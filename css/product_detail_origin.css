@@ -160,7 +160,7 @@
     margin: 80px 0 50px 0;
 }
 .product_detail_02_h2{
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 0.01em;
     font-weight: 700;
     line-height: 35px;
@@ -168,7 +168,7 @@
     font-family: 'Playfair Display';
 }
 .product_detail_02_h3{
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.1em;
     line-height: 20px;
     color: #fff;
@@ -231,7 +231,7 @@
     width: 100%;
 }
 .product_detail_03_sec1_left{
-    width: 40%;
+    width: 70%;
     margin: 0, auto;
     padding-top: 20px;
 }
@@ -261,23 +261,38 @@
 }
 /* section2 */
 .product_detail_03_sec2{
+    height: 500px;
     width: 100%;
-    justify-content: center;
     margin-top: -50px;
 }
 .product_detail_03_sec2_left{
-    width: 40%;
-    height: 500px;
-    background: url(../images/tonella_sofa_23.jpg) no-repeat top center;
+    width: 70%;
+    background: url(../images/Sancal-Catalogo-Pink_book-02.jpg) no-repeat center bottom;
     background-size: cover;
 }
 .product_detail_03_sec2_right{
     width: 40%;
+    margin: 0, auto;
 }
 .product_detail_03_sec2_right_txt{
-    width: 70%;
-    padding: 150px 50px 0 0;
+    width: 100%;
+    padding: 250px 100px 0 0;
     float: right;
+}
+.product_detail_03_h3{
+    font-size: 30px;
+    letter-spacing: 0.01em;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    line-height: 35px;
+    text-align: right;
+}
+.product_detail_03_sec2_right_box{
+    background-color: #fff;
+    height: 450px;
+    width: 110%;
+    margin: 50px 0 0 -150px;
+    
 }
 /* section3 */
 .product_detail_03_sec3{
@@ -344,13 +359,13 @@
     margin: 80px auto;
 }
 .product_detail_04_products{
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .product_detail_04_topic{
     margin-bottom: 30px;
 }
 .product_detail_04_h2{
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 0.01em;
     font-weight: 700;
     line-height: 35px;
@@ -358,11 +373,54 @@
     font-family: 'Playfair Display';
 }
 .product_detail_04_h3{
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.1em;
     line-height: 20px;
     color: #000;
     font-family: 'SourceHanSerifTC-Bold';
+}
+/* 商品 */
+.product_list{
+    display: inline-flex;
+    justify-content: center;
+}
+.product_box{
+    width: 100%; 
+    position: relative;
+}
+.product_box img{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+.product_mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    width: 100%; 
+    height:100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;}
+.product_mask:hover{
+    opacity: 1;
+}
+.product_mask h3.product_name {
+    margin: 0 0 5px 0;
+}
+.product_mask h3.product_name a{
+    font-size: 20px;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    color: #fff;
+    line-height: 40px;
+    
+}
+.quick_look_palette_btn{
+    margin: 20px 0 -20px 0;
 }
 /* part5 */
 #product_detail_05{
@@ -379,7 +437,7 @@
 margin-bottom: 30px;
 }
 .product_detail_05_h2{
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 0.01em;
     font-weight: 700;
     line-height: 35px;
@@ -387,7 +445,7 @@ margin-bottom: 30px;
     font-family: 'Playfair Display';
 }
 .product_detail_05_h3{
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.1em;
     line-height: 20px;
     color: #fff;
@@ -463,7 +521,7 @@ margin-bottom: 30px;
 margin-bottom: 30px;
 }
 .product_detail_06_h2{
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 0.01em;
     font-weight: 700;
     line-height: 35px;
@@ -471,7 +529,7 @@ margin-bottom: 30px;
     font-family: 'Playfair Display';
 }
 .product_detail_06_h3{
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.1em;
     line-height: 20px;
     color: #000;
