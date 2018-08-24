@@ -24,6 +24,7 @@ span.description_mark{color:#e54728;}
 span.description_mark_b{color: #000;}
 .description_5{width: 4%;margin: 0 1% 0 0;}
 .description_10{width: 9%;margin: 0 1% 0 0;}
+.description_20{width: 19%;margin: 0 1% 0 0;}
 .description_25{width: 24%;margin: 0 1% 0 0;}
 .description_30{width: 29%;margin: 0 1% 0 0;}
 .description_40{width: 39%;margin: 0 1% 0 0;}
@@ -162,6 +163,12 @@ a.description_q:hover{background: #ccc;}
 /* item_15填寫註冊資料 */
 .item_15 .item_02 {width: 50%;}
 
+/* 預約 */
+.item_16box{display: inline-flex;flex-flow: wrap;}
+input[type="text"].flatpickr-input{width: 55%;margin: 0 ;}
+.item_16 .palette_select{margin: 0 0 0 4%}
+.item_16 input[type="submit"]{margin: 20px auto 0;}
+
 /* item_17 18 19購物車 */
 .item_17>div{padding: 70px 50px;}
 .item_17 .description_10,.item_17 .description_5{text-align: center;}
@@ -187,3 +194,4 @@ a.description_q:hover{background: #ccc;}
 .item_19 .item_19_title{flex-wrap: wrap;padding: 5% 0;border-top: 1px solid #ddd;}
 .item_19 .item_19_title p{font-size: 13px;width: 100%; text-align: center;line-height: 24px;}
 .item_19 .member_title{color: #000;height: auto;justify-content: center;}
+.item_19 .item_conten_button{justify-content: center;}
