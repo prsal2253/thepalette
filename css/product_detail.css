@@ -236,7 +236,7 @@
     .product_detail_03_sec1_left01{
         width: 100%;
         height: 400px;
-        background: url(images/tonella_sofa_23.jpg) no-repeat right center;
+        background: url(../images/tonella_sofa_23.jpg) no-repeat right center;
         background-size: cover;
     }
     .product_detail_03_sec1_left02{
@@ -267,7 +267,7 @@
     .product_detail_03_sec1_left03{
         width: 100%;
         height: 800px;
-        background: url(images/tonella-2015-blue-book-021-sillones-h.jpg) no-repeat left bottom;
+        background: url(../images/tonella-2015-blue-book-021-sillones-h.jpg) no-repeat left bottom;
         background-size: cover;
     }
     .product_detail_03_sec1_right01{
@@ -277,13 +277,13 @@
     .product_detail_03_sec1_right02{
         width: 100%;
         height: 800px;
-        background: url(images/tonella-2015-blue-book-024-sillones-b.jpg) no-repeat left center;
+        background: url(../images/tonella-2015-blue-book-024-sillones-b.jpg) no-repeat left center;
         background-size: cover;
     }
     .product_detail_03_sec1_right03{
         width: 100%;
         height: 400px;
-        background: url(images/tonella_sofa_05.jpg) no-repeat left center;
+        background: url(../images/tonella_sofa_05.jpg) no-repeat left center;
         background-size: cover;
     }
     /* section2 */
@@ -310,12 +310,12 @@
         height: 70%;
         float: right;
         margin: 150px 50px 0 0;
-        background: url(images/Sancal-Producto-Sofa-Tonella-07.png) no-repeat center center;
+        background: url(../images/Sancal-Producto-Sofa-Tonella-07.png) no-repeat center center;
     }
     .product_detail_03_sec2_03{
         width: 100%;
         height: 500px;
-        background: url(images/Sancal-Producto-Mesita-Mosaico-02.jpg) no-repeat bottom center;
+        background: url(../images/Sancal-Producto-Mesita-Mosaico-02.jpg) no-repeat bottom center;
         background-size: cover;
     }
 /* part4 */
