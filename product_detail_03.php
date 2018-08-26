@@ -25,7 +25,7 @@
                     </div>
                     <div class="product_detail_03_sec1_right04">
                         <div class="product_detail_03_sec1_txt">
-                            <h3 class="product_detail_03_h3" style="font-size: 20px;font-weight: 500; font-family:'SourceHanSerifTC-Bold';letter-spacing: 0.05em">商品尺寸</h3>
+                            <h3 class="product_detail_03_h3" style="font-size: 20px;font-weight: 500; font-family:'SourceHanSerifTC-Bold';letter-spacing: 0.05em;margin-top:0">商品尺寸</h3>
                             <h3 class="product_detail_03_h3">
                                 寬度: 150cm 高度: 85cm 深度: 150cm <br>
                                 淨重: 2.45kg <br>
