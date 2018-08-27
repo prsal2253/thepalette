@@ -206,6 +206,8 @@ header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100
 .padunlock_icon{-webkit-mask-image:url(../images/icon/padunlock.svg);mask-image:url(../images/icon/padunlock.svg);}
 .menu_iconbar .car_icon{-webkit-mask-image:url(../images/icon/shopping-cart.svg);mask-image:url(../images/icon/shopping-cart.svg);}
 
+nav > a.member_icon{margin: 15px auto 0;display: block;}
+
 .go_top{background: url(../images/icon/next.svg) center no-repeat; background-size: 25px auto; width: 40px;height: 40px;position: fixed;bottom: 30px; right: 30px;transform: rotate(180deg);border-radius: 50%;background-color: rgba(255,255,255,.0);transition: all .5s;cursor: pointer;display: none;}
 .go_top:hover{background-color: rgba(255,255,255,.6);}
 
