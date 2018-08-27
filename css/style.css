@@ -236,13 +236,16 @@ span.list_cn{opacity: 0;}
 .bread_crumbs_b ul li,.bread_crumbs_b ul li::after,.bread_crumbs_b ul li a{color: #000;}
 
 /* 商品 */
-.product_list{display: inline-flex;justify-content: center;}
-.product_box{width: 100%; position: relative;}
-.product_box img{width: 100%;height: auto;}
-.product_mask{position: absolute;top: 0;left: 0;background: rgba(0,0,0,.6);width: 100%; height:100%;display: inline-flex;justify-content: center;align-items: center;text-align: center;opacity: 0;}
-.product_mask:hover{opacity: 1;}
-.product_mask h3.product_name {margin: 0 0 5px 0;}
-.product_mask h3.product_name a{font-size: 13px;color: #fff;}
+.product_list{display: inline-flex; justify-content: center;}
+.product_box{ width: 100%; position: relative;}
+.product_box >img{ width: 90%; height: auto; margin: 0 auto;}
+.product_mask{ display:inline-flex;justify-content:center; align-items:center;position: absolute; top: 0; left: 0; background: rgba(0,0,0,.6); width: 100%; height:100%; text-align: center; opacity: 0;}
+.product_mask:hover{ opacity: 1;}
+.product_mask .product_name_h3 { margin: 0 0 5px 0;}
+.product_mask .product_name_h3 a{ font-size: 20px; font-family: 'Playfair Display'; font-weight: 700; color: #fff; line-height: 40px;}
+.product_mask .product_favorate{ width: 35px; height: 35px; background: url(../images/icon/heart_w.svg) no-repeat center center; background-size: cover;float: right; position:absolute; right:20px; top:20px;}
+.product_name_nd_btn{ margin-top:20px;}
+.quick_look_palette_btn{ margin: 20px 0 -20px 0;}
 
 
 .product_price{font-family: Georgia, 'Times New Roman', Times, serif;font-size: 20px;color:#e54728;}
