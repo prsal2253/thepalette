@@ -4,15 +4,15 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,|Roboto:100,300,400,500,700,900);
 
 @font-face {
-    font-family: SourceHanSerifTC-Bold;
+    font-family: 'SourceHanSerifTC-Bold';
     src: url(../fonts/SourceHanSerifTC-Bold.otf);
   }
 @font-face {
-    font-family: SourceHanSerifTC-Heavy;
+    font-family: 'SourceHanSerifTC-Heavy';
     src: url(../fonts/SourceHanSerifTC-Heavy.otf);
   }
 @font-face {
-    font-family: SourceHanSerifTC-SemiBold;
+    font-family: 'SourceHanSerifTC-SemiBold';
     src: url(../fonts/SourceHanSerifTC-SemiBold.otf);
   }
 
@@ -114,10 +114,10 @@ p.address_num{width: 10%;color: #888;}
 
 /* header */
 #heard .index_main{background: url(../images/avenue-boiserie.jpg) bottom center repeat-y;background-attachment: fixed;background-size: 100% auto;min-height:500vh;}
-header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100px;height: 100px;border: 2px solid #fff;color: #fff;text-transform: uppercase;align-items: flex-end;justify-content:flex-end;letter-spacing: .15em;z-index: 999;}
-nav{position: fixed;right: 30px; top:0px; width: 40px;height: 100%;padding: 50px 0;}
+header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100px;height: 100px;border: 2px solid #fff;color: #fff;text-transform: uppercase;align-items: flex-end;justify-content:flex-end;letter-spacing: .15em;z-index: 9999;}
+.index_top nav{position: fixed;right: 30px; top:0px; width: 40px;height: 100%;padding: 50px 0;z-index: 999;}
 
-.palette_menu {cursor: pointer;}
+.palette_menu {cursor: pointer;z-index: 999;}
 .menu_icon{width: 40px;height: 20px;margin: 0 auto 20px;cursor: pointer;position: relative;z-index: 999;}
 .menu_icon .bar{width:100%;height:2px;border-radius: 2px;background-color: #fff; position: absolute;right: 0;}
 .menu_icon .bar:nth-child(2){margin:9px auto 7px;}
@@ -236,13 +236,16 @@ span.list_cn{opacity: 0;}
 .bread_crumbs_b ul li,.bread_crumbs_b ul li::after,.bread_crumbs_b ul li a{color: #000;}
 
 /* 商品 */
-.product_list{display: inline-flex;justify-content: center;}
-.product_box{width: 100%; position: relative;}
-.product_box img{width: 100%;height: auto;}
-.product_mask{position: absolute;top: 0;left: 0;background: rgba(0,0,0,.6);width: 100%; height:100%;display: inline-flex;justify-content: center;align-items: center;text-align: center;opacity: 0;}
-.product_mask:hover{opacity: 1;}
-.product_mask h3.product_name {margin: 0 0 5px 0;}
-.product_mask h3.product_name a{font-size: 13px;color: #fff;}
+.product_list{display: inline-flex; justify-content: center;}
+.product_box{ width: 100%; position: relative;}
+.product_box >img{ width: 90%; height: auto; margin: 0 auto;}
+.product_mask{ display:inline-flex;justify-content:center; align-items:center;position: absolute; top: 0; left: 0; background: rgba(0,0,0,.6); width: 100%; height:100%; text-align: center; opacity: 0;}
+.product_mask:hover{ opacity: 1;}
+.product_mask .product_name_h3 { margin: 0 0 5px 0;}
+.product_mask .product_name_h3 a{ font-size: 20px; font-family: 'Playfair Display'; font-weight: 700; color: #fff; line-height: 40px;}
+.product_mask .product_favorate{ width: 35px; height: 35px; background: url(../images/icon/heart_w.svg) no-repeat center center; background-size: cover;float: right; position:absolute; right:20px; top:20px;}
+.product_name_nd_btn{ margin-top:20px;}
+.quick_look_palette_btn{ margin: 20px 0 -20px 0;}
 
 
 .product_price{font-family: Georgia, 'Times New Roman', Times, serif;font-size: 20px;color:#e54728;}
