@@ -287,7 +287,6 @@ $pageName = 'register';
                         location.href = 'signup_03.php';
                     }, 1000);
 
-
                 } else {
 
                     submit_btn.show();

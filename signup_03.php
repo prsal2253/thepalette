@@ -39,16 +39,18 @@ require __DIR__. '/__db_connect.php';
             <div class="item_02">
                 <?php if(isset($_SESSION['sighup_email'])): ?>
                 <div class="item_14box">
-                    <p>會員 <span class="description_mark"><?= $_SESSION['sighup_email'] ?></span> 先生/小姐 您好</p>
+                    <p>會員 <span class="description_mark"><?= $_SESSION['sighup_name'] ?></span> 先生/小姐 您好</p>
                     <p>&nbsp;</p>
                     <p>感謝您註冊成為 the palette 購物網的會員，</p>
-                    <p>我們已發送一封認證信至您所填寫的 <span class="description_mark"><?= $_SESSION['sighup_name'] ?></span> 信箱中，</p>
+                    <p>我們已發送一封認證信至您所填寫的 <span class="description_mark"><?= $_SESSION['sighup_email'] ?></span> 信箱中，</p>
                     <p>請查看信箱完成認證，開始享受購物的樂趣！</p>
                 </div>
                 <div class="item_02_conten">
                     <input type="submit" value="註冊會員">
+                    <a href="header.php">跑回首頁</a>
                 </div>
                 <?php endif; ?>
+                <?php unset($_SESSION['sighup_email'],$_SESSION['sighup_name']);?>
             </div>
         </div>
     </section>
