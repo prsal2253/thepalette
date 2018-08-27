@@ -50,7 +50,7 @@
 
                 <div class="sort_red05_row flex">
                     <div class="sort_red05_box_s">
-                        <img src="images/S-light-06.png" alt="商品名稱">
+                        <img src="images/H-light-06-S.png" alt="商品名稱">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
                             <div class="product_name_nd_btn">
@@ -131,7 +131,7 @@
                             </div> 
                     </div>
                     <div class="sort_red05_box_l">
-                        <img src="images/S-brown-chair-09.png" alt="商品名稱">
+                        <img src="images/H-brown-chair-09-S.png" alt="商品名稱">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
                             <div class="product_name_nd_btn">
