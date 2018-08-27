@@ -10,7 +10,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
     $sql = sprintf("SELECT
  `member_sid`, `name`, `gender`, `email`,
   `password`, `mobile`, `address`,
-   `birthday` FROM `members` WHERE `email`='%s' AND `password`='%s'",
+   `birthday`, `year`, `month`, `day` FROM `members` WHERE `email`='%s' AND `password`='%s'",
 //    比對帳號密碼一不一樣用SELECT，WHERE這欄要等於什麼，用這兩個條件下去找
     $mysqli->escape_string($_POST['email']),($_POST['password']));
 //        這邊escape_string是代表填表單去掉$_POST['email']單引號，只是準備字串，password不用escape_string如果編碼過前面就要加sha1

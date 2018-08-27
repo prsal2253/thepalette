@@ -56,14 +56,17 @@ if(isset($_POST['name']) and isset($_POST['email']) and isset($_POST['password']
 //        $password = sha1($_POST['password']);
 //        這裡是破壞性編碼，md5建議不要用，建議用sha256
 
-        $sql ="INSERT INTO `members`(`name`, `email`, `password`) VALUES (?,?,?)";
+        $sql ="INSERT INTO `members`(`name`, `email`, `password`, `year`, `month`, `day`) VALUES (?,?,?,?,?,?)";
 //最後一格後面不能有逗號！
         $stmt = $mysqli->prepare($sql);
 //            $stmt去接mysqli那個值
-        $stmt->bind_param('sss',
+        $stmt->bind_param('ssssss',
             $_POST['name'],
             $_POST['email'],
-                $_POST['password']
+                $_POST['password'],
+                $_POST['year'],
+                $_POST['month'],
+                $_POST['day']
         //最後一格後面不能有逗號！
         );
 
