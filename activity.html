@@ -8,7 +8,6 @@
     <title>activity</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="js/jquery-3.3.1.js">
     <style>
         #activity .index_main .index_top section {
             padding: 0;
@@ -65,15 +64,16 @@
             padding: 40px;
         }
 
-        .mark_title h1 {
+        .mark_title h2 {
             font-family: 'SourceHanSerifTC-Bold';
             letter-spacing: 5px;
-            font-size: 45px;
+            font-size: 40px;
             font-weight: bold;
+            margin-left: -24px;
         }
 
-        .mark_title h2 {
-            font-family:'SourceHanSerifTC-Bold';
+        .mark_title h3 {
+            font-family: 'SourceHanSerifTC-Bold';
             letter-spacing: 5px;
             font-size: 35px;
             line-height: 20px;
@@ -266,47 +266,48 @@
         .mark_title1 {
             font-family: 'SourceHanSerifTC-Bold';
             font-size: 25px;
-            margin-top: 30px;
+            margin-top: 22px;
             font-weight: 600;
             color: #000;
 
         }
 
-        .mark_title1 h1 {
-            font-family: 'SourceHanSerifTC-Bold';
-            letter-spacing: 5px;
-            font-size: 45px;
-            font-weight: bold;
-        }
-
         .mark_title1 h2 {
             font-family: 'SourceHanSerifTC-Bold';
             letter-spacing: 5px;
-            font-size: 35px;
-            line-height: 20px;
-            margin-top: 40px;
-
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: -25px;
         }
 
         .mark_title1 h3 {
+            font-family: 'SourceHanSerifTC-Bold';
+            letter-spacing: 5px;
             font-size: 25px;
-            margin-top: 30px;
-            color: #444;
+            line-height: 30px;
+            margin-top: 25px;
+
         }
 
         .mark_title1 h4 {
-            width: 300px;
-            font-size: 25px;
-            margin-top: 25px;
-            line-height: 10px;
+            font-size: 20px;
+            margin-top: 21px;
             color: #444;
-            border-bottom: 15px solid #97b189;
+        }
+
+        .mark_title1 h5 {
+            width: 238px;
+            font-size: 20px;
+            margin-top: 15px;
+            line-height: 8px;
+            color: #444;
+            border-bottom: 11px solid #97b189;
         }
 
         .mark_title1 p {
             font-family: 'SourceHanSerifTC-Bold';
             font-size: 13px;
-            margin-top: 20px;
+            margin-top: 15px;
             line-height: 20px;
             letter-spacing: 3px;
             color: #444;
@@ -314,131 +315,157 @@
 
         .mark_img_light1 {
             top: -110px;
-            right: 200px;
-            width: 400px;
+            right: 220px;
+            width: 365px;
             z-index: 11;
             position: absolute;
         }
 
         .mark_img_light_sm1 {
-            top: -215px;
-            right: 130px;
+            top: -245px;
+            right: 150px;
             width: 250px;
             position: absolute;
         }
+
         /* footer */
-    #footer{
+
+        #footer {
             background-color: #000;
         }
-        .footer{
+
+        .footer {
             height: 380px;
             flex-direction: column;
-            justify-content: space-between; 
+            justify-content: space-between;
         }
-       .footer_top, .footer_bottom{
-           width: 100%;
-       } 
-       .footer_top{
-           height: 20%;
-           margin: 60px 0 20px 0;
-       }
-       .footer_top h2{
-           font-size: 40px;
-           letter-spacing: 0.05em;
-           font-family: 'Playfair Display';
-           font-weight: 700;
-           color: #ad776c;
-       }
-       .footer_bottom{
-           height: 80%;
-           width: 100%;
-           justify-content: space-between;
-       }
-       .footer_bottom h3{
+
+        .footer_top,
+        .footer_bottom {
+            width: 100%;
+        }
+
+        .footer_top {
+            height: 20%;
+            margin: 60px 0 20px 0;
+        }
+
+        .footer_top h2 {
+            font-size: 40px;
+            letter-spacing: 0.05em;
+            font-family: 'Playfair Display';
+            font-weight: 700;
+            color: #ad776c;
+        }
+
+        .footer_bottom {
+            height: 80%;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .footer_bottom h3 {
             font-size: 18px;
-           letter-spacing: 0.1em;
-           font-family: 'SourceHanSerifTC-SemiBold';
-           font-weight: 700;
-           color: #fff; 
-           margin-bottom: 20px;
-       }
-       .footer_bottom ul{
-           margin: 0 40px 20px 0;
-       }
-       .footer_bottom_left{
-           width: 60%;
-           justify-content: flex-start;
-       }
-       .footer_about li, .footer_contact li, .footer_notice li, .footer_service li{
-            font-size: 13px;
-           letter-spacing: 0.1em;
-           line-height: 25px;
-           font-family: 'Noto Sans TC';
-           font-weight: 300;
-           color: #fff; 
-           display: block;
-           transition: all .5s;
-       }
-       .footer_service li:hover, .footer_about li:hover, .footer_notice li:hover{
-           color: #ad776c;
+            letter-spacing: 0.1em;
+            font-family: 'SourceHanSerifTC-SemiBold';
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
         }
-        .footer_bottom_right > ul{
+
+        .footer_bottom ul {
+            margin: 0 40px 20px 0;
+        }
+
+        .footer_bottom_left {
+            width: 60%;
+            justify-content: flex-start;
+        }
+
+        .footer_about li,
+        .footer_contact li,
+        .footer_notice li,
+        .footer_service li {
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            line-height: 25px;
+            font-family: 'Noto Sans TC';
+            font-weight: 300;
+            color: #fff;
+            display: block;
+            transition: all .5s;
+        }
+
+        .footer_service li:hover,
+        .footer_about li:hover,
+        .footer_notice li:hover {
+            color: #ad776c;
+        }
+
+        .footer_bottom_right>ul {
             flex-direction: column;
             justify-content: space-between;
             margin: 0;
         }
-       .footer_bottom_right figure{
-           width: 40px;
-           height: 40px;
-           margin-right: 10px;
-           display: inline-block;
-       }
-       .footer_bottom_right_icon1{
-           background: url(images/icon/facebook.svg) no-repeat center center;
-           background-size: cover;
-       }
-       .footer_bottom_right_icon2{
-           background: url(images/icon/instagram.svg) no-repeat center center;
-           background-size: cover;
-       }
-       .footer_bottom_right h4{
-           font-size: 12px;
-           font-family: 'Roboto';
-           color: #fff;
-           letter-spacing: 0.01em;
-           line-height: 30px;
-       }
-       .footer_bottom_right_mail{
-           width: 100%;
-           justify-content: space-between;
-           align-items: flex-end;
-           margin-top: 40px;
-       }
-       input[type="text"].footer_bottom_right_txtmail{
-           width: 75%;
-           height: 40px;
-           border: 1px solid #fff;
-           background: rgba(255, 255, 255, 0);
-           border-radius: 40px;
-           padding: 0;
-           margin: 0 10px 0 0 ;
-           text-align: center;
-       }
-       .footer_bottom_right_send{
-           width: 20%;
-           height: 40px;
-           background-color: #666;
-           border-radius: 40px;
-           color: #fff;
-           font-size: 14px;
-           letter-spacing: 0.1em;
-           font-family: 'Noto Sans TC';
-           margin-left: 10px;
-           border: 1px solid #666;
-           padding: 0;
-           margin: 0;
-           font-weight: 300;
-       }
+
+        .footer_bottom_right figure {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .footer_bottom_right_icon1 {
+            background: url(images/icon/facebook.svg) no-repeat center center;
+            background-size: cover;
+        }
+
+        .footer_bottom_right_icon2 {
+            background: url(images/icon/instagram.svg) no-repeat center center;
+            background-size: cover;
+        }
+
+        .footer_bottom_right h4 {
+            font-size: 12px;
+            font-family: 'Roboto';
+            color: #fff;
+            letter-spacing: 0.01em;
+            line-height: 30px;
+        }
+
+        .footer_bottom_right_mail {
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 40px;
+        }
+
+        input[type="text"].footer_bottom_right_txtmail {
+            width: 75%;
+            height: 40px;
+            border: 1px solid #fff;
+            background: rgba(255, 255, 255, 0);
+            border-radius: 40px;
+            padding: 0;
+            margin: 0 10px 0 0;
+            text-align: center;
+        }
+
+        .footer_bottom_right_send {
+            width: 20%;
+            height: 40px;
+            background-color: #666;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            font-family: 'Noto Sans TC';
+            margin-left: 10px;
+            border: 1px solid #666;
+            padding: 0;
+            margin: 0;
+            font-weight: 300;
+        }
     </style>
 </head>
 
@@ -456,8 +483,8 @@
 
                         <div class="mark_title_box">
                             <div class="mark_title">
-                                <h1>「家具滿額贈」</h1>
-                                <h2>活動開跑即日起至9/16</h2>
+                                <h2>「家具滿額贈」</h2>
+                                <h3>活動開跑即日起至9/16</h3>
                                 <p>購買家具滿兩萬元送1000</p>
                                 <p>滿三萬贈設計感燈飾</p>
                             </div>
@@ -571,7 +598,7 @@
                     </div>
                 </div>
                 <div class="mark_product">
-                    <img class="mark_img2" src="images/S-green-chair-07.png" alt="">
+                    <img class="mark_img2" src="images/H-green-chair-07.png" alt="">
                     <h3>商品名稱</h3>
                     <h3>$26000</h3>
                     <div class="palette_select member_input40 flex">
@@ -619,7 +646,7 @@
                     </div>
                 </div>
                 <div class="mark_product">
-                    <img class="mark_img2" src="images/S-green-table-01.png" alt="">
+                    <img class="mark_img2" src="images/H-green-table-01.png" alt="">
                     <h3>商品名稱</h3>
                     <h3>$26000</h3>
                     <div class="palette_select member_input40 flex">
@@ -714,16 +741,16 @@
                 <div class="mark_left1">
                     <div class="mark_title_box1">
                         <div class="mark_title1">
-                            <h1>「家具滿額贈」</h1>
-                            <h2>滿三萬贈設計感燈飾</h2>
-                            <h3>ERIN PENDANT LAMP</h3>
-                            <h4>BRASS, LIGHT GREY</h4>
-                            <p>
-                                W: 30 cm D: 30 cm H: 60 cm
-                                <br>Wt: 0.5 kg
-                                <br> Cbm: 0.93 cbm
-                                <br> Sh: 40 cm
-                            </p>
+                            <h2>「家具滿額贈」</h2>
+                                <h3>滿三萬贈設計感燈飾</h3>
+                                <h4>ERIN PENDANT LAMP</h4>
+                                <h5>BRASS, LIGHT GREY</h5>
+                                <p>
+                                    W: 30 cm D: 30 cm H: 60 cm
+                                    <br>Wt: 0.5 kg
+                                    <br> Cbm: 0.93 cbm
+                                    <br> Sh: 40 cm
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -734,56 +761,87 @@
             </div>
         </section>
     </div>
+
     <!-- footer -->
     <!-- <div class="index_footer"></div> -->
-    <div id="footer"> 
-            <section>
-                <div class="index_conten_flex footer">
-                    <div class="footer_top"><h2>Better Living Through Color</h2></div>
-                    <div class="footer_bottom flex">
-                        <div class="footer_bottom_left flex">
-                            <ul class="footer_about"><h3>關於我們</h3>
-                            <a href=""><li>品牌理念</li></a> 
-                            <a href=""><li>實體店面</li></a> 
-                                <a href=""><li>最新消息</li></a> 
-                                <a href=""><li>聯絡我們</li></a> 
-                                <a href=""><li>隱私權條款</li></a> 
-                            </ul>
-                            <ul class="footer_notice"><h3>購物須知</h3>
-                                <a href=""><li>購物流程</li></a> 
-                                <a href=""><li>安裝說明</li></a> 
-                                <a href=""><li>運送說明</li></a> 
-                            </ul>
-                            <ul class="footer_service"><h3>客戶服務</h3>
-                                <a href=""><li>線上客服</li></a> 
-                                <a href=""><li>常見問題</li></a> 
-                                <a href=""><li>運送說明</li></a> 
-                            </ul>
-                            <ul class="footer_contact"><h3>聯絡我們</h3>
-                                <li>客服電話 &nbsp;2658-4833</li> 
-                                <li>客服信箱 &nbsp;@thepalette@gmail.com</li> 
-                                <li>營業時間 &nbsp;MON-SAT 11:00-21:00</li>
-                            </ul>
-                        </div>
-                        <div class="footer_bottom_right" style="width:35%">
-                            <ul class="flex">
-                                <li class="footer_bottom_right">
-                                    <figure class="footer_bottom_right_icon1"></figure>
-                                    <figure class="footer_bottom_right_icon2"></figure>
-                                </li>
-                                <li class="footer_bottom_right"><h4>Copyright © 2018 THE PALETTE All rights reserved.</h4></li>
-                                <li class="footer_bottom_right_input">
+    <div id="footer">
+        <section>
+            <div class="index_conten_flex footer">
+                <div class="footer_top">
+                    <h2>Better Living Through Color</h2>
+                </div>
+                <div class="footer_bottom flex">
+                    <div class="footer_bottom_left flex">
+                        <ul class="footer_about">
+                            <h3>關於我們</h3>
+                            <a href="">
+                                <li>品牌理念</li>
+                            </a>
+                            <a href="">
+                                <li>實體店面</li>
+                            </a>
+                            <a href="">
+                                <li>最新消息</li>
+                            </a>
+                            <a href="">
+                                <li>聯絡我們</li>
+                            </a>
+                            <a href="">
+                                <li>隱私權條款</li>
+                            </a>
+                        </ul>
+                        <ul class="footer_notice">
+                            <h3>購物須知</h3>
+                            <a href="">
+                                <li>購物流程</li>
+                            </a>
+                            <a href="">
+                                <li>安裝說明</li>
+                            </a>
+                            <a href="">
+                                <li>運送說明</li>
+                            </a>
+                        </ul>
+                        <ul class="footer_service">
+                            <h3>客戶服務</h3>
+                            <a href="">
+                                <li>線上客服</li>
+                            </a>
+                            <a href="">
+                                <li>常見問題</li>
+                            </a>
+                            <a href="">
+                                <li>運送說明</li>
+                            </a>
+                        </ul>
+                        <ul class="footer_contact">
+                            <h3>聯絡我們</h3>
+                            <li>客服電話 &nbsp;2658-4833</li>
+                            <li>客服信箱 &nbsp;@thepalette@gmail.com</li>
+                            <li>營業時間 &nbsp;MON-SAT 11:00-21:00</li>
+                        </ul>
+                    </div>
+                    <div class="footer_bottom_right" style="width:35%">
+                        <ul class="flex">
+                            <li class="footer_bottom_right">
+                                <figure class="footer_bottom_right_icon1"></figure>
+                                <figure class="footer_bottom_right_icon2"></figure>
+                            </li>
+                            <li class="footer_bottom_right">
+                                <h4>Copyright © 2018 THE PALETTE All rights reserved.</h4>
+                            </li>
+                            <li class="footer_bottom_right_input">
                                 <div class="footer_bottom_right_mail flex">
                                     <input class="footer_bottom_right_txtmail" type="text" placeholder="請輸入Email訂閱電子報">
                                     <button class="footer_bottom_right_send">送出</button>
                                 </div>
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
