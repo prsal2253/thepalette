@@ -31,8 +31,6 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
     }
 
 
-
-
 }
 
 ?>
@@ -63,7 +61,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
         <div class="index_conten">
             <!--     登入成功與否訊息           -->
             <?php if(isset($msg_type)): ?>
-            <div id="info" class="alert" role="alert" style="display: none">
+            <div id="info" class="alert" role="alert" 
                 <?= $msg_info ?>
             </div>
             <?php endif ; ?>
