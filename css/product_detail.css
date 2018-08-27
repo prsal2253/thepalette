@@ -29,7 +29,7 @@
 }
 .product_detail_01_h4{
     font-size: 12px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05em; 
     font-weight: 300;
     color: #666;
     font-family: 'Noto Sans TC', serif;
@@ -118,6 +118,13 @@
     border-radius: 50%;
     display: inline-block;
     margin-left: 2px;
+}
+.choose_color{
+    border: 3px solid #fff;
+}
+.choose_color:hover{
+    border-color: #333;
+    cursor: pointer;
 }
 .color01{
     background-color: #bf301d;
@@ -299,7 +306,7 @@
     .product_detail_03_sec2_01_bg_box{
         width: 50%;
         height: 100%;
-        background-color: #ad776c; 
+        background-color: #662424; 
     }
     .product_detail_03_sec2_01_top{
         width: 100%;

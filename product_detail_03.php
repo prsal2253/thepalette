@@ -41,7 +41,7 @@
                     <div class="product_detail_03_sec2_01_bg">
                         <div class="product_detail_03_sec2_01_bg_box">
                             <div class="product_detail_03_sec1_txt">
-                                <h2 class="product_detail_03_h2">The Dream Chair<br>That Lits Up<br>Your Home</h2>
+                                <h2 class="product_detail_03_h2" style="color:#fff">The Dream Chair<br>That Lits Up<br>Your Home</h2>
                             </div>
                         </div>
                     </div>

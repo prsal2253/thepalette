@@ -42,9 +42,9 @@
                         <h8 class="product_detail_01_h8"><span style="font-family: Georgia">$</span>16,970<span style="font-size: 12px; color:#666; text-decoration: line-through"> 21,300</span></h8>
                     </div>
                     <div class="product_detail_01_color">
-                        <div class="choose_color color01"></div>
-                        <div class="choose_color color02"></div>
-                        <div class="choose_color color03"></div>
+                        <div class="choose_color color01 transition"></div>
+                        <div class="choose_color color02 transition"></div>
+                        <div class="choose_color color03 transition"></div>
                     </div>
                     <div class="product_detail_01_btns flex">
                         <div class="s_product_detail_01_num flex">
