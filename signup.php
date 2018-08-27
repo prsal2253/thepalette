@@ -1,4 +1,10 @@
 <?php
+
+require __DIR__. '/__db_connect.php';
+
+?>
+
+<?php
 $pageName = 'register';
 //命名頁面
 ?>
@@ -274,9 +280,13 @@ $pageName = 'register';
             $.post('signup_api.php', $(document.form1).serialize(), function(data){
                 //這裏不是用表單方式發送出去而是用ajax方式發送出去，所以資料JQ物件包起來
                 // $(document.form1).serialize()表單序列化
-
                 if(data.success){
                 //    是ture代表註冊成功  else就是註冊失敗秀按鈕出來
+
+                    setTimeout(function(){
+                        location.href = 'signup_03.php';
+                    }, 1000);
+
 
                 } else {
 
@@ -299,7 +309,7 @@ $pageName = 'register';
             submit_btn.show();
         }
         return false;
-    }
+    };
 </script>
 <div class="index_footer"></div>
 </body>

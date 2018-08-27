@@ -87,6 +87,8 @@ if(isset($_POST['name']) and isset($_POST['email']) and isset($_POST['password']
 //                key =>value
 
             ];
+            $_SESSION['sighup_name'] = $_POST['name'];
+            $_SESSION['sighup_email'] = $_POST['email'];
 
         } elseif($af===-1){
             $result['info'] = [
