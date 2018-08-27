@@ -85,8 +85,9 @@ if(isset($_POST['name']) and isset($_POST['email']) and isset($_POST['password']
                 'msg' => '註冊完成'
                 // msg這裡是文字內容
 //                key =>value
-
             ];
+            $_SESSION['sighup_name'] = $_POST['name'];
+            $_SESSION['sighup_email'] = $_POST['email'];
 
         } elseif($af===-1){
             $result['info'] = [
