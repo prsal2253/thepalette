@@ -29,8 +29,10 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
         $msg_type = 'danger';
         $msg_info = '登入失敗請重新確認帳號密碼';
     }
-
-
+} else {
+    if(isset($_SERVER['HTTP_REFERER'])){
+        $_SESSION['come_from'] = $_SERVER['HTTP_REFERER'];
+    }
 }
 
 ?>
@@ -61,7 +63,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
         <div class="index_conten">
             <!--     登入成功與否訊息           -->
             <?php if(isset($msg_type)): ?>
-            <div id="info" class="alert" role="alert" 
+            <div id="info" class="alert" role="alert">
                 <?= $msg_info ?>
             </div>
             <?php endif ; ?>
@@ -71,7 +73,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
                 <script>
                     setTimeout(function(){
                         location.href = '<?= $_SESSION['come_from'] ?>';
-                    }, 2000);
+                    }, 1000);
                 </script>
                 <?php unset($_SESSION['come_from']); endif ?>
 
