@@ -16,8 +16,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -29,8 +28,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -42,15 +40,14 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                 </div>
 
                 <div class="sort_red05_row flex">
                     <div class="sort_red05_box_s">
-                        <img src="images/S-light-06.png" alt="商品名稱">
+                        <img src="images/H-light-06-S.png" alt="商品名稱">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
                             <div class="product_name_nd_btn">
@@ -58,8 +55,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -71,8 +67,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -84,8 +79,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -97,8 +91,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                 </div>
@@ -113,8 +106,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -126,12 +118,11 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_l">
-                        <img src="images/S-brown-chair-09.png" alt="商品名稱">
+                        <img src="images/H-brown-chair-09-S.png" alt="商品名稱">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
                             <div class="product_name_nd_btn">
@@ -139,8 +130,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                 </div>
@@ -155,8 +145,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -168,8 +157,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -181,8 +169,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                     <div class="sort_red05_box_s">
@@ -194,8 +181,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
-                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
                             </div> 
                     </div>
                 </div>

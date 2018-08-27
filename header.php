@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__. '/__db_connect.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
