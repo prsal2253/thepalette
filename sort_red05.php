@@ -1,4 +1,16 @@
-<div id="sort_red05"> 
+
+<?php include 'page_item/head.php';?>
+</head>
+<!-- 依照頁面改ＩＤ -->
+<body id="signup" class="">
+<!-- top -->
+<div class="index_top">
+    <?php include 'page_item/header.php';?>
+</div>
+<!-- main -->
+<div class="index_main">
+
+<div id="sort_red05">
         <section>
             <div class="index_conten_flex sort_red05">
                 <ul class="sort_red05_sec1">
@@ -17,7 +29,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-orange-chair-07.png" alt="商品名稱">
@@ -29,7 +41,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-orange-chair-07.png" alt="商品名稱">
@@ -41,7 +53,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                 </div>
 
@@ -56,7 +68,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-orange-chair-07.png" alt="商品名稱">
@@ -68,7 +80,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-orange-chair-04.png" alt="商品名稱">
@@ -80,7 +92,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-pink-chair-09.png" alt="商品名稱">
@@ -92,7 +104,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                 </div>
 
@@ -107,7 +119,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-pink-chair-03.png" alt="商品名稱">
@@ -119,7 +131,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_l">
                         <img src="images/H-brown-chair-09-S.png" alt="商品名稱">
@@ -131,7 +143,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                 </div>
 
@@ -146,7 +158,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-pink-chair-08.png" alt="商品名稱">
@@ -158,7 +170,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-orange-chair-07.png" alt="商品名稱">
@@ -170,7 +182,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                     <div class="sort_red05_box_s">
                         <img src="images/H-orange-chair-07.png" alt="商品名稱">
@@ -182,7 +194,7 @@
                                 </div>
                                 <div class="product_btn"></div>
                                 <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                                </div>
-                            </div> 
+                            </div>
                     </div>
                 </div>
                 <!-- 頁碼 -->
@@ -198,3 +210,10 @@
             </div>
         </section>
 </div>
+</div>
+<!-- footer -->
+<div class="index_footer">
+    <?php include 'page_item/footer.php';?>
+</div>
+</body>
+</html>
