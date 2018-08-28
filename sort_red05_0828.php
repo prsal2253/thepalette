@@ -4,6 +4,7 @@ require __DIR__ . '/__db_connect.php';
 
 $pageName = 'product_list_red';
 
+$build_query = [];
 
 # 商品資料 begin>
 $per_page = 14; //一頁有幾筆
@@ -15,6 +16,9 @@ $page = isset($_GET['page']) ? intval($_GET['page']) : 1; //用戶要看第幾�
 //    $where .= " AND product_color_sid=$cate ";
 //    $params['cate'] = $cate;
 //}
+
+//$price_sql = "SELECT * FROM `products_list`WHERE `product_color_sid` BETWEEN 1 AND 3 ORDER BY `price` ASC ";
+//$price_rs = $mysqli->query($price_sql);
 
 $where = " WHERE `product_color_sid` BETWEEN 1 AND 3 ";
 
@@ -80,7 +84,7 @@ $product_rs = $mysqli->query($product_sql);
                 <div class="sort_red05_row flex">
 <!--                    --><?php //if((isset($p_big))):?>
                     <?php while($r = $product_rs->fetch_assoc()): ?>
-                    <div class="sort_red05_box_s" data-sid="<?= $r['product_sid'] ?>">
+                    <div name="product" class="sort_red05_box_s" data-sid="<?= $r['product_sid'] ?>">
                         <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
@@ -89,7 +93,7 @@ $product_rs = $mysqli->query($product_sql);
                                     <h3 class="product_name_h3"><a href="#"><?= $r['product_name'] ?></a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn"
+                                <a href="product_quicklook.php"  class="palette_btn quick_look_palette_btn"
                                    data-fancybox
                                    data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
                                    "70vh"}}}'>快速查看</a>
@@ -113,21 +117,18 @@ $product_rs = $mysqli->query($product_sql);
                 <!-- 頁碼 -->
                 <div class="sort_red05_page">
                     <ul>
-                        <a href="/">
+                        <a href="?page=<?= $page==1 ? 1 : $page-1 ?>&<?= http_build_query($build_query) ?>">
                             <li class="page_prev">
                                 <figure></figure>
                                 PREV
                             </li>
                         </a>
-
-
                         <?php for($i=1; $i<=$total_pages; $i++): ?>
                             <li class="page p<?= $i==$page ? 'active' : '' ?>">
-                                <a href="?page=<?= $i ?>"><?= $i ?></a>
+                                <a <?= $page == $i ? '' : "href='?page=$i'"?>><?= $i ?></a>
                             </li>
-
                         <?php endfor ?>
-                        <a href="/">
+                        <a href="?page=<?= $page==$total_pages ? $total_pages : $page+1 ?>&<?= http_build_query($build_query) ?>">
                             <li class="page_next">
                                 <figure></figure>
                                 NEXT
@@ -139,6 +140,13 @@ $product_rs = $mysqli->query($product_sql);
         </section>
     </div>
 </div>
+<script>
+    // console.log($(document.product).serialize());
+    // $('.palette_btn').click(function () {
+    //     $.post('product_quicklook.php',$(document.product).serialize())
+    // };
+
+</script>
 <!-- footer -->
 <div class="index_footer">
     <?php include 'page_item/footer.php'; ?>

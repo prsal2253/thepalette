@@ -1,3 +1,10 @@
+<?php
+
+require __DIR__ . '/__db_connect.php';
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -229,7 +236,7 @@
             </section>
         </div>  
     </div>
-</div> 
+</div>
 <script
 src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
