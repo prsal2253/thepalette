@@ -9,6 +9,8 @@ $build_query = [];
 # 商品資料 begin>
 $per_page = 14; //一頁有幾筆
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1; //用戶要看第幾頁
+$page1 = $page+1;
+$page2 = $page-1;
 //$cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0; //用戶要看的分類
 
 //$where = " WHERE 1 ";
@@ -117,7 +119,7 @@ $product_rs = $mysqli->query($product_sql);
                 <!-- 頁碼 -->
                 <div class="sort_red05_page">
                     <ul>
-                        <a href="?page=<?= $page==1 ? 1 : $page-1 ?>&<?= http_build_query($build_query) ?>">
+                        <a <?= $page==1 ? '' : "href='?page=$page2'" ?><?= http_build_query($build_query) ?>">
                             <li class="page_prev">
                                 <figure></figure>
                                 PREV
@@ -128,7 +130,7 @@ $product_rs = $mysqli->query($product_sql);
                                 <a <?= $page == $i ? '' : "href='?page=$i'"?>><?= $i ?></a>
                             </li>
                         <?php endfor ?>
-                        <a href="?page=<?= $page==$total_pages ? $total_pages : $page+1 ?>&<?= http_build_query($build_query) ?>">
+                        <a <?= $page==$total_pages ? '' : "href='?page=$page1'" ?><?= http_build_query($build_query) ?>">
                             <li class="page_next">
                                 <figure></figure>
                                 NEXT
