@@ -187,33 +187,97 @@
             margin: 10px 0 100px 0;
         }
 
+        .about_name {
+            font-size: 400px;
+            color: #d1c0a5;
+            font-family: 'Playfair Display';
+            font-weight: 700;
+            position: absolute;
+        }
+
+        /* animate */
+
+        /* left */
+
+        .about_member_l {
+            width: 440px;
+            height: 440px;
+        }
+
+        .about_animate_l {
+            position: absolute;
+            height: 440px;
+            width: 420px;
+        }
+
+        @keyframes run_l {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -2940px 0;
+            }
+        }
+
+        .about_animate_l:hover {
+            animation: run_l 1s steps(7) infinite;
+        }
+
+        /* right */
+
+        .about_member_r {
+            width: 500px;
+            height: 480px;
+        }
+
+        .about_animate_r {
+            position: absolute;
+            height: 500px;
+            width: 480px;
+        }
+
+        @keyframes run_r {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -2410px 0;
+            }
+        }
+
+        .about_animate_r:hover {
+            animation: run_r 1s steps(5) infinite;
+        }
+
+        /* member img */
+
+        .about_prsal {
+            background: url('images/about/Y.jpg') no-repeat 0 0;
+        }
+
+        .about_sandra {
+            background: url('images/about/S.jpg') no-repeat 0 0;
+        }
+
+        .about_orange {
+            background: url('images/about/O.jpg') no-repeat 0 0;
+        }
+
+        .about_weiwei {
+            background: url('images/about/W.jpg') no-repeat 0 0;
+        }
+
         /* designer 1 */
 
         .about_left2 {
             width: 50%;
             height: 100%;
+            position: relative;
         }
 
         .about_left2 h4 {
             margin-left: -19%;
             margin-top: -523px;
-            font-size: 400px;
-            color: #d1c0a5;
-            font-family: 'Playfair Display';
-            font-weight: 700;
-        }
-
-        .about_left2 figure {
-            width: 70%;
-            height: 440px;
-
-        }
-
-        .about_left2 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
         }
 
         .about_box7 {
@@ -232,62 +296,28 @@
             font-weight: 400;
         }
 
-        @keyframes run {
-            from {
-                background-position: 0 0;
-            }
-            to {
-                background-position: -3360px 0;
-            }
-        }
-
-        .about_animate {
-            background: url('images/Y1.jpg') no-repeat 0 0;
-            height: 440px;
-            width: 420px;
-        }
-
-        .about_animate:hover {
-            animation: run 1s steps(8) infinite;
-        }
 
         /* designer 2 */
 
         .about_right2 {
-            margin-top: 45%;
+            margin-top: 15%;
             width: 40%;
             height: 100%;
-
             margin-left: 60%;
         }
 
-        .about_right2 figure {
-            width: 100%;
-            height: 500px;
-        }
-
-        .about_right2 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
 
         .about_right2 p {
             width: 100%;
-            margin-top: 3%;
+            margin-top: 11%;
             text-align: justify;
             line-height: 20px;
             font-weight: 400;
         }
 
         .about_right2 h4 {
-            margin-left: -24%;
-            margin-top: -564px;
-            font-size: 400px;
-            color: #d1c0a5;
-            font-family: 'Playfair Display';
-            font-weight: 700;
+            margin-left: -7%;
+            margin-top: -582px;
         }
 
         /* designer 3 */
@@ -296,28 +326,12 @@
             width: 50%;
             height: 100%;
             font-weight: 900;
-            margin-top: 45%;
+            margin-top: 10%;
         }
 
         .about_left3 h4 {
-            margin-left: -28%;
+            margin-left: -9%;
             margin-top: -409px;
-            font-size: 400px;
-            color: #d1c0a5;
-            font-family: 'Playfair Display';
-        }
-
-        .about_left3 figure {
-            width: 70%;
-            height: 440px;
-
-        }
-
-        .about_left3 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 10% center;
         }
 
         .about_left3 p {
@@ -331,40 +345,23 @@
         /* designer 4 */
 
         .about_right3 {
-            margin-top: 45%;
+            margin-top: 20%;
             width: 40%;
             height: 100%;
-
             margin-left: 60%;
-        }
-
-        .about_right3 figure {
-            width: 100%;
-            height: 500px;
-        }
-
-        .about_right3 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 80% center;
         }
 
         .about_right3 p {
             width: 100%;
-            margin-top: 20%;
+            margin-top: 26%;
             text-align: justify;
             line-height: 20px;
             font-weight: 400;
         }
 
         .about_right3 h4 {
-            margin-left: 52%;
-            margin-top: -262px;
-            font-size: 400px;
-            color: #d1c0a5;
-            font-family: 'Playfair Display';
-            font-weight: 700;
+            margin-left: 13%;
+            margin-top: -271px;
         }
 
         .about_box8 {
@@ -379,7 +376,7 @@
         /* store */
 
         .about_store {
-            margin-top: 400px;
+            margin-top: 200px;
             width: 100%;
         }
 
@@ -616,58 +613,6 @@
         </header>
     </div>
     <nav>
-        <div class="palette_menu">
-            <!-- menu icon -->
-            <div class="menu_icon">
-                <div class="bar transition"></div>
-                <div class="bar transition"></div>
-                <div class="bar transition"></div>
-            </div>
-            <!-- search icon -->
-            <div class="search_icon transition"></div>
-            <!-- menu -->
-            <div class="palette_menu_open transition">
-                <div class="palette_menubox">
-                    <div class="menubox_l">
-                        <ul>
-                            <li class="selected" data-id="all">
-                                <a href="#">
-                                    <span>Home</span>首頁</a>
-                            </li>
-                            <li data-id="all">
-                                <a href="#">
-                                    <span>About Us</span>關於我們</a>
-                            </li>
-                            <li data-id="collections">
-                                <a href="#">
-                                    <span>Collections</span>精選商品</a>
-                            </li>
-                            <li data-id="articles">
-                                <a href="#">
-                                    <span>Articles</span>風格專欄</a>
-                            </li>
-                            <li data-id="all">
-                                <a href="#">
-                                    <span>Get In Touch</span>聯絡我們</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menubox_r">
-                        <!-- all -->
-                        <div id="all" class="ranking_box selected">ALLLLLLLLLL</div>
-                        <!-- product -->
-                        <div class="ranking_box" id="collections">3</div>
-                        <!-- articles -->
-                        <div class="ranking_box" id="articles">4</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="menu_list">
-            <a href="#">login</a>
-            <a href="#">signup</a>
-            <a href="#">cart</a>
-        </div>
     </nav>
     <div class="index_main">
         <!-- 麵包屑 -->
@@ -689,7 +634,7 @@
         <section class="item_36">
             <div class="about_box1">
                 <figure>
-                    <img src="images/_VLX6006.jpg" alt="">
+                    <img src="images/about/_VLX6006.jpg" alt="">
                 </figure>
                 <div class="about_box2"></div>
                 <div class="about_box3"></div>
@@ -706,7 +651,7 @@
                     <div class="about_box6"></div>
                     <h2>THE PALETTE</h2>
                     <figure>
-                        <img src="images/kasthall_gabrielle_gold_750_ls18.jpg" alt="">
+                        <img src="images/about/kasthall_gabrielle_gold_750_ls18.jpg" alt="">
                     </figure>
                 </div>
 
@@ -728,10 +673,10 @@
                     </div>
                     <div class="about_right1">
                         <div class="about_img1">
-                            <img src="images/1532947292018879720.jpg" alt="">
+                            <img src="images/about/1532947292018879720.jpg" alt="">
                         </div>
                         <div class="about_img2">
-                            <img src="images/1532946633455684891.jpg" alt="">
+                            <img src="images/about/1532946633455684891.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -741,51 +686,49 @@
                 <div class="about_designer">
                     <h2>DESIGNER</h2>
                     <h3>關於設計師</h3>
-
                     <div class="about_left2">
-                        <div style="height: 440px;
-                        width: 420px;z-index: 11;">
-                            <div class="about_animate"></div>
+                        <div class="about_member_l">
+                            <div class="about_animate_l about_prsal"></div>
                         </div>
                         <div class="about_box7"></div>
 
                         <p>CARL HANSEN擅長活用建築中的結構、力學等概念，他的設計經過精密計算，並以簡潔的線條表現出來。不僅如此，他的作品也散發著濃濃的北歐之情和自然主義，「像是Ant Chair、蛋椅、天鵝椅，都是以有機的造型為主。」在形隨機能之餘，取法自然，CARL
                             HANSEN 的作品歷經半個世紀至今依然清新無比，深具吸引力。
                         </p>
-                        <h4>Y</h4>
+                        <h4 class="about_name">Y</h4>
                     </div>
 
                     <div class="about_right2 ">
-                        <figure>
-                            <img src="images/S.jpg" alt="">
-                        </figure>
+                        <div class="about_member_r">
+                            <div class="about_animate_r about_sandra"></div>
+                        </div>
                         <p>La Rambla 從小對藝術求知若渴，相當迷戀抽象畫與雕塑。他的設計不僅貫徹功能性及實用主義，更是大膽地重新組合形式與表現抽象的概念。
                             <br>
                             <br> 他認為家具的線條與細緻的手工藝是該被強調的，並嘗試透過不同的素材創造形態與功能的平衡。La Rambla 的作品相較其他幾位大師，更顯得自由無拘束、極具實驗性質，讓人過目難忘，卻難以仿效。</p>
-                        <h4>S</h4>
+                        <h4 class="about_name">S</h4>
                     </div>
 
 
                     <div class="about_left3">
-                        <figure>
-                            <img src="images/O.jpg" alt="">
-                        </figure>
+                        <div class="about_member_l">
+                            <div class="about_animate_l about_orange"></div>
+                        </div>
 
                         <p>VITRA 像是家具界的藝術家一樣，創作相對稀少珍貴，成為收藏家眼中的夢幻逸品，1973年，他遇見工匠 Niels Vodder，兩人攜手合作，打造出許多在當年製作流程相當困難的作品，替北歐設計定義了全新的當代風格，並推向全世界。
                             <br>
                             <br> 她的知名作品包括：有「 世界上最美的扶手椅 」之稱的 ｢ 45 Chair ｣、充滿原始部落意象的｢ Chieftain's Chair ｣（酋長椅）、｢ Poet Sofa ｣或是｢
                             Pelican Chair ｣（鵜鶘椅）等。
                         </p>
-                        <h4>O</h4>
+                        <h4 class="about_name">O</h4>
                     </div>
 
                     <div class="about_right3">
-                        <figure>
-                            <img src="images/W.jpg" alt="">
-                        </figure>
+                        <div class="about_member_r">
+                            <div class="about_animate_r about_weiwei"></div>
+                        </div>
                         <div class="about_box8"></div>
                         <p>當代建築大師 DE PADOVA，他提倡簡約式的設計風格，為丹麥機能主義的倡導人。「他將自己獨特的建築觀念及見解，帶入到家具、家飾的設計上。」</p>
-                        <h4>W</h4>
+                        <h4 class="about_name">W</h4>
                     </div>
                 </div>
                 <!-- designer end-->
@@ -797,17 +740,16 @@
                     <h3>實體店面</h3>
                     <div class="about_info flex">
                         <figure>
-                            <img src="images/27855179879_0f2427679a_b.jpg" alt="">
+                            <img src="images/about/27855179879_0f2427679a_b.jpg" alt="">
                         </figure>
                         <div class="about_location">
-                            <h4>THE PALETTE家具 中山門市 
+                            <h4>THE PALETTE家具 中山門市
                             </h4>
                             <p>台北市中山北路二段20巷2號1F</p>
                             <p>客服電話 2658-4833</p>
                             <p>營業時間 MON-SAT 11:00-21:00</p>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- store end-->
@@ -858,69 +800,9 @@
                 </div>
                 <!-- policy end-->
 
-                <!-- 下面不要動 -->
             </div>
         </section>
     </div>
 </body>
 
 </html>
-
-
-<!-- <div class="about_left2">
-        <figure>
-            <img src="images/Y1 .jpg" alt="">
-        </figure>
-        <div class="about_box7"></div>
-
-        <p>CARL HANSEN擅長活用建築中的結構、力學等概念，他的設計經過精密計算，並以簡潔的線條表現出來。不僅如此，他的作品也散發著濃濃的北歐之情和自然主義，「像是Ant Chair、蛋椅、天鵝椅，都是以有機的造型為主。」在形隨機能之餘，取法自然，CARL
-            HANSEN 的作品歷經半個世紀至今依然清新無比，深具吸引力。
-        </p>
-        <h4>Y</h4>
-    </div> 
-
-    /* designer 1 */
-
-    .about_left2 {
-        width: 50%;
-        height: 100%;
-    }
-
-    .about_left2 h4 {
-        margin-left: -31%;
-        margin-top: -494px;
-        font-size: 500px;
-        color: #d1c0a5;
-        font-family: 'Playfair Display';
-        font-weight: 700;
-    }
-
-    .about_left2 figure {
-        width: 70%;
-        height: 440px;
-
-    }
-
-    .about_left2 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* object-position: center center; */
-    }
-
-    .about_box7 {
-        background: #d1c0a5;
-        height: 430px;
-        width: 70%;
-        margin-left: 31%;
-        margin-top: -65%;
-    }
-
-    .about_left2 p {
-        width: 70%;
-        margin-top: 5%;
-        text-align: justify;
-        line-height: 20px;
-        font-weight: 400;
-    }
--->
