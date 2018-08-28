@@ -206,6 +206,8 @@ header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100
 .padunlock_icon{-webkit-mask-image:url(../images/icon/padunlock.svg);mask-image:url(../images/icon/padunlock.svg);}
 .menu_iconbar .car_icon{-webkit-mask-image:url(../images/icon/shopping-cart.svg);mask-image:url(../images/icon/shopping-cart.svg);}
 
+nav > a.member_icon{margin: 15px auto 0;display: block;}
+
 .go_top{background: url(../images/icon/next.svg) center no-repeat; background-size: 25px auto; width: 40px;height: 40px;position: fixed;bottom: 30px; right: 30px;transform: rotate(180deg);border-radius: 50%;background-color: rgba(255,255,255,.0);transition: all .5s;cursor: pointer;display: none;}
 .go_top:hover{background-color: rgba(255,255,255,.6);}
 
@@ -275,8 +277,8 @@ span.list_cn{opacity: 0;}
 .footer_service li:hover, .footer_about li:hover, .footer_notice li:hover{ color: #ad776c;}
 .footer_bottom_right > ul{  flex-direction: column;  justify-content: space-between;  margin: 0;}
 .footer_bottom_right figure{ width: 40px; height: 40px; margin-right: 10px; display: inline-block;}
-.footer_bottom_right_icon1{ background: url(images/icon/facebook.svg) no-repeat center center; background-size: cover;}
-.footer_bottom_right_icon2{ background: url(images/icon/instagram.svg) no-repeat center center; background-size: cover;}
+.footer_bottom_right_icon1{ background: url(../images/icon/facebook.svg) no-repeat center center; background-size: cover;}
+.footer_bottom_right_icon2{ background: url(../images/icon/instagram.svg) no-repeat center center; background-size: cover;}
 .footer_bottom_right h4{ font-size: 12px; font-family: 'Roboto'; color: #fff; letter-spacing: 0.01em; line-height: 30px;}
 .footer_bottom_right_mail{ width: 100%; justify-content: space-between; align-items: flex-end; margin-top: 40px;}
 input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border: 1px solid #fff; background: rgba(255, 255, 255, 0); border-radius: 40px;padding: 0; margin: 0 10px 0 0 ; text-align: center;}

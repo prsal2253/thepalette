@@ -63,7 +63,7 @@
 
     /* 篩選第一層 */
     #filter{
-        height: 200px;
+        
         margin-top: 50px;
     }
     .flex{
@@ -76,18 +76,19 @@
         flex-direction: space-between;
     }
     .filter_inner{
-        height: 40vh;
-        width: 100%;
+        height: 0;
+        width: 90%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: #000;
+        overflow: hidden;
     }
     .filter_color{
         height: 30%;
     }
     .filter_item{
-        height: 30%;
+        height: 40%;
     }
     .filter_sbar{
         height: 40%;
@@ -143,7 +144,7 @@
         align-items: center;
     }
     .filter_sbar1, .filter_sbar2{
-        width: 30%;
+        width: 25%;
     }
     .filter_sbar1{
         margin-right: 80px;
@@ -151,7 +152,7 @@
     .slider {
         -webkit-appearance: none;
         width: 100%;
-        height: 5px;
+        height: 3px;
         border-radius: 5px;   
         background: #d3d3d3;
         outline: none;
@@ -171,10 +172,14 @@
     .slider::-webkit-slider-runnable-track{
 
     }
+    .filter_open{
+        height: 30vh;
+    }
+
         </style>
 </head>
 <body>
-    <div id="filter">
+    <div id="filter" class="transition">
         <section>
             <div class="index_conten_flex filter">
                 <ul class="filter_sec1">
@@ -183,21 +188,7 @@
                     <li class="filter_bytime transition"> 依上架順序<figure></figure></li>
                 </ul>
             </div>
-            <div class="index_conten_flex filter_inner">
-                <div class="filter_color flex">
-                    <div class="filter_color_in">
-                        <div class="filter_color1 filter_color_box"></div>
-                        <p>紅色</p>
-                    </div>
-                    <div class="filter_color_in">
-                        <div class="filter_color2 filter_color_box"></div>
-                        <p>粉色</p>
-                    </div>
-                    <div class="filter_color_in">
-                        <div class="filter_color3 filter_color_box"></div>
-                        <p>橘色</p>
-                    </div>
-                </div>
+            <div class="index_conten_flex filter_inner transition">
                 <ul class="filter_item flex">
                     <li>椅 子</li> 
                     <li>桌 子</li> 
@@ -208,10 +199,24 @@
                 </ul>
                 <div class="filter_sbar flex">
                     <div class="filter_sbar1"> <!--寬度-->
-                        <input type="range" class="slider" min="0" max="200" value="" step="50">
+                        <input type="range" class="slider" min="0" max="150" value="" step="50">
                     </div>
                     <div class="filter_sbar2"> <!--高度-->
-                        <input type="range" class="slider">
+                        <input type="range" class="slider" min="0" max="150" value="" step="50">
+                    </div>
+                    <div class="filter_color flex">
+                        <div class="filter_color_in">
+                            <div class="filter_color1 filter_color_box"></div>
+                            <p>紅色</p>
+                        </div>
+                        <div class="filter_color_in">
+                            <div class="filter_color2 filter_color_box"></div>
+                            <p>粉色</p>
+                        </div>
+                        <div class="filter_color_in">
+                            <div class="filter_color3 filter_color_box"></div>
+                            <p>橘色</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -232,6 +237,10 @@
                 "border-radius": "50%"
             }).children().css("color","rgb(240,240,240)");
         });
+
+        $(".filter_filter").click(function(){
+            $(".filter_inner").toggleClass("filter_open")
+        })
     </script>
 </body>
 </html>
