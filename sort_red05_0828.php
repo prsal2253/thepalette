@@ -119,7 +119,7 @@ $product_rs = $mysqli->query($product_sql);
                 <!-- 頁碼 -->
                 <div class="sort_red05_page">
                     <ul>
-                        <a <?= $page==1 ? '' : "href='?page=$page2'" ?><?= http_build_query($build_query) ?>">
+                        <a <?= $page==1 ? "style='display: none'" : "href='?page=$page2'" ?><?= http_build_query($build_query) ?>">
                             <li class="page_prev">
                                 <figure></figure>
                                 PREV
@@ -130,8 +130,8 @@ $product_rs = $mysqli->query($product_sql);
                                 <a <?= $page == $i ? '' : "href='?page=$i'"?>><?= $i ?></a>
                             </li>
                         <?php endfor ?>
-                        <a <?= $page==$total_pages ? '' : "href='?page=$page1'" ?><?= http_build_query($build_query) ?>">
-                            <li class="page_next">
+                        <a <?= $page==$total_pages ? "style='display: none'" : "href='?page=$page1'" ?><?= http_build_query($build_query) ?>">
+                            <li class="page_next" >
                                 <figure></figure>
                                 NEXT
                             </li>
