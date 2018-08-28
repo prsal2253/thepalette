@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index_heard</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
-    <link rel="stylesheet" href="css/product_detail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-</head>
-<body id="heard" class="">
-    <div class="index_top">
+
         <header><h1>palette</h1></header>
         <nav>
             <div class="palette_menu">
@@ -56,15 +42,15 @@
                                 </div>
                                 <div class="collectionsbox_r">
                                     <!-- 01 -->
-                                    <div id="sort01" class="ranking_box selected"><img src="images/39195293794_6055c635a0_k.jpg" alt=""></div>
+                                    <div id="sort01" class="ranking_box selected"><img src="../images/banner/39195293794_6055c635a0_k.jpg" alt=""></div>
                                     <!-- 02 -->
-                                    <div id="sort02" class="ranking_box"><img src="images/40745884310_4b1e901143_b.jpg" alt=""></div>
+                                    <div id="sort02" class="ranking_box"><img src="../images/banner/40745884310_4b1e901143_b.jpg" alt=""></div>
                                     <!-- 03 -->
-                                    <div id="sort03" class="ranking_box"><img src="images/40745889000_96ba023acb_k.jpg" alt=""></div>
+                                    <div id="sort03" class="ranking_box"><img src="../images/banner/40745889000_96ba023acb_k.jpg" alt=""></div>
                                     <!-- 04 -->
-                                    <div id="sort04" class="ranking_box"><img src="images/38924676214_1e6d29ce12_b.jpg" alt=""></div>
+                                    <div id="sort04" class="ranking_box"><img src="../images/banner/38924676214_1e6d29ce12_b.jpg" alt=""></div>
                                     <!-- 05 -->
-                                    <div id="sort05" class="ranking_box"><img src="images/28680134718_346947a0b7_b.jpg" alt=""></div>
+                                    <div id="sort05" class="ranking_box"><img src="../images/banner/28680134718_346947a0b7_b.jpg" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -74,14 +60,14 @@
                             <div class="menu_articlesbox">
                                 <h2>最新專欄</h2>
                                 <a class="menu_articles" href="#">
-                                    <figure><img src="images/BM_2002_TP_1230_WL_4300_mood_rgb_high.jpg" alt=""></figure>
+                                    <figure><img src="../images/banner/BM_2002_TP_1230_WL_4300_mood_rgb_high.jpg" alt=""></figure>
                                     <h3 class="menuarticles_titlebox">
                                         <span class="menuarticles_time">2017 JUN 31</span>
                                         <span class="menuarticles_title">不再盲目追逐流行：藏於細節裡的時尚感。</span>
                                     </h3>
                                 </a>
                                 <a class="menu_articles" href="#">
-                                        <figure><img src="images/BM_2002_TP_1230_WL_4300_mood_rgb_high.jpg" alt=""></figure>
+                                        <figure><img src="../images/banner/BM_2002_TP_1230_WL_4300_mood_rgb_high.jpg" alt=""></figure>
                                         <h3 class="menuarticles_titlebox">
                                             <span class="menuarticles_time">2017 JUN 31</span>
                                             <span class="menuarticles_title">不再盲目追逐流行：藏於細節裡的時尚感。</span>
@@ -95,7 +81,7 @@
                                 <span class="transition">站內搜尋</span>
                                 <div class="search_icon"></div>
                             </a>
-                            <a href="login.html">
+                            <a href="../login.html">
                                     <span class="transition">會員登入</span>
                                     <div class="padlock_icon"></div>
                             </a>
@@ -108,11 +94,11 @@
                             </a>
 
                              -->
-                             <a href="order_list.html">
+                             <a href="../order_list.html">
                                     <span class="transition">會員中心</span>
                                     <div class="member_icon"></div>
                              </a>
-                             <a href="shoppingcar_01.html">
+                             <a href="../shoppingcar_01.html">
                                     <span class="transition">購物車(0)</span>
                                     <div class="car_icon"></div>
                              </a>
@@ -126,7 +112,7 @@
             <div class="car_icon transition"><span>1</span>
             <div class="car_iconhover">
                 <div class="order_listbox">
-                    <figure class="description_20"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
+                    <figure class="description_20"><a href="#"><img src="../images/banner/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
                     <div class="description_70">
                         <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
                         <p>黃色Ｘ1</p>
@@ -136,7 +122,7 @@
                 </div>
 
                 <div class="order_listbox">
-                    <figure class="description_20"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
+                    <figure class="description_20"><a href="#"><img src="../images/banner/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
                     <div class="description_70">
                         <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
                         <p>黃色Ｘ1</p>
@@ -144,7 +130,7 @@
                     </div>
                     <div class="description_10"><div class="icon_garbage"></div></div>
                 </div> 
-                <div class="check_outbox"><a class="check_out" href="shoppingcar_01.html">CHECK OUT</a></div>
+                <div class="check_outbox"><a class="check_out" href="../shoppingcar_01.html">CHECK OUT</a></div>
                
                 <!-- 購物車沒有商品時的狀態 -->
                 <!-- <div class="order_listbox carts_none">
@@ -154,28 +140,17 @@
             </div>
             </div>
 
+            <!-- member icon -->
+            <a href="../order_list.html" class="member_icon"></a>
+
             
-            <div class="menu_list">
+            <!-- <div class="menu_list">
                 <a href="#"><span class="list_en">longin</span><span class="list_cn">會員登入</span></a>
-                <!-- <a href="#"><span class="list_en">longout</span><span class="list_cn">會員登出</span></a> -->
+                <a href="#"><span class="list_en">longout</span><span class="list_cn">會員登出</span></a>
                 <a href="#"><span class="list_en">signup</span><span class="list_cn">會員註冊</span></a>
-            </div>
+            </div> -->
         </nav>
         <div class="go_top"></div>
-    </div>
-    <div class="index_main">
-        <!-- 麵包屑 -->
-        <section  class="bread_crumbs">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">member</a></li>
-                <li>login</li>
-            </ul></section>
-        
-</div>
-<div class="index_footer"></div>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 <script>
     // menu
         $("nav>.palette_menu,nav>.car_icon").click(function(){
@@ -216,4 +191,3 @@
         });
     });
 </script>
-</html>
