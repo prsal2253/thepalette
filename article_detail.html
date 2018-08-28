@@ -92,7 +92,7 @@
     }
 
     .artd_box1 figure {
-        background: url("images/Skærmbillede-2018-07-04-kl.-14.08.04-1024x763.png") no-repeat center bottom;
+        background: url("images/article/Skærmbillede-2018-07-04-kl.-14.08.04-1024x763.png") no-repeat center bottom;
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -110,7 +110,7 @@
         font-size: 33px;
         letter-spacing: 2px;
         line-height: 50px;
-        width: 70%;
+        width: 60%;
     }
 
     /* 文章內容 */
@@ -382,10 +382,10 @@
                     <a href="#">home</a>
                 </li>
                 <li>
-                    <a href="#">product red</a>
+                    <a href="#">article</a>
                 </li>
                 <li>
-                    <a href="#">Swoon Chair Space Copenhagen</a>
+                    <a href="#">article detail</a>
                 </li>
             </ul>
         </section>
@@ -429,17 +429,17 @@
             <p>多功能家具趨勢流行已久，其美觀與實用兼具的特性，成為狹窄空間的救星。無論是能拆解與重組的辦公桌、可摺疊的沙發床、藏在巨型抽屜裡的輪床，都會是值得投資的商品。</p>
 
             <div class="artd_img1">
-                <img src="images/6028_era_lounge_chair_home_2_1.jpg" alt="">
+                <img src="images/article/6028_era_lounge_chair_home_2_1.jpg" alt="">
             </div>
             <h3>02 用壁紙裝飾牆面</h3>
             <p>在裝飾住屋的視覺法則中，「壁紙」絕對名列前茅。當地板已被圖樣壁磚、圖騰地毯給佔據，你可以考慮往牆壁上繼續作裝飾。深沉的壁紙顏色能夠帶給人靜謐幽然的現代感，而亮色的壁紙顏色則能提點出空間的明亮感，當陽光透過窗戶灑進來，那幅自然光景更是美不勝收。</p>
 
             <div class="artd_box4 flex">
                 <div class="artd_img2">
-                    <img src="images/getimage (1).jpg" alt="">
+                    <img src="images/article/getimage(8).jpg" alt="">
                 </div>
                 <div class="artd_img3">
-                    <img src="images/getimage.jpg" alt="">
+                    <img src="images/article/getimage(9).jpg" alt="">
                 </div>
             </div>
 
@@ -582,39 +582,4 @@
             </section>
         </div>
 </body>
-
-<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-<script>
-    // menu
-    $(".palette_menu,.search_icon").click(function () {
-        $(this).toggleClass("menu_active");
-    });
-    // tab
-    $(function () {
-        $(".palette_menubox ul li").mouseover(function () {
-            $(".palette_menubox ul li").removeClass("selected");
-            $(".palette_menubox .ranking_box").removeClass("selected");
-            $(this).addClass("selected");
-            $("#" + $(this).attr("data-id")).addClass("selected");
-        });
-    });
-    //go top
-    $(function () {
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 1620) {
-                $(".go_top").fadeIn(800);
-            } else {
-                $(".go_top").fadeOut(600);
-            };
-        })
-        $('.go_top').click(function () {
-            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ?
-                $('html') : $('body')) : $('html,body');
-            $body.animate({ scrollTop: 0 }, 600);
-            return false;
-        });
-    });
-</script>
-
 </html>
