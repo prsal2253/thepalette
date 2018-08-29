@@ -278,18 +278,17 @@
             margin: -133% 0 0 15%;
         }
         .left02_box_hide {
-            margin: -60% 0 0 -600px;
+            transform: translate(600px,-700px);
             transition: all .8s;
             opacity: 0;
         }
 
         .left02_box_hide img {
-            width: 70%;
-            margin: -15% 0 0 48%;
+            object-fit: contain;
         }
 
         .index03_left02:hover .left02_box_hide {
-            margin: -110% 0 0 -600px;
+            transform: translate(0px,-680px);
             opacity: 1;
         }
         .index03_left02:hover .left02_box_show {
@@ -306,13 +305,38 @@
         .index03_right04:hover .right04_hide_bg{
             margin: -270% 0 0 0;
         }
-        .index03_txt01_right04_hide{
-            margin: -27% 0 0 0;
-            opacity: 0;
-        }
         .index03_right04:hover .index03_txt01_right04_hide{
+            transform: translate(15px,-230px);
             opacity: 1;
         }
+        .index03_txt01_right04_hide{
+            transition: all .8s;
+            transform: translate(550px,-230px);
+            opacity: 0;
+        }
+        .index03_right04:hover .right04_box_hide{
+            transform: translate(0px,-1050px);
+            opacity: 1;
+        }
+        .right04_box_hide{
+            transform: translate(100px,-1020px);
+            transition: all .5s .1s;
+            opacity: 0;
+        }
+        .index03_right04:hover .right04_box_hide img{
+            width: 150%;
+            height: 150%;
+            object-fit: cover;
+        }
+        .right04_box_hide img{
+            width: 140%;
+            height: 140%;
+        }
+        .index03_right04:hover .right04_box_show{
+            transform: translateX(600px);
+            opacity: 0;
+        }
+
         /* right03 hidden */
         .right03_hide_bg{
             background: url(images/banner/leather_bg.jpg) no-repeat center center;
