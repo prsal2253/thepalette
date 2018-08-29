@@ -43,9 +43,6 @@ $product_sql = sprintf("SELECT * FROM  `products_list` $where LIMIT %s, %s ", ($
 //這裡會拿到sql的字串
 $product_rs = $mysqli->query($product_sql);
 
-$p_big = [];
-$p_small = [];
-
 
 ?>
 <?php include 'page_item/head.php'; ?>
@@ -93,16 +90,16 @@ $p_small = [];
 
                 <div class="sort_red05_row flex">
                     <?php while($r = $product_rs->fetch_assoc()): ?>
-                        <div name="product" class="sort_red05_box_s" data-sid="<?= $r['product_sid'] ?>">
+                        <div name="product" class="sort_red05_box_s product_sid_data" data-sid="<?= $r['product_sid'] ?>">
                             <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                             <div class="product_mask transition">
                                 <div class="product_favorate transition"></div>
                                 <div class="product_name_nd_btn">
                                     <div class="product_name">
-                                        <h3 class="product_name_h3"><a href="#"><?= $r['product_name'] ?></a></h3>
+                                        <h3 class="product_name_h3"><a href="#" id="product_name"><?= $r['product_name'] ?></a></h3>
                                     </div>
                                     <div class="product_btn"></div>
-                                    <a href="product_quicklook.php?id=<?= $r['product_sid'] ?>"  class="palette_btn quick_look_palette_btn"
+                                    <a href="product_quicklook.php?id=<?= $r['product_sid'] ?>" class="palette_btn quick_look_palette_btn quick"
                                        data-fancybox
                                        data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
                                    "70vh"}}}'>快速查看</a>
@@ -138,15 +135,8 @@ $p_small = [];
         </section>
     </div>
 </div>
-<script>
-    // console.log($(document.product).serialize());
-    // $('.palette_btn').click(function () {
-    //     $.post('product_quicklook.php',$(document.product).serialize())
-    // };
-
-</script>
-<!-- footer -->
 <div class="index_footer">
+
     <?php include 'page_item/footer.php'; ?>
 </div>
 </body>
