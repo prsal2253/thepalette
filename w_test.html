@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test1</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .infinite-slider {
+            width: 100vw;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            float: left;
+        }
+
+.about_pro2{
+    background-repeat: no-repeat;
+    width: 50%;
+}
+
+
+        .polite {
+            position: relative;
+            width: 100%;
+            display: inline-flex;
+        }
+
+        .inner_wrapper,
+        .scroll_bar {
+            overflow: hidden;
+            height:100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="infinite-slider">
+        <div class="slide">
+            <div class="about_pro1"></div>
+            <img class="about_pro1" src="images/H-brown-chair-09-S.png" alt="">
+        </div>
+        <div class="slide">
+            <img class="about_pro2" src="images/H-bottle-03.png" alt="">
+        </div>
+        <div class="slide">
+            <img class="about_pro2" src="images/H-brown-chair-05.png" alt="">
+        </div>
+        <div class="slide">
+            <img class="about_pro2" src="images/H-red-chair-05.png" alt="">
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script>
+    let slider_ = $(".infinite-slider");
+    slider_.wrapInner(
+        '<div class="inner_wrapper"><div class="scrol--bar"><div class="polite"></div></div></div>'
+    );
+
+    let _clonePolite = $(".polite").clone();
+    _clonePolite.addClass("cloned");
+
+    let scroll_bar = $(".inner_wrapper").find(".scrol--bar");
+
+    scroll_bar.append(_clonePolite);
+
+    let polite = $(".polite");
+
+   
+
+    polite.each((ind, el) => {
+        let _ = $(el);
+        let __item = _.find(".slide");
+        let item_length = __item.length;
+    });
+
+    let pos = 0;
+    let p__w = polite.width();
+
+    function draw() {
+        requestAnimationFrame(draw);
+
+        pos = pos -= 1;
+        polite.css({ left: pos });
+        if (pos < p__w - p__w * 2) {
+            pos = 0;
+        }
+    }
+    draw();
+
+</script>
+
+</html>

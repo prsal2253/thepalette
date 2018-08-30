@@ -47,7 +47,7 @@ a:active 	{ font:15px/18px 'Roboto', 'Noto Sans TC'; color:#000; text-decoration
 /* Photoshop 里设置的间距值/1000＝以 em 为单位的所得值（letter-spacing: Xem） */
 
 /* button */
-button,input[type="button"],input[type="submit"],a.palette_btn{display: block;border: 0px solid #000;border-radius: 20px; text-align: center; color: #fff; font-size: 15px;letter-spacing: .5em;background: #000;line-height: 40px; padding: 0 52px 0 60px;margin: 0 auto;cursor: pointer;text-decoration: none;transition: all .5s}
+button,input[type="button"],input[type="submit"],a.palette_btn{display: block;border: 0px solid #000;border-radius: 20px; text-align: center; color: #fff; font-size: 15px;letter-spacing: .5em;background: #000;line-height: 40px; padding: 0 52px 0 60px;margin: 0 auto;cursor: pointer;text-decoration: none;transition: all .5s;}
 input[type="button"].palette_btn_back,a.palette_btn_back{background-color: #888;}
 button:hover,input[type="button"]:hover,input[type="submit"]:hover,a.palette_btn:hover{background: #444;}
 
@@ -277,13 +277,63 @@ span.list_cn{opacity: 0;}
 .footer_service li:hover, .footer_about li:hover, .footer_notice li:hover{ color: #ad776c;}
 .footer_bottom_right > ul{  flex-direction: column;  justify-content: space-between;  margin: 0;}
 .footer_bottom_right figure{ width: 40px; height: 40px; margin-right: 10px; display: inline-block;}
-.footer_bottom_right_icon1{ background: url(images/icon/facebook.svg) no-repeat center center; background-size: cover;}
-.footer_bottom_right_icon2{ background: url(images/icon/instagram.svg) no-repeat center center; background-size: cover;}
+.footer_bottom_right_icon1{ background: url(../images/icon/facebook.svg) no-repeat center center; background-size: cover;}
+.footer_bottom_right_icon2{ background: url(../images/icon/instagram.svg) no-repeat center center; background-size: cover;}
 .footer_bottom_right h4{ font-size: 12px; font-family: 'Roboto'; color: #fff; letter-spacing: 0.01em; line-height: 30px;}
 .footer_bottom_right_mail{ width: 100%; justify-content: space-between; align-items: flex-end; margin-top: 40px;}
 input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border: 1px solid #fff; background: rgba(255, 255, 255, 0); border-radius: 40px;padding: 0; margin: 0 10px 0 0 ; text-align: center;}
 .footer_bottom_right_send{ width: 20%; height: 40px; background-color: #666; border-radius: 40px; color: #fff; font-size: 14px; letter-spacing: 0.1em; font-family: 'Noto Sans TC'; margin-left: 10px; border: 1px solid #666; padding: 0; margin: 0; font-weight: 300;}
 
+/* footer */
+.filter_sec1 { width: 100%; height: 30px; margin-bottom: 30px;}
+.filter_sec1 li { display: inline-block;  padding: 10px;  font-size: 14px;  font-family: 'Noto Sans TC';
+  line-height: 20px;  letter-spacing: 0.1em;}
+.filter_filter { width: 130px; background-color: #000; border-radius: 40px; color: #fff; margin-right: 10px;  text-align: center;  justify-content: space-around;  align-items: center;}
+.filter_filter:hover { background-color: #666; cursor: pointer;}
+.filter_filter>figure {  width: 20px;  height: 20px; background: url(../images/icon/filter.svg) no-repeat center center;
+  background-size: cover; margin-left: 10px;  float: left;}
+.filter_byprice>figure,
+.filter_bytime>figure { width: 10px; height: 15px; background: url(../images/icon/next.svg) no-repeat center center;
+  background-size: cover; margin: 2px 0 0 4px; float: right;}
+.filter_byprice,
+.filter_bytime { border: 1px solid #999;  border-radius: 40px;}
+.filter_byprice:hover,
+.filter_bytime:hover { background-color: rgb(240, 240, 240); cursor: pointer;}
+#filter { margin-top: 50px;}
+.flex {  display: flex;}
+.filter { width: 100%; height: 100%; flex-direction: column; flex-direction: space-between;}
+.filter_inner { height: 0; width: 100%;  flex-direction: column; justify-content: center; align-items: center;  background-color: #000;overflow: hidden;}
+.filter_color { height: 30%;}
+.filter_item { height: 40%; width: 80%; justify-content: space-between;  align-items: center;}
+.filter_sbar { height: 40%;  width: 80%;}
+.filter_color {  align-items: center; justify-content: center;}
+.filter_color_box {  width: 30px;  height: 30px;  border-radius: 50%;  margin: 60px auto 15px auto;}
+.filter_color_in { margin: 0 0 0 80px;  color: #999;}
+.filter_color1 { background-color: #662424;}
+.filter_color2 { background-color: #ad776c;}
+.filter_color3 { background-color: #a4594a;}
+.filter_item li { margin: 50px 10px 0 0;  padding: 10px 30px;  border-radius: 20px;  border: 1px solid #000;}
+.filter_item p{ color: rgb(240, 240, 240); letter-spacing: 0.3em;  text-align: center;  font-weight: 400;  line-height: 25px;  font-size: 15px;  margin-top: 10px;}
+.filter_item li:hover { border-radius: 20px; border: 1px solid #999;  cursor: pointer;}
+.filter_item figure{  width: 80px;  height: 80px;  margin-top: 10px;}
+.filter_item01 figure{ background: url(../images/icon/filter_chair.svg) no-repeat center center;  background-size: cover;}
+.filter_item02 figure{  background: url(../images/icon/filter_table.svg) no-repeat center center;  background-size: cover;}
+.filter_item03 figure{  background: url(../images/icon/filter_sofa.svg) no-repeat center center;  background-size: cover;}
+.filter_item04 figure{  background: url(../images/icon/filter_shelf.svg) no-repeat center center;
+  background-size: cover;}
+.filter_item05 figure{  background: url(../images/icon/filter_light.svg) no-repeat center center;
+  background-size: cover;}
+.filter_item06 figure{  background: url(../images/icon/filter_deco.svg) no-repeat center center;
+  background-size: cover;}
+.item_choose{ border: 1px solid rgb(240, 240, 240);}
+.filter_sbar {  width: 100%;  justify-content: center;  align-items: center;  padding-top: 20px;}
+.filter_sbar1,
+.filter_sbar2 {  width: 25%;}
+.filter_sbar1 {  margin-right: 80px;}
+.slider {  -webkit-appearance: none;  width: 100%;  height: 3px;  border-radius: 5px;  background: #888;  outline: none;  opacity: 0.7;  -webkit-transition: .2s;  transition: opacity .2s;}
+.slider::-webkit-slider-thumb {  -webkit-appearance: none;  appearance: none;  width: 16px;  height: 16px;  border-radius: 50%;  background: #fff;  cursor: pointer;}
+.sbar1_txt{  padding:20px 0 0 0;  text-align: center;  color: #fff;}
+.filter_open {  height: 45vh;}
 
 
 

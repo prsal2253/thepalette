@@ -54,4 +54,4 @@ table {
 
 * html .clearfix { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-input:focus , select:focus {outline : 0;}
+input:focus , select:focus,button:focus  {outline : 0;}

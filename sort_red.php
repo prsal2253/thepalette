@@ -15,7 +15,7 @@
     <?php include 'sort_red03.php';?>
     <?php include 'sort_red04.php';?>
     <?php include 'sort_red05.php';?>
-    <?php include 'footer.php';?>  
+    <?php include 'page_item/footer.php';?>  
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -46,6 +46,35 @@ $(window).scroll(function() {
         $('.changebox').css('background-color','#df9282');
     }
 });
+
+// filter
+        // 選擇顏色
+        $(".filter_color_box").click(function () {
+            $(this).css({
+                "border": "3px solid #fff",
+                "border-radius": "50%"
+            }).children().css("color", "rgb(240,240,240)");
+        });
+
+        $(".filter_filter").click(function () {
+            $(".filter_inner").toggleClass("filter_open")
+        })
+        //選品項
+        $(".filter_items").click(function(){
+            $(this).toggleClass("item_choose");
+        })
+
+        //顯示range的值
+			function change() {
+  				var value = document.getElementById('range').value ;
+  				document.getElementById('value').innerHTML = value;
+                console.log("#value");
+            }
+            function change2() {
+  				var value = document.getElementById('range2').value ;
+  				document.getElementById('value2').innerHTML = value;
+                console.log("#value");
+            }
 </script>
 </body>
 </html>
