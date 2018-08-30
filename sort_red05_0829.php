@@ -57,7 +57,7 @@ $product_rs = $mysqli->query($product_sql);
 <div class="index_main">
 
     <div id="sort_red05">
-        <section>
+        <section style="background-color: #22394b;">
             <div class="index_conten_flex sort_red05">
                 <ul class="sort_red05_sec1">
                     <a href="/">
@@ -135,6 +135,7 @@ $product_rs = $mysqli->query($product_sql);
         </section>
     </div>
 </div>
+
 <div class="index_footer">
 
     <?php include 'page_item/footer.php'; ?>

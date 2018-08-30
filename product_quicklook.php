@@ -195,7 +195,7 @@ if(isset($_GET['id'])) {
 <div id="product_quicklook">
     <div class="">
             <section class="">
-                <div class="product_quicklook_01">
+                <div class="product_quicklook_01 card" data-sid="<?= $r['product_sid'] ?>">
                     <!-- 左邊 -->
                     <div class="product_quicklook_01_left flex">
                         <div class="product_quicklook_01_topic">
@@ -227,14 +227,15 @@ if(isset($_GET['id'])) {
                             <div class="choose_color color03 transition"></div>
                         </div>
                         <div class="product_quicklook_01_btns flex">
-                            <div class="s_product_quicklook_01_num flex">
-                                <a href="">-</a>
-                                <p>1</p>
-                                <a href="">+</a>
-                            </div>
+                            <select class="qty">
+                                <?php for($i=1; $i<=10;$i++): ?>
+                                    <option value="<?= $i ?>"><?= $i ?></option>
+                                <?php endfor ?>
+                            </select>
                             <button class="add_to_cart"><h5 class="product_quicklook_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                         </div>
-                        <button class="ql_more"><h5 class="product_quicklook_01_h5">了解商品詳情</h5></button>
+                        <button class="ql_more"><a href="product_detail.php" class="product_quicklook_01_h5">了解商品詳情</a></button>
+
                     </div>
                 </div>
             </section>
@@ -257,6 +258,19 @@ crossorigin="anonymous"></script>
             "border": "3px solid #333",
             "border-radius": "50%"
         }).siblings().css("border","");
+    });
+    //購物車功能
+    $('.add_to_cart').click(function(event){
+        var card = $(this).closest('.card');
+        var sid = card.attr('data-sid');
+        var qty = card.find('.qty').val();
+        console.log(`sid: ${sid}, qty: ${qty}`);
+
+        $.get('add_to_cart.php', {sid:sid,qty:qty}, function(data){
+            //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+            console.log(data);
+            changeQty(data);
+        }, 'json');
     });
 </script>
 </body>
