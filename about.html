@@ -700,14 +700,21 @@
             clip: rect(0, 0, 50rem, 0);
         }
 
-        .prev,
-        .next,
-        .counter {
+        .item_36 .prev,
+        .item_36 .next,
+        .item_36 .counter {
             vertical-align: middle;
         }
 
-        .prev,
-        .next {
+        .item_36 .prev:focus,
+        .item_36 .next:focus{
+            border: 0px solid #000;
+            appearance: none;
+            -webkit-appearance: none; 
+        }
+
+        .item_36 .prev,
+        .item_36 .next {
             position: relative;
             display: inline-block;
             height: 5rem;
@@ -715,9 +722,11 @@
             border: 0;
             cursor: pointer;
             background: transparent;
+            appearance: none;
+            -webkit-appearance: none; 
         }
 
-        .prev::before {
+        .item_36 .prev::before {
             content: url("images/icon/arrow_b.svg");
             position: absolute;
             /* top: 50%; */
@@ -728,7 +737,7 @@
             z-index: 1000;
         }
 
-        .next::before {
+        .item_36 .next::before {
             content: url("images/icon/arrow2_b.svg");
             position: absolute;
             /* top: 50%; */
@@ -738,8 +747,8 @@
 
         }
 
-        .prev::after,
-        .next::after {
+        .item_36 .prev::after,
+        .item_36 .next::after {
             position: absolute;
             top: 50%;
             transform: translateY(-50%) translateZ(0);
@@ -751,7 +760,7 @@
             transition: width .3s;
         }
 
-        .next::before {
+        .item_36 .next::before {
             right: 0;
             left: auto;
             border-left-width: .5rem;
@@ -759,7 +768,7 @@
             border-right-width: 0;
         }
 
-        .next::after {
+        .item_36 .next::after {
             right: .5rem;
             left: auto;
         }
@@ -776,8 +785,8 @@
             margin: 0 1rem;
         }
 
-        .about_prev:hover::after,
-        .about_next:hover::after {
+        .item_36 prev:hover::after,
+        .item_36 next:hover::after {
             width: 3.5rem;
         }
 
@@ -973,41 +982,33 @@
                         <h2>POLICY</h2>
                         <h3>服務條款及隱私權政策</h3>
                         <h6>關於個人資料保護，請會員詳細閱讀以下 THE PALETTE家具的隱私權聲明</h6>
-                        <p>THE PALETTE家具為 THE PALETTE家具所經營；為了維護個人隱私權與支持個人資料保護， THE PALETTE家具行謹以下列聲明，向您說明 THE PALETTE家具蒐集個人資料之目的、類別、利用範圍及方式、以及您所得行使之權利等事項；如果您對於
-                            THE PALETTE家具的隱私權聲明、以下相關告知事項、或與個人資料保護有關之相關事項有任何疑問，可以和 THE PALETTE家具客服中心聯絡， THE PALETTE家具將儘快回覆說明。</p>
+                        <p>THE PALETTE家具為 THE PALETTE家具所經營；為了維護個人隱私權與支持個人資料保護， THE PALETTE家具行謹以下列聲明，向您說明 THE PALETTE家具蒐集個人資料之目的、類別、利用範圍及方式、以及您所得行使之權利等事項；如果您對於 THE PALETTE家具的隱私權聲明、以下相關告知事項、或與個人資料保護有關之相關事項有任何疑問，可以和 THE PALETTE家具客服中心聯絡， THE PALETTE家具將儘快回覆說明。</p>
 
                         <h6>適用範圍</h6>
                         <p>THE PALETTE家具隱私權聲明及其所包含之告知事項，僅適用於 THE PALETTE家具所擁有及經營的網站。 THE PALETTE家具網站內可能包含許多連結、或其他合作夥伴及個別開店店家所提供的商品或服務，關於該等連結網站、合作夥伴網站或個別開店店家之網路店家的隱私權聲明及與個人資料保護有關之告知事項，請參閱各該連結網站、合作夥伴網站或個別開店店家之網路店家。</p>
 
                         <h6>個人資料蒐集之目的與類別</h6>
-                        <p>THE PALETTE家具為了提供電子商務服務、售後服務、履行法定或合約義務、保護當事人及相關利害關係人之權益、行銷、客戶管理與服務、以及經營合於營業登記項目或組織章程所定之業務等目的，依照各服務之性質，有可能會蒐集您的姓名、連絡方式(包括但不限於電話、E-MAIL及地址等)、為完成收款或付款所需之資料、ＩＰ位址、及其他得以直接或間接識別使用者身分之個人資料。
-                            此外，為提升服務品質， THE PALETTE家具會依照所提供服務之性質，記錄使用者的IP位址、以及在 THE PALETTE家具相關網站或APP內的瀏覽活動(例如，使用者所使用的軟硬體、所點選的網頁、下載的APP)等資料，但是這些資料僅供作流量分析和網路行為調查，以便於改善
-                            THE PALETTE家具相關網站的服務品質，不會和特定個人相連繫。</p>
+                        <p>THE PALETTE家具為了提供電子商務服務、售後服務、履行法定或合約義務、保護當事人及相關利害關係人之權益、行銷、客戶管理與服務、以及經營合於營業登記項目或組織章程所定之業務等目的，依照各服務之性質，有可能會蒐集您的姓名、連絡方式(包括但不限於電話、E-MAIL及地址等)、為完成收款或付款所需之資料、ＩＰ位址、及其他得以直接或間接識別使用者身分之個人資料。此外，為提升服務品質， THE PALETTE家具會依照所提供服務之性質，記錄使用者的IP位址、以及在 THE PALETTE家具相關網站或APP內的瀏覽活動(例如，使用者所使用的軟硬體、所點選的網頁、下載的APP)等資料，但是這些資料僅供作流量分析和網路行為調查，以便於改善 THE PALETTE家具相關網站的服務品質，不會和特定個人相連繫。</p>
 
                         <h6>個人資料的利用</h6>
-                        <p>THE PALETTE家具所蒐集的足以識別使用者身分的個人資料、消費與交易資料，或日後經您同意而提供之其他個人資料，都僅供 THE PALETTE家具於其內部、依照蒐集之目的進行處理和利用、或為完成提供服務或履行合約義務之必要、或依照相關法令規定或有權主管機關（包括但不限於法院或台灣票據交換所）之命令或要求，否則
-                            THE PALETTE家具不會將足以識別使用者身分的個人資料提供給第三人（包括境內及境外）、或移作蒐集目的以外之使用。THE PALETTE家具會持續保管、處理及利用相關資料。在上開蒐集目的範圍內，本商店會將所蒐集的個人資料，提供予合作廠商（包括但不限提供本服務之91APP、宅配貨運業者或其他）以協助交易完成或終止。若選擇以信用卡方式支付，僅限信用卡持卡人本人使用，且得就此交易資料向發卡銀行、收單行及持卡人照會並確認是否屬實，於核對無誤後付款程序才算完成。</p>
+                        <p>THE PALETTE家具所蒐集的足以識別使用者身分的個人資料、消費與交易資料，或日後經您同意而提供之其他個人資料，都僅供 THE PALETTE家具於其內部、依照蒐集之目的進行處理和利用、或為完成提供服務或履行合約義務之必要、或依照相關法令規定或有權主管機關（包括但不限於法院或台灣票據交換所）之命令或要求，否則 THE PALETTE家具不會將足以識別使用者身分的個人資料提供給第三人（包括境內及境外）、或移作蒐集目的以外之使用。THE PALETTE家具會持續保管、處理及利用相關資料。在上開蒐集目的範圍內，本商店會將所蒐集的個人資料，提供予合作廠商（包括但不限提供本服務之91APP、宅配貨運業者或其他）以協助交易完成或終止。若選擇以信用卡方式支付，僅限信用卡持卡人本人使用，且得就此交易資料向發卡銀行、收單行及持卡人照會並確認是否屬實，於核對無誤後付款程序才算完成。</p>
 
                         <h6>資料安全</h6>
                         <p>THE PALETTE家具將以合於產業標準之合理技術及程序，維護THE PALETTE家具個人資料之安全。</p>
 
                         <h6>資料當事人之權利</h6>
-                        <p>資料當事人可以請求查詢、閱覽本人的個人資料或要求給予複本。若您的個人資料有變更、或發現您的個人資料不正確，可以向THE PALETTE家具要求修改或更正。當蒐集個人資料之目的消失或期限屆滿時，您可要求刪除、停止處理或利用個人資料。但因THE
-                            PALETTE家具執行職務或業務所必須者，不在此限。
+                        <p>資料當事人可以請求查詢、閱覽本人的個人資料或要求給予複本。若您的個人資料有變更、或發現您的個人資料不正確，可以向THE PALETTE家具要求修改或更正。當蒐集個人資料之目的消失或期限屆滿時，您可要求刪除、停止處理或利用個人資料。但因 THE PALETTE 家具執行職務或業務所必須者，不在此限。
                         </p>
 
                         <h6>Cookie</h6>
-                        <p>為了便利使用者， THE PALETTE家具網站可能會讀取儲存在使用者電腦中的cookie資料。使用者可以經由瀏覽器的設定，取消、或限制此項功能，但可能因此無法使用部份網站功能。若您想知道如何取消、或限制此項功能，請與
-                            THE PALETTE家具客服中心聯絡。</p>
+                        <p>為了便利使用者， THE PALETTE家具網站可能會讀取儲存在使用者電腦中的cookie資料。使用者可以經由瀏覽器的設定，取消、或限制此項功能，但可能因此無法使用部份網站功能。若您想知道如何取消、或限制此項功能，請與 THE PALETTE家具客服中心聯絡。</p>
 
                         <h6>Google Analyics(分析)廣告功能</h6>
-                        <p>本服務已安裝 Google Analytics (分析) 廣告功能。本功能僅用於提供 THE PALETTE家具分析廣告投放效益及優化使用流程，如您欲停用 Google Analytics (分析)
-                            廣告功能，建議您可參考Google所提供 不透露資訊的方式以停用該服務。
+                        <p>本服務已安裝 Google Analytics (分析) 廣告功能。本功能僅用於提供 THE PALETTE家具分析廣告投放效益及優化使用流程，如您欲停用 Google Analytics (分析)廣告功能，建議您可參考Google所提供 不透露資訊的方式以停用該服務。
                         </p>
 
                         <h6>影響</h6>
-                        <p>若您不願意提供各服務或交易所要求的相關個人資料予 THE PALETTE家具，並同意 THE PALETTE家具就該等個人資料依法令規定、以及本隱私權聲明及其相關告知內容為相關之個人資料蒐集、處理、利用及國際傳輸，
-                            THE PALETTE家具將尊重您的決定，但依照各該服務之性質或條件，您可能因此無法使用該等服務或完成相關交易， THE PALETTE家具並保留是否同意提供該等相關服務或完成相關交易之權利。</p>
+                        <p>若您不願意提供各服務或交易所要求的相關個人資料予 THE PALETTE家具，並同意 THE PALETTE家具就該等個人資料依法令規定、以及本隱私權聲明及其相關告知內容為相關之個人資料蒐集、處理、利用及國際傳輸，THE PALETTE家具將尊重您的決定，但依照各該服務之性質或條件，您可能因此無法使用該等服務或完成相關交易， THE PALETTE家具並保留是否同意提供該等相關服務或完成相關交易之權利。</p>
 
                         <h6>修訂之權利</h6>
                         <p>THE PALETTE家具有權隨時修訂本隱私權聲明及相關告知事項，並得於修訂後公佈在 THE PALETTE家具網站，不另行個別通知，您可以隨時在 THE PALETTE家具網站上詳閱修訂後的隱私權聲明及相關告知事項。</p>

@@ -47,7 +47,7 @@ a:active 	{ font:15px/18px 'Roboto', 'Noto Sans TC'; color:#000; text-decoration
 /* Photoshop 里设置的间距值/1000＝以 em 为单位的所得值（letter-spacing: Xem） */
 
 /* button */
-button,input[type="button"],input[type="submit"],a.palette_btn{display: block;border: 0px solid #000;border-radius: 20px; text-align: center; color: #fff; font-size: 15px;letter-spacing: .5em;background: #000;line-height: 40px; padding: 0 52px 0 60px;margin: 0 auto;cursor: pointer;text-decoration: none;transition: all .5s}
+button,input[type="button"],input[type="submit"],a.palette_btn{display: block;border: 0px solid #000;border-radius: 20px; text-align: center; color: #fff; font-size: 15px;letter-spacing: .5em;background: #000;line-height: 40px; padding: 0 52px 0 60px;margin: 0 auto;cursor: pointer;text-decoration: none;transition: all .5s;}
 input[type="button"].palette_btn_back,a.palette_btn_back{background-color: #888;}
 button:hover,input[type="button"]:hover,input[type="submit"]:hover,a.palette_btn:hover{background: #444;}
 
