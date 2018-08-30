@@ -1,4 +1,26 @@
+<?php
 
+
+if(!empty($_SESSION['cart'])) {
+    $keys = array_keys($_SESSION['cart']);
+//字面上意思是拿到$_SESSION['cart']所有的key
+    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
+    //IN (這邊要塞sid逗號隔開)
+//黏著符號js叫做join()
+//php叫做implode
+//SELECT * FROM `products_list` WHERE `product_sid` IN (1,2)
+    $rs = $mysqli->query($sql);
+
+    $data = [];
+
+    while ($r = $rs->fetch_assoc()) {
+        $r['qty'] = $_SESSION['cart'][$r['product_sid']];
+
+        $data[$r['product_sid']] = $r;
+    }
+
+}
+?>
         <header><h1>palette</h1></header>
         <nav>
             <div class="palette_menu">
@@ -81,7 +103,7 @@
                                 <span class="transition">站內搜尋</span>
                                 <div class="search_icon"></div>
                             </a>
-                            <a href="../login.html">
+                            <a href="/login.php">
                                     <span class="transition">會員登入</span>
                                     <div class="padlock_icon"></div>
                             </a>
@@ -98,8 +120,8 @@
                                     <span class="transition">會員中心</span>
                                     <div class="member_icon"></div>
                              </a>
-                             <a href="../shoppingcar_01.html">
-                                    <span class="transition">購物車(0)</span>
+                             <a href="../shoppingcar_01.php">
+                                    <span class="transition">購物車</span><span class="qty-badge"></span>
                                     <div class="car_icon"></div>
                              </a>
                         </div>
@@ -109,35 +131,44 @@
             </div>
 
             <!-- cart icon -->
-            <div class="car_icon transition"><span>1</span>
+            <div class="car_icon transition"><span class="qty-badge"></span>
             <div class="car_iconhover">
+                <?php if(!empty($_SESSION['cart'])): ?>
+                    <?php
+                    $total = 0;
+                    foreach($keys as $k):
+                        $r = $data[$k]; // 整筆資料(包含 qty)
+                        $total += $r['price'] * $r['qty'];
+                        ?>
                 <div class="order_listbox">
-                    <figure class="description_20"><a href="#"><img src="../images/banner/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
+                    <figure class="description_20"><a href="#"><img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>"></a></figure>
                     <div class="description_70">
-                        <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                        <p>黃色Ｘ1</p>
-                        <p>$20,000</p>
+                        <a href="#" class="product_name"><?= $r['product_name'] ?></a>
+                        <p>Ｘ<?= $r['qty'] ?></p>
+                        <p>$<?= $r['price'] ?></p>
                     </div>
                     <div class="description_10"><div class="icon_garbage"></div></div>
                 </div>
+                <?php endforeach; ?>
 
-                <div class="order_listbox">
-                    <figure class="description_20"><a href="#"><img src="../images/banner/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                    <div class="description_70">
-                        <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                        <p>黃色Ｘ1</p>
-                        <p>$20,000</p>
-                    </div>
-                    <div class="description_10"><div class="icon_garbage"></div></div>
-                </div> 
-                <div class="check_outbox"><a class="check_out" href="../shoppingcar_01.html">CHECK OUT</a></div>
-               
-                <!-- 購物車沒有商品時的狀態 -->
-                <!-- <div class="order_listbox carts_none">
+<!--                <div class="order_listbox">-->
+<!--                    <figure class="description_20"><a href="#"><img src="../images/banner/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>-->
+<!--                    <div class="description_70">-->
+<!--                        <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>-->
+<!--                        <p>黃色Ｘ1</p>-->
+<!--                        <p>$20,000</p>-->
+<!--                    </div>-->
+<!--                    <div class="description_10"><div class="icon_garbage"></div></div>-->
+<!--                </div> -->
+                <div class="check_outbox"><a class="check_out" href="../shoppingcar_01.php">CHECK OUT</a></div>
+
+                <?php else: ?><!-- 購物車沒有商品時的狀態 -->
+                 <div class="order_listbox carts_none">
                         <h3>購物車目前沒有任何商品</h3>
-                </div> -->
-   
+                </div>
+                <?php endif ?>
             </div>
+
             </div>
 
             <!-- member icon -->
@@ -190,4 +221,31 @@
         return false;
         });
     });
+
+//    購物車功能區塊
+    var changeQty = function(obj){
+        //這個函式丟一個物件進來
+        var total = 0;
+        for(var s in obj){
+
+            total += obj[s];
+        }
+        $('.qty-badge').text(total);
+    };
+
+    
+    $.get('add_to_cart.php', function(data){
+        changeQty(data);
+    }, 'json');
+
+    // $('.icon_garbage').click(function(){
+    //     var tr = $(this).closest('.order_listbox');
+    //     var sid = tr.attr('data-sid');
+    //
+    //     $.get('add_to_cart.php', {sid:sid}, function(data){
+    //         tr.remove();//要等ajax回來才可以做刪除動作
+    //         changeQty(data);
+    //         calTotal();
+    //     }, 'json');
+    // });
 </script>
