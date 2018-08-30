@@ -14,13 +14,11 @@
         #index03 {
             margin: 50px 0 150px 0;
         }
-
         .index03_left,
         .index03_right {
             flex-direction: column;
             width: 50%;
         }
-
         .index03_400 {
             width: 100%;
             height: 400px;
@@ -216,11 +214,11 @@
             margin-left: 0;
         }
 
-        .index03_txt02_show, .index03_txt01_show, .index03_txt01_right04_show, .index03_txt01_right03_show{
+        .index03_txt02_show, .index03_txt01_show, .index03_txt01_right04_show, .index03_txt01_right03_show, .index03_txt01_left05_show{
             transition: all .3s .2s;
         }
 
-        .index03_right01:hover .index03_txt02_show, .index03_left02:hover .index03_txt01_show, .index03_right04:hover .index03_txt01_right04_show, .index03_right03:hover .index03_txt01_right03_show{
+        .index03_right01:hover .index03_txt02_show, .index03_left02:hover .index03_txt01_show, .index03_right04:hover .index03_txt01_right04_show, .index03_right03:hover .index03_txt01_right03_show, .index03_left05:hover .index03_txt01_left05_show{
             opacity: 0;
         }
 
@@ -362,6 +360,30 @@
         .index03_right03:hover .right03_box_hide{
             transform: translate(100px,-700px);
         }
+        /* left05 */ 
+        .left05_hide_bg{
+            background-color: #c2704f; 
+            width: 100%;
+            height: 110%;
+            margin: -300% 0 0 -100%;
+        }
+        .index03_left05:hover .left05_hide_bg{
+            margin: -300% 0 0 0;
+        }
+        .index03_left05:hover .left05_box_show{
+            transform: translateX(-600px);
+        }
+        .left05_box_hide{
+            transform: translate(20px,-270%);
+        }
+        .left05_box_hide img{
+            width:100%;
+            object-fit: contain;
+            margin-left: 1px;
+        }
+        .index03_left05:hover .left05_box_hide{
+            transform: translate(0px,-182%);
+        }
 
     </style>
 </head>
@@ -406,7 +428,7 @@
                 <div class="index03_left03 index03_400"></div>
                 <div class="index03_left04 index03_400"></div>
                 <div class="index03_left05 index03_800">
-                    <div class="index03_txt01">
+                    <div class="index03_txt01 index03_txt01_left05_show">
                         <div class="index03_txt01_left">
                             <div class="index03_deco"></div>
                             <h2 class="index03_h2">Slogan
@@ -416,10 +438,25 @@
                             <h2 class="index03_h2">05</h2>
                         </div>
                     </div>
-                    <div class="index03_left05_box">
+                    <div class="index03_left05_box left05_box_show transition">
                         <img src="images/H-blue-chair-11-side.png" alt="">
                     </div>
-                    
+                    <!-- hidden parts -->
+                    <div class="index03_txt01 index03_txt01_left05_hide">
+                        <div class="index03_txt01_left">
+                            <div class="index03_deco"></div>
+                            <h2 class="index03_h2">Slogan
+                                <br>Goes Here</h2>
+                        </div>
+                        <div class="index03_txt01_right">
+                            <h2 class="index03_h2">05</h2>
+                        </div>
+                    </div>
+                    <div class="index03_left05_box left05_box_hide">
+                        <img src="images/H-light-09.png" alt="">
+                    </div>
+                    <div class="left05_hide_bg transition"></div>
+
                 </div>
             </div>
             <div class="index03_right flex">
