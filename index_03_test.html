@@ -337,7 +337,7 @@
 
         /* right03 hidden */
         .right03_hide_bg{
-            background: url(images/banner/leather_bg.jpg) no-repeat center center;
+            background: url(images/banner/wood_bg.jpg) no-repeat center center;
             background-size: cover;
             width: 100%;
             height: 110%;
@@ -351,15 +351,29 @@
             transform: translateY(-300px);
         }
         .right03_box_hide{
-            transform: translate(650px,-700px);
+            width:130%;
+            transform: translate(-450px,-550px);
+            opacity: 0;
         }
         .right03_box_hide img{
-            width: 120%;
-            transform: rotateY(180deg);
+            width: 90%;
+            object-fit: cover;
+            margin-top: -50px;
         }
         .index03_right03:hover .right03_box_hide{
-            transform: translate(100px,-700px);
+            transform: translate(-90px,-550px);
+            opacity: 1;
         }
+        .index03_txt01_right03_hide{
+            transform: translate(0px,-900%);
+            opacity: 0;
+            transition: all .5s .2s;
+        }
+        .index03_right03:hover .index03_txt01_right03_hide{
+            transform: translate(0px,-820%);
+            opacity: 1;
+        }
+
         /* left05 */ 
         .left05_hide_bg{
             background-color: #c2704f; 
@@ -372,9 +386,11 @@
         }
         .index03_left05:hover .left05_box_show{
             transform: translateX(-600px);
+            opacity: 0;
         }
         .left05_box_hide{
             transform: translate(20px,-270%);
+            opacity: 0;
         }
         .left05_box_hide img{
             width:100%;
@@ -383,6 +399,15 @@
         }
         .index03_left05:hover .left05_box_hide{
             transform: translate(0px,-182%);
+            opacity: 1;
+        }
+        .index03_txt01_left05_hide{
+            transition: all .8s ;
+            opacity: 0
+        }
+        .index03_left05:hover .index03_txt01_left05_hide{
+            transform: translateY(-230%);
+            opacity: 1;
         }
 
     </style>
@@ -431,11 +456,11 @@
                     <div class="index03_txt01 index03_txt01_left05_show">
                         <div class="index03_txt01_left">
                             <div class="index03_deco"></div>
-                            <h2 class="index03_h2">Slogan
-                                <br>Goes Here</h2>
+                            <h2 class="index03_h2">Earth
+                                <br>Tone</h2>
                         </div>
                         <div class="index03_txt01_right">
-                            <h2 class="index03_h2">05</h2>
+                            <h2 class="index03_h2">09</h2>
                         </div>
                     </div>
                     <div class="index03_left05_box left05_box_show transition">
@@ -445,11 +470,11 @@
                     <div class="index03_txt01 index03_txt01_left05_hide">
                         <div class="index03_txt01_left">
                             <div class="index03_deco"></div>
-                            <h2 class="index03_h2">Slogan
-                                <br>Goes Here</h2>
+                            <h2 class="index03_h2">Energetic
+                                <br>Orange</h2>
                         </div>
                         <div class="index03_txt01_right">
-                            <h2 class="index03_h2">05</h2>
+                            <h2 class="index03_h2">10</h2>
                         </div>
                     </div>
                     <div class="index03_left05_box left05_box_hide">
@@ -475,7 +500,7 @@
                             <h2 class="index03_h2">01</h2>
                         </div>
                     </div>
-                    <!-- hidden parts -->
+                    <!-- right01 hidden parts -->
                     <div class="index03_txt02 txt02_hide">
                         <div class="index03_txt02_top">
                             <div class="index03_deco"></div>
@@ -502,8 +527,8 @@
                     <div class="index03_txt01 index03_txt01_right03_show" style="margin-top: 70px">
                         <div class="index03_txt01_left">
                             <div class="index03_deco" style="background-color: #000"></div>
-                            <h2 class="index03_h2" style="color: #000">Slogan
-                                <br>Goes Here</h2>
+                            <h2 class="index03_h2" style="color: #000">Noble
+                                <br>Marble</h2>
                         </div>
                         <div class="index03_txt01_right">
                             <h2 class="index03_h2" style="color: #000">05</h2>
@@ -511,16 +536,16 @@
                     </div>
                     <!-- right03 hidden -->
                      <div class="index03_right03_box right03_box_hide transition">
-                        <img src="images/H-other-chair-10.png" alt="" class="index03_right03_box_img1">
+                        <img src="images/H-black-table-01.png" alt="" class="index03_right03_box_img1">
                     </div>
                     <div class="index03_txt01 index03_txt01_right03_hide" style="margin-top: 70px">
                         <div class="index03_txt01_left">
-                            <div class="index03_deco" style="background-color: #000"></div>
-                            <h2 class="index03_h2" style="color: #000">Slogan
-                                <br>Goes Here</h2>
+                            <div class="index03_deco"></div>
+                            <h2 class="index03_h2">Bald
+                                <br>Texture</h2>
                         </div>
                         <div class="index03_txt01_right">
-                            <h2 class="index03_h2" style="color: #000">05</h2>
+                            <h2 class="index03_h2">06</h2>
                         </div>
                     </div>
                     <div class="right03_hide_bg transition"></div>
@@ -532,22 +557,22 @@
                     <div class="index03_txt01 index03_txt01_right04_show" style="margin-top: 70px">
                         <div class="index03_txt01_left">
                             <div class="index03_deco"></div>
-                            <h2 class="index03_h2">Slogan
-                                <br>Goes Here</h2>
+                            <h2 class="index03_h2">Soft
+                                <br>Pink</h2>
                         </div>
                         <div class="index03_txt01_right">
-                            <h2 class="index03_h2">05</h2>
+                            <h2 class="index03_h2">07</h2>
                         </div>
                     </div>
                     <!-- hidden parts -->
                     <div class="index03_txt01 index03_txt01_right04_hide" style="margin-top: 70px">
                         <div class="index03_txt01_left">
                             <div class="index03_deco"></div>
-                            <h2 class="index03_h2">Slogan
-                                <br>Goes Here</h2>
+                            <h2 class="index03_h2">Burgundy
+                                <br>Red</h2>
                         </div>
                         <div class="index03_txt01_right">
-                            <h2 class="index03_h2">05</h2>
+                            <h2 class="index03_h2">08</h2>
                         </div>
                     </div>
                     <div class="index03_right04_box right04_box_hide">
