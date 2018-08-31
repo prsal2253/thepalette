@@ -234,7 +234,8 @@ if(isset($_GET['id'])) {
                             </select>
                             <button class="add_to_cart"><h5 class="product_quicklook_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                         </div>
-                        <button class="ql_more"><a href="product_detail.php" class="product_quicklook_01_h5">了解商品詳情</a></button>
+                        <button class="ql_more"><a href="product_detail.php" target="_top" class="product_quicklook_01_h5">了解商品詳情</a></button>
+                                                                        <!-- target屬性規定在何處打開連接文檔                       -->
 
                     </div>
                 </div>
@@ -260,7 +261,7 @@ crossorigin="anonymous"></script>
         }).siblings().css("border","");
     });
     //購物車功能
-    $('.add_to_cart').click(function(event){
+    $('.add_to_cart').click(function(){
         var card = $(this).closest('.card');
         var sid = card.attr('data-sid');
         var qty = card.find('.qty').val();
