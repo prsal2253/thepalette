@@ -228,7 +228,7 @@ if(isset($_GET['id'])) {
                         </div>
                         <div class="product_quicklook_01_btns flex">
                             <select class="qty">
-                                <?php for($i=1; $i<=10;$i++): ?>
+                                <?php for($i=1; $i<=5;$i++): ?>
                                     <option value="<?= $i ?>"><?= $i ?></option>
                                 <?php endfor ?>
                             </select>
@@ -270,6 +270,7 @@ crossorigin="anonymous"></script>
         $.get('add_to_cart.php', {sid:sid,qty:qty}, function(data){
             //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
             console.log(data);
+            alert('商品已加入購物車囉！啾咪～');
             changeQty(data);
         }, 'json');
     });

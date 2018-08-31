@@ -94,10 +94,16 @@ if (!empty($_SESSION['cart'])) {
                             </div>
                             <div class="description_5"></div>
                             <div class="description_10">黃色</div>
-                            <div class="description_10 product-item-qty"
-                                 data-qty="<?= $r['qty'] ?>"><?= $r['qty'] ?></div>
-                            <div class="description_10 product-item-price"
-                                 data-price="<?= $r['price'] ?>"><?= $r['price'] ?></div>
+                            <div class="description_10 product-item-qty"  data-qty="<?= $r['qty'] ?>">
+                                <select class="qty-sel">
+                                    <?php for($i=1; $i<=5; $i++): ?>
+                                        <option value="<?=$i?>"><?=$i?></option>
+                                    <?php endfor; ?>
+                                </select>
+                            </div>
+                            <div class="description_10 product-item-price" data-price="<?= $r['price'] ?>">
+                                <?= $r['price'] ?>
+                            </div>
                             <div class="description_10">
                                 <div class="icon_love"></div>
                             </div>
@@ -248,6 +254,11 @@ if (!empty($_SESSION['cart'])) {
         var total_qty = 0;
         var items = $('.product-item');
 
+        if (items.length == 0) {
+            location.href = location.href;  //如果沒抓到頁面就會重新讀取
+            return;
+        }
+
         items.each(function () {    // 抓到所有項目，所以用each迴圈下去跑，每跑到一個就抓它價格跟數量乘起來
             total += $(this).find('.product-item-price').attr('data-price') * $(this).find('.product-item-qty').attr('data-qty');
             //這裡應該做型別轉換parseInt轉成數字，但是乘法會轉換
@@ -258,7 +269,40 @@ if (!empty($_SESSION['cart'])) {
         $('#total-price').text(dallorCommas(total));
         $('#total-qty').text(total_qty);
     };
-    calTotal();// 一進來就呼叫calTotal
+
+    //---------------------------------------------------------------------
+
+
+    var p_items = $('.product-item');
+
+    if (p_items.length) {
+        calTotal();// 一進來就呼叫calTotal
+        }
+
+    //    一開始設定正確的數量
+    p_items.each(function () {
+        var sel = $(this).find('.qty-sel');
+        sel.val($(this).find('.product-item-qty').attr('data-qty'));
+    });
+    //    這裏開始選項變更數量
+    p_items.find('.qty-sel').change(function () {
+        var sid = $(this).closest('.product-item').attr('data-sid');
+        //這裡拿到的數量是用戶調整完product-item的數量
+        var qty = $(this).val();
+        //當qty改變時要拿到裡面的值 這邊的this指的是.qty-sel
+        $(this).closest('.product-item').find('.product-item-qty').attr('data-qty',qty);
+
+        // console.log($(this).closest('.product-item').find('.product-item-qty').attr('data-qty',qty));
+
+
+        $.get('add_to_cart.php', {sid: sid,qty:qty}, function (data) {
+            // changeQty(data);
+            calTotal();//改變選單數量再去呼叫它calTotal，讓他重算
+        }, 'json');
+    });
+
+
+
 
 
     //        購物車垃圾桶

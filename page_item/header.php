@@ -140,7 +140,7 @@ if(!empty($_SESSION['cart'])) {
                         $r = $data[$k]; // 整筆資料(包含 qty)
                         $total += $r['price'] * $r['qty'];
                         ?>
-                <div class="order_listbox">
+                <div class="order_listbox" data-sid="<?= $k ?>">
                     <figure class="description_20"><a href="#"><img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>"></a></figure>
                     <div class="description_70">
                         <a href="#" class="product_name"><?= $r['product_name'] ?></a>
@@ -237,6 +237,7 @@ if(!empty($_SESSION['cart'])) {
         changeQty(data);
     }, 'json');
 
+
     $('.icon_garbage').click(function(e){
         var tr = $(this).closest('.order_listbox');
         var sid = tr.attr('data-sid');
@@ -245,9 +246,8 @@ if(!empty($_SESSION['cart'])) {
         $.get('add_to_cart.php', {sid:sid}, function(data){
             tr.remove();//要等ajax回來才可以做刪除動作
             changeQty(data);
-            calTotal();
         }, 'json');
+
     });
 
-    changeQty(data);
 </script>
