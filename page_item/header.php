@@ -103,7 +103,7 @@ if(!empty($_SESSION['cart'])) {
                                 <span class="transition">站內搜尋</span>
                                 <div class="search_icon"></div>
                             </a>
-                            <a href="/login.php">
+                            <a href="/thepalette/thepalette/login.php">
                                     <span class="transition">會員登入</span>
                                     <div class="padlock_icon"></div>
                             </a>
@@ -116,11 +116,11 @@ if(!empty($_SESSION['cart'])) {
                             </a>
 
                              -->
-                             <a href="../order_list.html">
+                             <a href="/thepalette/thepalette/order_list.html">
                                     <span class="transition">會員中心</span>
                                     <div class="member_icon"></div>
                              </a>
-                             <a href="../shoppingcar_01.php">
+                             <a href="/thepalette/thepalette/shoppingcar_01.php">
                                     <span class="transition">購物車</span><span class="qty-badge"></span>
                                     <div class="car_icon"></div>
                              </a>
@@ -160,7 +160,7 @@ if(!empty($_SESSION['cart'])) {
 <!--                    </div>-->
 <!--                    <div class="description_10"><div class="icon_garbage"></div></div>-->
 <!--                </div> -->
-                <div class="check_outbox"><a class="check_out" href="../shoppingcar_01.php">CHECK OUT</a></div>
+                <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette//shoppingcar_01.php">CHECK OUT</a></div>
 
                 <?php else: ?><!-- 購物車沒有商品時的狀態 -->
                  <div class="order_listbox carts_none">
@@ -233,19 +233,21 @@ if(!empty($_SESSION['cart'])) {
         $('.qty-badge').text(total);
     };
 
-    
     $.get('add_to_cart.php', function(data){
         changeQty(data);
     }, 'json');
 
-    // $('.icon_garbage').click(function(){
-    //     var tr = $(this).closest('.order_listbox');
-    //     var sid = tr.attr('data-sid');
-    //
-    //     $.get('add_to_cart.php', {sid:sid}, function(data){
-    //         tr.remove();//要等ajax回來才可以做刪除動作
-    //         changeQty(data);
-    //         calTotal();
-    //     }, 'json');
-    // });
+    $('.icon_garbage').click(function(e){
+        var tr = $(this).closest('.order_listbox');
+        var sid = tr.attr('data-sid');
+        e.stopPropagation();
+        //    氣泡事件
+        $.get('add_to_cart.php', {sid:sid}, function(data){
+            tr.remove();//要等ajax回來才可以做刪除動作
+            changeQty(data);
+            calTotal();
+        }, 'json');
+    });
+
+    changeQty(data);
 </script>
