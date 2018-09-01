@@ -7,7 +7,7 @@
                         <h3 class="product_detail_02_h3">居家布置提案</h3>
                     </div>
                     <div class="product_detail_02_topic_right">
-                        <h4 class="product_detail_02_h4"><span style="font-family:'Roboto'; font-size: 12px; color:#fff; text-decoration: line-through">$43,700 </span><span style="font-family: Georgia">$</span>38,970</h4>
+                        <h4 class="product_detail_02_h4"><span style="font-family: Georgia">$</span>38,970</h4>
                     </div>                   
                 </div>
                 <ul class="product_detail_02_group">
