@@ -177,7 +177,7 @@ header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100
 
 .car_icon{width: 40px;height: 40px;opacity: 1;cursor: pointer;background: url(../images/icon/shopping-cart.svg) center no-repeat;position: relative;background-size: 80% auto;margin: 0 auto;  }
 .car_icon a{display: block;text-decoration: none;}
-.car_icon span{width: 18px;height: 18px;position: absolute;top:0;right: 0;border-radius: 50%;background-color: #df9282;color: #fff;font-size: 12px;text-align: center;line-height: 18px;transition: all .5s;letter-spacing: 0;}
+span.cart_number{width: 18px;height: 18px;position: absolute;top:2px;right: -3px;border-radius: 50%;background-color: #df9282;color: #fff;font-size: 12px;text-align: center;line-height: 18px;transition: all .5s;letter-spacing: 0;}
 .car_icon:hover span{background-color: #e54728;}
 .car_icon p{font-size: 12px;line-height: 15px;color: #888;}
 .car_icon.menu_active .car_iconhover{opacity: 1;right: 50px;}
@@ -194,8 +194,9 @@ header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100
 /* menu_iconbar */
 .menu_iconbar{position: absolute;right: 5%;bottom: 30px;display: inline-flex;}
 .menu_iconbar>a{margin: 0 0 0 5px;display: block;text-decoration: none;}
-.menu_iconbar>a span{display: block;width: 100%; opacity: 0; color: #df9282;font-size: 12px;text-align: center;margin: 0 0 5px 0;}
-.menu_iconbar>a:hover span{opacity: 1;}
+.menu_iconbar>a span.icontitle{display: block;width: 100%; opacity: 0; color: #df9282;font-size: 12px;text-align: center;margin: 0 0 5px 0;}
+.menu_iconbar>a:hover span.icontitle{opacity: 1;}
+.menu_iconbar>a span.cart_number{ top: 25px;right: 7px;z-index: 2;}
 
 .search_icon,.member_icon,.padlock_icon,.padunlock_icon,.menu_iconbar .car_icon{width: 40px;height: 40px;opacity: 1;cursor: pointer;mask-size: 80% auto;-webkit-mask-size: 80% auto;mask-repeat: no-repeat;-webkit-mask-repeat: no-repeat;margin: 0 auto;    background:#fff;mask-position: center center;-webkit-mask-position: center center;transition: all .5s;}
 .search_icon:hover,.padunlock_icon:hover,.padlock_icon:hover,.member_icon:hover,.menu_iconbar .car_icon:hover{background:#df9282;}
@@ -204,7 +205,8 @@ header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100
 .member_icon{-webkit-mask-image: url(../images/icon/member_center.svg);mask-image: url(../images/icon/member_center.svg);}
 .padlock_icon{-webkit-mask-image:url(../images/icon/padlock.svg);mask-image:url(../images/icon/padlock.svg);}
 .padunlock_icon{-webkit-mask-image:url(../images/icon/padunlock.svg);mask-image:url(../images/icon/padunlock.svg);}
-.menu_iconbar .car_icon{-webkit-mask-image:url(../images/icon/shopping-cart.svg);mask-image:url(../images/icon/shopping-cart.svg);}
+.menu_iconbar .car_icon{-webkit-mask-image:url(../images/icon/shopping-cart.svg);mask-image:url(../images/icon/shopping-cart.svg);z-index: 1;}
+
 
 nav > a.member_icon{margin: 15px auto 0;display: block;}
 
