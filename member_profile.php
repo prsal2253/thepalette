@@ -9,6 +9,7 @@ if (empty($_SESSION['user'])) {
 
     header('Location: ./login.php');
 };
+echo ($_SESSION['user']['gender']);
 ?>
 <?php include 'page_item/head.php';?>
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ if (empty($_SESSION['user'])) {
             <div class="member_title"><h2>member profile</h2><span>會員資料</span></div>
             <div class="member_conten">
                 <div class="item_02">
-                <form action="">
+                    <form name="form1" method="post" action="" onsubmit="return checkForm()">
                     <!-- 會員帳號 -->
                     <div class="item_02_conten">
                         <div class="item_02_conten_l">會員帳號</div>
@@ -65,12 +66,20 @@ if (empty($_SESSION['user'])) {
                     <div class="item_02_conten">
                             <div class="item_02_conten_l">會員名稱</div>
                             <div class="item_02_conten_r">
-                                <input class="member_name" type="text" placeholder="<?= $_SESSION['user']['name'] ?>">
+                                <input class="member_name" type="text" name="name"
+                                       placeholder="<?=$_SESSION['user']['name'] =="" ? "請輸入會員名稱" : $_SESSION['user']['name']?>">
                                 <!-- 需判斷兩者只能選填一個預設為Ｍ -->
+                                <?php if (($_SESSION['user']['gender']) ===1): ?>
                                 <div class="radio_box">
                                     <input type="radio" name="six" value="" checked><span class="radio_content">先生</span></div>
                                 <div class="radio_box">
                                     <input type="radio" name="six" value=""><span class="radio_content">小姐</span></div>
+                                <?php else: ?>
+                                    <div class="radio_box">
+                                        <input type="radio" name="six" value=""><span class="radio_content">先生</span></div>
+                                    <div class="radio_box">
+                                        <input type="radio" name="six" value="" checked><span class="radio_content">小姐</span></div>
+                                <?php endif ?>
                             </div>
                     </div>
 
@@ -78,7 +87,8 @@ if (empty($_SESSION['user'])) {
                     <div class="item_02_conten">
                             <div class="item_02_conten_l">聯絡電話</div>
                             <div class="item_02_conten_r">
-                            <input type="text" placeholder="請輸入聯絡電話">
+                            <input type="text" name="mobile"
+                                   placeholder="<?=$_SESSION['user']['mobile'] =="" ? "請輸入聯絡電話" : $_SESSION['user']['mobile']?>">
                              </div>
                     </div>
 
@@ -89,19 +99,22 @@ if (empty($_SESSION['user'])) {
                                 <div class="palette_select member_input40">
                                     <!--------------    地址選項S ------------->
                                     <div id="twzipcode">
-                                        <div data-role="county"
-                                             data-name="表單名稱"
-                                             data-value="預設值"
+                                        <div name="address_city"
+                                             data-role="county"
+                                             data-name="address_city"
+                                             data-value="<?= $_SESSION['user']['address_city'] ?>"
                                              data-style="樣式名稱">
                                         </div>
-                                        <div data-role="district"
-                                             data-name="district[]"
-                                             data-value="大安區"
+                                        <div name="address_side"
+                                             data-role="district"
+                                             data-name="address_side[]"
+                                             data-value="<?= $_SESSION['user']['address_side'] ?>"
                                              data-style="district-style">
                                         </div>
-                                        <div data-role="zipcode"
-                                             data-name="zipcode"
-                                             data-value="160"
+                                        <div name="address_post"
+                                             data-role="zipcode"
+                                             data-name="address_post"
+                                             data-value="<?= $_SESSION['user']['address_post'] ?>"
                                              data-style="zipcode-style">
                                         </div>
                                     </div>
@@ -121,7 +134,8 @@ if (empty($_SESSION['user'])) {
 <!--                                <p class="address_num">103</p>-->
 
                                     <!--------------    地址選項E -------------->
-                                <input type="text" class="margin_top" placeholder="請輸入地址">
+                                <input type="text" class="margin_top" name="address"
+                                       placeholder="<?=$_SESSION['user']['address'] =="" ? "請輸入地址" : $_SESSION['user']['address']?>">
                             </div>
                     </div>
                     <!-- 生日 -->
@@ -129,7 +143,7 @@ if (empty($_SESSION['user'])) {
                             <div class="item_02_conten_l">會員生日</div>
                             <div class="item_02_conten_r">
                                 <div class="palette_select member_input40">
-                                    <select class="sel_year" rel="years" name="year" ></select>
+                                    <select class="sel_year" rel="years" name="year"></select>
                                 </div>
                                 <div class="palette_select member_input40 member_input25">
                                     <select class="sel_month" rel="month" name="month"></select>
@@ -176,6 +190,7 @@ if (empty($_SESSION['user'])) {
             });
             $.ms_DatePicker();
         });
+
         (function($){
             $.extend({
                 ms_DatePicker: function (options) {
@@ -188,6 +203,7 @@ if (empty($_SESSION['user'])) {
                         DayText: "<?= $_SESSION['user']['day'] ?>",
                         FirstValue: 0
                     };
+
                     var opts = $.extend({}, defaults, options);
                     var $YearSelector = $(opts.YearSelector);
                     var $MonthSelector = $(opts.MonthSelector);
