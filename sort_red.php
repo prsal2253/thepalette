@@ -50,10 +50,7 @@ $(window).scroll(function() {
 // filter
         // 選擇顏色
         $(".filter_color_box").click(function () {
-            $(this).css({
-                "border": "3px solid #fff",
-                "border-radius": "50%"
-            }).children().css("color", "rgb(240,240,240)");
+            $(this).toggleClass("toggle_color");
         });
 
         $(".filter_filter").click(function () {
