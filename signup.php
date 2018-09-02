@@ -106,6 +106,7 @@ $pageName = 'register';
             </div>
     </section>
 </div>
+<!--    年月日選項S -->
 <script>
     $(function () {
         $.ms_DatePicker({
@@ -218,6 +219,7 @@ $pageName = 'register';
         });
     })(jQuery);
 </script>
+    <!--    年月日選項E -->
 <script>
 
     function checkForm() {

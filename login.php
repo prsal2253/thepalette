@@ -7,7 +7,7 @@ $pageName = 'login';
 
 if(isset($_POST['email']) and isset($_POST['password'])) {
 
-    $sql = sprintf("SELECT `member_sid`, `name`, `gender`, `email`, `password`, `mobile`, `address`, `year`, `month`, `day`, `activated`  FROM `members` WHERE `email`='%s' AND `password`='%s'",
+    $sql = sprintf("SELECT `member_sid`, `name`, `gender`, `email`, `password`, `mobile`, `address_city`, `address_side`, `address_post`, `address`, `year`, `month`, `day`, `activated`  FROM `members` WHERE `email`='%s' AND `password`='%s'",
 //    比對帳號密碼一不一樣用SELECT，WHERE這欄要等於什麼，用這兩個條件下去找
     $mysqli->escape_string($_POST['email']),($_POST['password']));
 //        這邊escape_string是代表填表單去掉$_POST['email']單引號，只是準備字串，password不用escape_string如果編碼過前面就要加sha1
@@ -20,6 +20,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
         $msg_type = 'success';
         $msg_info = '登入成功';
         $_SESSION['user'] = $result->fetch_assoc();
+
 //       直接把$result的值塞給它$_SESSION['user']，就會有上面的資料
 //        其實正常情況下寫程式都習慣會用fetch_array()，因為它是最通用的使用方式，但有些時候如果你需要將一大筆輸出的資料轉換成JSON時，fetch_array()就會顯得有點累贅了…使用fetch_assoc()就可以獲得比較精簡的資料陣列。
     } else {
