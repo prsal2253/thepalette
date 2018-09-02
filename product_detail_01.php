@@ -47,11 +47,15 @@
                         <div class="choose_color color03 transition"></div>
                     </div>
                     <div class="product_detail_01_btns flex">
-                        <div class="s_product_detail_01_num flex">
-                            <a href="">-</a>
-                            <p>1</p>
-                            <a href="">+</a>
-                        </div>
+                        <div class="s_product_detail_01_num palette_select">
+                                <select>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                </select>
+                            </div>
                         <button class="add_to_cart"><h5 class="product_detail_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                     </div>
                 </div>
