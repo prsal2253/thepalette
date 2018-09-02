@@ -175,6 +175,9 @@ echo ($_SESSION['user']['gender']);
     </section>
 </div>
 <div class="index_footer"></div>
+    <script>
+
+    </script>
     <!--    地址選項S -->
     <script>$('#twzipcode').twzipcode();</script>
     <!--    地址選項E -->
