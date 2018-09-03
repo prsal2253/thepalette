@@ -9,7 +9,7 @@ if (empty($_SESSION['user'])) {
 
     header('Location: ./login.php');
 };
-print_r($_SESSION['user']['member_sid']);
+//print_r($_SESSION['user']['member_sid']);
 ?>
 <?php include 'page_item/head.php'; ?>
 <!DOCTYPE html>
@@ -79,7 +79,7 @@ print_r($_SESSION['user']['member_sid']);
                                 <div class="item_02_conten_l">會員名稱</div>
                                 <div class="item_02_conten_r">
                                     <input class="member_name" type="text" name="name"
-                                           placeholder="<?= $_SESSION['user']['name'] == "" ? "請輸入會員名稱" : $_SESSION['user']['name'] ?>">
+                                           placeholder="請輸入會員名稱" value=" <?= $_SESSION['user']['name'] ?>">
                                     <!-- 需判斷兩者只能選填一個預設為Ｍ -->
                                     <?php if (($_SESSION['user']['gender']) === 0): ?>
                                         <div class="radio_box">
@@ -104,7 +104,7 @@ print_r($_SESSION['user']['member_sid']);
                                 <div class="item_02_conten_l">手機號碼</div>
                                 <div class="item_02_conten_r">
                                     <input type="text" name="mobile" class="mobile"
-                                           placeholder="<?= $_SESSION['user']['mobile'] == "" ? "請輸入手機號碼" : $_SESSION['user']['mobile'] ?>">
+                                           placeholder="請輸入手機號碼" value="<?= $_SESSION['user']['mobile'] ?>">
                                     <small id="mobileHelp" class="">請符合手機格式</small>
                                 </div>
                             </div>
@@ -117,18 +117,21 @@ print_r($_SESSION['user']['member_sid']);
                                         <!--------------    地址選項S ------------->
                                         <div id="twzipcode">
                                             <div name="address_city"
+                                                 placeholder="請選擇城市"
                                                  data-role="county"
                                                  data-name="address_city"
                                                  data-value="<?= $_SESSION['user']['address_city'] ?>"
                                                  data-style="樣式名稱">
                                             </div>
                                             <div name="address_side"
+                                                 placeholder="請選擇地區"
                                                  data-role="district"
                                                  data-name="address_side"
                                                  data-value="<?= $_SESSION['user']['address_side'] ?>"
                                                  data-style="district-style">
                                             </div>
                                             <div name="address_post"
+                                                 placeholder="郵遞區號"
                                                  data-role="zipcode"
                                                  data-name="address_post"
                                                  data-value="<?= $_SESSION['user']['address_post'] ?>"
@@ -152,7 +155,7 @@ print_r($_SESSION['user']['member_sid']);
 
                                         <!--------------    地址選項E -------------->
                                         <input type="text" class="margin_top" name="address"
-                                               placeholder="<?= $_SESSION['user']['address'] == "" ? "請輸入地址" : $_SESSION['user']['address'] ?>">
+                                               placeholder="請輸入街路巷地址" value="<?= $_SESSION['user']['address'] ?>">
                                     </div>
                                 </div>
                                 <!-- 生日 -->

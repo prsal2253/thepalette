@@ -245,7 +245,7 @@ if(!empty($_SESSION['cart'])) {
         //    氣泡事件
         $.get('add_to_cart.php', {sid:sid}, function(data){
             tr.remove();//要等ajax回來才可以做刪除動作
-            changeQty(data);
+            window.changeQty(data);
         }, 'json');
 
     });
