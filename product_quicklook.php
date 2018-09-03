@@ -271,6 +271,8 @@ crossorigin="anonymous"></script>
             //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
             console.log(data);
             alert('商品已加入購物車囉！啾咪～');
+            //點上面購物車數量會變
+            window.parent.changeQty(data);
             changeQty(data);
         }, 'json');
     });

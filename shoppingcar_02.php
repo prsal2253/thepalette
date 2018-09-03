@@ -1,3 +1,9 @@
+<?php
+
+require __DIR__ . '/__db_connect.php';
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-    <script src="jquery.twzipcode.js"></script>
 </head>
 <body id="shoppingcar" class="shoppingcar_02">
     <div class="index_top">
