@@ -101,16 +101,19 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                             <p class="description_25">訂單編號：000000<?= $order['orders_sid'] ?></p>
                             <p class="description"><span class="description_mark">訂單狀態：信用卡一次付清(已付款)</span></p>
                         </div>
-                        <?php foreach($my_details as $dt):
+                        <?php
+                        foreach($my_details as $dt):
                             if($order['orders_sid']==$dt['order_sid']):
                                 ?>
-                        <div class="order_listbox">
+                        <div class="order_listbox product-item">
                                 <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_40">
                                     <div class="sale_icon"><span>活動商品</span></div>
                                     <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
-                                <div class="description">黃色 x <?= $dt['quantity'] ?> <?= $dt['price'] ?></div>
+                                <div class="description">黃色</div>
+                            <div class="description_10 product-item-qty"  data-qty="<?= $dt['quantity'] ?>"> x <?= $dt['quantity'] ?></div>
+                            <div class="description_10 product-item-price" data-price=" <?= $dt['price'] ?>"><?= $dt['price'] ?></div>
                         </div>
                             <?php
                             endif;
@@ -120,8 +123,8 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
 <!--                        </div>-->
                         <div class="order_listbox order_listbox_tatle">
                             <div>
-                                <p>總共 <span class="description_mark">2</span> 件商品，訂單金額</p>
-                                <h3 class="product_price"><span>＄</span>39,280</h3>
+                                <p>總共 <span class="description_mark" id="total-qty"></span> 件商品，訂單金額</p>
+                                <h3 class="product_price" id="total-price"></h3>
                                 <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
                             </div>
 
@@ -145,6 +148,27 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
     </div>
     </section>
 </div>
+    <script>
+
+        var dallorCommas = function (n) {    // 這是加$跟三三為單位中間加逗號
+            return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        };
+
+            var total = 0;// 一開始設定0
+            var total_qty = 0;
+            var items = $('.product-item');
+
+            items.each(function () {    // 抓到所有項目，所以用each迴圈下去跑，每跑到一個就抓它價格跟數量乘起來
+                total += $(this).find('.product-item-price').attr('data-price') * $(this).find('.product-item-qty').attr('data-qty');
+                //這裡應該做型別轉換parseInt轉成數字，但是乘法會轉換
+                total_qty += parseInt($(this).find('.product-item-qty').attr('data-qty'));
+                // total_qty += $(this).find('.product-item-qty').attr('data-qty')*1;
+
+            });
+            $('#total-price').text(dallorCommas(total));
+            $('#total-qty').text(total_qty);
+
+    </script>
 <div class="index_footer"></div>
 </body>
 </html>
