@@ -16,7 +16,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a class="palette_btn quick_look_palette_btn" data-fancybox data-src="#modal"  class="btn btn-primary">快速查看</a>                               </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                         </div>
                     <!-- 一組商品 -->
@@ -29,7 +29,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a class="palette_btn quick_look_palette_btn" data-fancybox data-src="#modal"  class="btn btn-primary">快速查看</a>                               </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                     <!-- 一組商品 -->
@@ -42,7 +42,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a class="palette_btn quick_look_palette_btn" data-fancybox data-src="#modal"  class="btn btn-primary">快速查看</a>                                </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                     <!-- 一組商品 -->
@@ -55,7 +55,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a class="palette_btn quick_look_palette_btn" data-fancybox data-src="#modal"  class="btn btn-primary">快速查看</a>                              </div>
+                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                 </div>
