@@ -91,14 +91,14 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                                 <option>預約相過</option>
                                 </select>
                         </div>
-                        <p class="description">總共<span class="description_mark">32</span>筆訂單</p>
+                        <p class="description">總共<span class="description_mark" id="total_howmuch">32</span>筆訂單</p>
                     </div>
 
 
                     <!-- 一張訂單 -->
                     <?php foreach($my_orders as $order): ?>
 
-                    <div class="item_02_conten">
+                    <div class="item_02_conten howmuch">
                         <div class="order_listbox">
                             <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
                             <p class="description_25">訂單編號：000000<?= $order['orders_sid'] ?></p>
@@ -128,9 +128,9 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                             <div>
                                 <p>總共 <span class="description_mark" id="total-qty"></span> 件商品，訂單金額</p>
                                 <h3 class="product_price" id="total-price"></h3>
-                                <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
+                                <a href="#" class="palette_btn palette_btncolor2"
+                                 onclick="location.href='order_detail.php?id=<?= $order["orders_sid"] ?>'">訂單明細</a>
                             </div>
-
                         </div>
                     </div>
 
@@ -166,10 +166,11 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                 //這裡應該做型別轉換parseInt轉成數字，但是乘法會轉換
                 total_qty += parseInt($(this).find('.product-item-qty').attr('data-qty'));
                 // total_qty += $(this).find('.product-item-qty').attr('data-qty')*1;
-
             });
+
             $('#total-price').text(dallorCommas(total));
             $('#total-qty').text(total_qty);
+            $('#total_howmuch').text($( ".howmuch").length);
 
     </script>
 <div class="index_footer"></div>
