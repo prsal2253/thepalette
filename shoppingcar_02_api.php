@@ -52,8 +52,8 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         $_POST['sender_post'],
         $_POST['sender_address'],
         $_POST['invoice'],
-        $_POST['transport'],
-        $_POST['pay'],
+        $_SESSION['sighup_transport'],
+        $_SESSION['sighup_pay'],
         $_POST['reservation_sid']
     );
 
@@ -68,7 +68,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         $order_sid = $mysqli->insert_id; //取得最近新增資料的主鍵
 
         $od_sql = "INSERT INTO `orders_details`(
-                    `orders_sid`, `product_sid`, `price`, `quantity`
+                    `order_sid`, `product_sid`, `price`, `quantity`
                     ) VALUES (?,?,?,?)";
         $od_stmt = $mysqli->prepare($od_sql);
 

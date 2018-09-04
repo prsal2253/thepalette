@@ -138,22 +138,6 @@ if (empty($_SESSION['user'])) {
                                                  data-style="zipcode-style">
                                             </div>
                                         </div>
-
-                                        <!--                                    <select class=" ">-->
-                                        <!--                                    <option>請選擇城市</option>-->
-                                        <!--                                    <option>台北市</option>-->
-                                        <!--                                    </select>-->
-                                        <!--                                </div>-->
-                                        <!--                                <div class="palette_select member_input40">-->
-                                        <!--                                        <select class=" ">-->
-                                        <!--                                        <option>請選擇地區</option>-->
-                                        <!--                                        <option>大同區</option>-->
-                                        <!--                                        </select>-->
-                                        <!--                                </div>-->
-                                        <!-- 需判斷地區顯示相對應的郵遞區號 -->
-                                        <!--                                <p class="address_num">103</p>-->
-
-                                        <!--------------    地址選項E -------------->
                                         <input type="text" class="margin_top" name="address"
                                                placeholder="請輸入街路巷地址" value="<?= $_SESSION['user']['address'] ?>">
                                     </div>

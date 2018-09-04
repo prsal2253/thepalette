@@ -155,26 +155,26 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                         <div class="item_02_conten_r">
                             <div class="palette_select member_input40">
                                 <!--------------    地址選項S ------------->
-                                <div class="twzipcode">
+                                <div id="twzipcode">
                                     <div name="orderer_city"
                                          placeholder="請選擇城市"
                                          data-role="county"
                                          data-name="address_city"
-                                         data-value=""
+                                         data-value="<?= $_SESSION['user']['address_city'] ?>"
                                          data-style="樣式名稱">
                                     </div>
                                     <div name="orderer_side"
                                          placeholder="請選擇地區"
                                          data-role="district"
                                          data-name="address_side"
-                                         data-value=""
+                                         data-value="<?= $_SESSION['user']['address_side'] ?>"
                                          data-style="district-style">
                                     </div>
                                     <div name="orderer_post"
                                          placeholder="郵遞區號"
                                          data-role="zipcode"
                                          data-name="address_post"
-                                         data-value=""
+                                         data-value="<?= $_SESSION['user']['address_post'] ?>"
                                          data-style="zipcode-style">
                                     </div>
                                 </div>
@@ -226,7 +226,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                         <div class="item_02_conten_r">
                             <div class="palette_select member_input40">
                                 <!--------------    地址選項S ------------->
-                                <div class="twzipcode">
+                                <div id="twzipcode2">
                                     <div name="sender_city"
                                          placeholder="請選擇城市"
                                          data-role="county"
@@ -245,7 +245,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                                          placeholder="郵遞區號"
                                          data-role="zipcode"
                                          data-name="address_post"
-                                         data-value="<"
+                                         data-value=""
                                          data-style="zipcode-style">
                                     </div>
                                 </div>
@@ -318,7 +318,8 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
 
 </body>
 <!--    地址選項S -->
-<script>$('.twzipcode').twzipcode();</script>
+<script>$('#twzipcode').twzipcode();</script>
+<script>$('#twzipcode2').twzipcode();</script>
 <!--    地址選項E -->
 <script>
     //點結帳傳值

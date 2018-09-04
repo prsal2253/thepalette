@@ -198,7 +198,7 @@ if (!empty($_SESSION['cart'])) {
                        title="付款說明">?</a></div>
                 <div class="order_listbox">
                     <div class="radio_box">
-                        <input type="radio" name="pay" value="1"><span class="radio_content" checked>信用卡一次付清</span></div>
+                        <input type="radio" name="pay" value="1" checked><span class="radio_content" >信用卡一次付清</span></div>
                     <div class="radio_box">
                         <input type="radio" name="pay" value="2"><span class="radio_content">信用卡分期付款</span><span
                                 data-fancybox data-src="#modal" class="description_mark">分期銀行</span>
@@ -226,7 +226,7 @@ if (!empty($_SESSION['cart'])) {
                        title="付款說明">?</a></div>
                 <div class="order_listbox" >
                     <div class="radio_box">
-                        <input type="radio" name="transport" value="1"><span class="radio_content" checked>到店取貨<span
+                        <input type="radio" name="transport" value="1" checked><span class="radio_content" >到店取貨<span
                                     class="description_mark">＄0</span></span></div>
                     <div class="radio_box">
                         <input type="radio" name="transport" value="2"><span class="radio_content">宅配到府<span

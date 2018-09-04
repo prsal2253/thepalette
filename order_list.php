@@ -1,3 +1,45 @@
+<?php
+require __DIR__ . '/__db_connect.php';
+
+
+if(!isset($_SESSION['user'])){
+    header("Location: index_.php");
+    exit;
+}
+
+// 先取得會員的訂單資料 (半年內)
+$t = date("Y-m-d H:i:s", time()-180*24*60*60);
+$sql = sprintf("SELECT * FROM `orders` WHERE member_sid=%s AND order_date>'%s' ORDER BY orders_sid DESC",
+    $_SESSION['user']['member_sid'], $t);
+
+$rs = $mysqli->query($sql);
+$my_orders = $rs->fetch_all(MYSQLI_ASSOC);
+
+$order_sids = [];
+foreach($my_orders as $v){
+    $order_sids[] = $v['orders_sid'];
+}
+
+
+$sql2 = sprintf("SELECT d.*, p.product_name FROM order_details d JOIN products_list p ON d.product_sid=p.product_sid WHERE d.order_sid IN (%s)",
+    implode(',', $order_sids)
+);
+
+
+//$sql2 = sprintf("SELECT d.*, p.bookname FROM order_details d JOIN products p ON d.product_sid=p.sid WHERE d.orders_sid IN (%s)",
+//    implode(',', $order_sids)
+//);
+
+
+
+$rs2 = $mysqli->query($sql2);
+
+$my_details = $rs2->fetch_all(MYSQLI_ASSOC);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

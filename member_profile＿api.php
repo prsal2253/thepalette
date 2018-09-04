@@ -43,4 +43,4 @@ echo '<br>';
 $stmt->close();
 
 ?>
-<!--UPDATE `members` SET `name`="213123123", `gender`="1", `mobile`="123123123",`address_city`="澎湖縣", `address_side`="馬公市", `address_post`="880", `address`="走陸路" , `year`="2011", `month`="2",`day`="14" WHERE `member_sid`="46"-->
+
