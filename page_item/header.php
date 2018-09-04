@@ -143,7 +143,7 @@ if(!empty($_SESSION['cart'])) {
                 <div class="order_listbox" data-sid="<?= $k ?>">
                     <figure class="description_20"><a href="#"><img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>"></a></figure>
                     <div class="description_70">
-                        <a href="#" class="product_name"><?= $r['product_name'] ?></a>
+                        <a href="#" class="product_name"><?= $r1['product_name'] ?></a>
                         <p>Ｘ<?= $r['qty'] ?></p>
                         <p>$<?= $r['price'] ?></p>
                     </div>
@@ -186,6 +186,7 @@ if(!empty($_SESSION['cart'])) {
     // menu
         $("nav>.palette_menu,nav>.car_icon").click(function(){
             $(this).toggleClass("menu_active");
+
         });
     // tab
     $(function(){
@@ -221,6 +222,9 @@ if(!empty($_SESSION['cart'])) {
         return false;
         });
     });
+
+
+
 
 //    購物車功能區塊
     var changeQty = function(obj){

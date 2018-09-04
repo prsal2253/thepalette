@@ -94,11 +94,12 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
 
                     <!-- 一張訂單 -->
                     <?php foreach($my_orders as $order): ?>
+
                     <div class="item_02_conten">
                         <div class="order_listbox">
                             <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
                             <p class="description_25">訂單編號：000000<?= $order['orders_sid'] ?></p>
-                            <p class="description"><span class="description_mark">訂單狀態：款項確認</span></p>
+                            <p class="description"><span class="description_mark">訂單狀態：信用卡一次付清(已付款)</span></p>
                         </div>
                         <?php foreach($my_details as $dt):
                             if($order['orders_sid']==$dt['order_sid']):
@@ -111,6 +112,9 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                                 </div>
                                 <div class="description">黃色 x <?= $dt['quantity'] ?> <?= $dt['price'] ?></div>
                         </div>
+                            <?php
+                            endif;
+                        endforeach; ?>
 <!--                        <div class="order_listbox">-->
 <!--                            <p class="more_product">還有1件商品</p>-->
 <!--                        </div>-->
@@ -123,9 +127,7 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
 
                         </div>
                     </div>
-                        <?php
-                        endif;
-                        endforeach; ?>
+
                     <?php endforeach; ?>
                     <!-- 頁碼 -->
                     <div class="page_num">
