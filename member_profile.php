@@ -199,7 +199,7 @@ if (empty($_SESSION['user'])) {
 
     function checkForm() {
         console.log( $(document.form1).serialize() );
-        $.post('api_.php', $(document.form1).serialize(), function(data){
+        $.post('member_profile＿api.php', $(document.form1).serialize(), function(data){
 
         }, 'json');
 
