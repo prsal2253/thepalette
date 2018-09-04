@@ -11,7 +11,7 @@ $pageName = 'register';
 <?php include 'page_item/head.php';?>
     <style>
         small{
-            display: none;
+            display: none;font-size: 13px;line-height: 13px;margin: 12px 0 0 0;padding: 0 0 0 20px; color: #df9282; letter-spacing: .2em;
         }
     </style>
 </head>

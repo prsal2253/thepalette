@@ -47,7 +47,7 @@ if(!empty($_SESSION['cart'])) {
                         <div id="all" class="ranking_box selected">
                             <div class="all_box">
                                 <h2>最新活動</h2>
-                                <img src="images/blaise_desktop_1.jpg" alt=""></div>
+                                <img src="../images/banner/blaise_desktop_1.jpg" alt=""></div>
                         </div>
                         <!-- product -->
                         <div class="ranking_box" id="collections">
@@ -131,7 +131,7 @@ if(!empty($_SESSION['cart'])) {
             </div>
 
             <!-- cart icon -->
-            <div class="car_icon transition"><span class="qty-badge"></span>
+            <div class="car_icon transition"><span class="cart_number qty-badge"></span>
             <div class="car_iconhover">
                 <?php if(!empty($_SESSION['cart'])): ?>
                     <?php

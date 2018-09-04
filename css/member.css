@@ -154,7 +154,8 @@ a.description_q:hover{background: #ccc;}
 .item_13 .item_02 {width: 100%;}
 .item_13box{width: 100%;padding: 25px; background:rgba(247, 247, 247, .95);line-height:36px;font-size: 13px;}
 .item_13box>div{height: 50vh;overflow-y: auto;}
-.item_13 .item_02 .item_02_conten input[type="submit"],.item_13 .item_02 .item_02_conten input[type="button"]{margin: 35px auto 10px;}
+.item_13 .item_02 .item_02_conten input[type="submit"],.item_13 .item_02 .item_02_conten input[type="button"],
+.item_13 .item_02 .item_02_conten a.palette_btn{margin: 35px auto 10px;}
 
 /* item_14完成頁 */
 .item_14 .item_02 {width: 60%}

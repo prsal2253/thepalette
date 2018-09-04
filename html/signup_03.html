@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>signup_03</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/member.css">
 </head>
 <body id="signup" class="signup_03">
     <div class="index_top">
@@ -43,6 +43,21 @@
                 </div>
             </div>
         </div>
+
+        <div class="index_conten ">
+                <div class="item_02">
+                    <div class="item_14box">
+                        <p>會員 <span class="description_mark"><?= $_SESSION['sighup_name'] ?></span> 先生/小姐 您好</p>
+                        <p>&nbsp;</p>
+                        <p>感謝您註冊成為 the palette 購物網的會員，</p>
+                        <p>我們已發送一封認證信至您所填寫的 <span class="description_mark"><?= $_SESSION['sighup_email'] ?></span> 信箱中，</p>
+                        <p>請查看信箱完成認證，開始享受購物的樂趣！</p>
+                    </div>
+                    <div class="item_02_conten">
+                        <a href="header.php" class="palette_btn">開始購物</a>
+                    </div>
+                </div>
+            </div>
     </section>
 </div>
 <div class="index_footer"></div>
