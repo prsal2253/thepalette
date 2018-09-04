@@ -57,6 +57,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
             <div class="step_box step_box_in"><span>03</span><span>訂購完成</span></div>
         </div>
     </section>
+    <form name="form1" method="post" action="" onsubmit="return checkForm()">
     <section class="item_12 item_13 item_17 item_19">
         <div class="index_conten ">
             <div class="item_02">
@@ -120,18 +121,26 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                     </div>
                     <div class="order_listbox order_listbox_tatle item_conten_button">
                         <div>
-                            <input type="button" class="palette_btn_back" value="訂單詳細">
-                            <input type="submit" value="前往預約">
+                            <input type="submit" class="palette_btn_back"  onclick="location.href='order_list.php'" value="訂單詳細">
+                            <input type="submit" onclick="location.href='reservation_01.php'" value="前往預約">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    </form>
 
 </div>
 <script>
-    
+    //點結帳傳值
+    function checkForm() {
+        $.post('shoppingcar_03_api.php', $(document.form1).serialize(), function(data){
+
+        }, 'json');
+        return false;
+    };
+
 
     //      即時計算總價
     var dallorCommas = function (n) {    // 這是加$跟三三為單位中間加逗號
