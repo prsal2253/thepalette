@@ -40,8 +40,8 @@
                         </div>
                         <div class="order_listbox order_listbox_tatle item_conten_button">
                                 <div>
-                                    <input type="button" class="palette_btn_back" value="訂單詳細">
-                                    <input type="submit" value="繼續購物">
+                                    <input type="button"onclick="location.href='order_list.php'" class="palette_btn_back" value="訂單詳細">
+                                    <input type="submit"onclick="location.href='reservation_02.php'" value="繼續購物">
                                 </div>
                          </div>
                     </div>

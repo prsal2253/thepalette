@@ -82,7 +82,7 @@
                         <p>消費者可來電洽詢本公司客服進行申請。</p></div>
                 </div>
             <div class="item_02_conten">
-                <input type="submit" value="我已閱讀預約注意事項">
+                <input type="submit" onclick="location.href='reservation_02.php'" value="我已閱讀預約注意事項">
             </div>
             </div>
         </div>

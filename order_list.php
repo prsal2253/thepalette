@@ -3,7 +3,7 @@ require __DIR__ . '/__db_connect.php';
 
 
 if(!isset($_SESSION['user'])){
-    header("Location: index_.php");
+    header("Location: login.php");
     exit;
 }
 
@@ -131,6 +131,7 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                                 <a href="#" class="palette_btn palette_btncolor2"
                                  onclick="location.href='order_detail.php?id=<?= $order["orders_sid"] ?>'">訂單明細</a>
                             </div>
+
                         </div>
                     </div>
 

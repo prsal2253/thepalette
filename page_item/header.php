@@ -161,7 +161,7 @@ if(!empty($_SESSION['cart'])) {
 <!--                    </div>-->
 <!--                    <div class="description_10"><div class="icon_garbage"></div></div>-->
 <!--                </div> -->
-                <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette//shoppingcar_01.php">CHECK OUT</a></div>
+                <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette/shoppingcar_01.php">CHECK OUT</a></div>
 
                 <?php else: ?><!-- 購物車沒有商品時的狀態 -->
                  <div class="order_listbox carts_none">
