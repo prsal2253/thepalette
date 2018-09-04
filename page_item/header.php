@@ -55,11 +55,12 @@ if(!empty($_SESSION['cart'])) {
                                 <h2>商品分類</h2>
                                 <div class="collectionsbox_l">
                                         <ul>
-                                            <li class="selected" data-id="sort01"><a href="#">紅橘粉 系列</a></li>
-                                            <li data-id="sort02"><a href="#">藍綠黃 系列</a></li>
-                                            <li data-id="sort03"><a href="#">黑白灰 系列</a></li>
-                                            <li data-id="sort04"><a href="#">大地色 系列</a></li>
-                                            <li data-id="sort05"><a href="#">材質 系列</a></li>
+                                            <li class="selected" data-id="sort01"><a href="/thepalette/thepalette/sort_red05_0905.php">紅橘粉 系列</a></li>
+                                            <li data-id="sort02"><a href="/thepalette/thepalette/sort_yellow05_0905.php">藍綠黃 系列</a></li>
+                                            <li data-id="sort03"><a href="/thepalette/thepalette/sort_white05_0905.php">黑白灰 系列</a></li>
+                                            <li data-id="sort04"><a href="/thepalette/thepalette/sort_side05_0905.php">大地色 系列</a></li>
+                                            <li data-id="sort05"><a href="/thepalette/thepalette/sort_s05_0905.php">材質 系列</a></li>
+
                                         </ul>
                                 </div>
                                 <div class="collectionsbox_r">
@@ -103,23 +104,23 @@ if(!empty($_SESSION['cart'])) {
                                 <span class="transition">站內搜尋</span>
                                 <div class="search_icon"></div>
                             </a>
-                            <a href="/thepalette/thepalette/login.php">
-                                    <span class="transition">會員登入</span>
-                                    <div class="padlock_icon"></div>
-                            </a>
-                            <!-- 登出 -->
-                            <!-- 
-
-                            <a href="#">
-                                    <span class="transition">會員登出</span>
-                                    <div class="padunlock_icon"></div>
-                            </a>
-
-                             -->
-                             <a href="/thepalette/thepalette/order_list.html">
+                            <?php if(isset($_SESSION['user'])): ?>
+                                <!-- 登出 -->
+                                <a href="/thepalette/thepalette/logout.php">
+                                        <span class="transition">會員登出</span>
+                                        <div class="padunlock_icon"></div>
+                                </a>
+                                <a href="/thepalette/thepalette/order_list.php">
                                     <span class="transition">會員中心</span>
                                     <div class="member_icon"></div>
-                             </a>
+                                </a>
+                            <?php else: ?>
+                            <a href="/thepalette/thepalette/login.php" >
+                                <span class="transition">會員登入</span>
+                                <div class="padlock_icon"></div>
+                            </a>
+
+                            <?php endif; ?>
                              <a href="/thepalette/thepalette/shoppingcar_01.php">
                                     <span class="transition">購物車</span><span class="qty-badge"></span>
                                     <div class="car_icon"></div>
@@ -160,7 +161,7 @@ if(!empty($_SESSION['cart'])) {
 <!--                    </div>-->
 <!--                    <div class="description_10"><div class="icon_garbage"></div></div>-->
 <!--                </div> -->
-                <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette//shoppingcar_01.php">CHECK OUT</a></div>
+                <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette/shoppingcar_01.php">CHECK OUT</a></div>
 
                 <?php else: ?><!-- 購物車沒有商品時的狀態 -->
                  <div class="order_listbox carts_none">
@@ -186,6 +187,7 @@ if(!empty($_SESSION['cart'])) {
     // menu
         $("nav>.palette_menu,nav>.car_icon").click(function(){
             $(this).toggleClass("menu_active");
+
         });
     // tab
     $(function(){
@@ -221,6 +223,9 @@ if(!empty($_SESSION['cart'])) {
         return false;
         });
     });
+
+
+
 
 //    購物車功能區塊
     var changeQty = function(obj){

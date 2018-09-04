@@ -54,7 +54,7 @@
                         </div>
             </div>
             <div class="item_02_conten">
-                    <input type="submit" value="預約配送時間">
+                    <input type="submit" onclick="location.href='reservation_03.php'" value="預約配送時間">
                 </div>
         </div>
     </section>

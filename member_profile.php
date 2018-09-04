@@ -110,8 +110,10 @@ if (empty($_SESSION['user'])) {
                                                  placeholder="請選擇城市"
                                                  data-role="county"
                                                  data-name="address_city"
-                                                 data-value="<?= $_SESSION['user']['address_city'] ?>"
-                                                 data-style="樣式名稱">
+                                                 data-value=""
+                                                 data-style="樣式名稱"
+                                                 value="<?= $_SESSION['user']['address_city'] ?>"
+                                            >
                                             </div>
                                             <div name="address_side"
                                                  placeholder="請選擇地區"
@@ -128,22 +130,6 @@ if (empty($_SESSION['user'])) {
                                                  data-style="zipcode-style">
                                             </div>
                                         </div>
-
-                                        <!--                                    <select class=" ">-->
-                                        <!--                                    <option>請選擇城市</option>-->
-                                        <!--                                    <option>台北市</option>-->
-                                        <!--                                    </select>-->
-                                        <!--                                </div>-->
-                                        <!--                                <div class="palette_select member_input40">-->
-                                        <!--                                        <select class=" ">-->
-                                        <!--                                        <option>請選擇地區</option>-->
-                                        <!--                                        <option>大同區</option>-->
-                                        <!--                                        </select>-->
-                                        <!--                                </div>-->
-                                        <!-- 需判斷地區顯示相對應的郵遞區號 -->
-                                        <!--                                <p class="address_num">103</p>-->
-
-                                        <!--------------    地址選項E -------------->
                                         <input type="text" class="margin_top" name="address"
                                                placeholder="請輸入街路巷地址" value="<?= $_SESSION['user']['address'] ?>">
                                     </div>
@@ -174,7 +160,7 @@ if (empty($_SESSION['user'])) {
                                     </div>
                                 </div>
                                 <div class="item_02_conten">
-                                    <input type="submit" id="submit_btn" value="確認修改">
+                                    <input type="submit" id="submit_btn" value="確認修改" onclick="location.href=#">
                                     <p class="submit_point">會員資料修改完成後請點選確認修改</p>
                                 </div>
                         </form>
@@ -189,8 +175,8 @@ if (empty($_SESSION['user'])) {
 
     function checkForm() {
         console.log( $(document.form1).serialize() );
-        $.post('member_profile＿api.php', $(document.form1).serialize(), function(data){
-
+        $.post('member_profile_api.php', $(document.form1).serialize(), function(data){
+            alert('資料已修改囉！啾咪～');
         }, 'json');
 
     };
