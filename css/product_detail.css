@@ -305,7 +305,7 @@
     .product_detail_03_sec2_01_bg_box{
         width: 50%;
         height: 100%;
-        background-color: #662424; 
+        background-color: #662424;  
     }
     .product_detail_03_sec2_01_top{
         width: 100%;
@@ -316,8 +316,8 @@
         width: 70%;
         height: 70%;
         float: right;
-        margin: 150px 50px 0 0;
-        background: url(../images/Sancal-Producto-Sofa-Tonella-07.png) no-repeat center center;
+        margin: 170px 50px 0 0;
+        background: url(../images/domesticoshop-sancal-tonella-butaca-03.png) no-repeat center -280px;
     }
     .product_detail_03_sec2_03{
         width: 100%;

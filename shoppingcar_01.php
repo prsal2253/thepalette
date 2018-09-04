@@ -61,6 +61,7 @@ if (!empty($_SESSION['cart'])) {
             <div class="step_box"><span>03</span><span>訂購完成</span></div>
         </div>
     </section>
+<form name="form1" method="post" action="" onsubmit="return checkForm()">
     <section class="item_12 item_13 item_17">
         <div class="index_conten ">
             <div class="item_02">
@@ -197,9 +198,9 @@ if (!empty($_SESSION['cart'])) {
                        title="付款說明">?</a></div>
                 <div class="order_listbox">
                     <div class="radio_box">
-                        <input type="radio" name="pay" value=""><span class="radio_content">信用卡一次付清</span></div>
+                        <input type="radio" name="pay" value="1"><span class="radio_content" checked>信用卡一次付清</span></div>
                     <div class="radio_box">
-                        <input type="radio" name="pay" value=""><span class="radio_content">信用卡分期付款</span><span
+                        <input type="radio" name="pay" value="2"><span class="radio_content">信用卡分期付款</span><span
                                 data-fancybox data-src="#modal" class="description_mark">分期銀行</span>
                         <div style="display: none;" id="modal">
                             <p>You are awesome!</p>
@@ -209,7 +210,7 @@ if (!empty($_SESSION['cart'])) {
                         </div>
                     </div>
                     <div class="radio_box">
-                        <input type="radio" name="pay" value=""><span class="radio_content">線上匯款</span></div>
+                        <input type="radio" name="pay" value="3"><span class="radio_content">線上匯款</span></div>
                 </div>
             </div>
         </div>
@@ -223,12 +224,12 @@ if (!empty($_SESSION['cart'])) {
                     <a data-fancybox data-type="ajax" data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
                        href="javascript:;" class="description_q transition" class="description_q transition" href="#"
                        title="付款說明">?</a></div>
-                <div class="order_listbox">
+                <div class="order_listbox" >
                     <div class="radio_box">
-                        <input type="radio" name="gender" value=""><span class="radio_content">到店取貨<span
+                        <input type="radio" name="transport" value="1"><span class="radio_content" checked>到店取貨<span
                                     class="description_mark">＄0</span></span></div>
                     <div class="radio_box">
-                        <input type="radio" name="gender" value=""><span class="radio_content">宅配到府<span
+                        <input type="radio" name="transport" value="2"><span class="radio_content">宅配到府<span
                                     class="description_mark">＄800</span></span></div>
                 </div>
             </div>
@@ -237,17 +238,26 @@ if (!empty($_SESSION['cart'])) {
                 <div>
                     <a href="javascript:history.go(-1)" class="palette_btn palette_btn_back" title="繼續購物">繼續購物</a>
                     <?php if(isset($_SESSION['user'])): ?>
-                    <input type="button" onclick="location.href='shoppingcar_02.php'" id="submit_btn" value="前往結帳">
+                    <input type="submit" onclick="location.href='shoppingcar_02.php'" value="前往結帳">
                     <?php else: ?>
-                    <input type="button" onclick="location.href='login.php'" id="submit_btn" value="前往登入">
+                    <input type="submit" onclick="location.href='login.php'" value="前往登入">
                     <?php endif ?>
                 </div>
             </div>
         </div>
     </section>
+</form>
 </div>
 <div class="index_footer"></div>
 <script>
+    //點結帳傳值
+    function checkForm() {
+        $.post('shoppingcar_01_api.php', $(document.form1).serialize(), function(data){
+
+        }, 'json');
+        return false;
+    };
+
     //      即時計算總價
     var dallorCommas = function (n) {    // 這是加$跟三三為單位中間加逗號
         return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
