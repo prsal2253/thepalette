@@ -235,8 +235,12 @@ if (!empty($_SESSION['cart'])) {
 
             <div class="order_listbox order_listbox_tatle item_conten_button">
                 <div>
-                    <a href="#" class="palette_btn palette_btn_back" title="繼續購物">繼續購物</a>
-                    <input type="submit" value="前往結帳">
+                    <a href="javascript:history.go(-1)" class="palette_btn palette_btn_back" title="繼續購物">繼續購物</a>
+                    <?php if(isset($_SESSION['user'])): ?>
+                    <input type="button" onclick="location.href='shoppingcar_02.php'" id="submit_btn" value="前往結帳">
+                    <?php else: ?>
+                    <input type="button" onclick="location.href='login.php'" id="submit_btn" value="前往登入">
+                    <?php endif ?>
                 </div>
             </div>
         </div>

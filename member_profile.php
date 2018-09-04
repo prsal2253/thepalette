@@ -202,7 +202,7 @@ if (empty($_SESSION['user'])) {
         $.post('api_.php', $(document.form1).serialize(), function(data){
 
         }, 'json');
-        return false;
+
     };
 </script>
 
