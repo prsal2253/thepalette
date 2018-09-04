@@ -21,14 +21,9 @@ foreach($my_orders as $v){
 }
 
 
-$sql2 = sprintf("SELECT d.*, p.product_name FROM order_details d JOIN products_list p ON d.product_sid=p.product_sid WHERE d.order_sid IN (%s)",
+$sql2 = sprintf("SELECT d.*, p.* FROM orders_details d JOIN products_list p ON d.product_sid=p.product_sid WHERE d.order_sid IN (%s)",
     implode(',', $order_sids)
 );
-
-
-//$sql2 = sprintf("SELECT d.*, p.bookname FROM order_details d JOIN products p ON d.product_sid=p.sid WHERE d.orders_sid IN (%s)",
-//    implode(',', $order_sids)
-//);
 
 
 
@@ -96,141 +91,42 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                         <p class="description">總共<span class="description_mark">32</span>筆訂單</p>
                     </div>
 
+
                     <!-- 一張訂單 -->
+                    <?php foreach($my_orders as $order): ?>
                     <div class="item_02_conten">
                         <div class="order_listbox">
-                            <p class="description_25">訂購日期：2108/07/31</p>
-                            <p class="description_25">訂單編號：1234567890</p>
+                            <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
+                            <p class="description_25">訂單編號：000000<?= $order['orders_sid'] ?></p>
                             <p class="description"><span class="description_mark">訂單狀態：款項確認</span></p>
                         </div>
+                        <?php foreach($my_details as $dt):
+                            if($order['orders_sid']==$dt['order_sid']):
+                                ?>
                         <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
+                                <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_40">
                                     <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
+                                    <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
-                                <div class="description">黃色 x 1  $8900</div>
+                                <div class="description">黃色 x <?= $dt['quantity'] ?> <?= $dt['price'] ?></div>
                         </div>
-                        <div class="order_listbox">
-                            <p class="more_product">還有1件商品</p>
-                        </div>
+<!--                        <div class="order_listbox">-->
+<!--                            <p class="more_product">還有1件商品</p>-->
+<!--                        </div>-->
                         <div class="order_listbox order_listbox_tatle">
                             <div>
                                 <p>總共 <span class="description_mark">2</span> 件商品，訂單金額</p>
                                 <h3 class="product_price"><span>＄</span>39,280</h3>
                                 <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
-                            </div> 
+                            </div>
+
                         </div>
                     </div>
-
-                    <!-- 一張訂單 -->
-                     <div class="item_02_conten">
-                        <div class="order_listbox">
-                            <p class="description_25">訂購日期：2108/07/31</p>
-                            <p class="description_25">訂單編號：1234567890</p>
-                            <p class="description"><span class="description_mark">訂單狀態：訂單完成</span></p>
-                        </div>
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_40">
-                                    <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description">黃色 x 1  $8900</div>
-                        </div>
-                        <div class="order_listbox">
-                            <p class="more_product">還有1件商品</p>
-                        </div>
-                        <div class="order_listbox order_listbox_tatle">
-                            <div>
-                                <p>總共 <span class="description_mark">2</span> 件商品，訂單金額</p>
-                                <h3 class="product_price"><span>＄</span>39,280</h3>
-                                <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
-                            </div> 
-                        </div>
-                    </div>
-
-                     <!-- 一張訂單 -->
-                     <div class="item_02_conten">
-                        <div class="order_listbox">
-                            <p class="description_25">訂購日期：2108/07/31</p>
-                            <p class="description_25">訂單編號：1234567890</p>
-                            <p class="description"><span class="description_mark">訂單狀態：訂單完成</span></p>
-                        </div>
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_40">
-                                    <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description">黃色 x 1  $8900</div>
-                        </div>
-                        <div class="order_listbox">
-                            <p class="more_product">還有1件商品</p>
-                        </div>
-                        <div class="order_listbox order_listbox_tatle">
-                            <div>
-                                <p>總共 <span class="description_mark">2</span> 件商品，訂單金額</p>
-                                <h3 class="product_price"><span>＄</span>39,280</h3>
-                                <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
-                            </div> 
-                        </div>
-                    </div>
-
-                     <!-- 一張訂單 -->
-                     <div class="item_02_conten">
-                        <div class="order_listbox">
-                            <p class="description_25">訂購日期：2108/07/31</p>
-                            <p class="description_25">訂單編號：1234567890</p>
-                            <p class="description"><span class="description_mark">訂單狀態：訂單完成</span></p>
-                        </div>
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_40">
-                                    <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description">黃色 x 1  $8900</div>
-                        </div>
-                        <div class="order_listbox">
-                            <p class="more_product">還有1件商品</p>
-                        </div>
-                        <div class="order_listbox order_listbox_tatle">
-                            <div>
-                                <p>總共 <span class="description_mark">2</span> 件商品，訂單金額</p>
-                                <h3 class="product_price"><span>＄</span>39,280</h3>
-                                <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
-                            </div> 
-                        </div>
-                    </div>
-
-                     <!-- 一張訂單 -->
-                     <div class="item_02_conten">
-                        <div class="order_listbox">
-                            <p class="description_25">訂購日期：2108/07/31</p>
-                            <p class="description_25">訂單編號：1234567890</p>
-                            <p class="description"><span class="description_mark">訂單狀態：訂單完成</span></p>
-                        </div>
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_40">
-                                    <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description">黃色 x 1  $8900</div>
-                        </div>
-                        <div class="order_listbox">
-                            <p class="more_product">還有1件商品</p>
-                        </div>
-                        <div class="order_listbox order_listbox_tatle">
-                            <div>
-                                <p>總共 <span class="description_mark">2</span> 件商品，訂單金額</p>
-                                <h3 class="product_price"><span>＄</span>39,280</h3>
-                                <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
-                            </div> 
-                        </div>
-                    </div>
-
+                        <?php
+                        endif;
+                        endforeach; ?>
+                    <?php endforeach; ?>
                     <!-- 頁碼 -->
                     <div class="page_num">
                         <ul>
