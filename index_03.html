@@ -199,7 +199,7 @@
 
         /* hidden parts */
 
-        .index03_right01:hover, .index03_left02:hover {
+        .index03_right01:hover, .index03_right03:hover,.index03_right04:hover, .index03_left02:hover, .index03_left05:hover {
             cursor: pointer;
         }
 
@@ -410,6 +410,57 @@
             opacity: 1;
         }
 
+        @media screen and (max-width:800px){
+            .index03{
+                flex-direction: column;
+            }
+            .index03_left, .index03_right{
+                width: 100%;
+            }
+            .index03_400{
+                height: 250px;
+            }
+            .index03_800{
+                height: 400px;
+            }
+            .index03_left03, .index03_right02 {
+                display: none;
+            }
+            .index03_txt01{
+                margin-top: 50px;
+            }
+            .index03_txt01_right{
+                width: 15%;
+            }
+            .index03_h2{
+                font-size: 30px;
+                line-height: 35px;
+            }
+            .index03_left02_box, .index03_left05_box{
+                height: auto;
+                width: 100%;
+            }
+            .index03_left02_box img{
+                width: 130%;
+                margin: -25% 0 0 -5%;
+            }
+            .index03_left05_box img{
+                width: 110%;
+                margin: -12% 0 0 0;
+            }
+            .index03_txt02{
+                margin-left: 14%
+            }
+            .index03_right03_box2{
+                height: 80%;
+                margin: -320px 0 0 70px;
+            }
+            .index03_right03_box{
+                height: 80%;
+                margin: 0 0 0 -4%;
+            }
+            
+        }
     </style>
 </head>
 
