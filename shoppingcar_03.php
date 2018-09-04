@@ -8,7 +8,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
     $data = [];
     $keys = array_keys($_SESSION['cart']);
 
-    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
+    $sql = sprintf("SELECT l.*, pc.* FROM products_list l JOIN products_color_sid pc ON l.product_color_sid=pc.product_color_sid WHERE `product_sid` IN (%s)", implode(',', $keys));
     $rs = $mysqli->query($sql);
     while ($r = $rs->fetch_assoc()) {
         $r['qty'] = $_SESSION['cart'][$r['product_sid']];
@@ -87,7 +87,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                                     <a href="#" class="product_name"><?= $r['product_name'] ?></a>
                                 </div>
                                 <div class="description_10"></div>
-                                <div class="description_10">黃色</div>
+                                <div class="description_10"><?= $r['color'] ?></div>
                                 <div class="description_10 product-item-qty"
                                      data-qty="<?= $r['qty'] ?>"><?= $r['qty'] ?></div>
                                 <div class="description_10 product-item-price"

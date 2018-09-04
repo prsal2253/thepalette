@@ -103,23 +103,23 @@ if(!empty($_SESSION['cart'])) {
                                 <span class="transition">站內搜尋</span>
                                 <div class="search_icon"></div>
                             </a>
-                            <a href="/thepalette/thepalette/login.php">
-                                    <span class="transition">會員登入</span>
-                                    <div class="padlock_icon"></div>
-                            </a>
-                            <!-- 登出 -->
-                            <!-- 
-
-                            <a href="#">
-                                    <span class="transition">會員登出</span>
-                                    <div class="padunlock_icon"></div>
-                            </a>
-
-                             -->
-                             <a href="/thepalette/thepalette/order_list.html">
+                            <?php if(isset($_SESSION['user'])): ?>
+                                <!-- 登出 -->
+                                <a href="/thepalette/thepalette/logout.php">
+                                        <span class="transition">會員登出</span>
+                                        <div class="padunlock_icon"></div>
+                                </a>
+                                <a href="/thepalette/thepalette/order_list.php">
                                     <span class="transition">會員中心</span>
                                     <div class="member_icon"></div>
-                             </a>
+                                </a>
+                            <?php else: ?>
+                            <a href="/thepalette/thepalette/login.php" >
+                                <span class="transition">會員登入</span>
+                                <div class="padlock_icon"></div>
+                            </a>
+
+                            <?php endif; ?>
                              <a href="/thepalette/thepalette/shoppingcar_01.php">
                                     <span class="transition">購物車</span><span class="qty-badge"></span>
                                     <div class="car_icon"></div>
@@ -143,7 +143,7 @@ if(!empty($_SESSION['cart'])) {
                 <div class="order_listbox" data-sid="<?= $k ?>">
                     <figure class="description_20"><a href="#"><img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>"></a></figure>
                     <div class="description_70">
-                        <a href="#" class="product_name"><?= $r1['product_name'] ?></a>
+                        <a href="#" class="product_name"><?= $r['product_name'] ?></a>
                         <p>Ｘ<?= $r['qty'] ?></p>
                         <p>$<?= $r['price'] ?></p>
                     </div>

@@ -7,6 +7,8 @@ if(!isset($_SESSION['user'])){
     exit;
 }
 
+
+
 // 先取得會員的訂單資料 (半年內)
 $t = date("Y-m-d H:i:s", time()-180*24*60*60);
 $sql = sprintf("SELECT * FROM `orders` WHERE member_sid=%s AND order_date>'%s' ORDER BY orders_sid DESC",
@@ -24,6 +26,7 @@ foreach($my_orders as $v){
 $sql2 = sprintf("SELECT d.*, p.* FROM orders_details d JOIN products_list p ON d.product_sid=p.product_sid WHERE d.order_sid IN (%s)",
     implode(',', $order_sids)
 );
+
 
 
 
@@ -111,7 +114,7 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                                     <div class="sale_icon"><span>活動商品</span></div>
                                     <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
-                                <div class="description">黃色</div>
+                                <div class="description"><?= $dt['product_color_sid'] ?>有問題</div>
                             <div class="description_10 product-item-qty"  data-qty="<?= $dt['quantity'] ?>"> x <?= $dt['quantity'] ?></div>
                             <div class="description_10 product-item-price" data-price=" <?= $dt['price'] ?>"><?= $dt['price'] ?></div>
                         </div>
