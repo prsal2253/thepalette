@@ -17,7 +17,7 @@
                 <!-- 左邊 -->
                 <div class="product_detail_01_left flex">
                     <div class="product_detail_01_topic">
-                        <h2 class="product_detail_01_h2">Swoon Chair Space Copenhagen</h2> <br>
+                        <h2 class="product_detail_01_h2">Swoon Chair Space Copenhagen</h2>
                         <div class="s_rate flex">
                             <h3 class="product_detail_01_h3">by Fredericia Furniture&nbsp;&nbsp;</h3>
                             <div class="s_star"></div>
@@ -30,7 +30,7 @@
                 </div>          
                 <!-- 右邊 -->
                 <div class="flex product_detail_01_right">
-                    <div class="s_sale_01"><h5 class="product_detail_01_h5">週年慶活動期間Swoon滿兩件免費到府安裝</h5></div>
+                    <div class="s_sale_01"><h5 class="product_detail_01_h5">活動期間Swoon滿兩件免費到府安裝</h5></div>
                     <div class="s_sale_02"><h5 class="product_detail_01_h5">國泰銀行刷卡分期免利息</h5></div>
                     <div class="product_detail_01_description">
                         <h6 class="product_detail_01_h6">商品描述</h6>

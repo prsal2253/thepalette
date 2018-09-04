@@ -1,11 +1,11 @@
 
-<?php include 'page_item/head.php';?>
+
 </head>
 <!-- 依照頁面改ＩＤ -->
 <body id="signup" class="">
 <!-- top -->
 <div class="index_top">
-    <?php include 'page_item/header.php';?>
+    
 </div>
 <!-- main -->
 <div class="index_main">

@@ -60,21 +60,21 @@
     justify-content: flex-start;
 }
 .s_sale_01{
-    width: 100%;
+    max-width: 100%;
     border-radius: 40px;
     background: #bf301d;
     text-align: center;
     margin-bottom: 10px;
 }
 .s_sale_02{
-    width: 220px;
+    max-width: 220px;
     border-radius: 40px;
     background: #bc5446;
     text-align: center;
     margin-bottom: 20px;
 }
 .product_detail_01_h5{
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0.2em;
     line-height: 30px;
     font-weight: 300;
@@ -82,7 +82,7 @@
     font-family: 'Noto Sans TC', serif;
 }
 .product_detail_01_h6{
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 0.15em;
     line-height: 30px;
     font-weight: 400;
@@ -91,7 +91,7 @@
     text-decoration:underline;
 }
 .product_detail_01_h7{
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.1em;
     font-weight: 300;
@@ -112,8 +112,8 @@
     padding: 0 0 0 0;
 }
 .color01,.color02,.color03{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: inline-block;
     margin-left: 2px;
@@ -521,6 +521,10 @@ margin-bottom: 30px;
 .product_detail_06_hashtag li:hover{
     background-color: rgb(240, 240, 240);
 }
+/* swiper */
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    margin: 0 5px;
+}
 
 /* 手機板 */
 @media only screen and (max-width:800px){
@@ -541,7 +545,7 @@ margin-bottom: 30px;
         align-items: flex-start;
     }
     .s_sale_01{
-        width: 100%;
+        max-width: 100%;
     }
     .product_detail_image{
         width: 100%;
