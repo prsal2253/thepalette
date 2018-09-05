@@ -277,7 +277,9 @@ crossorigin="anonymous"></script>
             alert('商品已加入購物車囉！啾咪～');
             //點上面購物車數量會變
             window.parent.changeQty(data);
-            changeQty(data);
+
+            window.parent.changeSmallCart();
+            //changeQty(data);
         }, 'json');
     });
 </script>
