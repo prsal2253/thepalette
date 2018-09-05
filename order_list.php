@@ -7,8 +7,6 @@ if(!isset($_SESSION['user'])){
     exit;
 }
 
-
-
 // 先取得會員的訂單資料 (半年內)
 $t = date("Y-m-d H:i:s", time()-180*24*60*60);
 $sql = sprintf("SELECT * FROM `orders` WHERE member_sid=%s AND order_date>'%s' ORDER BY orders_sid DESC",
