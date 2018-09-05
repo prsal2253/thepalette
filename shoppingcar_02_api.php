@@ -80,11 +80,10 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                 $data[$k]['qty']
             );
 
-
+            $_SESSION['orders_sid'] = $order_sid;
 
             $od_stmt->execute();
-        }
-        ;
+        };
 
 
     } else {
