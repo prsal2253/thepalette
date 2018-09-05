@@ -176,18 +176,12 @@ if(!empty($_SESSION['cart'])) {
         <div class="go_top"></div>
 <script>
     // menu
-    /*
-        $("nav>.palette_menu,nav>.car_icon").click(function(){
-            $(this).toggleClass("menu_active");
-            // $.get('header_api.php', function(data){
-            // }, 'json');
-        });
-        */
-    $("nav>.car_icon").click(function(){
+    $("nav>.palette_menu,nav>.car_icon").click(function(){
         $(this).toggleClass("menu_active");
-        // $.get('header_api.php', function(data){
-        //     $('.car_iconhover').html(data);
-        // }, 'text');
+        //即時更新
+        $.get('header_api.php', function(data){
+            $('.car_iconhover').html(data);
+        }, 'text');
     });
     // tab
     $(function(){
