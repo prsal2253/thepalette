@@ -30,6 +30,20 @@ if (isset($_GET['id'])) {
 
     $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
 
+    $sql3 = sprintf("SELECT `product_color_sid`, `color` FROM `products_color_sid` WHERE 1");
+    $rs3 = $mysqli->query($sql3);
+
+    $c_ar = [];
+//先給空陣列
+    while($c = $rs3->fetch_assoc()){
+//    這裡迴圈先一一取出$rs3陣列
+        $c_ar[$c['product_color_sid']] = $c['color'];
+//以'product_color_sid'當作key對應'color'的val
+    }
+
+
+
+
 }
 
 ?>
@@ -171,7 +185,7 @@ if (isset($_GET['id'])) {
                                                 <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
                                             </div>
                                             <div class="description_10"></div>
-                                            <div class="description_10"><?= $dt['product_color_sid'] ?>有問題</div>
+                                            <div class="description_10"><?= $c_ar[$dt['product_color_sid']] ?></div>
                                             <div class="description_10 product-item-qty"
                                                  data-qty="<?= $dt['quantity'] ?>"> x <?= $dt['quantity'] ?></div>
                                             <div class="description_10 product-item-price"
