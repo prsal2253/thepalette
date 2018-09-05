@@ -34,21 +34,15 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>login</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
+<?php include 'page_item/head.php';?>
 </head>
 <body id="login" class="">
-    <div class="index_top">
-        <header><h1>palette</h1></header>
-    </div>
+ <!-- top -->
+<div class="index_top">
+    <?php include 'page_item/header.php';?> 
+</div>
+ <!-- main -->
+<div class="index_main">ｚ
     <div class="index_main">
         <!-- 麵包屑 -->
         <section  class="bread_crumbs">
@@ -84,7 +78,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
                     <!-- 登入 -->
                     <div class="index_conten_l">
                             <input type="text" name="email" placeholder="會員帳號">
-                            <input class="member_name" name="password" type="text" placeholder="密碼">
+                            <input class="member_name" name="password" type="password" placeholder="密碼">
                             <a href="#">忘記密碼</a>
                             <input type="submit" value="會員登入">
                             <input type="submit" class="fb_bnt" value="facebook登入">
@@ -129,6 +123,9 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
             return isPass;
         }
     </script>
-<div class="index_footer"></div>
+<!-- footer -->
+<div class="index_footer">
+<?php include 'page_item/footer.php';?>
+</div>
 </body>
 </html>
