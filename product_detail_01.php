@@ -110,8 +110,9 @@ if(isset($_GET['id'])) {
                         <h7 class="product_detail_01_h7"><?= $r['product_size'] ?></h7>
                     </div>
                     <div class="product_detail_01_price">
-                        <h8 class="product_detail_01_h8"><span style="font-family: Georgia">$</span><?= $r['price']*0.85 ?><span style="font-size: 12px; color:#666; text-decoration: line-through"> <?= $r['price'] ?></span></h8>
-                    </div>
+                        <h8 class="product_detail_01_h8"><span style="font-family: Georgia"  class="sub-total2"></span>
+                            <span style="font-size: 12px; color:#666; text-decoration: line-through"
+                                  data-totalprice="<?= $r['price'] ?>" class="sub-total"> </span></h8>
                     <div class="product_detail_01_color">
                         <?php foreach($s_same as $k=>$v): ?>
                             <div class="choose_color color<?= $v['product_color_sid'] ?> transition"
@@ -138,6 +139,23 @@ if(isset($_GET['id'])) {
 </div>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script>
+
+    var dallorCommas = function (n) {    // 這是加$跟三三為單位中間加逗號
+        return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    };
+
+    var items = $('.sub-total');
+
+    items.each(function () {
+        var p = parseInt($(this).attr('data-totalprice'));
+        $(this).text(dallorCommas(p));
+        $('.sub-total2').text(dallorCommas(p*0.85));
+
+
+    });
+
+
+
 
     $(".choose_color").click(function(){
         $(this).css({

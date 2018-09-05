@@ -263,7 +263,10 @@ if(isset($_GET['id'])) {
                             <h7 class="product_quicklook_01_h7"><?= $r['introduction'] ?><br><br></h7>
                         </div>
                         <div class="product_quicklook_01_price">
-                            <h8 class="product_quicklook_01_h8"><span style="font-family: Georgia">$</span><?= $r['price']*0.85 ?><span style="font-size: 12px; color:#666; text-decoration: line-through"><?= $r['price'] ?></span></h8>
+                            <h8 class="product_quicklook_01_h8">
+                                <span style="font-family: Georgia"class="sub-total2"></span>
+                                <span style="font-size: 12px; color:#666; text-decoration: line-through"
+                                      data-totalprice="<?= $r['price'] ?>" class="sub-total"></span></h8>
                         </div>
                         <div class="product_quicklook_01_color">
                             <?php foreach($s_same as $k=>$v): ?>
@@ -318,7 +321,19 @@ crossorigin="anonymous"></script>
     });
 
 
+    var dallorCommas = function (n) {    // 這是加$跟三三為單位中間加逗號
+        return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    };
 
+    var items = $('.sub-total');
+
+    items.each(function () {
+        var p = parseInt($(this).attr('data-totalprice'));
+        $(this).text(dallorCommas(p));
+        $('.sub-total2').text(dallorCommas(p*0.85));
+
+
+    });
 
     //購物車功能
     $('.add_to_cart').click(function(){
