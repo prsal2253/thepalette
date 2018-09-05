@@ -83,7 +83,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                                 </figure>
                                 <div class="description_50">
                                     <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name"><?= $r['product_name'] ?></a>
+                                    <a href="product_detail.php?id=<?= $r['product_sid'] ?>" class="product_name"><?= $r['product_name'] ?></a>
                                 </div>
                                 <div class="description_10"></div>
                                 <div class="description_10"><?= $c_ar[$r['product_color_sid']] ?></div>
