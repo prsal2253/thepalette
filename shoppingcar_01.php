@@ -28,23 +28,11 @@ if (!empty($_SESSION['cart'])) {
 
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>shoppingcar_01</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<?php include 'page_item/head.php';?>
 </head>
 <body id="shoppingcar" class="shoppingcar_01">
 <div class="index_top">
-    <header><h1>palette</h1></header>
+<?php include 'page_item/header.php';?> 
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -96,7 +84,7 @@ if (!empty($_SESSION['cart'])) {
                                 </div>
                                 <div class="description_5"></div>
                                 <div class="description_10"><?= $r['color'] ?></div>
-                                <div class="description_10 product-item-qty" data-qty="<?= $r['qty'] ?>">
+                                <div class="description_10 palette_select product-item-qty" data-qty="<?= $r['qty'] ?>">
                                     <select class="qty-sel">
                                         <?php for ($i = 1; $i <= 5; $i++): ?>
                                             <option value="<?= $i ?>"><?= $i ?></option>
@@ -107,6 +95,7 @@ if (!empty($_SESSION['cart'])) {
                                     <?= $r['price'] ?>
                                 </div>
                                 <div class="description_10">
+                                    <!-- 加入我的最愛後 加入class=> icon_love_click -->
                                     <div class="icon_love"></div>
                                 </div>
                                 <div class="description_5">
@@ -253,7 +242,6 @@ if (!empty($_SESSION['cart'])) {
         </section>
     </form>
 </div>
-<div class="index_footer"></div>
 <script>
     //點結帳傳值
     function checkForm() {
@@ -335,5 +323,9 @@ if (!empty($_SESSION['cart'])) {
     });
 
 </script>
+ <!-- footer -->
+<div class="index_footer">
+<?php include 'page_item/footer.php';?>
+</div>
 </body>
 </html>

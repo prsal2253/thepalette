@@ -24,24 +24,11 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
 
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>shoppingcar_02</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-    <script src="jquery.twzipcode.js"></script>
+<?php include 'page_item/head.php';?>
 </head>
 <body id="shoppingcar" class="shoppingcar_02">
 <div class="index_top">
-    <header><h1>palette</h1></header>
+    <?php include 'page_item/header.php';?> 
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -104,7 +91,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                         </div>
                         <?php if ($_SESSION['sighup_transport'] == 2): ?>
                             <div class="order_listbox order_listbox_tatle">
-                                <p>＋貨運運費<span class="description_mark">＄800</span></p>
+                                <p>＋貨運運費<h3 class="product_price">＄800</h3></p>
                             </div>
                         <?php else: ?>
                         <?php endif; ?>
@@ -153,7 +140,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                     <div class="item_02_conten">
                         <div class="item_02_conten_l">聯絡地址</div>
                         <div class="item_02_conten_r">
-                            <div class="palette_select member_input40">
+                            <div class="palette_select">
                                 <!--------------    地址選項S ------------->
                                 <div id="twzipcode">
                                     <div name="orderer_city"
@@ -224,7 +211,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                     <div class="item_02_conten">
                         <div class="item_02_conten_l">聯絡地址</div>
                         <div class="item_02_conten_r">
-                            <div class="palette_select member_input40">
+                            <div class="palette_select">
                                 <!--------------    地址選項S ------------->
                                 <div id="twzipcode2">
                                     <div name="sender_city"
@@ -313,10 +300,6 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         </section>
     </form>
 </div>
-<div class="index_footer"></div>
-
-
-</body>
 <!--    地址選項S -->
 <script>$('#twzipcode').twzipcode();</script>
 <script>$('#twzipcode2').twzipcode();</script>
@@ -337,19 +320,18 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         var personName = $(".item_18box:first-child").find("input").eq(0).val();
         var personEmail = $(".item_18box:first-child").find("input").eq(1).val();
         var personMobile = $(".item_18box:first-child").find("input").eq(2).val();
-        var personCity = $(".item_18box:first-child").find("input").eq(3).val();
-        var personSide = $(".item_18box:first-child").find("input").eq(4).val();
-        var personPost = $(".item_18box:first-child").find("input").eq(5).val();
-        var personAddress = $(".item_18box:first-child").find("input").eq(6).val();
+        var personCity = $("select[name='address_city']").find(":selected").val();
+        var personSide = $("select[name='address_side']").find(":selected").val();
+        var personPost = $(".item_18box:first-child").find("input").eq(3).val();
+        var personAddress = $(".item_18box:first-child").find("input").eq(4).val();
         $(".item_18box:last-child").find("input").eq(1).val(personName);
         $(".item_18box:last-child").find("input").eq(2).val(personEmail);
         $(".item_18box:last-child").find("input").eq(3).val(personMobile);
-        $(".item_18box:last-child").find("input").eq(4).val(personCity);
-        $(".item_18box:last-child").find("input").eq(5).val(personSide);
-        $(".item_18box:last-child").find("input").eq(6).val(personPost);
-        $(".item_18box:last-child").find("input").eq(7).val(personAddress);
-
-
+        $(".item_18box:last-child").find("select[name='address_city']").val(personCity);
+        $(".item_18box:last-child").find("select[name='address_side']").val(personSide);
+        $(".item_18box:last-child").find("input").eq(4).val(personPost);
+        $(".item_18box:last-child").find("input").eq(5).val(personAddress);
+        
     });
 
 
@@ -418,4 +400,9 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
 
 
 </script>
+ <!-- footer -->
+ <div class="index_footer">
+<?php include 'page_item/footer.php';?>
+</div>
+</body>
 </html>

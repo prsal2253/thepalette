@@ -33,24 +33,11 @@ if (isset($_GET['id'])) {
 }
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>order_detail</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<?php include 'page_item/head.php';?>
 </head>
 <body id="member" class="order_detail">
 <div class="index_top">
-    <header><h1>palette</h1></header>
+<?php include 'page_item/header.php';?> 
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -67,9 +54,9 @@ if (isset($_GET['id'])) {
                 <div class="item_01">
                     <div class="item_01menu item_01menu_in"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span>
                     </div>
-                    <div class="item_01menu "><a href="#"><h6 class="transition">會員資料</h6><span class="transition">member profile</span></a>
+                    <div class="item_01menu "><a href="member_profile.php"><h6 class="transition">會員資料</h6><span class="transition">member profile</span></a>
                     </div>
-                    <div class="item_01menu"><a href="#"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a>
+                    <div class="item_01menu"><a href="favorite_list.php"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a>
                     </div>
                 </div>
             </div>
@@ -252,6 +239,8 @@ if (isset($_GET['id'])) {
     $('#total_howmuch').text($(".howmuch").length);
 
 </script>
-<div class="index_footer"></div>
+<div class="index_footer">
+<?php include 'page_item/footer.php';?>
+</div>
 </body>
 </html>
