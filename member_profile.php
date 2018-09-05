@@ -11,27 +11,17 @@ if (empty($_SESSION['user'])) {
 };
 //print_r($_SESSION['user']['member_sid']);
 ?>
-<?php include 'page_item/head.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>member_profile</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
-    <script src="jquery.twzipcode.js"></script>
+<?php include 'page_item/head.php';?>
     <style>
-        small {
-            display: none;
+        small{
+            display: none;font-size: 13px;line-height: 13px;margin: 12px 0 0 0;padding: 0 0 0 20px; color: #df9282; letter-spacing: .2em;
         }
     </style>
 </head>
 <body id="member" class="member_profile">
-<div class="index_top">
-    <header><h1>palette</h1></header>
+ <!-- top -->
+ <div class="index_top">
+    <?php include 'page_item/header.php';?> 
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -46,11 +36,11 @@ if (empty($_SESSION['user'])) {
         <div class="index_conten_flex">
             <div class="index_conten_l">
                 <div class="item_01">
-                    <div class="item_01menu"><a href="#"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span></a>
+                    <div class="item_01menu"><a href="order_list.php"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span></a>
                     </div>
                     <div class="item_01menu item_01menu_in"><h6 class="transition">會員資料</h6><span class="transition">member profile</span>
                     </div>
-                    <div class="item_01menu"><a href="#"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a>
+                    <div class="item_01menu"><a href="favorite_list.php"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a>
                     </div>
                 </div>
             </div>
@@ -113,7 +103,7 @@ if (empty($_SESSION['user'])) {
                             <div class="item_02_conten">
                                 <div class="item_02_conten_l">聯絡地址</div>
                                 <div class="item_02_conten_r">
-                                    <div class="palette_select member_input40">
+                                    <div class="palette_select">
                                         <!--------------    地址選項S ------------->
                                         <div id="twzipcode">
                                             <div name="address_city"
@@ -315,5 +305,9 @@ if (empty($_SESSION['user'])) {
     })(jQuery);
 </script>
 <!--    年月日選項E -->
+<!-- footer -->
+<div class="index_footer">
+<?php include 'page_item/footer.php';?>
+</div>
 </body>
 </html>

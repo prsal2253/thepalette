@@ -16,3 +16,5 @@
     <!-- fancybox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <!-- 抓郵遞區號 -->
+    <script type="text/javascript" src="js/jquery.twzipcode.js"></script>

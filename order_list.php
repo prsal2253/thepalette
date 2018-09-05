@@ -3,9 +3,11 @@ require __DIR__ . '/__db_connect.php';
 
 
 if(!isset($_SESSION['user'])){
-    header("Location: index_.php");
+    header("Location: login.php");
     exit;
 }
+
+
 
 // 先取得會員的訂單資料 (半年內)
 $t = date("Y-m-d H:i:s", time()-180*24*60*60);
@@ -24,6 +26,7 @@ foreach($my_orders as $v){
 $sql2 = sprintf("SELECT d.*, p.* FROM orders_details d JOIN products_list p ON d.product_sid=p.product_sid WHERE d.order_sid IN (%s)",
     implode(',', $order_sids)
 );
+
 
 
 
@@ -88,44 +91,50 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
                                 <option>預約相過</option>
                                 </select>
                         </div>
-                        <p class="description">總共<span class="description_mark">32</span>筆訂單</p>
+                        <p class="description">總共<span class="description_mark" id="total_howmuch">32</span>筆訂單</p>
                     </div>
 
 
                     <!-- 一張訂單 -->
                     <?php foreach($my_orders as $order): ?>
-                    <div class="item_02_conten">
+
+                    <div class="item_02_conten howmuch">
                         <div class="order_listbox">
                             <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
                             <p class="description_25">訂單編號：000000<?= $order['orders_sid'] ?></p>
-                            <p class="description"><span class="description_mark">訂單狀態：款項確認</span></p>
+                            <p class="description"><span class="description_mark">訂單狀態：信用卡一次付清(已付款)</span></p>
                         </div>
-                        <?php foreach($my_details as $dt):
+                        <?php
+                        foreach($my_details as $dt):
                             if($order['orders_sid']==$dt['order_sid']):
                                 ?>
-                        <div class="order_listbox">
+                        <div class="order_listbox product-item">
                                 <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_40">
                                     <div class="sale_icon"><span>活動商品</span></div>
                                     <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
-                                <div class="description">黃色 x <?= $dt['quantity'] ?> <?= $dt['price'] ?></div>
+                                <div class="description"><?= $dt['product_color_sid'] ?>有問題</div>
+                            <div class="description_10 product-item-qty"  data-qty="<?= $dt['quantity'] ?>"> x <?= $dt['quantity'] ?></div>
+                            <div class="description_10 product-item-price" data-price=" <?= $dt['price'] ?>"><?= $dt['price'] ?></div>
                         </div>
+                            <?php
+                            endif;
+                        endforeach; ?>
 <!--                        <div class="order_listbox">-->
 <!--                            <p class="more_product">還有1件商品</p>-->
 <!--                        </div>-->
                         <div class="order_listbox order_listbox_tatle">
                             <div>
-                                <p>總共 <span class="description_mark">2</span> 件商品，訂單金額</p>
-                                <h3 class="product_price"><span>＄</span>39,280</h3>
-                                <a href="#" class="palette_btn palette_btncolor2">訂單明細</a>
+                                <p>總共 <span class="description_mark" id="total-qty"></span> 件商品，訂單金額</p>
+                                <h3 class="product_price" id="total-price"></h3>
+                                <a href="#" class="palette_btn palette_btncolor2"
+                                 onclick="location.href='order_detail.php?id=<?= $order["orders_sid"] ?>'">訂單明細</a>
                             </div>
 
                         </div>
                     </div>
-                        <?php
-                        endif;
-                        endforeach; ?>
+
                     <?php endforeach; ?>
                     <!-- 頁碼 -->
                     <div class="page_num">
@@ -143,6 +152,28 @@ $my_details = $rs2->fetch_all(MYSQLI_ASSOC);
     </div>
     </section>
 </div>
+    <script>
+
+        var dallorCommas = function (n) {    // 這是加$跟三三為單位中間加逗號
+            return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        };
+
+            var total = 0;// 一開始設定0
+            var total_qty = 0;
+            var items = $('.product-item');
+
+            items.each(function () {    // 抓到所有項目，所以用each迴圈下去跑，每跑到一個就抓它價格跟數量乘起來
+                total += $(this).find('.product-item-price').attr('data-price') * $(this).find('.product-item-qty').attr('data-qty');
+                //這裡應該做型別轉換parseInt轉成數字，但是乘法會轉換
+                total_qty += parseInt($(this).find('.product-item-qty').attr('data-qty'));
+                // total_qty += $(this).find('.product-item-qty').attr('data-qty')*1;
+            });
+
+            $('#total-price').text(dallorCommas(total));
+            $('#total-qty').text(total_qty);
+            $('#total_howmuch').text($( ".howmuch").length);
+
+    </script>
 <div class="index_footer"></div>
 </body>
 </html>

@@ -1,15 +1,3 @@
-
-
-</head>
-<!-- 依照頁面改ＩＤ -->
-<body id="signup" class="">
-<!-- top -->
-<div class="index_top">
-    
-</div>
-<!-- main -->
-<div class="index_main">
-
 <div id="sort_red05">
         <section>
             <div class="index_conten_flex sort_red05">
@@ -17,12 +5,18 @@
                 <ul class="filter_sec1">
                     <li class="filter_filter transition">
                         <figure></figure>商品篩選</li>
-                    <li class="filter_byprice transition"> 依價錢
-                        <figure></figure>
-                    </li>
-                    <li class="filter_bytime transition"> 依上架順序
-                        <figure></figure>
-                    </li>
+                    <select class="filter_byprice transition">依價錢
+                        <div class="s_product_detail_01_num palette_select">
+                        <a href="?cate=1"><option>由高到低</option></a>
+                        <a href="?cate=2"><option>由低到高</option></a>
+                        </div>
+                    </select>
+                    <select class="filter_byprice transition">依上架順序
+                        <div class="s_product_detail_01_num palette_select">
+                        <a href="?cate=3"><option>由新到舊</option></a>
+                        <a href="?cate=4"><option>由舊到新</option></a>
+                        </div>
+                    </select>
                 </ul>
             </div>
             <div class="index_conten_flex filter_inner transition">

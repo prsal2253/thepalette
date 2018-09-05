@@ -203,7 +203,7 @@ if(isset($_GET['id'])) {
                             <div class="s_rate flex">
                                 <h3 class="product_quicklook_01_h3">by <?= $r['designer'] ?>&nbsp;&nbsp;</h3>
                                 <div class="s_star"></div>
-                                <h4 class="product_quicklook_01_h4">&nbsp;&nbsp;5.0 (32筆評論)</h4>
+                                <h4 class="product_quicklook_01_h4">&nbsp;<?= $r['star'] ?>&nbsp;&nbsp;(<?= $r['howmuch_star'] ?>筆評論)</h4>
                             </div>
                         </div>
                         <div class="product_quicklook_image">
@@ -227,14 +227,18 @@ if(isset($_GET['id'])) {
                             <div class="choose_color color03 transition"></div>
                         </div>
                         <div class="product_quicklook_01_btns flex">
-                            <select class="qty">
-                                <?php for($i=1; $i<=5;$i++): ?>
-                                    <option value="<?= $i ?>"><?= $i ?></option>
-                                <?php endfor ?>
-                            </select>
+                            <div class="s_product_detail_01_num palette_select">
+                                <select class="qty">
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                </select>
+                            </div>
                             <button class="add_to_cart"><h5 class="product_quicklook_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                         </div>
-                        <button class="ql_more"><a href="product_detail.php" target="_top" class="product_quicklook_01_h5">了解商品詳情</a></button>
+                        <button class="ql_more"><a href="product_detail.php?id=<?= $r['product_sid'] ?>" target="_top" class="product_quicklook_01_h5">了解商品詳情</a></button>
                                                                         <!-- target屬性規定在何處打開連接文檔                       -->
 
                     </div>

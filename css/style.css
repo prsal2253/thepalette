@@ -298,7 +298,11 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 .filter_bytime>figure { width: 10px; height: 15px; background: url(../images/icon/next.svg) no-repeat center center;
   background-size: cover; margin: 2px 0 0 4px; float: right;}
 .filter_byprice,
-.filter_bytime { border: 1px solid #999;  border-radius: 40px;}
+.filter_bytime { border: 1px solid #999;  border-radius: 40px; padding: 10px;
+  font-size: 14px;
+  font-family: 'Noto Sans TC';
+  line-height: 20px;
+  letter-spacing: 0.1em;}
 .filter_byprice:hover,
 .filter_bytime:hover { background-color: rgb(240, 240, 240); cursor: pointer;}
 #filter { margin-top: 50px;}
