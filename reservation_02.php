@@ -40,12 +40,13 @@
                 <div class="step_box"><span>03</span><span>預約完成</span></div>
             </div>
     </section>
+<form name="form1" method="post" action="" onsubmit="return checkForm()">
     <section class="item_12 item_13 item_16">
         <div class="index_conten ">
             <div class="item_02 item_16box">
-                        <input class=flatpickr type=text data-inline=true placeholder="請選擇配送日期">
+                        <input class=flatpickr type=text data-inline=true name="reservation_date" placeholder="請選擇配送日期">
                         <div class="palette_select description_40">
-                                <select class="palette_select">
+                                <select class="palette_select" name="reservation_time">
                                 <option>請選擇配送時間</option>
                                 <option>上午09：00-12：00</option>
                                 <option>下午13：30-17：30</option>
@@ -58,13 +59,21 @@
                 </div>
         </div>
     </section>
+</form>
 </div>
 <div class="index_footer"></div>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script src="js/flatpickr.js"></script>
 <script>
     // 月曆
-    $(".flatpickr").flatpickr();   
+    $(".flatpickr").flatpickr();
+
+    function checkForm() {
+        $.post('reservation_02_api.php', $(document.form1).serialize(), function (data) {
+
+        }, 'json');
+        return false;
+    };
 </script>
 </body>
 </html>
