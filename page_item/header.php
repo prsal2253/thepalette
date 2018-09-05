@@ -152,15 +152,6 @@ if(!empty($_SESSION['cart'])) {
                 </div>
                 <?php endforeach; ?>
 
-<!--                <div class="order_listbox">-->
-<!--                    <figure class="description_20"><a href="#"><img src="../images/banner/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>-->
-<!--                    <div class="description_70">-->
-<!--                        <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>-->
-<!--                        <p>黃色Ｘ1</p>-->
-<!--                        <p>$20,000</p>-->
-<!--                    </div>-->
-<!--                    <div class="description_10"><div class="icon_garbage"></div></div>-->
-<!--                </div> -->
                 <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette/shoppingcar_01.php">CHECK OUT</a></div>
 
                 <?php else: ?><!-- 購物車沒有商品時的狀態 -->
@@ -185,10 +176,19 @@ if(!empty($_SESSION['cart'])) {
         <div class="go_top"></div>
 <script>
     // menu
+    /*
         $("nav>.palette_menu,nav>.car_icon").click(function(){
             $(this).toggleClass("menu_active");
-
+            // $.get('header_api.php', function(data){
+            // }, 'json');
         });
+        */
+    $("nav>.car_icon").click(function(){
+        $(this).toggleClass("menu_active");
+        // $.get('header_api.php', function(data){
+        //     $('.car_iconhover').html(data);
+        // }, 'text');
+    });
     // tab
     $(function(){
     $(".palette_menubox .menubox_l ul li").mouseover(function () {
@@ -238,8 +238,16 @@ if(!empty($_SESSION['cart'])) {
         $('.qty-badge').text(total);
     };
 
+    var changeSmallCart = function(){
+        $.get('./page_item/header_api.php', function(data){
+            $('.car_iconhover').html(data);
+        }, 'text');
+    };
     $.get('add_to_cart.php', function(data){
         changeQty(data);
+        // $.get('header_api.php', function(data){
+        //     $('.car_iconhover').html(data);
+        // }, 'text');
     }, 'json');
 
 
