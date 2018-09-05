@@ -26,13 +26,36 @@ if (!empty($_SESSION['cart'])) {
 //        以這筆資料product_sid當作key,$r2當作val
     }
 
+    $sql3 = sprintf("SELECT `product_color_sid`, `color` FROM `products_color_sid` WHERE 1");
+    $rs3 = $mysqli->query($sql3);
+
+    $c_ar = [];
+//先給空陣列
+    while($c = $rs3->fetch_assoc()){
+//    這裡迴圈先一一取出$rs3陣列
+        $c_ar[$c['product_color_sid']] = $c['color'];
+//以'product_color_sid'當作key對應'color'的val
+    }
+
 }
 ?>
-<?php include 'page_item/head.php';?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shoppingcar_01</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"/>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 </head>
 <body id="shoppingcar" class="shoppingcar_01">
 <div class="index_top">
-<?php include 'page_item/header.php';?> 
+    <header><h1>palette</h1></header>
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -83,8 +106,8 @@ if (!empty($_SESSION['cart'])) {
                                     <a href="#" class="product_name"><?= $r['product_name'] ?></a>
                                 </div>
                                 <div class="description_5"></div>
-                                <div class="description_10"><?= $r['color'] ?></div>
-                                <div class="description_10 palette_select product-item-qty" data-qty="<?= $r['qty'] ?>">
+                                <div class="description_10"><?= $c_ar[$r['product_color_sid']] ?></div>
+                                <div class="description_10 product-item-qty" data-qty="<?= $r['qty'] ?>">
                                     <select class="qty-sel">
                                         <?php for ($i = 1; $i <= 5; $i++): ?>
                                             <option value="<?= $i ?>"><?= $i ?></option>
@@ -95,7 +118,6 @@ if (!empty($_SESSION['cart'])) {
                                     <?= $r['price'] ?>
                                 </div>
                                 <div class="description_10">
-                                    <!-- 加入我的最愛後 加入class=> icon_love_click -->
                                     <div class="icon_love"></div>
                                 </div>
                                 <div class="description_5">
@@ -242,6 +264,7 @@ if (!empty($_SESSION['cart'])) {
         </section>
     </form>
 </div>
+<div class="index_footer"></div>
 <script>
     //點結帳傳值
     function checkForm() {
@@ -323,9 +346,5 @@ if (!empty($_SESSION['cart'])) {
     });
 
 </script>
- <!-- footer -->
-<div class="index_footer">
-<?php include 'page_item/footer.php';?>
-</div>
 </body>
 </html>
