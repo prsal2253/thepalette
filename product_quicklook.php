@@ -7,7 +7,20 @@ if(isset($_GET['id'])) {
     $sql = sprintf('SELECT * FROM `products_list` WHERE 1 AND `product_sid`='.$_GET['id']);
     $rs = $mysqli->query($sql);
     $r = $rs->fetch_assoc();
+
+    if($r['same']!==0) {
+        $sql2 = "SELECT * FROM `products_list` WHERE `same`=". $r['same'];
+
+        $rs2 = $mysqli->query($sql2);
+
+        $s_same = [];
+
+        while ($c = $rs2->fetch_assoc()) {
+            $s_same[$c['product_sid']] = $c;
+        }
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -143,7 +156,7 @@ if(isset($_GET['id'])) {
 .product_quicklook_01_color{
     padding: 0 0 0 0;
 }
-.color01,.color02,.color03{
+.color1,.color2,.color3,.color4,.color5,.color6,.color7,.color8,.color9,.color10,.color11,.color12,.color13{
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -157,15 +170,46 @@ if(isset($_GET['id'])) {
     border-color: #333;
     cursor: pointer;
 }
-.color01{
-    background-color: #bf301d;
+.color1{
+    background-color: red;
 }
-.color02{
-    background-color: #916c57;
+.color2{
+    background-color: hotpink;
 }
-.color03{
-    background-color: #8ba095;
+.color3{
+    background-color: darkorange;
 }
+    .color4{
+        background-color: deepskyblue;
+    }
+    .color5{
+        background-color: green;
+    }
+    .color6{
+        background-color: yellow;
+    }
+    .color7{
+        background-color: black;
+    }
+    .color8{
+        background-color: white;
+    }
+    .color9{
+        background-color: darkgray;
+    }
+    .color10{
+        background-color: saddlebrown;
+    }
+    .color11{
+        background-color: lightyellow;
+    }
+    .color12{
+        background-color: cornflowerblue;
+    }
+    .color13{
+        background-color: purple;
+    }
+
 .s_product_quicklook_01_num{
     width: 48%;
     height: 40px;
@@ -207,7 +251,7 @@ if(isset($_GET['id'])) {
                             </div>
                         </div>
                         <div class="product_quicklook_image">
-                            <img src="images/<?= $r['img'] ?>.png" alt="">
+                            <img class="img-good" src="images/<?= $r['img'] ?>.png" alt="">
                         </div>
                     </div>
                     <!-- 右邊 -->
@@ -222,9 +266,10 @@ if(isset($_GET['id'])) {
                             <h8 class="product_quicklook_01_h8"><span style="font-family: Georgia">$</span><?= $r['price']*0.85 ?><span style="font-size: 12px; color:#666; text-decoration: line-through"><?= $r['price'] ?></span></h8>
                         </div>
                         <div class="product_quicklook_01_color">
-                            <div class="choose_color color01 transition"></div>
-                            <div class="choose_color color02 transition"></div>
-                            <div class="choose_color color03 transition"></div>
+                            <?php foreach($s_same as $k=>$v): ?>
+                                <div class="choose_color color<?= $v['product_color_sid'] ?> transition"
+                                     data-sid="<?= $v['product_sid'] ?>" data-img="<?= $v['img'] ?>"></div>
+                            <?php endforeach; ?>
                         </div>
                         <div class="product_quicklook_01_btns flex">
                             <div class="s_product_detail_01_num palette_select">
@@ -244,7 +289,7 @@ if(isset($_GET['id'])) {
                     </div>
                 </div>
             </section>
-        </div>  
+        </div>
     </div>
 </div>
 <script
@@ -263,7 +308,18 @@ crossorigin="anonymous"></script>
             "border": "3px solid #333",
             "border-radius": "50%"
         }).siblings().css("border","");
+
+        var pid = $(this).attr('data-sid');
+        var img = $(this).attr('data-img');
+        $('.card').attr('data-sid', pid);
+        $('.img-good').attr('src', 'images/'+img+'.png');
+        console.log(pid);
+
     });
+
+
+
+
     //購物車功能
     $('.add_to_cart').click(function(){
         var card = $(this).closest('.card');
