@@ -320,18 +320,18 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         var personName = $(".item_18box:first-child").find("input").eq(0).val();
         var personEmail = $(".item_18box:first-child").find("input").eq(1).val();
         var personMobile = $(".item_18box:first-child").find("input").eq(2).val();
-        var personCity = $("select[name='address_city']").find(":selected").val();
-        var personSide = $("select[name='address_side']").find(":selected").val();
+        var personCity = $(".item_18box:first-child").find("select[name='address_city']").prop('selectedIndex');
+        var personSide = $(".item_18box:first-child").find("select[name='address_side']").prop('selectedIndex');
         var personPost = $(".item_18box:first-child").find("input").eq(3).val();
         var personAddress = $(".item_18box:first-child").find("input").eq(4).val();
         $(".item_18box:last-child").find("input").eq(1).val(personName);
         $(".item_18box:last-child").find("input").eq(2).val(personEmail);
         $(".item_18box:last-child").find("input").eq(3).val(personMobile);
-        $(".item_18box:last-child").find("select[name='address_city']").val(personCity);
-        $(".item_18box:last-child").find("select[name='address_side']").val(personSide);
+        $(".item_18box:last-child").find("select[name='address_city']").prop('selectedIndex', personCity);
+        $(".item_18box:last-child").find("select[name='address_side']").prop('selectedIndex', personSide);
         $(".item_18box:last-child").find("input").eq(4).val(personPost);
         $(".item_18box:last-child").find("input").eq(5).val(personAddress);
-        
+        console.log(personSide);
     });
 
 
