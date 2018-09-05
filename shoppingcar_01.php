@@ -345,6 +345,11 @@ if (!empty($_SESSION['cart'])) {
         }, 'json');
     });
 
+    // 點選收藏後加class
+    $(".icon_love,.product_favorate").click(function(){
+        $(this).toggleClass("icon_love_click");
+    });
+
 </script>
 </body>
 </html>
