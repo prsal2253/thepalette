@@ -5,13 +5,25 @@ require __DIR__ . '/__db_connect.php';
 
 if (isset($_SESSION['user'])){
 
+$sql = 'SELECT * FROM `members_favourite` WHERE `member_sid`='.$_SESSION['user']['member_sid'];
+    $rs = $mysqli->query($sql);
+$c = [];
+
+while ($r = $rs->fetch_assoc()) {
 
 
-
-
-
+    print_r($r['product_sid']);
 }
 
+ $sql2 =sprintf('SELECT * FROM `products_list` WHERE `product_sid`=(%s)', implode(",", $r['product_sid']));
+
+$rs2 = $mysqli->query($sql2);
+
+while ($r2 = $rs2->fetch_assoc()) {
+
+
+    print_r($r2);
+}
 
 
 ?>
