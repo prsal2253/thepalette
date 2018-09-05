@@ -24,7 +24,7 @@ if(isset($_GET['id'])) {
             </ul>
         </section>
         <section class="">
-            <div class="index_conten_flex product_detail_01" data-sid="<?= $r['product_sid'] ?>">
+            <div class="index_conten_flex product_detail_01 card" data-sid="<?= $r['product_sid'] ?>">
                 <!-- 左邊 -->
                 <div class="product_detail_01_left flex">
                     <div class="product_detail_01_topic">
@@ -32,7 +32,7 @@ if(isset($_GET['id'])) {
                         <div class="s_rate flex">
                             <h3 class="product_detail_01_h3">by <?= $r['designer'] ?>&nbsp;&nbsp;</h3>
                             <div class="s_star"></div>
-                            <h4 class="product_detail_01_h4">&nbsp;&nbsp;5.0 (32筆評論)</h4>
+                            <h4 class="product_detail_01_h4">&nbsp;<?= $r['star'] ?>&nbsp;&nbsp;(<?= $r['howmuch_star'] ?>筆評論)</h4>
                         </div>
                     </div>
                     <div class="product_detail_image">
@@ -47,7 +47,7 @@ if(isset($_GET['id'])) {
                         <h6 class="product_detail_01_h6">商品描述</h6>
                         <h7 class="product_detail_01_h7"><?= $r['introduction'] ?><br><br></h7>
                         <h6 class="product_detail_01_h6">商品規格</h6>
-                        <h7 class="product_detail_01_h7">W: 200CM x H: 70CM X D: 100cm<br>混紡羊毛 60%<br>電鍍銅椅腳<br>奈米布料椅背</h7>
+                        <h7 class="product_detail_01_h7"><?= $r['product_size'] ?></h7>
                     </div>
                     <div class="product_detail_01_price">
                         <h8 class="product_detail_01_h8"><span style="font-family: Georgia">$</span><?= $r['price']*0.85 ?><span style="font-size: 12px; color:#666; text-decoration: line-through"> <?= $r['price'] ?></span></h8>
@@ -59,12 +59,12 @@ if(isset($_GET['id'])) {
                     </div>
                     <div class="product_detail_01_btns flex">
                         <div class="s_product_detail_01_num palette_select">
-                                <select>
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
+                            <select class="qty">
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
                                 </select>
                             </div>
                         <button class="add_to_cart"><h5 class="product_detail_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
@@ -72,5 +72,26 @@ if(isset($_GET['id'])) {
                 </div>
             </div>
         </section>
-    </div>  
+    </div>
+
 </div>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script>
+
+    //購物車功能
+    $('.add_to_cart').click(function(){
+        var card = $(this).closest('.card');
+        var sid = card.attr('data-sid');
+        var qty = card.find('.qty').val();
+        console.log(`sid: ${sid}, qty: ${qty}`);
+
+        $.get('add_to_cart.php', {sid:sid,qty:qty}, function(data){
+            //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+            console.log(data);
+            alert('商品已加入購物車囉！啾咪～');
+            //點上面購物車數量會變
+            window.parent.changeQty(data);
+            changeQty(data);
+        }, 'json');
+    });
+</script>

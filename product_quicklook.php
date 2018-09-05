@@ -203,7 +203,7 @@ if(isset($_GET['id'])) {
                             <div class="s_rate flex">
                                 <h3 class="product_quicklook_01_h3">by <?= $r['designer'] ?>&nbsp;&nbsp;</h3>
                                 <div class="s_star"></div>
-                                <h4 class="product_quicklook_01_h4">&nbsp;&nbsp;5.0 (32筆評論)</h4>
+                                <h4 class="product_quicklook_01_h4">&nbsp;<?= $r['star'] ?>&nbsp;&nbsp;(<?= $r['howmuch_star'] ?>筆評論)</h4>
                             </div>
                         </div>
                         <div class="product_quicklook_image">
