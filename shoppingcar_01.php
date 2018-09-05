@@ -242,10 +242,10 @@ if (!empty($_SESSION['cart'])) {
                            title="付款說明">?</a></div>
                     <div class="order_listbox">
                         <div class="radio_box">
-                            <input type="radio" name="transport" value="1" checked><span class="radio_content">到店取貨<span
+                            <input type="radio" name="transport" value="1" ><span class="radio_content">到店取貨<span
                                         class="description_mark">＄0</span></span></div>
                         <div class="radio_box">
-                            <input type="radio" name="transport" value="2"><span class="radio_content">宅配到府<span
+                            <input type="radio" name="transport" value="2" checked><span class="radio_content">宅配到府<span
                                         class="description_mark">＄800</span></span></div>
                     </div>
                 </div>

@@ -41,7 +41,9 @@ if (isset($_GET['id'])) {
 //以'product_color_sid'當作key對應'color'的val
     }
 
-
+    $sql4 = "SELECT * FROM `reservation_sid` WHERE`order_sid`=".$_GET['id'];
+    $rs4 = $mysqli->query($sql4);
+    $r = $rs4->fetch_assoc();
 
 
 }
@@ -99,13 +101,17 @@ if (isset($_GET['id'])) {
                                     <ul class="order_timebar">
                                         <li></li>
                                         <li class="this_time"></li>
+                                        <?php if(!empty($r['reservation_date'])):?>
+                                        <li class="this_time"></li>
+                                        <?php else:?>
                                         <li class=""></li>
+                                        <?php endif;?>
                                         <li class=""></li>
                                     </ul>
                                     <div class="order_timebar_detail">
                                         <p>訂單成立<br/><span><?= $order['order_date'] ?></span></p>
                                         <p>匯款確認<br/><span><?= $order['order_date'] ?></span></p>
-                                        <p>預約確認<br/><span></span></p>
+                                        <p>預約確認<br/><span><?= $r['reservation_date'] ?></span></p>
                                         <p>訂單完成<br/><span></span></p>
                                     </div>
 
@@ -136,6 +142,21 @@ if (isset($_GET['id'])) {
                                         </div>
                                     </div>
                                 </div>
+                                <?php if(!empty($r['reservation_date'])):?>
+                                <div class="item_02_conten">
+                                    <div class="order_listbox">運送方式 : <span class="description_mark_b">貨運(已預約)</span><a
+                                                data-fancybox data-type="ajax"
+                                                data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
+                                                href="javascript:;" class="description_q transition"
+                                                class="description_q transition" href="#">?</a></div>
+                                    <div class="order_listbox">
+                                        <div>
+                                            <p>預約日期：<?= $r['reservation_date'] ?></p>
+                                            <p>配送時間：<?= $r['reservation_time'] ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php else :?>
                                 <div class="item_02_conten">
                                     <div class="order_listbox">運送方式 : <span class="description_mark_b">貨運(未預約)</span><a
                                                 data-fancybox data-type="ajax"
@@ -146,7 +167,7 @@ if (isset($_GET['id'])) {
                                         <a href="reservation_01.php?id=<?= $order['orders_sid'] ?>" class="palette_btn">尚未預約前往預約</a>
                                     </div>
                                 </div>
-
+                                <?php endif;?>
                             </div>
 
                             <!-- 訂購商品 -->
