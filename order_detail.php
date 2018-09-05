@@ -143,7 +143,7 @@ if (isset($_GET['id'])) {
                                                 href="javascript:;" class="description_q transition"
                                                 class="description_q transition" href="#">?</a></div>
                                     <div class="order_listbox">
-                                        <a href="/thepalette/thepalette/reservation_01.php?orders_sid=<?= $order['orders_sid'] ?>" class="palette_btn">尚未預約前往預約</a>
+                                        <a href="reservation_01.php?id=<?= $order['orders_sid'] ?>" class="palette_btn">尚未預約前往預約</a>
                                     </div>
                                 </div>
 

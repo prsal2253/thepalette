@@ -1,3 +1,13 @@
+<?php
+
+require __DIR__ . '/__db_connect.php';
+
+if(isset($_GET['id'])){
+
+    $_SESSION['orders_sid'] = $_GET['id'];
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,20 +91,10 @@
                         
                         <p>消費者可來電洽詢本公司客服進行申請。</p></div>
                 </div>
-                <form name="form1" method="post" action="" onsubmit="return checkForm()">
             <div class="item_02_conten">
-                <input type="submit"  onclick="location.href='reservation_02.php'" value="我已閱讀預約注意事項">
+                <a href="reservation_02.php" type="submit" class="palette_btn">我已閱讀預約注意事項</a>
             </div>
-                </form>
             </div>
-            <script>
-                function checkForm() {
-                    $.post('reservation_01_api.php', $(document.form1).serialize(), function (data) {
-
-                    }, 'json');
-                    return false;
-                };
-            </script>
         </div>
     </section>
 </div>

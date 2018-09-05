@@ -40,26 +40,28 @@
                 <div class="step_box"><span>03</span><span>預約完成</span></div>
             </div>
     </section>
-<form name="form1" method="post" action="" onsubmit="return checkForm()">
+
     <section class="item_12 item_13 item_16">
         <div class="index_conten ">
+            <form name="form1" method="post" action="" onsubmit="return checkForm()">
             <div class="item_02 item_16box">
                         <input class=flatpickr type=text data-inline=true name="reservation_date" placeholder="請選擇配送日期">
                         <div class="palette_select description_40">
                                 <select class="palette_select" name="reservation_time">
                                 <option>請選擇配送時間</option>
-                                <option>上午09：00-12：00</option>
-                                <option>下午13：30-17：30</option>
-                                <option>晚上19：30-21：30</option>
+                                <option value="上午09：00-12：00">上午09：00-12：00</option>
+                                <option value="下午13：30-17：30">下午13：30-17：30</option>
+                                <option value="晚上19：30-21：30">晚上19：30-21：30</option>
                                 </select>
                         </div>
             </div>
             <div class="item_02_conten">
-                    <input type="submit" onclick="location.href='reservation_03.php'" value="預約配送時間">
-                </div>
+                <input type="submit" onclick="location.href='reservation_03.php'" value="預約配送時間">
+            </div>
+            </form>
         </div>
     </section>
-</form>
+
 </div>
 <div class="index_footer"></div>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -69,7 +71,7 @@
     $(".flatpickr").flatpickr();
 
     function checkForm() {
-        $.post('reservation_02_api.php', $(document.form1).serialize(), function (data) {
+        $.post('r02api.php', $(document.form1).serialize(), function () {
 
         }, 'json');
         return false;
