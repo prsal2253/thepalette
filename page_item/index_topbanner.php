@@ -10,12 +10,11 @@
 				<div class="ps-slidewrapper">
 			
                         <div class="ps-slides">
-                                <div style="background-image:url(../images/article/27683649797_babbcb85cc_b.jpg);"></div>
+                                <div style="background-image:url(../images/article/27683649797_babbcb85cc_b.jpg);">
+                            <div class="ps-salebox"></div>
+                            </div>
                                 <div style="background-image:url(../images/about/28680117748_367563dcee_h.jpg)"></div>
                                 <div style="background-image:url(../images/article/40745881410_ab590a502f_k.jpg);"></div>
-                                <div style="background-image:url(../images/banner/banner01.jpg);"></div>
-                                <div style="background-image:url(../images/banner/banner02.jpg);"></div>
-                                <div style="background-image:url(../images/banner/banner03.jpg);"></div>
                                 <div style="background-image:url(../images/banner/40745889000_96ba023acb_k.jpg);"></div>
                                 <div style="background-image:url(../images/article/40745881410_ab590a502f_k.jpg);"></div>
                                 <div style="background-image:url(../images/banner/27683687327_6181c92a30_b.jpg);"></div>
@@ -24,14 +23,9 @@
             
             <div class="ps-numberwrapper">	
                     <div class="ps-number"><span class="">01</span><span>/ 04</span></div>
-                    <div class="ps-number"><span class="">02</span><span>/ 04</span></div>
-                    <div class="ps-number"><span class="">03</span><span>/ 04</span></div> 
-                    <div class="ps-number"><span class="">01</span><span>/ 04</span></div>
-                    <div class="ps-number"><span class="">02</span><span>/ 04</span></div>
-                    <div class="ps-number"><span class="">03</span><span>/ 04</span></div> 
-                    <div class="ps-number" style="background-color: #d89d54"><span class="">04</span><span>/ 04</span></div>
+                    <div class="ps-number" style="background-color: #d89d54"><span class="">02</span><span>/ 04</span></div>
                     <div class="ps-number" style="background-color: #568080"><span class="">03</span><span>/ 04</span></div>
-                    <div class="ps-number" style="background-color: #507982"><span class="">02</span><span>/ 04</span></div>    
+                    <div class="ps-number" style="background-color: #507982"><span class="">04</span><span>/ 04</span></div>    
             </div>
 			<div class="ps-contentwrapper">
 			
@@ -76,51 +70,10 @@
 </div>
 <div class="index_footer"></div>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="../js/slider.js"></script>
 <script type="text/javascript">
     $(function() {
         Slider.init();
-    });
-</script>		
-<script>
-    // menu
-        $("nav>.palette_menu,nav>.car_icon").click(function(){
-            $(this).toggleClass("menu_active");
-        });
-    // tab
-    $(function(){
-    $(".palette_menubox .menubox_l ul li").mouseover(function () {
-        $(".palette_menubox .menubox_l ul li").removeClass("selected");
-        $(".palette_menubox .menubox_r .ranking_box").removeClass("selected");
-        $(this).addClass("selected");
-       $("#"+$(this).attr("data-id")).addClass("selected");
-    });
-    });
-     // tab2
-     $(function(){
-    $(".collectionsbox_l ul li").mouseover(function () {
-        $(".collectionsbox_l ul li").removeClass("selected");
-        $(".collectionsbox_r .ranking_box").removeClass("selected");
-        $(this).addClass("selected");
-       $("#"+$(this).attr("data-id")).addClass("selected");
-    });
-    });
-    //go top
-    $(function(){
-        $(window).scroll(function(){
-		if( $(window).scrollTop() > 1620 ){
-			$(".go_top").fadeIn(800);
-		}else{
-			$(".go_top").fadeOut(600);
-		};
-	})	
-        $('.go_top').click(function(){
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ?
-        $('html') : $('body')) : $('html,body');
-        $body.animate({scrollTop: 0}, 600);
-        return false;
-        });
     });
 </script>
 </html>

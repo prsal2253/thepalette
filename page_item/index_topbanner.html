@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/member.css">
-    <link rel="stylesheet" href="../css/product_detail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="../css/pegeitem.css">
+    <link rel="stylesheet" href="../css/pageitem.css">
     <script type="text/javascript" src="../js/modernizr.custom.79639.js"></script>
 </head>
 <body id="index" class="">
@@ -104,51 +102,10 @@
 </div>
 <div class="index_footer"></div>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="../js/slider.js"></script>
 <script type="text/javascript">
     $(function() {
         Slider.init();
-    });
-</script>		
-<script>
-    // menu
-        $("nav>.palette_menu,nav>.car_icon").click(function(){
-            $(this).toggleClass("menu_active");
-        });
-    // tab
-    $(function(){
-    $(".palette_menubox .menubox_l ul li").mouseover(function () {
-        $(".palette_menubox .menubox_l ul li").removeClass("selected");
-        $(".palette_menubox .menubox_r .ranking_box").removeClass("selected");
-        $(this).addClass("selected");
-       $("#"+$(this).attr("data-id")).addClass("selected");
-    });
-    });
-     // tab2
-     $(function(){
-    $(".collectionsbox_l ul li").mouseover(function () {
-        $(".collectionsbox_l ul li").removeClass("selected");
-        $(".collectionsbox_r .ranking_box").removeClass("selected");
-        $(this).addClass("selected");
-       $("#"+$(this).attr("data-id")).addClass("selected");
-    });
-    });
-    //go top
-    $(function(){
-        $(window).scroll(function(){
-		if( $(window).scrollTop() > 1620 ){
-			$(".go_top").fadeIn(800);
-		}else{
-			$(".go_top").fadeOut(600);
-		};
-	})	
-        $('.go_top').click(function(){
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ?
-        $('html') : $('body')) : $('html,body');
-        $body.animate({scrollTop: 0}, 600);
-        return false;
-        });
     });
 </script>
 </html>
