@@ -18,7 +18,7 @@ $my_orders = $rs->fetch_all(MYSQLI_ASSOC);
 $order_sids = [];
 foreach($my_orders as $v){
     $order_sids[] = $v['orders_sid'];
-}
+
 
 
 $sql2 = sprintf("SELECT d.*, p.* FROM orders_details d JOIN products_list p ON d.product_sid=p.product_sid WHERE d.order_sid IN (%s)",
@@ -41,7 +41,7 @@ while($c = $rs3->fetch_assoc()){
     $c_ar[$c['product_color_sid']] = $c['color'];
 //以'product_color_sid'當作key對應'color'的val
 }
-
+}
 ?>
 <?php include 'page_item/head.php';?>
 </head>
@@ -97,7 +97,7 @@ while($c = $rs3->fetch_assoc()){
                         $t = 0;
                         $t_q=0;
                         ?>
-
+                    <?php if (!empty($order['order_date'])): ?>
                     <div class="item_02_conten howmuch ">
                         <div class="order_listbox">
                             <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
@@ -135,8 +135,14 @@ while($c = $rs3->fetch_assoc()){
                             </div>
                         </div>
                     </div>
-
+                    <?php else: ?>
+                        <!-- 追蹤清單沒有商品時的狀態 -->
+                        <div class="order_listbox carts_none">
+                            <h3>訂單列表目前沒有任何訂單</h3>
+                        </div>
+                    <?php endif ?>
                     <?php endforeach; ?>
+
                     <!-- 頁碼 -->
                     <div class="page_num">
                         <ul>

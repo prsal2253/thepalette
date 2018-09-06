@@ -18,7 +18,6 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
     if($result ->num_rows==1){
 //       這邊判斷結果如果等於一登入，如果不等於就失敗
         $msg_type = 'success';
-        $msg_info = '登入成功';
         $_SESSION['user'] = $result->fetch_assoc();
 
 //       直接把$result的值塞給它$_SESSION['user']，就會有上面的資料
@@ -118,10 +117,10 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
                 passwordHelp.show();
                 isPass = false;
             }
-
+            alert('登入成功');
 
             return isPass;
-        }
+        };
     </script>
 <!-- footer -->
 <div class="index_footer">
