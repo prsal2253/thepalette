@@ -2,29 +2,29 @@
 
 require __DIR__ . '/__db_connect.php';
 
+$data = [];
+$data_ar=[];
+if (isset($_SESSION['user'])) {
 
-if (isset($_SESSION['user'])){
-
-$sql = 'SELECT * FROM `members_favourite` WHERE `member_sid`='.$_SESSION['user']['member_sid'];
+    $sql = 'SELECT * FROM `members_favourite` WHERE `member_sid`=' . $_SESSION['user']['member_sid'];
     $rs = $mysqli->query($sql);
-$c = [];
 
-while ($r = $rs->fetch_assoc()) {
+    while ($r = $rs->fetch_assoc()) {
+        $data[]=$r['product_sid'];
 
+    }
 
-    print_r($r['product_sid']);
 }
 
- $sql2 =sprintf('SELECT * FROM `products_list` WHERE `product_sid`=(%s)', implode(",", $r['product_sid']));
 
+//
+
+$sql2 = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $data));
 $rs2 = $mysqli->query($sql2);
-
 while ($r2 = $rs2->fetch_assoc()) {
+    $data_ar[]=$r2;
 
-
-    print_r($r2);
 }
-
 
 ?>
 
@@ -82,89 +82,33 @@ while ($r2 = $rs2->fetch_assoc()) {
                         </div>
 
                         <!-- 一件商品 -->
+                    <?php   foreach($data_ar  as $dt):     ?>
                         <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
+                                <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_50">
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
+                                    <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
                                 <div class="description_10"></div>
                                 <div class="description_10">黃色</div>
-                                <div class="description_10">$120000</div>
+                                <div class="description_10"><?= $dt['price'] ?></div>
                                 <div class="description_10"><div class="icon_garbage"></div></div>
                         </div>
-
+                    <?php endforeach; ?>
                         <!-- 一件商品 -->
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_50">
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description_10"></div>
-                                <div class="description_10">黃色</div>
-                                <div class="description_10">$120000</div>
-                                <div class="description_10"><div class="icon_garbage"></div></div>
-                        </div>
 
-                        <!-- 一件商品 -->
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_50">
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description_10"></div>
-                                <div class="description_10">黃色</div>
-                                <div class="description_10">$120000</div>
-                                <div class="description_10"><div class="icon_garbage"></div></div>
-                        </div>
-
-                        <!-- 一件商品 -->
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_50">
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description_10"></div>
-                                <div class="description_10">黃色</div>
-                                <div class="description_10">$120000</div>
-                                <div class="description_10"><div class="icon_garbage"></div></div>
-                        </div>
-
-                        <!-- 一件商品 -->
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_50">
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description_10"></div>
-                                <div class="description_10">黃色</div>
-                                <div class="description_10">$120000</div>
-                                <div class="description_10"><div class="icon_garbage"></div></div>
-                        </div>
-
-                        <!-- 一件商品 -->
-                        <div class="order_listbox">
-                                <figure class="description_10"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
-                                <div class="description_50">
-                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>
-                                </div>
-                                <div class="description_10"></div>
-                                <div class="description_10">黃色</div>
-                                <div class="description_10">$120000</div>
-                                <div class="description_10"><div class="icon_garbage"></div></div>
-                        </div> 
 
             </div>
 
             <!-- 頁碼 -->
-            <div class="page_num">
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li>1</li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
+<!--            <div class="page_num">-->
+<!--                <ul>-->
+<!--                    <li><a href="#"></a></li>-->
+<!--                    <li>1</li>-->
+<!--                    <li><a href="#">2</a></li>-->
+<!--                    <li><a href="#">3</a></li>-->
+<!--                    <li><a href="#"></a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
 
         </div>
         </div>
