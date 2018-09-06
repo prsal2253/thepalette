@@ -2,36 +2,37 @@
 
 require __DIR__ . '/__db_connect.php';
 
-$data = [];
+$data_fa = [];
 $data_ar = [];
-if (isset($_SESSION['user']) {
+if (isset($_SESSION['user'])){
 
-    $sql = 'SELECT * FROM `members_favourite` WHERE `member_sid`=' . $_SESSION['user']['member_sid'];
-    $rs = $mysqli->query($sql);
+    $sql_fa = 'SELECT * FROM `members_favourite` WHERE `member_sid`=' . $_SESSION['user']['member_sid'];
+    $rs_fa = $mysqli->query($sql_fa);
 
-    while ($r = $rs->fetch_assoc()) {
-        $data[] = $r['product_sid'];
+    while ($r_fa = $rs_fa->fetch_assoc()) {
+        $data_fa[] = $r_fa['product_sid'];
 
     }
+if(!empty($data_fa)){
+    $sql2 = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $data_fa));
+    $rs2 = $mysqli->query($sql2);
+    while ($r2 = $rs2->fetch_assoc()) {
+        $data_ar[] = $r2;
+    }
+}
+
 
     $sql3 = sprintf("SELECT `product_color_sid`, `color` FROM `products_color_sid` WHERE 1");
     $rs3 = $mysqli->query($sql3);
 
     $c_ar = [];
-//先給空陣列
+
     while ($c = $rs3->fetch_assoc()) {
-//    這裡迴圈先一一取出$rs3陣列
+
         $c_ar[$c['product_color_sid']] = $c['color'];
-//以'product_
     }
-//
 
-    $sql2 = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $data));
-    $rs2 = $mysqli->query($sql2);
-    while ($r2 = $rs2->fetch_assoc()) {
-        $data_ar[] = $r2;
 
-    }
 }
 
 ?>
@@ -83,9 +84,9 @@ if (isset($_SESSION['user']) {
                             </div>
 
                             <!-- 一件商品 -->
-
+<!--                            --><?php //if (isset($_SESSION['love'])): ?>
                             <?php foreach ($data_ar as $dt): ?>
-                                <?php if (!empty($dt['product_sid'])): ?>
+
                                     <div class="order_listbox howmuch" data-sid="<?= $dt['product_sid'] ?>">
                                         <figure class="description_10"><a href="#"><img
                                                         src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
@@ -100,19 +101,19 @@ if (isset($_SESSION['user']) {
                                             <div class="icon_garbage"></div>
                                         </div>
                                     </div>
-                                <?php else: ?>
-                                    <!-- 追蹤清單沒有商品時的狀態 -->
-                                    <div class="order_listbox carts_none">
-                                        <h3>追蹤清單目前沒有任何商品</h3>
-                                    </div>
-                                <?php endif ?>
-
                             <?php endforeach; ?>
                             <!-- 一件商品 -->
 
 
                         </div>
-
+<!--                        --><?php //else: ?>
+<!--                        --><?php //endif ?>
+                        <?php if(empty($data_fa)):?>
+                            <!-- 追蹤清單沒有商品時的狀態 -->
+                            <div class="order_listbox carts_none">
+                                <h3>追蹤清單目前沒有任何商品</h3>
+                            </div>
+                        <?php endif ?>
                         <!-- 頁碼 -->
                         <!--            <div class="page_num">-->
                         <!--                <ul>-->

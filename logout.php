@@ -1,6 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['user']);
+unset($_SESSION['love']);
 //在登入頁已經設定了$_SESSION['user'] = $result->fetch_assoc();
 if(isset($_SERVER['HTTP_REFERER'])) {
 //    先判斷HTTP_REFERER有無設定

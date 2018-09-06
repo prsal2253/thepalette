@@ -176,7 +176,13 @@ if (empty($_SESSION['user'])) {
     function checkForm() {
         console.log( $(document.form1).serialize() );
         $.post('member_profile_api.php', $(document.form1).serialize(), function(data){
-            alert('資料已修改囉！啾咪～');
+            if (data.success) {
+                console.log(data);
+                alert('會員資料已更新！');
+            } else {
+                alert('更新錯誤！啾咪～');
+                $('#total_howmuch').text($(".howmuch").length);
+            }
         }, 'json');
 
     };

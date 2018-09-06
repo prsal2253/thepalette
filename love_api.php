@@ -2,50 +2,48 @@
 
 require __DIR__ . '/__db_connect.php';
 
-if(! isset($_SESSION['love'])){
+if (!isset($_SESSION['love'])) {
 //    如果沒有設定session就把它設定空的陣列
     $_SESSION['love'] = [];
 
 }
-if(!empty($_GET['sid'])){
-$sql ='SELECT * FROM `members_favourite` WHERE `product_sid`='.$_GET['sid'];
-$stmt=$mysqli->query($sql);
-if($stmt->num_rows==0) {
+
+$result = [];
+if (isset($_SESSION['user'])and !empty($_GET['sid'])) {
+    $sql = 'SELECT * FROM `members_favourite` WHERE `product_sid`=' . $_GET['sid'];
+    $stmt = $mysqli->query($sql);
+    if ($stmt->num_rows == 0) {
 
 
-    $result = [];
 
-    $sid = isset($_GET['sid']) ? $_GET['sid'] : 0;
 
-    $sql2 = "INSERT INTO `members_favourite`(`member_sid`, `product_sid`, `date` ) VALUES ( ?, ?,  NOW() ) ";
+        $sid = isset($_GET['sid']) ? $_GET['sid'] : 0;
 
-    $stmt2 = $mysqli->prepare($sql2);
+        $sql2 = "INSERT INTO `members_favourite`(`member_sid`, `product_sid`, `date` ) VALUES ( ?, ?,  NOW() ) ";
 
-    $stmt2->bind_param('ss',
-        $_SESSION['user']['member_sid'],
-        $_GET['sid']
-    );
+        $stmt2 = $mysqli->prepare($sql2);
 
-    $stmt2->execute();
-    $af = $stmt2->affected_rows;
+        $stmt2->bind_param('ss',
+            $_SESSION['user']['member_sid'],
+            $_GET['sid']
+        );
 
-    $stmt2->close();
+        $stmt2->execute();
+        $af = $stmt2->affected_rows;
 
-    if ($af === 1) {
-        $result['success'] = true;
+        $stmt2->close();
 
-        $_SESSION['love'] = $sid;
+        if ($af === 1) {
+            $result['success'] = true;
+
+            $_SESSION['love'] = $sid;
+        }
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
     }
+}else{
+    $result['noway'] = true;
     echo json_encode($result, JSON_UNESCAPED_UNICODE);
 }
-}
-
-
-
-
-
-
-
 
 
 ?>
