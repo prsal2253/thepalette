@@ -3,7 +3,7 @@
 /* home版頭banner */
 #index section.ps-container{padding: 0;position: relative;width: 100%;height: 100vh;overflow: hidden;}
 
-.sale_box{position: absolute;top: 0px;right:0px; width:30%;height: 35%;z-index: 10;display: inline-flex;align-items: center;padding:0 0 0 5%;margin-right: -3%;}
+.sale_box{position: absolute;top: 0px;right:0px; width:30%;height: 35%;z-index: 10;display: inline-flex;align-items: center;padding:0 0 0 5%;margin-right: -3%;z-index: 12;}
 .sale_box>div{width: 80%;}
 .sale_box h3{font-size: 32px;line-height: 40px;font-family: 'SourceHanSerifTC-SemiBold';color: #fff;margin-bottom:5px;text-indent: -20px;letter-spacing: .15em;}
 .sale_box h6{font-size: 24px;line-height: 30px;font-family: 'SourceHanSerifTC-SemiBold';color: #fff;margin-bottom:10px;letter-spacing: .15em;}
@@ -22,7 +22,10 @@
 .ps-number{position: absolute;width: 100%;height: 100%;    padding-bottom: 5%;background-color: #8f594a; color: #fff;display: inline-flex;justify-content:center;align-items: center;top:0;left: 0;font-weight: 700;}
 .ps-number span{font-size: 28px;font-family: 'PlayFair Display';padding:15px 12px 0 0;}
 .ps-number span:first-child{font-size: 45px;padding:5px 10px 0;}
-.ps-slidewrapper2{position: absolute;right:0px;top: 0px;width: 41%;height: 100%;overflow: hidden;background-color: #662424;}
+.ps-slidewrapper2{position: absolute;right:0px;top: 0px;width: 41%;height: 100%;overflow: hidden;}
+
+.ps-salewrapper{position: absolute;top: 0px;right:0px; width:25%;height: 35%;z-index: 10;overflow: hidden;}
+.ps-sale{position: absolute;width: 100%;height: 100%;top:0;left: 0;}
 
 .ps-slidewrapper2 a{position: absolute;display: block;text-decoration: none;}
 .ps-slidewrapper2 a::before{content: '';transition: all .5s;opacity: 0;}

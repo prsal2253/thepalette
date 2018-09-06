@@ -13,6 +13,9 @@ var Slider = (function() {
         $numbercontainer = $container.children( 'div.ps-numberwrapper' ),
 		$number = $numbercontainer.find( 'div.ps-number' ),
 
+		$salecontainer = $container.children( 'div.ps-salewrapper' ),
+		$sale = $salecontainer.find( 'div.ps-sale' ),
+
 		// navigation arrows
 		$navprev = $container.find( 'a.ps-prev' ),
 		$navnext = $container.find( 'a.ps-next' ),
@@ -39,7 +42,8 @@ var Slider = (function() {
 			// show first item
 			var $currentItem = $items.eq( current ),
                 $currentSlide = $slides.eq( current ),
-                $currentNumber = $number.eq( current ),
+				$currentNumber = $number.eq( current ),
+				$currentSale = $sale.eq( current ),
 				initCSS = {
 					top : 0,
 					zIndex : 10
@@ -47,7 +51,8 @@ var Slider = (function() {
 
 			$currentItem.css( initCSS );
             $currentSlide.css( initCSS );
-            $currentNumber.css( initCSS );
+			$currentNumber.css( initCSS );
+			$currentSale.css( initCSS );
 			
 			// update nav images
 			updateNavImages();
@@ -93,7 +98,8 @@ var Slider = (function() {
 			// transition end event
 			$items.on( transEndEventName, removeTransition );
             $slides.on( transEndEventName, removeTransition );
-            $number .on( transEndEventName, removeTransition );
+			$number .on( transEndEventName, removeTransition );
+			$sale .on( transEndEventName, removeTransition );
 			
 		},
 		removeTransition = function() {
@@ -108,7 +114,8 @@ var Slider = (function() {
 
 			var $currentItem = $items.eq( current ),
                 $currentSlide = $slides.eq( current ),
-                $currentNumber = $number.eq( current );
+				$currentNumber = $number.eq( current );
+				$currentSale = $sale.eq( current );
 
 			// update current value
 			if( dir === 'next' ) {
@@ -126,9 +133,11 @@ var Slider = (function() {
                 $newSlide = $slides.eq( current );
                 // new number that will be shown
 				$newNumber = $number.eq( current );
+				// new number that will be shown
+				$newSale = $sale.eq( current );
 
 			// position the new item up or down the viewport depending on the direction
-			$newSlide.css( {
+			$currentItem.css( {
                 top : ( dir === 'next' ) ? '100%' : '-100%',
                 //opacity : ( dir === 'next' ) ? '1' : '0',
 				zIndex : 10
@@ -141,7 +150,13 @@ var Slider = (function() {
             } );
             
             $newNumber.css( {
-                top : ( dir === 'next' ) ? '100%' : '-100%',
+                right : ( dir === 'next' ) ? '100%' : '-100%',
+                //opacity : ( dir === 'next' ) ? '1' : '0',
+				zIndex : 10
+			} );
+
+			$newSale.css( {
+                right : ( dir === 'next' ) ? '100%' : '-100%',
                 //opacity : ( dir === 'next' ) ? '1' : '0',
 				zIndex : 10
 			} );
@@ -160,14 +175,20 @@ var Slider = (function() {
                 } );
                 
                 $currentNumber.addClass( 'ps-move' ).css( {
-                    top : ( dir === 'next' ) ? '100%' : '-100%',
+                    rigjt : ( dir === 'next' ) ? '100%' : '-100%',
+					zIndex : 1
+				} );
+
+				$currentSale.addClass( 'ps-move' ).css( {
+                    right : ( dir === 'next' ) ? '100%' : '-100%',
 					zIndex : 1
 				} );
 
 				// move the new ones to the main viewport
 				$newItem.addClass( 'ps-move' ).css( 'top', 0 );
                 $newSlide.addClass( 'ps-move' ).css( 'top', 0 );
-                $newNumber.addClass( 'ps-move' ).css( 'top', 0 );
+				$newNumber.addClass( 'ps-move' ).css( 'top', 0 );
+				$newSale.addClass( 'ps-move' ).css( 'top', 0 );
 
 				// if no CSS transitions set the isAnimating flag to false
 				if( !support ) {

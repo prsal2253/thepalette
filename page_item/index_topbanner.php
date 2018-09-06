@@ -10,9 +10,7 @@
 				<div class="ps-slidewrapper">
 			
                         <div class="ps-slides">
-                                <div style="background-image:url(../images/article/27683649797_babbcb85cc_b.jpg);">
-                            <div class="ps-salebox"></div>
-                            </div>
+                                <div style="background-image:url(../images/article/27683649797_babbcb85cc_b.jpg);"></div>
                                 <div style="background-image:url(../images/about/28680117748_367563dcee_h.jpg)"></div>
                                 <div style="background-image:url(../images/article/40745881410_ab590a502f_k.jpg);"></div>
                                 <div style="background-image:url(../images/banner/40745889000_96ba023acb_k.jpg);"></div>
