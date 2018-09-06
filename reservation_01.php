@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<?php include 'page_item/head.php';?>
+=======
 <?php
 
 require __DIR__ . '/__db_connect.php';
@@ -18,24 +21,33 @@ if(isset($_GET['id'])){
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/member.css">
+>>>>>>> 0121cd3fcd03425061563e5ff0faa98bbc1a204f
 </head>
+
+<!-- 頁面ID -->
 <body id="reservation" class="reservation_01">
-    <div class="index_top">
-        <header><h1>palette</h1></header>
-    </div>
-    <div class="index_main">
-        <!-- 麵包屑 -->
-        <section  class="bread_crumbs">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">member</a></li>
-                <li>reservation</member></li>
-            </ul></section>
+
+ <!-- top -->
+ <div class="index_top">
+    <?php include 'page_item/header.php';?> 
+</div>
+
+ <!-- main -->
+<div class="index_main">
+    <!-- 麵包屑 -->
+    <section  class="bread_crumbs">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">member</a></li>
+            <li>reservation</li>
+        </ul></section>
+
+    <!-- 頁面內容 -->
     <section class="item_12">
             <div class="index_conten_flex">
-                    <div class="step_box step_box_in"><span>01</span><span>預約注意事項</span></div>
-                    <div class="step_box"><span>02</span><span>選擇預約時間</span></div>
-                    <div class="step_box"><span>03</span><span>預約完成</span></div>
+                <div class="step_box step_box_in"><span>01</span><span>預約注意事項</span></div>
+                <div class="step_box"><span>02</span><span>選擇預約時間</span></div>
+                <div class="step_box"><span>03</span><span>預約完成</span></div>
             </div>
     </section>
     <section class="item_12 item_13">
@@ -98,6 +110,8 @@ if(isset($_GET['id'])){
         </div>
     </section>
 </div>
-<div class="index_footer"></div>
+<div class="index_footer">
+    <?php include 'page_item/footer.php';?>
+</div>
 </body>
 </html>
