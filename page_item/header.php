@@ -1,6 +1,5 @@
 <?php
 
-
 if(!empty($_SESSION['cart'])) {
     $keys = array_keys($_SESSION['cart']);
 //字面上意思是拿到$_SESSION['cart']所有的key
@@ -18,7 +17,6 @@ if(!empty($_SESSION['cart'])) {
 
         $data[$r['product_sid']] = $r;
     }
-
 }
 ?>
         <header><h1>palette</h1></header>
@@ -174,7 +172,11 @@ if(!empty($_SESSION['cart'])) {
             
 
             <!-- member icon -->
+<<<<<<< HEAD
             <a href="../thepalette/order_list.php" class="member_icon member_icon2"></a>
+=======
+            <a href="../order_list.php" class="member_icon member_icon2"></a>
+>>>>>>> d3e128afc27da8fc03d3f4bbccc836ce78c78647
 
             
             <!-- <div class="menu_list">
