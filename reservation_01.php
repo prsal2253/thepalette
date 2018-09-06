@@ -8,34 +8,34 @@ if(isset($_GET['id'])){
 
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>reservation_01</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
+
+<?php include 'page_item/head.php';?>
 </head>
+
+<!-- 頁面ID -->
 <body id="reservation" class="reservation_01">
-    <div class="index_top">
-        <header><h1>palette</h1></header>
-    </div>
-    <div class="index_main">
-        <!-- 麵包屑 -->
-        <section  class="bread_crumbs">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">member</a></li>
-                <li>reservation</member></li>
-            </ul></section>
+
+ <!-- top -->
+ <div class="index_top">
+    <?php include 'page_item/header.php';?> 
+</div>
+
+ <!-- main -->
+<div class="index_main">
+    <!-- 麵包屑 -->
+    <section  class="bread_crumbs">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">member</a></li>
+            <li>reservation</li>
+        </ul></section>
+
+    <!-- 頁面內容 -->
     <section class="item_12">
             <div class="index_conten_flex">
-                    <div class="step_box step_box_in"><span>01</span><span>預約注意事項</span></div>
-                    <div class="step_box"><span>02</span><span>選擇預約時間</span></div>
-                    <div class="step_box"><span>03</span><span>預約完成</span></div>
+                <div class="step_box step_box_in"><span>01</span><span>預約注意事項</span></div>
+                <div class="step_box"><span>02</span><span>選擇預約時間</span></div>
+                <div class="step_box"><span>03</span><span>預約完成</span></div>
             </div>
     </section>
     <section class="item_12 item_13">
@@ -98,6 +98,8 @@ if(isset($_GET['id'])){
         </div>
     </section>
 </div>
-<div class="index_footer"></div>
+<div class="index_footer">
+    <?php include 'page_item/footer.php';?>
+</div>
 </body>
 </html>

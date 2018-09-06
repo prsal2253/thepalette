@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index_heard</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/member.css">
-    <link rel="stylesheet" href="../css/product_detail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="../css/pegeitem.css">
-    <script type="text/javascript" src="../js/modernizr.custom.79639.js"></script>
-</head>
-<body id="index" class="">
-    <div class="index_top">
-        <header><h1>palette</h1></header>
-    </div>
-    <div class="index_main">
-        <!-- 麵包屑 -->
-        <!-- <section  class="bread_crumbs">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">member</a></li>
-                <li>login</li>
-        </ul></section> -->
-
-         <!-- banner 輪播 -->
+<!-- banner 輪播 -->
          <section id="ps-container" class="ps-container">
                 <div class="sale_box">
                     <div><a href="#">

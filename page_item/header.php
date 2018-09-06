@@ -1,6 +1,5 @@
 <?php
 
-
 if(!empty($_SESSION['cart'])) {
     $keys = array_keys($_SESSION['cart']);
 //字面上意思是拿到$_SESSION['cart']所有的key
@@ -18,7 +17,6 @@ if(!empty($_SESSION['cart'])) {
 
         $data[$r['product_sid']] = $r;
     }
-
 }
 ?>
         <header><h1>palette</h1></header>
@@ -34,11 +32,21 @@ if(!empty($_SESSION['cart'])) {
                 <div class="palette_menubox">
                     <div class="menubox_l">
                         <ul>
-                            <li class="selected" data-id="all"><a href="#"><span>Home</span>首頁</a></li>
-                            <li data-id="all"><a href="#"><span>About Us</span>關於我們</a></li>
-                            <li data-id="collections"><a href="#" ><span>Collections</span>精選商品</a></li>
-                            <li data-id="articles"><a href="#"><span>Articles</span>風格專欄</a></li>
-                            <li data-id="all"><a href="#"><span>Get In Touch</span>聯絡我們</a></li>
+                            <li class="selected" data-id="all">
+                                <a href="../thepalette/index.php"><span>Home</span>首頁</a>
+                            </li>
+                            <li data-id="all">
+                                <a href="../thepalette/about.php"><span>About Us</span>關於我們</a>
+                            </li>
+                            <li data-id="collections">
+                                <a href="#"><span>Collections</span>精選商品</a>
+                            </li>
+                            <li data-id="article">
+                                <a href="../thepalette/article.php"><span>Articles</span>風格專欄</a>
+                            </li>
+                            <li data-id="all">
+                                <a href="../thepalette/activity.php"><span>Latest Events</span>最新活動</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="menubox_r">
@@ -46,7 +54,7 @@ if(!empty($_SESSION['cart'])) {
                         <div id="all" class="ranking_box selected">
                             <div class="all_box">
                                 <h2>最新活動</h2>
-                                <img src="../images/banner/blaise_desktop_1.jpg" alt=""></div>
+                                <img src="../thepalette/images/banner/blaise_desktop_1.jpg" alt=""></div>
                         </div>
                         <!-- product -->
                         <div class="ranking_box" id="collections">
@@ -54,45 +62,45 @@ if(!empty($_SESSION['cart'])) {
                                 <h2>商品分類</h2>
                                 <div class="collectionsbox_l">
                                         <ul>
-                                            <li class="selected" data-id="sort01"><a href="/thepalette/thepalette/sort_red05_0905.php">紅橘粉 系列</a></li>
-                                            <li data-id="sort02"><a href="/thepalette/thepalette/sort_yellow05_0905.php">藍綠黃 系列</a></li>
-                                            <li data-id="sort03"><a href="/thepalette/thepalette/sort_white05_0905.php">黑白灰 系列</a></li>
-                                            <li data-id="sort04"><a href="/thepalette/thepalette/sort_side05_0905.php">大地色 系列</a></li>
-                                            <li data-id="sort05"><a href="/thepalette/thepalette/sort_s05_0905.php">材質 系列</a></li>
+                                            <li class="selected" data-id="sort01"><a href="../thepalette/sort_red05_0905.php">紅橘粉 系列</a></li>
+                                            <li data-id="sort02"><a href="../thepalette/sort_yellow05_0905.php">藍綠黃 系列</a></li>
+                                            <li data-id="sort03"><a href="../thepalette/sort_white05_0905.php">黑白灰 系列</a></li>
+                                            <li data-id="sort04"><a href="../thepalette/sort_side05_0905.php">大地色 系列</a></li>
+                                            <li data-id="sort05"><a href="../thepalette/sort_s05_0905.php">材質 系列</a></li>
 
                                         </ul>
                                 </div>
                                 <div class="collectionsbox_r">
                                     <!-- 01 -->
-                                    <div id="sort01" class="ranking_box selected"><img src="../images/banner/39195293794_6055c635a0_k.jpg" alt=""></div>
+                                    <div id="sort01" class="ranking_box selected"><img src="../thepalette/images/banner/39195293794_6055c635a0_k.jpg" alt=""></div>
                                     <!-- 02 -->
-                                    <div id="sort02" class="ranking_box"><img src="../images/banner/40745884310_4b1e901143_b.jpg" alt=""></div>
+                                    <div id="sort02" class="ranking_box"><img src="../thepalette/images/banner/40745884310_4b1e901143_b.jpg" alt=""></div>
                                     <!-- 03 -->
-                                    <div id="sort03" class="ranking_box"><img src="../images/banner/40745889000_96ba023acb_k.jpg" alt=""></div>
+                                    <div id="sort03" class="ranking_box"><img src="../thepalette/images/banner/40745889000_96ba023acb_k.jpg" alt=""></div>
                                     <!-- 04 -->
-                                    <div id="sort04" class="ranking_box"><img src="../images/banner/38924676214_1e6d29ce12_b.jpg" alt=""></div>
+                                    <div id="sort04" class="ranking_box"><img src="../thepalette/images/banner/38924676214_1e6d29ce12_b.jpg" alt=""></div>
                                     <!-- 05 -->
-                                    <div id="sort05" class="ranking_box"><img src="../images/banner/28680134718_346947a0b7_b.jpg" alt=""></div>
+                                    <div id="sort05" class="ranking_box"><img src="../thepalette/images/banner/28680134718_346947a0b7_b.jpg" alt=""></div>
                                 </div>
                             </div>
                         </div>
                         <!-- articles -->
-                        <div class="ranking_box" id="articles">
+                        <div class="ranking_box" id="article">
                             
                             <div class="menu_articlesbox">
                                 <h2>最新專欄</h2>
                                 <a class="menu_articles" href="#">
-                                    <figure><img src="../images/banner/BM_2002_TP_1230_WL_4300_mood_rgb_high.jpg" alt=""></figure>
+                                    <figure><img src="../thepalette/images/article/35653610953_0bab2c8b03_k.jpg" alt=""></figure>
                                     <h3 class="menuarticles_titlebox">
-                                        <span class="menuarticles_time">2017 JUN 31</span>
+                                        <span class="menuarticles_time">2018 JUN 20</span>
                                         <span class="menuarticles_title">不再盲目追逐流行：藏於細節裡的時尚感。</span>
                                     </h3>
                                 </a>
                                 <a class="menu_articles" href="#">
-                                        <figure><img src="../images/banner/BM_2002_TP_1230_WL_4300_mood_rgb_high.jpg" alt=""></figure>
+                                        <figure><img src="../thepalette/images/article/19685713975_2af3c54b73_k.jpg" alt=""></figure>
                                         <h3 class="menuarticles_titlebox">
-                                            <span class="menuarticles_time">2017 JUN 31</span>
-                                            <span class="menuarticles_title">不再盲目追逐流行：藏於細節裡的時尚感。</span>
+                                            <span class="menuarticles_time">2018 JUN 11</span>
+                                            <span class="menuarticles_title">兩種英式宅風格，獻給嚮往英倫風格的你</span>
                                         </h3>
                                     </a>
                             </div>
@@ -100,28 +108,29 @@ if(!empty($_SESSION['cart'])) {
                         <!-- icon list -->
                         <div class="menu_iconbar">
                             <a href="#">
-                                <span class="transition">站內搜尋</span>
+                                <span class="icontitle transition">站內搜尋</span>
                                 <div class="search_icon"></div>
                             </a>
                             <?php if(isset($_SESSION['user'])): ?>
                                 <!-- 登出 -->
-                                <a href="/thepalette/thepalette/logout.php">
-                                        <span class="transition">會員登出</span>
+                                <a href="../thepalette/logout.php">
+                                        <span class="icontitle transition">會員登出</span>
                                         <div class="padunlock_icon"></div>
                                 </a>
-                                <a href="/thepalette/thepalette/order_list.php">
-                                    <span class="transition">會員中心</span>
+                                <a href="../thepalette/order_list.php">
+                                    <span class="icontitle transition">會員中心</span>
                                     <div class="member_icon"></div>
                                 </a>
                             <?php else: ?>
-                            <a href="/thepalette/thepalette/login.php" >
-                                <span class="transition">會員登入</span>
+                            <a href="../thepalette/login.php" >
+                                <span class="icontitle transition">會員登入</span>
                                 <div class="padlock_icon"></div>
                             </a>
 
                             <?php endif; ?>
-                             <a href="/thepalette/thepalette/shoppingcar_01.php">
-                                    <span class="transition">購物車</span><span class="qty-badge"></span>
+                             <a href="../thepalette/shoppingcar_01.php">
+                                    <span class="icontitle transition">購物車</span>
+                                    <span class="cart_number qty-badge"></span>
                                     <div class="car_icon"></div>
                              </a>
                         </div>
@@ -151,7 +160,7 @@ if(!empty($_SESSION['cart'])) {
                 </div>
                 <?php endforeach; ?>
 
-                <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette/shoppingcar_01.php">CHECK OUT</a></div>
+                <div class="check_outbox"><a class="check_out" href="../thepalette/shoppingcar_01.php">CHECK OUT</a></div>
 
                 <?php else: ?><!-- 購物車沒有商品時的狀態 -->
                  <div class="order_listbox carts_none">
@@ -163,7 +172,11 @@ if(!empty($_SESSION['cart'])) {
             
 
             <!-- member icon -->
-            <a href="../order_list.html" class="member_icon member_icon2"></a>
+<<<<<<< HEAD
+            <a href="../thepalette/order_list.php" class="member_icon member_icon2"></a>
+=======
+            <a href="../order_list.php" class="member_icon member_icon2"></a>
+>>>>>>> d3e128afc27da8fc03d3f4bbccc836ce78c78647
 
             
             <!-- <div class="menu_list">

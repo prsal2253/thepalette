@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<?php include 'page_item/head.php';?>
+</head>
+<body id="member" class="favorite_list">
+<div class="index_top">
+<?php include 'page_item/header.php';?> 
+</div>
+=======
 <?php
 
 require __DIR__ . '/__db_connect.php';
@@ -44,6 +52,7 @@ while ($r2 = $rs2->fetch_assoc()) {
     <div class="index_top">
         <header><h1>palette</h1></header>
     </div>
+>>>>>>> 4ea4cf507854898f88f5904142627c415251c8b1
     <div class="index_main">
         <!-- 麵包屑 -->
         <section  class="bread_crumbs">
@@ -56,9 +65,15 @@ while ($r2 = $rs2->fetch_assoc()) {
     <div class="index_conten_flex">
         <div class="index_conten_l">
             <div class="item_01">
+<<<<<<< HEAD
+                <div class="item_01menu"><a href="order_list.php"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span></a></div>
+                <div class="item_01menu "><a href="member_profile.php"><h6 class="transition">會員資料</h6><span class="transition">member profile</span></a></div>
+                <div class="item_01menu item_01menu_in"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></div>
+=======
                 <div class="item_01menu"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span></div>
                 <div class="item_01menu "><a href="#"><h6 class="transition">會員資料</h6><span class="transition">member profile</span></a></div>
                 <div class="item_01menu item_01menu_in"><a href="#"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a></div>
+>>>>>>> 4ea4cf507854898f88f5904142627c415251c8b1
             </div>
         </div>
         <div class="index_conten_r">
@@ -115,6 +130,12 @@ while ($r2 = $rs2->fetch_assoc()) {
     </div>
     </section>
 </div>
+<<<<<<< HEAD
+<div class="index_footer">
+<?php include 'page_item/footer.php';?>
+</div>
+=======
 <div class="index_footer"></div>
+>>>>>>> 4ea4cf507854898f88f5904142627c415251c8b1
 </body>
 </html>
