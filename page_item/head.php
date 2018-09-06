@@ -20,3 +20,5 @@
     <script type="text/javascript" src="js/jquery.twzipcode.js"></script>
     <!-- swiper -->
     <link rel="stylesheet" href="js/swiper/css/swiper.min.css">
+    <!-- article -->
+    <link rel="stylesheet" href="css/article.css">

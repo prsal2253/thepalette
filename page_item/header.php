@@ -1,6 +1,5 @@
 <?php
 
-
 if(!empty($_SESSION['cart'])) {
     $keys = array_keys($_SESSION['cart']);
 //字面上意思是拿到$_SESSION['cart']所有的key
@@ -18,7 +17,6 @@ if(!empty($_SESSION['cart'])) {
 
         $data[$r['product_sid']] = $r;
     }
-
 }
 ?>
         <header><h1>palette</h1></header>
@@ -34,11 +32,21 @@ if(!empty($_SESSION['cart'])) {
                 <div class="palette_menubox">
                     <div class="menubox_l">
                         <ul>
-                            <li class="selected" data-id="all"><a href="#"><span>Home</span>首頁</a></li>
-                            <li data-id="all"><a href="#"><span>About Us</span>關於我們</a></li>
-                            <li data-id="collections"><a href="#" ><span>Collections</span>精選商品</a></li>
-                            <li data-id="articles"><a href="#"><span>Articles</span>風格專欄</a></li>
-                            <li data-id="all"><a href="#"><span>Get In Touch</span>聯絡我們</a></li>
+                            <li class="selected" data-id="all">
+                                <a href="index.php"><span>Home</span>首頁</a>
+                            </li>
+                            <li data-id="all">
+                                <a href="about.php"><span>About Us</span>關於我們</a>
+                            </li>
+                            <li data-id="collections">
+                                <a href="#"><span>Collections</span>精選商品</a>
+                            </li>
+                            <li data-id="articles">
+                                <a href="article.php"><span>Articles</span>風格專欄</a>
+                            </li>
+                            <li data-id="all">
+                                <a href="about.php"><span>Get In Touch</span>聯絡我們</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="menubox_r">
@@ -163,7 +171,7 @@ if(!empty($_SESSION['cart'])) {
             
 
             <!-- member icon -->
-            <a href="../order_list.html" class="member_icon member_icon2"></a>
+            <a href="../order_list.php" class="member_icon member_icon2"></a>
 
             
             <!-- <div class="menu_list">
