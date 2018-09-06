@@ -64,7 +64,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
                 <script>
                     setTimeout(function(){
                         location.href = '<?= $_SESSION['come_from'] ?>';
-                    }, 1000);
+                    }, );
                 </script>
                 <?php unset($_SESSION['come_from']); endif ?>
 
