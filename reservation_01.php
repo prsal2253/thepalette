@@ -1,27 +1,4 @@
-<<<<<<< HEAD
 <?php include 'page_item/head.php';?>
-=======
-<?php
-
-require __DIR__ . '/__db_connect.php';
-
-if(isset($_GET['id'])){
-
-    $_SESSION['orders_sid'] = $_GET['id'];
-
-}
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>reservation_01</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
->>>>>>> 0121cd3fcd03425061563e5ff0faa98bbc1a204f
 </head>
 
 <!-- 頁面ID -->

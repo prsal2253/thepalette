@@ -4,12 +4,15 @@
 #login .index_main{background: url(../images/background/avenue-boiserie.jpg) bottom center repeat-y;background-attachment: fixed;background-size:cover;min-height:100vh;}
 #signup .index_main{background: url(../images/background/avenue-boiserie.jpg) bottom center repeat-y;background-attachment: fixed;background-size: cover;min-height:100vh;}
 #shoppingcar .index_main{background: url(../images/background/S-wall-03-1920px.jpg) bottom center repeat-y;background-attachment: fixed;background-size: cover;min-height:100vh;}
+#reservation .index_main{background: url(../images/background/S-wall-03-1920px.jpg) bottom center repeat-y;background-attachment: fixed;background-size: cover;min-height:100vh;}
 
 #member .index_conten_r{padding: 0 0 0 15px;}
 #member header,#member .menu_icon,#member .car_icon,#member a.member_icon2,
 #login header,#login .menu_icon,#login .car_icon,#login a.member_icon2,
 #signup header,#signup .menu_icon,#signup .car_icon,#signup a.member_icon2,
-#shoppingcar header,#shoppingcar .menu_icon,#shoppingcar .car_icon,#shoppingcar a.member_icon2{mix-blend-mode: normal;}
+#shoppingcar header,#shoppingcar .menu_icon,#shoppingcar .car_icon,#shoppingcar a.member_icon2,
+#reservation header,#reservation .menu_icon,#reservation .car_icon,#reservation a.member_icon2
+{mix-blend-mode: normal;}
 
 /* member title + conten*/
 .member_title {display: inline-flex; width: 100%; height: 50px;color: #fff;}
