@@ -84,7 +84,12 @@ if(!empty($data_fa)){
                             </div>
 
                             <!-- 一件商品 -->
-<!--                            --><?php //if (isset($_SESSION['love'])): ?>
+                            <?php if(empty($data_fa)):?>
+                            <!-- 追蹤清單沒有商品時的狀態 -->
+                            <div class="order_listbox carts_none">
+                                <h3>追蹤清單目前沒有任何商品</h3>
+                            </div>
+                            <?php else:?>
                             <?php foreach ($data_ar as $dt): ?>
 
                                     <div class="order_listbox howmuch" data-sid="<?= $dt['product_sid'] ?>">
@@ -108,11 +113,7 @@ if(!empty($data_fa)){
                         </div>
 <!--                        --><?php //else: ?>
 <!--                        --><?php //endif ?>
-                        <?php if(empty($data_fa)):?>
-                            <!-- 追蹤清單沒有商品時的狀態 -->
-                            <div class="order_listbox carts_none">
-                                <h3>追蹤清單目前沒有任何商品</h3>
-                            </div>
+
                         <?php endif ?>
                         <!-- 頁碼 -->
                         <!--            <div class="page_num">-->
@@ -142,11 +143,12 @@ if(!empty($data_fa)){
             //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
             tr.remove();
             if (data.success) {
-                console.log(data);
-                alert('你登入了媽？');
-            } else {
                 alert('商品已加入刪除囉！啾咪～');
+                console.log(data);
                 $('#total_howmuch').text($(".howmuch").length);
+            } else {
+                alert('你登入了媽？');
+
             }
         }, 'json');
     });
