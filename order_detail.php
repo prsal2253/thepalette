@@ -144,6 +144,13 @@ if (isset($_GET['id'])) {
                                                 class="description_q transition" href="#">?</a></div>
                                     <div class="order_listbox">
                                         <a href="/thepalette/thepalette/reservation_01.php?orders_sid=<?= $order['orders_sid'] ?>" class="palette_btn">尚未預約前往預約</a>
+                                        <!-- 預約完成後顯示資料 -->
+                                        <!-- <div>
+                                                <p>預約時間：2018/07/31 17:30</p>
+                                                <p>收件人：王ＫＫ</p>
+                                                <p>聯絡電話：0910110220</p>
+                                                <p>送貨地址：台北市中山區中山北路二段14巷2號5樓</p>
+                                        </div> -->
                                     </div>
                                 </div>
 

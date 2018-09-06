@@ -106,8 +106,8 @@ p.address_num{width: 10%;color: #888;}
 .icon_garbage:hover{opacity: .5;}
 
 .icon_love{width: 19px; height: 19px;margin: 0 auto; background-image: url(../images/icon/heart.svg);background-position:center;background-repeat: no-repeat; background-size: 100% auto;cursor: pointer;transition: all .5s;}
-.icon_love:hover{ background-image: url(../images/icon/heart_hover.svg);}
-.icon_love_click{ background-image: url(../images/icon/heart_hover.svg);}
+.icon_love:hover{ background-image: url(../images/icon/heart_w_hover.svg);}
+.icon_love_click{ background-image: url(../images/icon/heart_w_hover.svg);}
 
 /* fancybox */
 .fancybox-slide--html .fancybox-content{max-width:50%;}
@@ -184,7 +184,7 @@ span.cart_number2{width: 18px;height: 18px;position: fixed;top:92px;right: 26px;
 .car_icon:hover span{background-color: #e54728;}
 .car_icon p{font-size: 12px;line-height: 15px;color: #888;}
 .car_iconhover.menu_active {opacity: 1;right: 90px;}
-.car_iconhover{position: fixed;background: rgba(255,255,255,.9);width:400px;top: 90px;right: -440px;overflow: hidden;transition: all .5s;padding: 10px 15px;opacity: 0;}
+.car_iconhover{position: fixed;background: rgba(255,255,255,.9);width:400px;top: 90px;right: -440px;overflow: hidden;transition: all .5s;padding: 10px 15px;opacity: 0;z-index: 10;}
 .car_iconhover .order_listbox{background: rgba(255,255,255,0);transition: all .5s;}
 .car_iconhover .order_listbox:hover{background: rgba(255,255,255,.9);}
 .car_iconhover .check_outbox{width: 100%; padding: 10px 0 0 0; border-top: 1px #ddd solid;}
