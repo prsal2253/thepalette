@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: localhost:8889
--- 產生時間： 2018 年 09 月 05 日 19:14
+-- 產生時間： 2018 年 09 月 06 日 10:37
 -- 伺服器版本: 5.7.21
 -- PHP 版本： 7.2.7
 
@@ -48,7 +48,7 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`member_sid`, `name`, `gender`, `email`, `password`, `mobile`, `address_city`, `address_side`, `address_post`, `address`, `year`, `month`, `day`, `activated`) VALUES
-(1, ' test', 1, '123@gmail.com', '123456', '0987987987', '臺北市', '中正區', '100', '走路會痛', 0, 0, 0, NULL);
+(1, '  test', 1, '123@gmail.com', '123456', '0987987987', '臺北市', '中正區', '100', '走路會痛', 0, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -60,8 +60,18 @@ CREATE TABLE `members_favourite` (
   `members_favourite_sid` int(11) NOT NULL COMMENT '會員收藏編號',
   `member_sid` int(11) NOT NULL COMMENT '客戶編號',
   `product_sid` int(11) NOT NULL COMMENT '商品編號',
-  `date` date NOT NULL COMMENT '日期'
+  `date` datetime NOT NULL COMMENT '日期'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 資料表的匯出資料 `members_favourite`
+--
+
+INSERT INTO `members_favourite` (`members_favourite_sid`, `member_sid`, `product_sid`, `date`) VALUES
+(56, 1, 72, '2018-09-06 18:17:20'),
+(58, 1, 8, '2018-09-06 18:17:23'),
+(59, 1, 74, '2018-09-06 18:22:27'),
+(60, 1, 3, '2018-09-06 18:27:51');
 
 -- --------------------------------------------------------
 
@@ -110,7 +120,11 @@ INSERT INTO `orders` (`orders_sid`, `member_sid`, `order_date`, `orderer_name`, 
 (10, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '1', '1', NULL),
 (11, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '1', '1', NULL),
 (12, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '1', '1', NULL),
-(13, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '1', '1', NULL);
+(13, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '1', '1', NULL),
+(14, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL),
+(15, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL),
+(16, 1, '2018-09-06', '法大大', 'fdfsdfds', 'fsdfsf', NULL, NULL, NULL, 'dsfsd', '法大大', 'fdfsdfds', 'fsdfsf', NULL, NULL, NULL, 'dsfsd', '1', '2', '1', NULL),
+(17, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -160,7 +174,12 @@ INSERT INTO `orders_details` (`sid`, `order_sid`, `product_sid`, `price`, `quant
 (27, 10, 12, 78600, 5),
 (28, 11, 45, 9000, 5),
 (29, 12, 4, 42600, 3),
-(30, 13, 2, 27000, 4);
+(30, 13, 2, 27000, 4),
+(31, 14, 42, 27000, 1),
+(32, 15, 109, 9000, 1),
+(33, 16, 110, 8500, 1),
+(34, 17, 3, 9000, 4),
+(35, 17, 44, 9000, 5);
 
 -- --------------------------------------------------------
 
@@ -467,7 +486,9 @@ INSERT INTO `reservation_sid` (`reservation_sid`, `member_sid`, `order_sid`, `re
 (1, 1, 12, '', '請選擇配送時間'),
 (2, 1, 13, '2018-09-21', '下午13：30-17：30'),
 (3, 1, 13, '2018-09-13', '晚上19：30-21：30'),
-(4, 1, 9, '2018-09-27', '上午09：00-12：00');
+(4, 1, 9, '2018-09-27', '上午09：00-12：00'),
+(5, 1, 14, '2018-09-06', '下午13：30-17：30'),
+(6, 1, 16, '2018-08-30', '上午09：00-12：00');
 
 --
 -- 已匯出資料表的索引
@@ -554,19 +575,19 @@ ALTER TABLE `members`
 -- 使用資料表 AUTO_INCREMENT `members_favourite`
 --
 ALTER TABLE `members_favourite`
-  MODIFY `members_favourite_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '會員收藏編號';
+  MODIFY `members_favourite_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '會員收藏編號', AUTO_INCREMENT=61;
 
 --
 -- 使用資料表 AUTO_INCREMENT `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orders_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '訂單編號', AUTO_INCREMENT=14;
+  MODIFY `orders_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '訂單編號', AUTO_INCREMENT=18;
 
 --
 -- 使用資料表 AUTO_INCREMENT `orders_details`
 --
 ALTER TABLE `orders_details`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '編號', AUTO_INCREMENT=31;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '編號', AUTO_INCREMENT=36;
 
 --
 -- 使用資料表 AUTO_INCREMENT `products_category_sid`
@@ -608,7 +629,7 @@ ALTER TABLE `products_size_sid_w`
 -- 使用資料表 AUTO_INCREMENT `reservation_sid`
 --
 ALTER TABLE `reservation_sid`
-  MODIFY `reservation_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '預約時間編號', AUTO_INCREMENT=5;
+  MODIFY `reservation_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '預約時間編號', AUTO_INCREMENT=7;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
