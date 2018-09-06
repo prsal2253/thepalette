@@ -1,7 +1,7 @@
 
 <?php include 'page_item/head.php';?>
 </head>
- <!-- 依照頁面改ＩＤ -->
+ <!-- 依照頁面改ID -->
 <body id="signup" class="">
  <!-- top -->
 <div class="index_top">
