@@ -31,7 +31,7 @@ if (!empty($_SESSION['cart'])) {
 
     $c_ar = [];
 //先給空陣列
-    while($c = $rs3->fetch_assoc()){
+    while ($c = $rs3->fetch_assoc()) {
 //    這裡迴圈先一一取出$rs3陣列
         $c_ar[$c['product_color_sid']] = $c['color'];
 //以'product_color_sid'當作key對應'color'的val
@@ -103,7 +103,8 @@ if (!empty($_SESSION['cart'])) {
                                 </figure>
                                 <div class="description_40">
                                     <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name"><?= $r['product_name'] ?></a>
+                                    <a href="product_detail.php?id=<?= $r['product_sid'] ?>"
+                                       class="product_name"><?= $r['product_name'] ?></a>
                                 </div>
                                 <div class="description_5"></div>
                                 <div class="description_10"><?= $c_ar[$r['product_color_sid']] ?></div>
@@ -242,10 +243,10 @@ if (!empty($_SESSION['cart'])) {
                            title="付款說明">?</a></div>
                     <div class="order_listbox">
                         <div class="radio_box">
-                            <input type="radio" name="transport" value="1" checked><span class="radio_content">到店取貨<span
+                            <input type="radio" name="transport" value="1"><span class="radio_content">到店取貨<span
                                         class="description_mark">＄0</span></span></div>
                         <div class="radio_box">
-                            <input type="radio" name="transport" value="2"><span class="radio_content">宅配到府<span
+                            <input type="radio" name="transport" value="2" checked><span class="radio_content">宅配到府<span
                                         class="description_mark">＄800</span></span></div>
                     </div>
                 </div>
@@ -346,9 +347,23 @@ if (!empty($_SESSION['cart'])) {
     });
 
     // 點選收藏後加class
-    $(".icon_love,.product_favorate").click(function(){
-        $(this).toggleClass("icon_love_click");
-    });
+    $(".icon_love,.product_favorate").click(function () {
+        $(this).addClass("icon_love_click");
+            var product = $(this).closest('.product-item');
+            var sid = product.attr('data-sid');
+        $.get('love_api.php', {sid:sid}, function(data){
+            //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+
+            if(data.success) {
+                console.log(data);
+                alert('商品已加入最愛囉！啾咪～');
+            }else {
+                alert('你登入了媽？');
+            }
+        }, 'json');
+        });
+
+
 
 </script>
 </body>

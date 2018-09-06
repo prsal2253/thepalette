@@ -1,9 +1,58 @@
+<<<<<<< HEAD
 <?php include 'page_item/head.php';?>
 </head>
 <body id="member" class="favorite_list">
 <div class="index_top">
 <?php include 'page_item/header.php';?> 
 </div>
+=======
+<?php
+
+require __DIR__ . '/__db_connect.php';
+
+
+if (isset($_SESSION['user'])){
+
+$sql = 'SELECT * FROM `members_favourite` WHERE `member_sid`='.$_SESSION['user']['member_sid'];
+    $rs = $mysqli->query($sql);
+$c = [];
+
+while ($r = $rs->fetch_assoc()) {
+
+
+    print_r($r['product_sid']);
+}
+
+ $sql2 =sprintf('SELECT * FROM `products_list` WHERE `product_sid`=(%s)', implode(",", $r['product_sid']));
+
+$rs2 = $mysqli->query($sql2);
+
+while ($r2 = $rs2->fetch_assoc()) {
+
+
+    print_r($r2);
+}
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>favorite_list</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/member.css">
+</head>
+<body id="member" class="favorite_list">
+    <div class="index_top">
+        <header><h1>palette</h1></header>
+    </div>
+>>>>>>> 4ea4cf507854898f88f5904142627c415251c8b1
     <div class="index_main">
         <!-- 麵包屑 -->
         <section  class="bread_crumbs">
@@ -16,9 +65,15 @@
     <div class="index_conten_flex">
         <div class="index_conten_l">
             <div class="item_01">
+<<<<<<< HEAD
                 <div class="item_01menu"><a href="order_list.php"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span></a></div>
                 <div class="item_01menu "><a href="member_profile.php"><h6 class="transition">會員資料</h6><span class="transition">member profile</span></a></div>
                 <div class="item_01menu item_01menu_in"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></div>
+=======
+                <div class="item_01menu"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span></div>
+                <div class="item_01menu "><a href="#"><h6 class="transition">會員資料</h6><span class="transition">member profile</span></a></div>
+                <div class="item_01menu item_01menu_in"><a href="#"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a></div>
+>>>>>>> 4ea4cf507854898f88f5904142627c415251c8b1
             </div>
         </div>
         <div class="index_conten_r">
@@ -131,8 +186,12 @@
     </div>
     </section>
 </div>
+<<<<<<< HEAD
 <div class="index_footer">
 <?php include 'page_item/footer.php';?>
 </div>
+=======
+<div class="index_footer"></div>
+>>>>>>> 4ea4cf507854898f88f5904142627c415251c8b1
 </body>
 </html>

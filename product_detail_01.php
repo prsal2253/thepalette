@@ -114,10 +114,16 @@ if(isset($_GET['id'])) {
                             <span style="font-size: 12px; color:#666; text-decoration: line-through"
                                   data-totalprice="<?= $r['price'] ?>" class="sub-total"> </span></h8>
                     <div class="product_detail_01_color">
-                        <?php foreach($s_same as $k=>$v): ?>
-                            <div class="choose_color color<?= $v['product_color_sid'] ?> transition"
-                                 data-sid="<?= $v['product_sid'] ?>" data-img="<?= $v['img'] ?>"></div>
-                        <?php endforeach; ?>
+                        <?php if(($r['same']!=0)):?>
+                            <div class="product_quicklook_01_color">
+                                <?php foreach($s_same as $k=>$v): ?>
+                                    <div class="choose_color color<?= $v['product_color_sid'] ?> transition"
+                                         data-sid="<?= $v['product_sid'] ?>" data-img="<?= $v['img'] ?>"></div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php else:?>
+                            <div></div>
+                        <?php endif;?>
                     </div>
                     <div class="product_detail_01_btns flex">
                         <div class="s_product_detail_01_num palette_select">
