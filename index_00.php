@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
+<?php include 'page_item/head.php';?>
     <style>
         .index02 {
             width: 100%;
@@ -702,7 +693,15 @@
 </head>
 
 <body>
+    <!-- 頁面ID -->
     <section id="index02">
+
+         <!-- top -->
+        <div class="index_top">
+            <?php include 'page_item/header.php';?> 
+        </div>
+
+        <!-- main -->
         <div class="index_conten index02">
             <div class="index02_video">
                 <div class="index02_video_txt">
@@ -976,6 +975,11 @@
             </div>
         </section>
     </div>
+     <!-- footer -->
+    <div class="index_footer">
+        <?php include 'page_item/footer.php';?>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="js/swiper/js/swiper.min.js"></script> 
