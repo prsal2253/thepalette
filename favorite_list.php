@@ -75,7 +75,7 @@ while ($r2 = $rs2->fetch_assoc()) {
                         <div class="order_listbox">
                                 <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_50">
-                                    <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
+                                    <a href="product_detail.php?id=<?= $dt['product_sid'] ?>" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
                                 <div class="description_10"></div>
                                 <div class="description_10">黃色</div>
