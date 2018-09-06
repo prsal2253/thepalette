@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 
 require __DIR__ . '/__db_connect.php';
@@ -11,7 +9,6 @@ if(isset($_GET['id'])){
 }
 ?>
 
->>>>>>> 016d8853751d3609bb74086b5147e9fa55c4b49c
 <?php include 'page_item/head.php';?>
 </head>
 
