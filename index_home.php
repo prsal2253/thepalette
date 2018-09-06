@@ -19,7 +19,7 @@
     <!-- banner 輪播 -->
     <section id="ps-container" class="ps-container">
                 <div class="sale_box">
-                    <div><a href="#">
+                    <div><a href="activity.php">
                         <h3>「家具滿額贈」</h3>
                         <h6>活動開跑即日起至9/16</h6>
                         <p>活動開跑即日即是起至9/16, 全館商品消費滿萬即贈設計師吊燈一組。</p>

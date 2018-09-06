@@ -5,6 +5,7 @@
 
 .sale_box{position: absolute;top: 0px;right:0px; width:30%;height: 35%;z-index: 10;display: inline-flex;align-items: center;padding:0 0 0 5%;margin-right: -3%;z-index: 12;}
 .sale_box>div{width: 80%;}
+.sale_box a{text-decoration: none;}
 .sale_box h3{font-size: 32px;line-height: 40px;font-family: 'SourceHanSerifTC-SemiBold';color: #fff;margin-bottom:5px;text-indent: -20px;letter-spacing: .15em;}
 .sale_box h6{font-size: 24px;line-height: 30px;font-family: 'SourceHanSerifTC-SemiBold';color: #fff;margin-bottom:10px;letter-spacing: .15em;}
 .sale_box p{font-size: 16px;line-height: 24px;color: #d6b7b7;margin-top: 5%;font-weight: 300;letter-spacing: 0.15em;}

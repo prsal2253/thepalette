@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . '/__db_connect.php';
 
 if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
@@ -341,8 +340,21 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         $(".item_18box:last-child").find("select[name='address_side']").prop('selectedIndex', personSide);
         $(".item_18box:last-child").find("input").eq(4).val(personPost);
         $(".item_18box:last-child").find("input").eq(5).val(personAddress);
-        console.log(personSide);
+        if ($(this).prop("checked") == true) {
+                    console.log("ready to copy... ");
+                    var cityValue = $("select[name=address_side]").find("option").eq($("select[name=address_side]").prop("selectedIndex")).val();
+                    var cityText = $("select[name=address_side]").find("option").eq($("select[name=address_side]").prop("selectedIndex")).text();
+                    console.log(cityValue);
+                    console.log(cityText);
+                    var newOption = document.createElement("option");
+                    $(newOption).prop("value", cityValue);
+                    $(newOption).text(cityText);
+                    $(".item_18box:last-child").find("select[name='address_side']").html(newOption);
+                }
     });
+
+                
+
 
 
     //      即時計算總價

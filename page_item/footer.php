@@ -5,11 +5,11 @@
                 <div class="footer_bottom flex">
                     <div class="footer_bottom_left flex">
                         <ul class="footer_about"><h3>關於我們</h3>
-                        <a href=""><li>品牌理念</li></a> 
-                        <a href=""><li>實體店面</li></a> 
+                        <a href="../thepalette/about.php?#w_about"><li>品牌理念</li></a> 
+                        <a href="../thepalette/about.php?#w_designer"><li>實體店面</li></a> 
                             <a href=""><li>最新消息</li></a> 
-                            <a href=""><li>聯絡我們</li></a> 
-                            <a href=""><li>隱私權條款</li></a> 
+                            <a href="../thepalette/about.php?#w_contact"><li>聯絡我們</li></a> 
+                            <a href="../thepalette/about.php?#w_policy"><li>隱私權條款</li></a> 
                         </ul>
                         <ul class="footer_notice"><h3>購物須知</h3>
                             <a href=""><li>購物流程</li></a> 

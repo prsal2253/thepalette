@@ -16,6 +16,18 @@
     #article_detail .index_main section {
         padding: 0;
     }
+    /* 麵包屑 */
+
+    #article_detail .bread_crumbs {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+        z-index: 11;
+    }
+
+    #article_detail .bread_crumbs ul li a,#article_detail .bread_crumbs ul li,#article_detail .bread_crumbs ul li::after {
+        color: #fff;
+    }
 
     .artd_box1 {
         width: 100%;
@@ -44,15 +56,38 @@
 
     .artd_prev,
     .artd_next {
-        width: 40%;
+        width: 50%;
         height: 100%;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        position: relative;
     }
 
     .artd_prev img,
     .artd_next img {
-        width: 50px;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+    .artd_prev img{
+        left:-100%;
+    }
+    .artd_next img {
+        right:-100%;
+    }
+
+    .artd_prev:hover img,
+    .artd_next:hover img{
+        opacity: 1;
+    }
+
+    .artd_prev:hover img{
+        left:0%;
+    }
+    .artd_next:hover img {
+        right:0%;
     }
 
     .artd_prev a,
@@ -61,13 +96,32 @@
 
     }
 
-    .artd_prev a {
-        margin: 0 0 4% 5%;
-        text-align: right;
-    }
+    .artd_prev a, .artd_next a  {
+        display: inline-flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-size: 50px auto;
+    background-repeat: no-repeat;
+    text-decoration: none;
 
+    }
+    .artd_prev a {
+        background-image: url(images/icon/arrow_w.svg);
+        background-position: 25% 54%;
+        padding: 0 0 0 15%;
+    }
     .artd_next a {
-        margin: 0 5% 4% 0;
+        background-image: url(images/icon/arrow2_w.svg);
+        background-position: 75% 54%;
+        padding: 0 15% 0 0;
+    }
+    .artd_prev:hover a, .artd_next:hover a{
+        background-color: rgba(0,0,0,0.3);
     }
 
     .artd_box1 figure {
@@ -82,6 +136,7 @@
     .artd_title {
         position: relative;
         top: -110px;
+        width: 60%;
     }
 
     .artd_title h2 {
@@ -89,7 +144,6 @@
         font-size: 33px;
         letter-spacing: 2px;
         line-height: 50px;
-        width: 60%;
     }
 
     /* 文章內容 */
@@ -214,15 +268,15 @@
                     <div class="artd_box2"></div>
 
                     <div class="artd_post flex">
-                        <div class="artd_prev flex">
-                            <img src="images/icon/arrow_w.svg" alt="">
-                            <a href="article_detail_05.php">PREV
+                        <div class="artd_prev flex ">
+                            <img src="images/article/36416203116_b5ffe0b139_k.jpg" alt="" class="transition">
+                            <a href="article_detail_05.php" class="transition">PREV
                                 <br>ARTICLE</a>
                         </div>
-                        <div class="artd_next flex">
-                            <a href="article_detail_02.php">NEXT
+                        <div class="artd_next flex transition">
+                            <img src="images/article/42554120281_2532aefa20_b.jpg" alt="" class="transition">
+                            <a href="article_detail_02.php" class="transition">NEXT
                                 <br>ARTICLE</a>
-                            <img src="images/icon/arrow2_w.svg" alt="">
                         </div>
                     </div>
                 </figure>
