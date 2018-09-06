@@ -13,7 +13,7 @@
         background: #fff;
     }
 
-    .index_main section {
+    #article_detail .index_main section {
         padding: 0;
     }
 
@@ -174,8 +174,11 @@
     .product_detail_04 {
         width: 100%;
         flex-direction: column;
-        margin: 80px auto;
+        padding: 80px 0;
+        background-color: #fff;
+        margin: 0 auto;
     }
+    #product_detail_04{    background-color: #fff;}
 </style>
 </head>
 
@@ -224,8 +227,6 @@
                     </div>
                 </figure>
             </div>
-    </div>
-
     <div class="index_conten">
         <!-- 文章標題 -->
         <div class="artd_title">
@@ -346,7 +347,7 @@
             </div>
         </section>
     </div>
-
+    </div>
     <div class="index_footer">
         <?php include 'page_item/footer.php';?>
     </div>
