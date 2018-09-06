@@ -114,7 +114,7 @@ while($c = $rs3->fetch_assoc()){
                                 <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_40">
                                     <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
+                                    <a href="product_detail.php?id=<?= $dt['product_sid'] ?>" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
                                 <div class="description"><?= $c_ar[$dt['product_color_sid']] ?></div>
                             <div class="description_10 product-item-qty"  data-qty="<?= $dt['quantity'] ?>"> x <?= $dt['quantity'] ?></div>

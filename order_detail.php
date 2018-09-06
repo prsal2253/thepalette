@@ -35,25 +35,26 @@ if (isset($_GET['id'])) {
 
     $c_ar = [];
 //先給空陣列
-    while($c = $rs3->fetch_assoc()){
+    while ($c = $rs3->fetch_assoc()) {
 //    這裡迴圈先一一取出$rs3陣列
         $c_ar[$c['product_color_sid']] = $c['color'];
 //以'product_color_sid'當作key對應'color'的val
     }
 
-    $sql4 = "SELECT * FROM `reservation_sid` WHERE`order_sid`=".$_GET['id'];
+    $sql4 = "SELECT * FROM `reservation_sid` WHERE`order_sid`=" . $_GET['id'];
     $rs4 = $mysqli->query($sql4);
-    $r = $rs4->fetch_assoc();
+    $rt1 = $rs4->fetch_assoc();
+
 
 
 }
 
 ?>
-<?php include 'page_item/head.php';?>
+<?php include 'page_item/head.php'; ?>
 </head>
 <body id="member" class="order_detail">
 <div class="index_top">
-<?php include 'page_item/header.php';?> 
+    <?php include 'page_item/header.php'; ?>
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -70,9 +71,11 @@ if (isset($_GET['id'])) {
                 <div class="item_01">
                     <div class="item_01menu item_01menu_in"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span>
                     </div>
-                    <div class="item_01menu "><a href="member_profile.php"><h6 class="transition">會員資料</h6><span class="transition">member profile</span></a>
+                    <div class="item_01menu "><a href="member_profile.php"><h6 class="transition">會員資料</h6><span
+                                    class="transition">member profile</span></a>
                     </div>
-                    <div class="item_01menu"><a href="favorite_list.php"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a>
+                    <div class="item_01menu"><a href="favorite_list.php"><h6 class="transition">追蹤清單</h6><span
+                                    class="transition">my favourite</span></a>
                     </div>
                 </div>
             </div>
@@ -101,17 +104,17 @@ if (isset($_GET['id'])) {
                                     <ul class="order_timebar">
                                         <li></li>
                                         <li class="this_time"></li>
-                                        <?php if(!empty($r['reservation_date'])):?>
-                                        <li class="this_time"></li>
-                                        <?php else:?>
-                                        <li class=""></li>
-                                        <?php endif;?>
+                                        <?php if (!empty($r['reservation_date'])): ?>
+                                            <li class="this_time"></li>
+                                        <?php else: ?>
+                                            <li class=""></li>
+                                        <?php endif; ?>
                                         <li class=""></li>
                                     </ul>
                                     <div class="order_timebar_detail">
                                         <p>訂單成立<br/><span><?= $order['order_date'] ?></span></p>
                                         <p>匯款確認<br/><span><?= $order['order_date'] ?></span></p>
-                                        <p>預約確認<br/><span><?= $r['reservation_date'] ?></span></p>
+                                        <p>預約確認<br/><span><?= $rt1['reservation_date'] ?></span></p>
                                         <p>訂單完成<br/><span></span></p>
                                     </div>
 
@@ -142,40 +145,43 @@ if (isset($_GET['id'])) {
                                         </div>
                                     </div>
                                 </div>
-                                <?php if(!empty($r['reservation_date'])):?>
-                                <div class="item_02_conten">
-                                    <div class="order_listbox">運送方式 : <span class="description_mark_b">貨運(已預約)</span><a
-                                                data-fancybox data-type="ajax"
-                                                data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
-                                                href="javascript:;" class="description_q transition"
-                                                class="description_q transition" href="#">?</a></div>
-                                    <div class="order_listbox">
-                                        <div>
-                                            <p>預約日期：<?= $r['reservation_date'] ?></p>
-                                            <p>配送時間：<?= $r['reservation_time'] ?></p>
+                                <?php if (!empty($rt1['reservation_date'])): ?>
+                                    <div class="item_02_conten">
+                                        <div class="order_listbox">運送方式 : <span
+                                                    class="description_mark_b">貨運(已預約)</span><a
+                                                    data-fancybox data-type="ajax"
+                                                    data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
+                                                    href="javascript:;" class="description_q transition"
+                                                    class="description_q transition" href="#">?</a></div>
+                                        <div class="order_listbox">
+                                            <div>
+                                                <p>預約日期：<?= $rt1['reservation_date'] ?></p>
+                                                <p>配送時間：<?= $rt1['reservation_time'] ?></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <?php else :?>
-                                <div class="item_02_conten">
-                                    <div class="order_listbox">運送方式 : <span class="description_mark_b">貨運(未預約)</span><a
-                                                data-fancybox data-type="ajax"
-                                                data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
-                                                href="javascript:;" class="description_q transition"
-                                                class="description_q transition" href="#">?</a></div>
-                                    <div class="order_listbox">
-                                        <!-- 預約完成後顯示資料 -->
-                                        <!-- <div>
-                                                <p>預約時間：2018/07/31 17:30</p>
-                                                <p>收件人：王ＫＫ</p>
-                                                <p>聯絡電話：0910110220</p>
-                                                <p>送貨地址：台北市中山區中山北路二段14巷2號5樓</p>
-                                        </div> -->
-                                        <a href="reservation_01.php?id=<?= $order['orders_sid'] ?>" class="palette_btn">尚未預約前往預約</a>
+                                <?php else : ?>
+                                    <div class="item_02_conten">
+                                        <div class="order_listbox">運送方式 : <span
+                                                    class="description_mark_b">貨運(未預約)</span><a
+                                                    data-fancybox data-type="ajax"
+                                                    data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
+                                                    href="javascript:;" class="description_q transition"
+                                                    class="description_q transition" href="#">?</a></div>
+                                        <div class="order_listbox">
+                                            <!-- 預約完成後顯示資料 -->
+                                            <!-- <div>
+                                                    <p>預約時間：2018/07/31 17:30</p>
+                                                    <p>收件人：王ＫＫ</p>
+                                                    <p>聯絡電話：0910110220</p>
+                                                    <p>送貨地址：台北市中山區中山北路二段14巷2號5樓</p>
+                                            </div> -->
+                                            <a href="reservation_01.php?id=<?= $order['orders_sid'] ?>"
+                                               class="palette_btn">尚未預約前往預約</a>
 
+                                        </div>
                                     </div>
-                                </div>
-                                <?php endif;?>
+                                <?php endif; ?>
                             </div>
 
                             <!-- 訂購商品 -->
@@ -198,7 +204,8 @@ if (isset($_GET['id'])) {
                                                             src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                             <div class="description_50">
                                                 <div class="sale_icon"><span>活動商品</span></div>
-                                                <a href="#" class="product_name"><?= $dt['product_name'] ?></a>
+                                                <a href="product_detail.php?id=<?= $dt['product_sid'] ?>"
+                                                   class="product_name"><?= $dt['product_name'] ?></a>
                                             </div>
                                             <div class="description_10"></div>
                                             <div class="description_10"><?= $c_ar[$dt['product_color_sid']] ?></div>
@@ -283,7 +290,7 @@ if (isset($_GET['id'])) {
 
 </script>
 <div class="index_footer">
-<?php include 'page_item/footer.php';?>
+    <?php include 'page_item/footer.php'; ?>
 </div>
 </body>
 </html>
