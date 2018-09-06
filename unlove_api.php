@@ -18,7 +18,6 @@ if(!empty($_GET['sid'])) {
 
         $result['success'] = true;
 
-        unset($_SESSION['love'][$sid]);
 
 
     }

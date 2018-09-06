@@ -5,7 +5,7 @@ require __DIR__ . '/__db_connect.php';
 $pageName = 'cart';
 
 
-if (!empty($_SESSION['cart'])) {
+if( !empty($_SESSION['cart'])) {
     $keys = array_keys($_SESSION['cart']);
 //字面上意思是拿到$_SESSION['cart']所有的key
     $sql = sprintf("SELECT l.*, pc.* FROM products_list l JOIN products_color_sid pc ON l.product_color_sid=pc.product_color_sid WHERE `product_sid` IN (%s)", implode(',', $keys));
@@ -37,8 +37,18 @@ if (!empty($_SESSION['cart'])) {
 //以'product_color_sid'當作key對應'color'的val
     }
 
-}
+    if (isset ($_SESSION['user'])) {
+        $data_fa = [];
+        $sql_love = 'SELECT * FROM `members_favourite` WHERE `member_sid`=' . $_SESSION['user']['member_sid'];
+        $rs_love = $mysqli->query($sql_love);
 
+        while ($r_love = $rs_love->fetch_assoc()) {
+            $data_fa[$r_love['product_sid']] = $r_love['product_sid'];
+
+        }
+
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -120,8 +130,8 @@ if (!empty($_SESSION['cart'])) {
                                     <?= $r['price'] ?>
                                 </div>
                                 <div class="description_10">
-                                    <div class="icon_love <?=$_SESSION['love']==$r['product_sid'] ? 'icon_love_click' : ''?>"></div>
-
+<!--                                    --><?php //foreach ($data_fa as $key => $love);?>
+                                    <div class="icon_love <?=$data_fa[$r['product_sid']]==$r['product_sid'] ? 'icon_love_click' : ''?>"></div>
                                 </div>
                                 <div class="description_5">
                                     <div class="icon_garbage"></div>
@@ -349,22 +359,24 @@ if (!empty($_SESSION['cart'])) {
     });
 
     // 點選收藏後加class
-    $(".icon_love,.product_favorate").click(function () {
+    $(".icon_love,.product_favorate").click(function (data) {
         if($(this).hasClass('icon_love_click')) {
+            $(this).removeClass("icon_love_click");
             var product = $(this).closest('.product-item');
             var sid = product.attr('data-sid');
             $.get('unlove_api.php', {sid:sid}, function(data){
                 //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
                 if(data.success) {
                     console.log(data);
-                    alert('你登入了媽？！啾咪～');
+                    alert('商品已加入刪除囉！啾咪～？');
+
 
                 }else {
-                    alert('商品已加入刪除囉！啾咪～？');
-                    $(this).removeClass("icon_love_click");
+                    alert('你登入了媽？！啾咪～');
                 }
             }, 'json');
         }else{
+            $(this).addClass("icon_love_click");
             var product = $(this).closest('.product-item');
             var sid = product.attr('data-sid');
             $.get('love_api.php', {sid: sid}, function (data) {
@@ -373,7 +385,7 @@ if (!empty($_SESSION['cart'])) {
                 if (data.success) {
                     console.log(data);
                     alert('商品已加入最愛囉！啾咪～');
-                    $(this).addClass("icon_love_click");
+
                 } else {
                     alert('你登入了媽？');
                 }
