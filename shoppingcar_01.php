@@ -119,7 +119,8 @@ if (!empty($_SESSION['cart'])) {
                                     <?= $r['price'] ?>
                                 </div>
                                 <div class="description_10">
-                                    <div class="icon_love"></div>
+                                    <div class="icon_love <?=$_SESSION['love']==$r['product_sid'] ? 'icon_love_click' : ''?>"></div>
+
                                 </div>
                                 <div class="description_5">
                                     <div class="icon_garbage"></div>
@@ -348,20 +349,38 @@ if (!empty($_SESSION['cart'])) {
 
     // 點選收藏後加class
     $(".icon_love,.product_favorate").click(function () {
-        $(this).addClass("icon_love_click");
+        if(!$(this).hasClass('icon_love_click')) {
+            $(this).addClass("icon_love_click");
             var product = $(this).closest('.product-item');
             var sid = product.attr('data-sid');
-        $.get('love_api.php', {sid:sid}, function(data){
-            //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+            $.get('love_api.php', {sid: sid}, function (data) {
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
 
-            if(data.success) {
-                console.log(data);
-                alert('商品已加入最愛囉！啾咪～');
-            }else {
-                alert('你登入了媽？');
-            }
-        }, 'json');
+                if (data.success) {
+                    console.log(data);
+                    alert('商品已加入最愛囉！啾咪～');
+                } else {
+                    alert('你登入了媽？');
+                }
+            }, 'json');
+        }else{
+            $(this).removeClass("icon_love_click");
+            var product = $(this).closest('.product-item');
+            var sid = product.attr('data-sid');
+            $.get('unlove_api.php', {sid:sid}, function(data){
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                if(data.success) {
+                    console.log(data);
+                    alert('你登入了媽？！啾咪～');
+                }else {
+                    alert('商品已加入刪除囉！啾咪～？');
+                }
+            }, 'json');
+
+        }
         });
+
+
 
 
 

@@ -79,7 +79,9 @@ while ($r2 = $rs2->fetch_assoc()) {
                         </div>
 
                         <!-- 一件商品 -->
+
                     <?php   foreach($data_ar  as $dt):     ?>
+                    <?php if (!empty($dt['product_sid'])): ?>
                         <div class="order_listbox howmuch" data-sid="<?= $dt['product_sid'] ?>">
                                 <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_50">
@@ -90,6 +92,13 @@ while ($r2 = $rs2->fetch_assoc()) {
                                 <div class="description_10"><?= $dt['price'] ?></div>
                                 <div class="description_10"><div class="icon_garbage"></div></div>
                         </div>
+                        <?php else: ?>
+                            <!-- 追蹤清單沒有商品時的狀態 -->
+                            <div class="order_listbox carts_none">
+                                <h3>追蹤清單目前沒有任何商品</h3>
+                            </div>
+                        <?php endif ?>
+
                     <?php endforeach; ?>
                         <!-- 一件商品 -->
 

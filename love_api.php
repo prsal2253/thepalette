@@ -7,6 +7,7 @@ if(! isset($_SESSION['love'])){
     $_SESSION['love'] = [];
 
 }
+if(!empty($_GET['sid'])){
 $sql ='SELECT * FROM `members_favourite` WHERE `product_sid`='.$_GET['sid'];
 $stmt=$mysqli->query($sql);
 if($stmt->num_rows==0) {
@@ -35,11 +36,11 @@ if($stmt->num_rows==0) {
 
         $_SESSION['love'] = $sid;
     }
-
+    echo json_encode($result, JSON_UNESCAPED_UNICODE);
+}
 }
 
 
-echo json_encode($result, JSON_UNESCAPED_UNICODE);
 
 
 
