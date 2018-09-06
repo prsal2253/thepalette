@@ -21,6 +21,16 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
     foreach ($data as $k => $v) {
         $total_price += $v['price'] * $v['qty'];
     }
+    $sql3 = sprintf("SELECT `product_color_sid`, `color` FROM `products_color_sid` WHERE 1");
+    $rs3 = $mysqli->query($sql3);
+
+    $c_ar = [];
+//先給空陣列
+    while($c = $rs3->fetch_assoc()){
+//    這裡迴圈先一一取出$rs3陣列
+        $c_ar[$c['product_color_sid']] = $c['color'];
+//以'product_color_sid'當作key對應'color'的val
+    }
 
 }
 ?>
@@ -73,10 +83,10 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                                 </figure>
                                 <div class="description_50">
                                     <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name"><?= $r['product_name'] ?></a>
+                                    <a href="product_detail.php?id=<?= $r['product_sid'] ?>" class="product_name"><?= $r['product_name'] ?></a>
                                 </div>
                                 <div class="description_10"></div>
-                                <div class="description_10"><?= $r['color'] ?></div>
+                                <div class="description_10"><?= $c_ar[$r['product_color_sid']] ?></div>
                                 <div class="description_10 product-item-qty"
                                      data-qty="<?= $r['qty'] ?>"><?= $r['qty'] ?></div>
                                 <div class="description_10 product-item-price"
@@ -320,18 +330,18 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         var personName = $(".item_18box:first-child").find("input").eq(0).val();
         var personEmail = $(".item_18box:first-child").find("input").eq(1).val();
         var personMobile = $(".item_18box:first-child").find("input").eq(2).val();
-        var personCity = $("select[name='address_city']").find(":selected").val();
-        var personSide = $("select[name='address_side']").find(":selected").val();
+        var personCity = $(".item_18box:first-child").find("select[name='address_city']").prop('selectedIndex');
+        var personSide = $(".item_18box:first-child").find("select[name='address_side']").prop('selectedIndex');
         var personPost = $(".item_18box:first-child").find("input").eq(3).val();
         var personAddress = $(".item_18box:first-child").find("input").eq(4).val();
         $(".item_18box:last-child").find("input").eq(1).val(personName);
         $(".item_18box:last-child").find("input").eq(2).val(personEmail);
         $(".item_18box:last-child").find("input").eq(3).val(personMobile);
-        $(".item_18box:last-child").find("select[name='address_city']").val(personCity);
-        $(".item_18box:last-child").find("select[name='address_side']").val(personSide);
+        $(".item_18box:last-child").find("select[name='address_city']").prop('selectedIndex', personCity);
+        $(".item_18box:last-child").find("select[name='address_side']").prop('selectedIndex', personSide);
         $(".item_18box:last-child").find("input").eq(4).val(personPost);
         $(".item_18box:last-child").find("input").eq(5).val(personAddress);
-        
+        console.log(personSide);
     });
 
 

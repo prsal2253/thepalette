@@ -7,8 +7,6 @@ if(!isset($_SESSION['user'])){
     exit;
 }
 
-
-
 // 先取得會員的訂單資料 (半年內)
 $t = date("Y-m-d H:i:s", time()-180*24*60*60);
 $sql = sprintf("SELECT * FROM `orders` WHERE member_sid=%s AND order_date>'%s' ORDER BY orders_sid DESC",
@@ -161,7 +159,6 @@ while($c = $rs3->fetch_assoc()){
             return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         };
 
-            var total = 0;// 一開始設定0
             var items = $('.sub-total');
 
             items.each(function () {    // 抓到所有項目，所以用each迴圈下去跑，每跑到一個就抓它價格跟數量乘起來

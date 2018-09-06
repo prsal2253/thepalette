@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
     <style>
-        #heard .index_main{background: url(../images/background/avenue-boiserie.jpg) bottom center repeat-y;background-attachment: fixed;background-size: cover;min-height:100vh;}
+        #heard .index_main{
+            background:#fff url(../images/background/avenue-boiserie.jpg) top center no-repeat;
+            background-size:100% auto;min-height:500vh;}
     </style>
 </head>
 <body id="heard" class="">
     <div class="index_top">
         <header><h1>palette</h1></header>
-        <nav>
-            <div class="palette_menu">
             <!-- menu icon -->
             <div class="menu_icon">
                 <div class="bar transition"></div>
@@ -130,10 +130,12 @@
                     </div>
                 </div>
             </div>
-            </div>
+            
 
             <!-- cart icon -->
-            <div class="car_icon transition"><span class="cart_number">1</span>
+            
+            <div class="car_icon car_icon_fixed transition"></div>
+            <span class="cart_number2">1</span>
             <div class="car_iconhover">
                 <div class="order_listbox">
                     <figure class="description_20"><a href="#"><img src="../images/banner/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>
@@ -162,18 +164,11 @@
                 </div> -->
    
             </div>
-            </div>
+            
 
             <!-- member icon -->
-            <a href="../order_list.html" class="member_icon"></a>
+            <a href="../order_list.html" class="member_icon member_icon2"></a>
 
-            
-            <!-- <div class="menu_list">
-                <a href="#"><span class="list_en">longin</span><span class="list_cn">會員登入</span></a>
-                <a href="#"><span class="list_en">longout</span><span class="list_cn">會員登出</span></a>
-                <a href="#"><span class="list_en">signup</span><span class="list_cn">會員註冊</span></a>
-            </div> -->
-        </nav>
         <div class="go_top"></div>
     </div>
     <div class="index_main">
@@ -189,8 +184,13 @@
 <div class="index_footer"></div>
 <script>
     // menu
-        $("nav>.palette_menu,nav>.car_icon").click(function(){
+    $(".menu_icon").click(function(){
             $(this).toggleClass("menu_active");
+            $(this).parents().find(".palette_menu_open").toggleClass("menu_active");
+        });
+    // menu
+    $(".car_icon").click(function(){
+            $(this).parents().find(".car_iconhover").toggleClass("menu_active");
         });
     // tab
     $(function(){

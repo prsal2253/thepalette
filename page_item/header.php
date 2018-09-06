@@ -22,8 +22,7 @@ if(!empty($_SESSION['cart'])) {
 }
 ?>
         <header><h1>palette</h1></header>
-        <nav>
-            <div class="palette_menu">
+ 
             <!-- menu icon -->
             <div class="menu_icon">
                 <div class="bar transition"></div>
@@ -129,10 +128,10 @@ if(!empty($_SESSION['cart'])) {
                     </div>
                 </div>
             </div>
-            </div>
 
             <!-- cart icon -->
-            <div class="car_icon transition"><span class="cart_number qty-badge"></span>
+            <div class="car_icon car_icon_fixed transition"></div>
+            <span class="cart_number2 qty-badge"></span>
             <div class="car_iconhover">
                 <?php if(!empty($_SESSION['cart'])): ?>
                     <?php
@@ -161,10 +160,10 @@ if(!empty($_SESSION['cart'])) {
                 <?php endif ?>
             </div>
 
-            </div>
+            
 
             <!-- member icon -->
-            <a href="../order_list.html" class="member_icon"></a>
+            <a href="../order_list.html" class="member_icon member_icon2"></a>
 
             
             <!-- <div class="menu_list">
@@ -172,23 +171,30 @@ if(!empty($_SESSION['cart'])) {
                 <a href="#"><span class="list_en">longout</span><span class="list_cn">會員登出</span></a>
                 <a href="#"><span class="list_en">signup</span><span class="list_cn">會員註冊</span></a>
             </div> -->
-        </nav>
         <div class="go_top"></div>
 <script>
     // menu
-    /*
-        $("nav>.palette_menu,nav>.car_icon").click(function(){
+    $(".menu_icon").click(function(){
             $(this).toggleClass("menu_active");
-            // $.get('header_api.php', function(data){
-            // }, 'json');
+            $(this).parents().find(".palette_menu_open").toggleClass("menu_active");
         });
-        */
-    $("nav>.car_icon").click(function(){
-        $(this).toggleClass("menu_active");
-        // $.get('header_api.php', function(data){
-        //     $('.car_iconhover').html(data);
-        // }, 'text');
-    });
+    // menu
+    $(".car_icon").click(function(){
+            $(this).parents().find(".car_iconhover").toggleClass("menu_active");
+            //即時更新
+            $.get('header_api.php', function(data){
+                $('.car_iconhover').html(data);
+        },      'text');
+        });
+
+    // menu
+    // $("nav>.palette_menu,nav>.car_icon").click(function(){
+    //     $(this).toggleClass("menu_active");
+        //即時更新
+    //     $.get('header_api.php', function(data){
+    //         $('.car_iconhover').html(data);
+    //     }, 'text');
+    // });
     // tab
     $(function(){
     $(".palette_menubox .menubox_l ul li").mouseover(function () {

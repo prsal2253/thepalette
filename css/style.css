@@ -106,19 +106,20 @@ p.address_num{width: 10%;color: #888;}
 .icon_garbage:hover{opacity: .5;}
 
 .icon_love{width: 19px; height: 19px;margin: 0 auto; background-image: url(../images/icon/heart.svg);background-position:center;background-repeat: no-repeat; background-size: 100% auto;cursor: pointer;transition: all .5s;}
-.icon_love:hover{ background-image: url(../images/icon/heart_hover.svg);}
-.icon_love_click{ background-image: url(../images/icon/heart_hover.svg);}
+.icon_love:hover{ background-image: url(../images/icon/heart_w_hover.svg);}
+.icon_love_click{ background-image: url(../images/icon/heart_w_hover.svg);}
 
 /* fancybox */
 .fancybox-slide--html .fancybox-content{max-width:50%;}
 
 /* header */
 #heard .index_main{background: url(../images/avenue-boiserie.jpg) bottom center repeat-y;background-attachment: fixed;background-size: 100% auto;min-height:500vh;}
+header{    mix-blend-mode: difference;}
 header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100px;height: 100px;border: 2px solid #fff;color: #fff;text-transform: uppercase;align-items: flex-end;justify-content:flex-end;letter-spacing: .15em;z-index: 9999;}
-.index_top nav{position: fixed;right: 30px; top:0px; width: 40px;height: 100%;padding: 50px 0;z-index: 999;}
+/* .index_top nav{position: fixed;right: 30px; top:0px; width: 40px;height: 100%;padding: 50px 0;z-index: 999;}
 
-.palette_menu {cursor: pointer;z-index: 999;}
-.menu_icon{width: 40px;height: 20px;margin: 0 auto 20px;cursor: pointer;position: relative;z-index: 999;}
+.palette_menu {cursor: pointer;z-index: 999;} */
+.menu_icon{position: fixed;right: 30px;top:50px; width: 40px;height: 20px;cursor: pointer;z-index: 999;mix-blend-mode: difference;}
 .menu_icon .bar{width:100%;height:2px;border-radius: 2px;background-color: #fff; position: absolute;right: 0;}
 .menu_icon .bar:nth-child(2){margin:9px auto 7px;}
 .menu_icon .bar:nth-child(3){width: 70%;bottom: 0;}
@@ -131,8 +132,8 @@ header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100
 .menu_active:hover .bar{width: 100%;}
 .menu_active:hover .bar:nth-child(3){width: 100%;}
 
-.palette_menu_open{position: absolute;right:-100vw;top:0px;background:#000;display:inline-flex;width:100vw;opacity: 0;height: 100vh;z-index: 1;justify-content: center;align-items: center;overflow: hidden;}
-.menu_active .palette_menu_open{opacity: 1;right:-30px}
+.palette_menu_open{position: fixed;right:-100vw;top:0px;background:#000;display:inline-flex;width:100vw;opacity: 0;height: 100vh;z-index: 1;justify-content: center;align-items: center;overflow: hidden;}
+.palette_menu_open.menu_active {opacity: 1;right:0px}
 .palette_menu_open .palette_menubox{width:75vw;height: 75vh;display: inline-flex;}
 .palette_menu_open .palette_menubox .menubox_l{width: 28%;height: 100%;border-right: 1px solid #fff;padding:30px 0;}
 .palette_menu_open .palette_menubox .menubox_r{width: 72%;height: 100%;position: relative; padding: 30px 0; }
@@ -175,13 +176,15 @@ header h1{display:inline-flex; position: fixed; top: 50px; left: 30px; width:100
 .collectionsbox_l ul li:hover a{color: #df9282;}
 .collectionsbox_l ul li.selected a{color: #df9282;}
 
-.car_icon{width: 40px;height: 40px;opacity: 1;cursor: pointer;background: url(../images/icon/shopping-cart.svg) center no-repeat;position: relative;background-size: 80% auto;margin: 0 auto;  }
+.car_icon{width: 40px;height: 40px;opacity: 1;cursor: pointer;background: url(../images/icon/shopping-cart.svg) center no-repeat;background-size: 80% auto;mix-blend-mode: difference;}
+.car_icon_fixed{position: fixed;right: 30px;top:90px; }
 .car_icon a{display: block;text-decoration: none;}
 span.cart_number{width: 18px;height: 18px;position: absolute;top:2px;right: -3px;border-radius: 50%;background-color: #df9282;color: #fff;font-size: 12px;text-align: center;line-height: 18px;transition: all .5s;letter-spacing: 0;}
+span.cart_number2{width: 18px;height: 18px;position: fixed;top:92px;right: 26px;border-radius: 50%;background-color: #df9282;color: #fff;font-size: 12px;text-align: center;line-height: 18px;transition: all .5s;letter-spacing: 0;}
 .car_icon:hover span{background-color: #e54728;}
 .car_icon p{font-size: 12px;line-height: 15px;color: #888;}
-.car_icon.menu_active .car_iconhover{opacity: 1;right: 50px;}
-.car_iconhover{position: absolute;background: rgba(255,255,255,.9);width:400px;top: 0px;right: -440px;overflow: hidden;transition: all .5s;padding: 10px 15px;opacity: 0;}
+.car_iconhover.menu_active {opacity: 1;right: 90px;}
+.car_iconhover{position: fixed;background: rgba(255,255,255,.9);width:400px;top: 90px;right: -440px;overflow: hidden;transition: all .5s;padding: 10px 15px;opacity: 0;z-index: 10;}
 .car_iconhover .order_listbox{background: rgba(255,255,255,0);transition: all .5s;}
 .car_iconhover .order_listbox:hover{background: rgba(255,255,255,.9);}
 .car_iconhover .check_outbox{width: 100%; padding: 10px 0 0 0; border-top: 1px #ddd solid;}
@@ -208,7 +211,7 @@ span.cart_number{width: 18px;height: 18px;position: absolute;top:2px;right: -3px
 .menu_iconbar .car_icon{-webkit-mask-image:url(../images/icon/shopping-cart.svg);mask-image:url(../images/icon/shopping-cart.svg);z-index: 1;}
 
 
-nav > a.member_icon{margin: 15px auto 0;display: block;}
+a.member_icon2{position: fixed;right: 30px;top:140px;display: block;mix-blend-mode: difference;}
 
 .go_top{background: url(../images/icon/next.svg) center no-repeat; background-size: 25px auto; width: 40px;height: 40px;position: fixed;bottom: 30px; right: 30px;transform: rotate(180deg);border-radius: 50%;background-color: rgba(255,255,255,.0);transition: all .5s;cursor: pointer;display: none;}
 .go_top:hover{background-color: rgba(255,255,255,.6);}
