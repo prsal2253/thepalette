@@ -152,17 +152,17 @@ if (!empty($_SESSION['cart'])) {
         <?php
         $total = 0;
         foreach ($keys as $k):
-            $r = $data[$k]; // 整筆資料(包含 qty)
-            $total += $r['price'] * $r['qty'];
+            $rq = $data[$k]; // 整筆資料(包含 qty)
+            $total += $rq['price'] * $rq['qty'];
             ?>
             <div class="order_listbox" data-sid="<?= $k ?>">
-                <figure class="description_20"><a href="product_detail.php?id=<?= $r['product_sid'] ?>"><img
-                                src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>"></a></figure>
+                <figure class="description_20"><a href="product_detail.php?id=<?= $rq['product_sid'] ?>"><img
+                                src="images/<?= $rq['img'] ?>.png" alt="<?= $rq['product_name'] ?>"></a></figure>
                 <div class="description_70">
-                    <a href="product_detail.php?id=<?= $r['product_sid'] ?>"
-                       class="product_name"><?= $r['product_name'] ?></a>
-                    <p>Ｘ<?= $r['qty'] ?></p>
-                    <p>$<?= $r['price'] ?></p>
+                    <a href="product_detail.php?id=<?= $rq['product_sid'] ?>"
+                       class="product_name"><?= $rq['product_name'] ?></a>
+                    <p>Ｘ<?= $rq['qty'] ?></p>
+                    <p>$<?= $rq['price'] ?></p>
                 </div>
                 <div class="description_10">
                     <div class="icon_garbage"></div>

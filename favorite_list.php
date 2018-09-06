@@ -15,8 +15,16 @@ if (isset($_SESSION['user'])) {
     }
 
 }
+$sql3 = sprintf("SELECT `product_color_sid`, `color` FROM `products_color_sid` WHERE 1");
+$rs3 = $mysqli->query($sql3);
 
-
+$c_ar = [];
+//先給空陣列
+while ($c = $rs3->fetch_assoc()) {
+//    這裡迴圈先一一取出$rs3陣列
+    $c_ar[$c['product_color_sid']] = $c['color'];
+//以'product_
+}
 //
 
 $sql2 = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $data));
@@ -56,7 +64,7 @@ while ($r2 = $rs2->fetch_assoc()) {
                 <div class="item_02 item_03 item_04">
                     <!-- top -->
                     <div class="item_02_conten">
-                        <p class="description">總共<span class="description_mark">32</span>筆商品</p>
+                        <p class="description">總共<span class="description_mark" id="total_howmuch">32</span>筆商品</p>
                     </div>
 
                    
@@ -72,13 +80,13 @@ while ($r2 = $rs2->fetch_assoc()) {
 
                         <!-- 一件商品 -->
                     <?php   foreach($data_ar  as $dt):     ?>
-                        <div class="order_listbox">
+                        <div class="order_listbox howmuch" data-sid="<?= $dt['product_sid'] ?>">
                                 <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
                                 <div class="description_50">
                                     <a href="product_detail.php?id=<?= $dt['product_sid'] ?>" class="product_name"><?= $dt['product_name'] ?></a>
                                 </div>
                                 <div class="description_10"></div>
-                                <div class="description_10">黃色</div>
+                                <div class="description_10"><?= $c_ar[$dt['product_color_sid']] ?></div>
                                 <div class="description_10"><?= $dt['price'] ?></div>
                                 <div class="description_10"><div class="icon_garbage"></div></div>
                         </div>
@@ -104,6 +112,29 @@ while ($r2 = $rs2->fetch_assoc()) {
     </div>
     </section>
 </div>
+<script>
+    $('#total_howmuch').text($(".howmuch").length);
+
+
+    $('.icon_garbage').click(function () {
+        var tr = $(this).closest('.order_listbox');
+        var sid = tr.attr('data-sid');
+
+        $.get('unlove_api.php', {sid:sid}, function(data){
+            //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+            tr.remove();
+            if(data.success) {
+                console.log(data);
+                alert('你登入了媽？');
+            }else {
+                alert('商品已加入刪除囉！啾咪～');
+            }
+        }, 'json');
+    });
+
+
+
+</script>
 <div class="index_footer">
 <?php include 'page_item/footer.php';?>
 </div>
