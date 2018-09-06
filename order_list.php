@@ -97,7 +97,6 @@ while($c = $rs3->fetch_assoc()){
                         $t = 0;
                         $t_q=0;
                         ?>
-                    <?php if (!empty($order['order_date'])): ?>
                     <div class="item_02_conten howmuch ">
                         <div class="order_listbox">
                             <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
@@ -135,24 +134,25 @@ while($c = $rs3->fetch_assoc()){
                             </div>
                         </div>
                     </div>
-                    <?php else: ?>
-                        <!-- 追蹤清單沒有商品時的狀態 -->
-                        <div class="order_listbox carts_none">
-                            <h3>訂單列表目前沒有任何訂單</h3>
-                        </div>
-                    <?php endif ?>
-                    <?php endforeach; ?>
 
-                    <!-- 頁碼 -->
-                    <div class="page_num">
-                        <ul>
-                            <li><a href="#"></a></li>
-                            <li>1</li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
+                    <?php endforeach; ?>
+                    <?php if (!empty($order['order_date'])): ?>
+                    <?php else: ?>
+                    <!-- 追蹤清單沒有商品時的狀態 -->
+                    <div class="order_listbox carts_none">
+                        <h3>訂單列表目前沒有任何訂單</h3>
                     </div>
+                    <?php endif ?>
+                    <!-- 頁碼 -->
+<!--                    <div class="page_num">-->
+<!--                        <ul>-->
+<!--                            <li><a href="#"></a></li>-->
+<!--                            <li>1</li>-->
+<!--                            <li><a href="#">2</a></li>-->
+<!--                            <li><a href="#">3</a></li>-->
+<!--                            <li><a href="#"></a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
