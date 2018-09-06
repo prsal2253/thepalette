@@ -1,5 +1,5 @@
 <?php include 'page_item/head.php';?>
-</head>
+
 <style>
     nav {
         z-index: 99;
@@ -176,89 +176,35 @@
         flex-direction: column;
         margin: 80px auto;
     }
-
-   
 </style>
 </head>
 
+<!-- 頁面ID -->
 <body id="article_detail" class="">
-    <div class="index_top">
-        <header>
-            <h1>palette</h1>
-        </header>
-        <nav>
-            <div class="palette_menu">
-                <!-- menu icon -->
-                <div class="menu_icon">
-                    <div class="bar transition"></div>
-                    <div class="bar transition"></div>
-                    <div class="bar transition"></div>
-                </div>
-                <!-- search icon -->
-                <div class="search_icon transition"></div>
-                <!-- menu -->
-                <div class="palette_menu_open transition">
-                    <div class="palette_menubox">
-                        <div class="menubox_l">
-                            <ul>
-                                <li class="selected" data-id="all">
-                                    <a href="#">
-                                        <span>Home</span>首頁</a>
-                                </li>
-                                <li data-id="all">
-                                    <a href="#">
-                                        <span>About Us</span>關於我們</a>
-                                </li>
-                                <li data-id="collections">
-                                    <a href="#">
-                                        <span>Collections</span>精選商品</a>
-                                </li>
-                                <li data-id="articles">
-                                    <a href="#">
-                                        <span>Articles</span>風格專欄</a>
-                                </li>
-                                <li data-id="all">
-                                    <a href="#">
-                                        <span>Get In Touch</span>聯絡我們</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="menubox_r">
-                            <!-- all -->
-                            <div id="all" class="ranking_box selected">ALLLLLLLLLL</div>
-                            <!-- product -->
-                            <div class="ranking_box" id="collections">3</div>
-                            <!-- articles -->
-                            <div class="ranking_box" id="articles">4</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu_list">
-                <a href="#">login</a>
-                <a href="#">signup</a>
-                <a href="#">cart</a>
-            </div>
-        </nav>
 
-    </div>
+<!-- top -->
+<div class="index_top">
+    <?php include 'page_item/header.php';?> 
+</div>
+
+     <!-- main -->
     <div class="index_main">
         <!-- 麵包屑 -->
         <section class="bread_crumbs bread_crumbs_b">
             <ul>
                 <li>
-                    <a href="#">home</a>
+                    <a href="index.php">home</a>
                 </li>
                 <li>
-                    <a href="article.html">article</a>
+                    <a href="article.php">article</a>
                 </li>
                 <li>
-                    <a href="#">article detail</a>
+                    article detail
                 </li>
             </ul>
         </section>
 
-        <!-- item32 文章詳細-->
+        <!-- 頁面內容 -->
         <section class="item_32">
             <div class="artd_box1">
                 <figure>
@@ -267,16 +213,15 @@
                     <div class="artd_post flex">
                         <div class="artd_prev flex">
                             <img src="images/icon/arrow_w.svg" alt="">
-                            <a href="article_detail_05.html">PREV
+                            <a href="article_detail_05.php">PREV
                                 <br>ARTICLE</a>
                         </div>
                         <div class="artd_next flex">
-                            <a href="article_detail_02.html">NEXT
+                            <a href="article_detail_02.php">NEXT
                                 <br>ARTICLE</a>
                             <img src="images/icon/arrow2_w.svg" alt="">
                         </div>
                     </div>
-
                 </figure>
             </div>
     </div>
@@ -402,86 +347,9 @@
         </section>
     </div>
 
-    <!-- footer -->
-    <!-- <div class="index_footer"></div> -->
-    <div id="footer">
-        <section>
-            <div class="index_conten_flex footer">
-                <div class="footer_top">
-                    <h2>Better Living Through Color</h2>
-                </div>
-                <div class="footer_bottom flex">
-                    <div class="footer_bottom_left flex">
-                        <ul class="footer_about">
-                            <h3>關於我們</h3>
-                            <a href="">
-                                <li>品牌理念</li>
-                            </a>
-                            <a href="">
-                                <li>實體店面</li>
-                            </a>
-                            <a href="">
-                                <li>最新消息</li>
-                            </a>
-                            <a href="">
-                                <li>聯絡我們</li>
-                            </a>
-                            <a href="">
-                                <li>隱私權條款</li>
-                            </a>
-                        </ul>
-                        <ul class="footer_notice">
-                            <h3>購物須知</h3>
-                            <a href="">
-                                <li>購物流程</li>
-                            </a>
-                            <a href="">
-                                <li>安裝說明</li>
-                            </a>
-                            <a href="">
-                                <li>運送說明</li>
-                            </a>
-                        </ul>
-                        <ul class="footer_service">
-                            <h3>客戶服務</h3>
-                            <a href="">
-                                <li>線上客服</li>
-                            </a>
-                            <a href="">
-                                <li>常見問題</li>
-                            </a>
-                            <a href="">
-                                <li>運送說明</li>
-                            </a>
-                        </ul>
-                        <ul class="footer_contact">
-                            <h3>聯絡我們</h3>
-                            <li>客服電話 &nbsp;2658-4833</li>
-                            <li>客服信箱 &nbsp;@thepalette@gmail.com</li>
-                            <li>營業時間 &nbsp;MON-SAT 11:00-21:00</li>
-                        </ul>
-                    </div>
-                    <div class="footer_bottom_right" style="width:35%">
-                        <ul class="flex">
-                            <li class="footer_bottom_right">
-                                <figure class="footer_bottom_right_icon1"></figure>
-                                <figure class="footer_bottom_right_icon2"></figure>
-                            </li>
-                            <li class="footer_bottom_right">
-                                <h4>Copyright © 2018 THE PALETTE All rights reserved.</h4>
-                            </li>
-                            <li class="footer_bottom_right_input">
-                                <div class="footer_bottom_right_mail flex">
-                                    <input class="footer_bottom_right_txtmail" type="text" placeholder="請輸入Email訂閱電子報">
-                                    <button class="footer_bottom_right_send">送出</button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="index_footer">
+        <?php include 'page_item/footer.php';?>
     </div>
-</body>
 
+</body>
 </html>
