@@ -113,8 +113,8 @@ while ($r2 = $rs2->fetch_assoc()) {
     </section>
 </div>
 <script>
-    $('#total_howmuch').text($(".howmuch").length);
 
+    $('#total_howmuch').text($(".howmuch").length);
 
     $('.icon_garbage').click(function () {
         var tr = $(this).closest('.order_listbox');
@@ -128,6 +128,7 @@ while ($r2 = $rs2->fetch_assoc()) {
                 alert('你登入了媽？');
             }else {
                 alert('商品已加入刪除囉！啾咪～');
+                $('#total_howmuch').text($(".howmuch").length);
             }
         }, 'json');
     });

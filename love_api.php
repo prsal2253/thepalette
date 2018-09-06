@@ -7,33 +7,36 @@ if(! isset($_SESSION['love'])){
     $_SESSION['love'] = [];
 
 }
+$sql ='SELECT * FROM `members_favourite` WHERE `product_sid`='.$_GET['sid'];
+$stmt=$mysqli->query($sql);
+if($stmt->num_rows==0) {
 
 
-$result = [];
+    $result = [];
 
-$sid = isset($_GET['sid']) ? $_GET['sid'] : 0;
+    $sid = isset($_GET['sid']) ? $_GET['sid'] : 0;
 
-$sql2 = "INSERT INTO `members_favourite`(`member_sid`, `product_sid`, `date` ) VALUES ( ?, ?,  NOW() ) ";
+    $sql2 = "INSERT INTO `members_favourite`(`member_sid`, `product_sid`, `date` ) VALUES ( ?, ?,  NOW() ) ";
 
-        $stmt2 = $mysqli->prepare($sql2);
+    $stmt2 = $mysqli->prepare($sql2);
 
-        $stmt2->bind_param('ss',
-            $_SESSION['user']['member_sid'],
-            $_GET['sid']
-        );
+    $stmt2->bind_param('ss',
+        $_SESSION['user']['member_sid'],
+        $_GET['sid']
+    );
 
-        $stmt2->execute();
-        $af = $stmt2->affected_rows;
+    $stmt2->execute();
+    $af = $stmt2->affected_rows;
 
-        $stmt2->close();
+    $stmt2->close();
 
-        if($af===1){
-            $result['success'] = true;
+    if ($af === 1) {
+        $result['success'] = true;
 
-            $_SESSION['love']=$sid;
-        }
+        $_SESSION['love'] = $sid;
+    }
 
-
+}
 
 
 echo json_encode($result, JSON_UNESCAPED_UNICODE);
