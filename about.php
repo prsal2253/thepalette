@@ -1,4 +1,5 @@
 <?php include 'page_item/head.php';?>
+
     <style>
         #about nav {
             z-index: 99;
@@ -11,8 +12,9 @@
             background: none;
         }
 
-        .index_main section {
+        #about .index_main section {
             padding: 0;
+            background:#fff;
         }
 
         .about_box1 {
@@ -85,39 +87,45 @@
 
         .about_catalog {
             width: 100%;
-            margin-top: 10%;
-            justify-content: space-around;
+            justify-content: center;
         }
 
         .about_catalog a {
-            font-family: 'Playfair Display';
-            font-size: 20px;
-            background: #d1c0a5;
-            font-weight: 600;
+            font-family: 'Roboto';
+            font-size: 18px;
+            color: #d1c0a5;
+            background: #fff;
+            font-weight: 400;
             padding: 0;
-            width: 210px;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             border: 1px solid #d1c0a5;
 
         }
 
         .about_catalog a:hover {
-            font-family: 'Playfair Display';
-            font-size: 20px;
-            color:#d1c0a5;
-            background: #fff;
+            font-family: 'Roboto';
+            font-size: 18px;
+            color:#fff;
+            background: #d1c0a5;
             border: 1px solid #d1c0a5;
-            font-weight: 600;
+            font-weight: 400;
             padding: 0;
-            width: 210px;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
+        }
+
+        .w_catalog1,
+        .w_catalog2,
+        .w_catalog3,
+        .w_catalog4{
+            margin:8% 2% 0 2%;
+            width: 15%;
         }
 
         /* 關於我們 */
 
         .about_us {
             position: relative;
-            margin: 20% 0 5% 0;
+            margin: 15% 0 5% 0;
             width: 100%;
             height: auto;
         }
@@ -307,6 +315,7 @@
             width: 50%;
             height: 100%;
             position: relative;
+            margin-left: 10%;
         }
 
         .about_left2 h4 {
@@ -336,7 +345,7 @@
             margin-top: 15%;
             width: 40%;
             height: 100%;
-            margin-left: 60%;
+            margin-left: 50%;
         }
 
         .about_right2 p {
@@ -348,7 +357,7 @@
         }
 
         .about_right2 h4 {
-            margin-left: -6%;
+            margin-left: -7%;
             margin-top: -623px;
         }
 
@@ -358,11 +367,11 @@
             width: 50%;
             height: 100%;
             font-weight: 900;
-            margin-top: 10%;
+            margin: 10% 0 0 10%;
         }
 
         .about_left3 h4 {
-            margin-left: -8%;
+            margin-left: -9%;
             margin-top: -458px;
         }
 
@@ -377,10 +386,10 @@
         /* designer 4 */
 
         .about_right3 {
-            margin-top: 20%;
+            margin-top: 25%;
             width: 40%;
             height: 100%;
-            margin-left: 60%;
+            margin-left: 50%;
         }
 
         .about_right3 p {
@@ -392,7 +401,7 @@
         }
 
         .about_right3 h4 {
-            margin-left: 11%;
+            margin-left: 13%;
             margin-top: -285px;
         }
 
@@ -795,6 +804,7 @@
             color: #e2dedb;
         }
     </style>
+
 </head>
 <!-- 頁面ID -->
 <body id="about" class="">
@@ -807,7 +817,7 @@
     <!-- main -->
     <div class="index_main">
         <!-- 麵包屑 -->
-        <section class="bread_crumbs bread_crumbs_b">
+        <section class="bread_crumbs bread_crumbs_b" style="background:none">
             <ul>
                 <li>
                     <a href="#">home</a>
@@ -838,16 +848,16 @@
 
                 <div class="about_catalog flex">
                     <div class="w_catalog1">
-                        <a href="#w_about" class="palette_btn about_click">ABOUT</a>
+                        <a href="#w_about" class="palette_btn about_click">About</a>
                     </div>
                     <div class="w_catalog2">
-                        <a href="#w_designer" class="palette_btn designer_click">DESIGNER</a>
+                        <a href="#w_designer" class="palette_btn designer_click">Designer</a>
                     </div>
                     <div class="w_catalog3">
-                        <a href="#w_policy" class="palette_btn policy_click">POLICY</a>
+                        <a href="#w_policy" class="palette_btn policy_click">Policy</a>
                     </div>
                     <div class="w_catalog4">
-                        <a href="#w_contact" class="palette_btn contact_click">CONTACT</a>
+                        <a href="#w_contact" class="palette_btn contact_click">Contact</a>
                     </div>
                 </div>
                 <div id="w_about"></div>
@@ -960,7 +970,7 @@
                 <!-- designer end-->
             </div>
             <!-- slider start -->
-            <div class="about_box9">
+            <!-- <div class="about_box9">
                 <div class="about_slider">
 
                     <div class="about_polite">
@@ -970,7 +980,7 @@
                         <img src="images/about/slider1.png" alt="" />
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- slider end -->
 
 
@@ -1087,17 +1097,17 @@
 
 
         // 家具輪播
-        let pos = 0;
-        let speed = 1;
-        function draw() {
-            requestAnimationFrame(draw); $('.about_polite').css({
-                left: pos -= speed
-            });
-            if (pos < -$('.about_polite').width()) {
-                pos = 0;
-            }
-        }
-        draw();
+        // let pos = 0;
+        // let speed = 1;
+        // function draw() {
+        //     requestAnimationFrame(draw); $('.about_polite').css({
+        //         left: pos -= speed
+        //     });
+        //     if (pos < -$('.about_polite').width()) {
+        //         pos = 0;
+        //     }
+        // }
+        // draw();
 
 
         // 輪播特效
