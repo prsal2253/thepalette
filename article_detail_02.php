@@ -341,7 +341,10 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                    <a href="product_quicklook.php?id=45" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>
@@ -357,7 +360,11 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                <div class="product_btn"></div>
+                                    <a href="product_quicklook.php?id=53" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>
@@ -373,7 +380,10 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                    <a href="product_quicklook.php?id=103" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>
@@ -389,7 +399,10 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                    <a href="product_quicklook.php?id=40" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>

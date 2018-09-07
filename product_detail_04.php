@@ -19,7 +19,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
+                                <a href="product_quicklook.php" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                         </div>
                     <!-- 一組商品 -->
@@ -32,7 +32,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
+                                <a href="product_quicklook.php" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                     <!-- 一組商品 -->
@@ -45,7 +45,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
+                                <a href="product_quicklook.php" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                     <!-- 一組商品 -->
@@ -58,7 +58,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
+                                <a href="product_quicklook.php" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                     <!-- 一組商品 -->
@@ -71,7 +71,7 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
+                                <a href="product_quicklook.php" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                     <!-- 一組商品 -->
@@ -84,12 +84,12 @@
                                 <h3 class="product_name_h3"><a href="#">Arch Zen Chair</a></h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="product_quicklook.html" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
+                                <a href="product_quicklook.php" class="palette_btn quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" : "70vh"}}}'>快速查看</a>                               </div>
                             </div> 
                     </div>
                     <!-- 一組商品 -->
                     <div class="product_box swiper-slide" style="width: 25%;">  
-                        <img src="images/H-pink-cabinet-02.png" alt="商品名稱">
+                        <img src="images/H-pink-cabinet-02.php" alt="商品名稱">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
                             <div class="product_name_nd_btn">
@@ -102,7 +102,7 @@
                     </div>
                     <!-- 一組商品 -->
                     <div class="product_box swiper-slide" style="width: 25%;">  
-                        <img src="images/H-light-01.png" alt="商品名稱">
+                        <img src="images/H-light-01.php" alt="商品名稱">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
                             <div class="product_name_nd_btn">

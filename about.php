@@ -787,6 +787,7 @@
             border: solid 1px #b3aca7;
             transition: all 0.3s ease-in-out;
             margin: 2% 0;
+            outline: none;
         }
 
         .about_contact textarea:hover {
