@@ -109,7 +109,7 @@ if (!empty($_SESSION['cart'])) {
                                 </div>
                                 <div class="description_5"></div>
                                 <div class="description_10"><?= $c_ar[$r['product_color_sid']] ?></div>
-                                <div class="description_10 product-item-qty" data-qty="<?= $r['qty'] ?>">
+                                <div class="description_10 palette_select product-item-qty" data-qty="<?= $r['qty'] ?>">
                                     <select class="qty-sel">
                                         <?php for ($i = 1; $i <= 5; $i++): ?>
                                             <option value="<?= $i ?>"><?= $i ?></option>

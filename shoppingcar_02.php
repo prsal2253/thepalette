@@ -193,7 +193,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                            href="javascript:;" class="description_q transition" href="#" title="付款說明">?</a></div>
 
                     <div class="item_02_conten">
-                        <div class="item_02_conten_l">收件人姓名</div>
+                        <div class="item_02_conten_l">收件人</div>
                         <div class="item_02_conten_r">
                             <input type="text" name="sender_name" placeholder="請輸入收件人姓名">
 
