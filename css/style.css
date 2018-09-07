@@ -316,6 +316,17 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 .filter_color1 { background-color: #662424;}
 .filter_color2 { background-color: #ad776c;}
 .filter_color3 { background-color: #a4594a;}
+.filter_color4{background-color: rgb(46, 69, 83);}
+.filter_color5{background-color: rgb(86, 128, 128);}
+.filter_color6{background-color: rgb(216, 157, 84);}
+.filter_color7{background-color: rgb(40, 40, 40);}/* 因為背景為正黑色，篩選吧上放深灰 */
+.filter_color8{background-color: rgb(255, 255, 255);}
+.filter_color9{background-color: rgb(190, 190, 190);}
+.filter_color10{background-color: rgb(95, 78, 66);}
+.filter_color11{background-image: url(../images/banner/wood_bg.jpg);}
+.filter_color12{background-image: url(../images/banner/tin_texture.jpg);}
+.filter_color13{background-image: url(../images/banner/marble_bg.jpg);}
+
 .filter_item li { margin: 50px 10px 0 0;  padding: 10px 30px;  border-radius: 20px;  border: 1px solid #000;}
 .filter_item p{ color: rgb(240, 240, 240); letter-spacing: 0.3em;  text-align: center;  font-weight: 400;  line-height: 25px;  font-size: 15px;  margin-top: 10px;}
 .filter_item li:hover { border-radius: 20px; border: 1px solid #999;  cursor: pointer;}
