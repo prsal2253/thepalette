@@ -291,4 +291,24 @@ if (!empty($_SESSION['cart'])) {
 
     });
 
+     (function () {
+        window.alert = function (text) {
+            //解析alert内容中的换行符
+            text = text.toString().replace(/\\/g, '\\').replace(/\n/g, '<br />').replace(/\r/g, '<br />');
+
+            // 自定义DIV弹窗
+            var alertdiv = '<div id="alertdiv" style="position:absolute; display:none ; overflow:hidden;  padding:20px 30px; top: 5%; left: 50%; text-align:center; line-height:30px; background-color: rgba(0, 0, 0, 0.8);color:#fff;">' + text + '<br /><input type="submit" name="button" id="button" value="確認" style="margin-top:10px;" onclick="$(this).parent().remove(); " /></div>';
+            $(document.body).append(alertdiv);
+
+            // 设置偏移数值，实现垂直和水平居中
+            $("#alertdiv").css({
+                "margin-left": $("#alertdiv").width() / 2 * (-1) - 20,
+                //"margin-top": $("#alertdiv").height() / 2 * (-1) - 20
+            });
+
+            // 显示
+            $("#alertdiv").show();
+        };
+    })();
+
 </script>
