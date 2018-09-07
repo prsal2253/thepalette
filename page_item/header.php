@@ -62,11 +62,11 @@ if (!empty($_SESSION['cart'])) {
                     <h2>商品分類</h2>
                     <div class="collectionsbox_l">
                         <ul>
-                            <li class="selected" data-id="sort01"><a href="../thepalette/sort_red05_0905.php">紅橘粉 系列</a>
+                            <li class="selected" data-id="sort01"><a href="../thepalette/sort_red.php">紅橘粉 系列</a>
                             </li>
-                            <li data-id="sort02"><a href="../thepalette/sort_yellow05_0905.php">藍綠黃 系列</a></li>
-                            <li data-id="sort03"><a href="../thepalette/sort_white05_0905.php">黑白灰 系列</a></li>
-                            <li data-id="sort04"><a href="../thepalette/sort_side05_0905.php">大地色 系列</a></li>
+                            <li data-id="sort02"><a href="../thepalette/sort_blue.php">藍綠黃 系列</a></li>
+                            <li data-id="sort03"><a href="../thepalette/sort_black.php">黑白灰 系列</a></li>
+                            <li data-id="sort04"><a href="../thepalette/sort_earth.php">大地色 系列</a></li>
                             <li data-id="sort05"><a href="../thepalette/sort_s05_0905.php">材質 系列</a></li>
 
                         </ul>

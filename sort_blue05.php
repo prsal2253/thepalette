@@ -109,15 +109,15 @@ $product_rs = $mysqli->query($product_sql);
             <div class="index_conten_flex filter_inner transition total_change">
                 <div class="filter_color flex">
                     <div class="filter_color_in" style="margin-left: 0">
-                        <div class="filter_color1 filter_color_box" data-color="bule"></div>
+                        <div class="filter_color4 filter_color_box" data-color="bule"></div>
                         <p>藍色</p>
                     </div>
                     <div class="filter_color_in">
-                        <div class="filter_color2 filter_color_box" data-color="green"></div>
+                        <div class="filter_color5 filter_color_box" data-color="green"></div>
                         <p>綠色</p>
                     </div>
                     <div class="filter_color_in">
-                        <div class="filter_color3 filter_color_box" data-color="yellow"></div>
+                        <div class="filter_color6 filter_color_box" data-color="yellow"></div>
                         <p>黃色</p>
                     </div>
                 </div>
