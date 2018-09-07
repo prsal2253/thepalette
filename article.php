@@ -68,7 +68,7 @@
                                         <li class="transition">生活品味</li>
                                     </a>
                                     <a href="">
-                                        <li class="transition">設計</li>
+                                        <li class="transition">風格</li>
                                     </a>
                                 </ul>
                             </div>
@@ -93,7 +93,13 @@
                                         <li class="transition">生活品味</li>
                                     </a>
                                     <a href="">
+                                        <li class="transition">寧靜感</li>
+                                    </a>
+                                    <a href="">
                                         <li class="transition">設計</li>
+                                    </a>
+                                    <a href="">
+                                        <li class="transition">紅色</li>
                                     </a>
                                 </ul>
                             </div>
@@ -120,6 +126,9 @@
                                     <a href="">
                                         <li class="transition">設計</li>
                                     </a>
+                                    <a href="">
+                                        <li class="transition">色調</li>
+                                    </a>
                                 </ul>
                             </div>
                         </div>
@@ -140,10 +149,10 @@
                             <div class="product_detail_06_hashtag">
                                 <ul>
                                     <a href="">
-                                        <li class="transition">生活品味</li>
+                                        <li class="transition">英倫風</li>
                                     </a>
                                     <a href="">
-                                        <li class="transition">設計</li>
+                                        <li class="transition">生活品味</li>
                                     </a>
                                 </ul>
                             </div>
@@ -168,6 +177,9 @@
                                     </a>
                                     <a href="">
                                         <li class="transition">設計</li>
+                                    </a>
+                                    <a href="">
+                                        <li class="transition">改造</li>
                                     </a>
                                 </ul>
                             </div>
