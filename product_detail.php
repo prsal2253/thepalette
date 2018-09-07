@@ -64,6 +64,11 @@
                 disableOnInteraction: false,
             },
         });
+
+        //加入最愛
+        $(".product_favorate").click(function(){
+            $(this).toggleClass("icon_love_click");
+        })
     </script>
 </body>
 </html>

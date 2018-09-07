@@ -13,10 +13,9 @@
         background: #fff;
     }
 
-    .index_main section {
+    #article_detail .index_main section {
         padding: 0;
     }
-
     /* 麵包屑 */
 
     #article_detail .bread_crumbs {
@@ -26,16 +25,13 @@
         z-index: 11;
     }
 
-    #article_detail .bread_crumbs ul li a {
+    #article_detail .bread_crumbs ul li a,#article_detail .bread_crumbs ul li,#article_detail .bread_crumbs ul li::after {
         color: #fff;
     }
-
-    /* 版頭 */
 
     .artd_box1 {
         width: 100%;
         height: 100vh;
-        background: lightblue;
         position: relative;
     }
 
@@ -59,26 +55,70 @@
 
     .artd_prev,
     .artd_next {
-        width: 40%;
+        width: 50%;
         height: 100%;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        position: relative;
     }
+
     .artd_prev img,
-    .artd_next img{
-        width: 50px;
+    .artd_next img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        opacity: 0;
     }
+    .artd_prev img{
+        left:-100%;
+    }
+    .artd_next img {
+        right:-100%;
+    }
+
+    .artd_prev:hover img,
+    .artd_next:hover img{
+        opacity: 1;
+    }
+
+    .artd_prev:hover img{
+        left:0%;
+    }
+    .artd_next:hover img {
+        right:0%;
+    }
+
     .artd_prev a,
     .artd_next a {
         color: #fff;
-        
+    }
+
+    .artd_prev a, .artd_next a  {
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        background-size: 50px auto;
+        background-repeat: no-repeat;
+        text-decoration: none;
     }
     .artd_prev a {
-        margin: 0 0 4% 5%;
-        text-align: right;
+        background-image: url(images/icon/arrow_w.svg);
+        background-position: 25% 54%;
+        padding: 0 0 0 15%;
     }
     .artd_next a {
-        margin: 0 5% 4% 0;
+        background-image: url(images/icon/arrow2_w.svg);
+        background-position: 75% 54%;
+        padding: 0 15% 0 0;
+    }
+    .artd_prev:hover a, .artd_next:hover a{
+        background-color: rgba(0,0,0,0.3);
     }
 
     .artd_box1 figure {
@@ -87,12 +127,12 @@
         width: 100%;
         height: 100%;
     }
-
     /* 文章標題 */
 
     .artd_title {
         position: relative;
         top: -110px;
+        width: 60%;
     }
 
     .artd_title h2 {
@@ -100,7 +140,6 @@
         font-size: 33px;
         letter-spacing: 2px;
         line-height: 50px;
-        width: 60%;
     }
 
     /* 文章內容 */
@@ -185,9 +224,11 @@
     .product_detail_04 {
         width: 100%;
         flex-direction: column;
-        margin: 80px auto;
+        padding: 80px 0;
+        background-color: #fff;
+        margin: 0 auto;
     }
-
+    #product_detail_04{ background-color: #fff;}
 </style>
 </head>
 
@@ -223,19 +264,19 @@
                     <div class="artd_box2"></div>
 
                     <div class="artd_post flex">
-                        <div class="artd_prev flex">
-                            <img src="images/icon/arrow_w.svg" alt="">
-                            <a href="article_detail_02.php">PREV<br>ARTICLE</a>
+                        <div class="artd_prev flex ">
+                            <img src="images/article/42554120281_2532aefa20_b.jpg" alt="" class="transition">
+                            <a href="article_detail_02.php" class="transition">PREV
+                                <br>ARTICLE</a>
                         </div>
-                        <div class="artd_next flex">
-                            <a href="article_detail_04.php">NEXT<br>ARTICLE</a>
-                            <img src="images/icon/arrow2_w.svg" alt="">
+                        <div class="artd_next flex transition">
+                            <img src="images/article/27310906941_89aae40e9e_k.jpg" alt="" class="transition">
+                            <a href="article_detail_04.php" class="transition">NEXT
+                                <br>ARTICLE</a>
                         </div>
                     </div>
-
                 </figure>
             </div>
-    </div>
 
     <div class="index_conten">
         <!-- 文章標題 -->
@@ -300,7 +341,10 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                    <a href="product_quicklook.php?id=30" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>
@@ -316,7 +360,10 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                    <a href="product_quicklook.php?id=8" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>
@@ -332,7 +379,10 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                    <a href="product_quicklook.php?id=8" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>
@@ -348,13 +398,17 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                <a href="#" class="palette_btn quick_look_palette_btn">快速查看</a>
+                                    <a href="product_quicklook.php?id=126" class="palette_btn quick_look_palette_btn quick"
+                                       data-fancybox
+                                       data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
+                                   "70vh"}}}'>快速查看</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
     </div>
 
     <div class="index_footer">

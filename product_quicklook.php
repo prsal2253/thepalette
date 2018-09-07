@@ -88,8 +88,8 @@ if(isset($_GET['id'])) {
     overflow: hidden;
 }
 .product_quicklook_image img{
-    width: 110%;
-    margin-left: -40px;
+    width: 100%;
+    margin-left: 0;
     object-fit: cover;
 }
 /* 右邊 */
@@ -126,7 +126,7 @@ if(isset($_GET['id'])) {
     margin: 0;
 }
 .product_quicklook_01_h6{
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 0.15em;
     line-height: 30px;
     font-weight: 400;
@@ -136,8 +136,8 @@ if(isset($_GET['id'])) {
     margin: 0;
 }
 .product_quicklook_01_h7{
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 22px;
     letter-spacing: 0.1em;
     font-weight: 300;
     color: #000;
@@ -154,7 +154,8 @@ if(isset($_GET['id'])) {
     font-family: 'Playfair Display';
 }
 .product_quicklook_01_color{
-    padding: 0 0 0 0;
+    padding: 0;
+    margin:3% 0;
 }
 .color1,.color2,.color3,.color4,.color5,.color6,.color7,.color8,.color9,.color10,.color11,.color12,.color13{
     width: 25px;
@@ -171,22 +172,22 @@ if(isset($_GET['id'])) {
     cursor: pointer;
 }
 .color1{
-    background-color: red;
+    background-color: #662424;
 }
 .color2{
-    background-color: hotpink;
+    background-color: #da9480;
 }
 .color3{
     background-color: darkorange;
 }
     .color4{
-        background-color: deepskyblue;
+        background-color: #2e4553;
     }
     .color5{
-        background-color: green;
+        background-color: #407060;
     }
     .color6{
-        background-color: yellow;
+        background-color: #d89d54;
     }
     .color7{
         background-color: black;
@@ -195,10 +196,10 @@ if(isset($_GET['id'])) {
         background-color: white;
     }
     .color9{
-        background-color: darkgray;
+        background-color: #999;
     }
     .color10{
-        background-color: saddlebrown;
+        background-color: #736558;
     }
     .color11{
         background-color: lightyellow;
@@ -224,7 +225,6 @@ if(isset($_GET['id'])) {
     height: 40px;
     background-color: #000;
     border-radius: 40px;
-    margin-top:10px;
     padding: 0 0 0 5px;
 }
 .ql_more{
@@ -232,6 +232,10 @@ if(isset($_GET['id'])) {
     height: 40px;
     background-color: #666;
     margin-top: 10px;
+}
+.product_quicklook_01_h7_box{
+    height: 150px;
+    overflow: hidden;
 }
     </style>
 </head>
@@ -260,7 +264,9 @@ if(isset($_GET['id'])) {
                         <div class="s_sale_02"><h5 class="product_quicklook_01_h5">國泰銀行刷卡分期免利息</h5></div>
                         <div class="product_quicklook_01_description">
                             <h6 class="product_quicklook_01_h6">商品描述</h6>
-                            <h7 class="product_quicklook_01_h7"><?= $r['introduction'] ?><br><br></h7>
+                            <div class="product_quicklook_01_h7_box">
+                                <h7 class="product_quicklook_01_h7"><?= $r['introduction'] ?><br><br></h7> 
+                            </div>
                         </div>
                         <div class="product_quicklook_01_price">
                             <h8 class="product_quicklook_01_h8">
@@ -279,7 +285,7 @@ if(isset($_GET['id'])) {
                         <div></div>
                         <?php endif;?>
                         <div class="product_quicklook_01_btns flex">
-                            <div class="s_product_detail_01_num palette_select">
+                            <div class="s_product_detail_01_num palette_select" style="width:48%;">
                                 <select class="qty">
                                     <option value="1">01</option>
                                     <option value="2">02</option>
@@ -290,7 +296,7 @@ if(isset($_GET['id'])) {
                             </div>
                             <button class="add_to_cart"><h5 class="product_quicklook_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                         </div>
-                        <button class="ql_more"><a href="product_detail.php?id=<?= $r['product_sid'] ?>" target="_top" class="product_quicklook_01_h5">了解商品詳情</a></button>
+                        <button class="ql_more"><a href="product_detail.php?id=<?= $r['product_sid'] ?>" target="_top" class="product_quicklook_01_h5" style="color:#fff;">了解商品詳情</a></button>
                                                                         <!-- target屬性規定在何處打開連接文檔                       -->
 
                     </div>
