@@ -39,7 +39,7 @@
                     <div class="sort_earth02_intro_l flex">
                         <h2 class="sort_earth02_h2">Brown</h2>
                         <div class="sort_earth02_intro_l_txt">
-                            <h3>熱情的紅 沉穩的紅 撩人的紅</h3><br><br>
+                            <h3>沉穩的咖 穩定的咖 神秘的咖</h3><br><br>
                             <p>改編自 Jenny Han 的同名青春愛情小說，內容講述亞裔女孩 Lara Jean 這名默默無名的女孩，有著溫柔、聰穎的性格，卻十分內向。她的心思細膩，對那些「愛過的男孩們」卻不曾訴說心中的情感，這是她永藏心底的秘密。</p>
                         </div>                            
                         
@@ -86,7 +86,7 @@
                     <div class="sort_earth03_intro_l flex">
                         
                         <div class="sort_earth03_intro_l_txt">
-                            <h3>熱情的橘 沉穩的橘 撩人的橘</h3><br><br>
+                            <h3>熱情的橘 輕快的橘 智慧的橘</h3><br><br>
                             <p>改編自 Jenny Han 的同名青春愛情小說，內容講述亞裔女孩 Lara Jean 這名默默無名的女孩，有著溫柔、聰穎的性格，卻十分內向。她的心思細膩，對那些「愛過的男孩們」卻不曾訴說心中的情感，這是她永藏心底的秘密。當熾熱的感情無處渲洩時，Lara Jean 會寫下「情書」藏在帽盒裡。</p>
                         </div>
                         <h2 class="sort_earth03_h2">Ginger</h2>                                 
@@ -134,7 +134,7 @@
                     <div class="sort_earth04_intro_l flex">
                         <h2 class="sort_earth04_h2">Yellow</h2>
                         <div class="sort_earth04_intro_l_txt">
-                            <h3>熱情的粉 沉穩的粉 撩人的粉</h3><br><br>
+                            <h3>溫暖的黃 快樂的黃 朝氣的黃</h3><br><br>
                             <p>改編自 Jenny Han 的同名青春愛情小說，內容講述亞裔女孩 Lara Jean 這名默默無名的女孩，有著溫柔、聰穎的性格，卻十分內向。她的心思細膩，對那些「愛過的男孩們」卻不曾訴說心中的情感，這是她永藏心底的秘密。</p>
                         </div>                            
                         
@@ -180,7 +180,7 @@
 $(window).scroll(function() {
     var scrolltop = $(this).scrollTop();
     if (scrolltop>300 && scrolltop<2000){
-        $(".changebg").css('background-color','#736558');
+        $(".changebg").css('background-color','#5f4e42');
     }else if(scrolltop>2000 && scrolltop<3400){
         $('.changebg').css('background-color','#c2704f');
     }else if(scrolltop>3400){
@@ -191,7 +191,7 @@ $(window).scroll(function() {
 $(window).scroll(function() {
     var scrolltop = $(this).scrollTop();
     if (scrolltop>300 && scrolltop<2000){
-        $(".changebox").css('background-color','#736558');
+        $(".changebox").css('background-color','#5f4e42');
     }else if(scrolltop>2000 && scrolltop<3400){
         $('.changebox').css('background-color','#c2704f');
     }else if(scrolltop>3400){

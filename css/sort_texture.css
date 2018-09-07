@@ -21,7 +21,8 @@
 .sort_texture01_bg_r{
     width: 35%;
     height: 100%;
-    background-color: #662424;
+    background: url(../images/banner/tin_texture.jpg) no-repeat center center;
+    background-size: cover;
     float: right;
 }
 /* 前方圖片與色塊 */
