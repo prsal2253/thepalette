@@ -316,8 +316,8 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 .filter_item { height: 40%; width: 80%; justify-content: space-between;  align-items: center;}
 .filter_sbar { height: 40%;  width: 80%;}
 .filter_color {  align-items: center; justify-content: center;}
-.filter_color_box {  width: 30px;  height: 30px;  border:3px solid #000; border-radius: 50%;  margin: 60px auto 15px auto;}
-.filter_color_box:hover{cursor: pointer;}
+.filter_color_box {  width: 30px;  height: 30px;  border:3px solid #000; border-radius: 50%;  margin: 60px auto 15px auto;transition: all .5s;}
+.filter_color_box:hover{cursor: pointer;border:3px solid #fff; }
 .filter_color_in { margin: 0 0 0 80px;  color: #999;}
 .filter_color1 { background-color: #662424;}
 .filter_color2 { background-color: #ad776c;}

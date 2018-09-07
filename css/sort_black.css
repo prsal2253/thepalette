@@ -1,44 +1,44 @@
 
-#sort_blue01{
+#sort_black01{
     background-color: #fff;
 }
-.sort_blue01{
+.sort_black01{
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 /* 背景 */
-.sort_blue01_bg{
+.sort_black01_bg{
     width: 100%;
     height: 100%;
 }
-.sort_blue01_bg_l{
+.sort_black01_bg_l{
     width: 65%;
     height: 100%;
     background-color: #ad776c;
     float:left;
 } 
-.sort_blue01_bg_r{
+.sort_black01_bg_r{
     width: 35%;
     height: 100%;
     background-color: #662424;
     float: right;
 }
 /* 前方圖片與色塊 */
-.sort_blue01_top{
+.sort_black01_top{
     width: 85%;
     height: 100%;
     margin: -80vh 0 0 0;
     float: right;
 }
-.sort_blue01_top>figure{
+.sort_black01_top>figure{
     width: 100%;
     height: 80%;
     background: url(../images/article/41831742764_29cab9c5a9_k.jpg) no-repeat left bottom;
     background-size: cover;
     position: relative;
 }
-.sort_blue01_top_box1{
+.sort_black01_top_box1{
     height: 60%;
     width: 14%;
     background-color: #ad776c;
@@ -46,7 +46,7 @@
     bottom: 0;
     left: 0;
 }
-.sort_blue01_top_box2{
+.sort_black01_top_box2{
     width: 10%;
     height: 25%;
     background-color: #662424;
@@ -54,13 +54,13 @@
     top: 0;
     right: 0;
 }
-.sort_blue01_top_topic{
+.sort_black01_top_topic{
     z-index: 5;
     position: absolute;
     left: 70px;
     bottom: 22%;
 }
-.sort_blue01_top_topic>h2{
+.sort_black01_top_topic>h2{
     font-size: 45px;
     line-height: 60px;
     letter-spacing: 0.1em;
@@ -68,7 +68,7 @@
     color: #fff;
     font-family: 'Playfair Display';
 }
-.sort_blue01_top_topic>h3{
+.sort_black01_top_topic>h3{
     font-size: 40px;
     line-height: 55px;
     letter-spacing: 0.01em;
@@ -76,64 +76,64 @@
     font-family: 'SourceHanSerifTC-Bold';
 }
 /* part2 */
-.sort_blue02{
+.sort_black02{
     height: 160vh;
     flex-direction: column;
 }
 /* 大圖與介紹 */
-.sort_blue02_intro{
+.sort_black02_intro{
     width: 100%;
     height: 50%;
     margin: 0 auto;
     overflow: hidden;
 }
-.sort_blue02_intro_bg{
+.sort_black02_intro_bg{
     background-color: #fff;
     height: 500px;
     width: 80%;
     margin: -43% auto 0 auto;
 }
-.sort_blue02_intro_box{
+.sort_black02_intro_box{
     width: 15%;
     height: 45%;
     background-color: #fff;
     float: right;
 }
-.sort_blue02_intro_top{
+.sort_black02_intro_top{
     justify-content: space-between;
     height: 70%;
     width: 80%;
     margin: 200px auto 0 auto;
 }
-.sort_blue02_intro_l{
+.sort_black02_intro_l{
     width: 40%;
     height: 100%;
     padding: 6% 0 0 80px;
     flex-direction: column;
     justify-content: space-around;
 }
-.sort_blue02_intro_r{
+.sort_black02_intro_r{
     height: 100%;
     width: 60%;
     overflow: hidden;
-    background: url(../images/H-blue-chair-07.png) no-repeat center center;
+    background: url(../images/H-black-chair-07.png) no-repeat center center;
     background-size: cover;
 }
-.sort_blue02_intro_l_txt>h3{
+.sort_black02_intro_l_txt>h3{
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.1em;
     color: #ad776c;
     font-family: 'SourceHanSerifTC-Bold';
 }
-.sort_blue02_h2{
+.sort_black02_h2{
     font-size: 80px;
     letter-spacing: 0.05em;
     color: #662424;
     font-weight: 700;
     font-family: 'Playfair Display';
 }
-.sort_blue02_intro_l_txt>p{
+.sort_black02_intro_l_txt>p{
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.1em;
@@ -141,65 +141,65 @@
     font-family: 'Noto Sans TC';
 }
 /* 推薦商品導引文字 */
-.sort_blue02_rec{
+.sort_black02_rec{
     height: 12%;
     text-align: center;
     padding-top: 90px;
 }
-.sort_blue02_rec > h5{
+.sort_black02_rec > h5{
     font-size: 15px;
     font-weight: 200;
     letter-spacing: 0.3em;
     font-family: 'Noto Sans TC';
     color: #fff;
 }
-.sort_blue02_rec > figure{
+.sort_black02_rec > figure{
     height: 25px;
     width: 25px;
     margin: 8px auto;
 }
-.sort_blue02_rec > figure img{
+.sort_black02_rec > figure img{
     height: 100%;
     object-fit: contain;
 }
 /* 推薦商品 */
-.sort_blue02_rec_product{
+.sort_black02_rec_product{
     height: 30%;
     justify-content: space-between;
     padding-top: 30px;
 }
-.sort_blue02_rec_product_scale:hover{
+.sort_black02_rec_product_scale:hover{
     transform: scale(1.1);
 }
-.sort_blue02_rec_product a{
+.sort_black02_rec_product a{
     text-decoration: none;
 }
-.sort_blue02_rec_product_s{
+.sort_black02_rec_product_s{
     width: 20%;
     height: 100%;
     text-align: center;
 }
-.sort_blue02_rec_product_l{
+.sort_black02_rec_product_l{
     width: 35%;
     height: 100%;
     text-align: center;
 }
-.sort_blue02_rec_product01{
+.sort_black02_rec_product01{
     height: 80%;
     background: url(../images/H-pink-cabinet-01.png) no-repeat center center;
     background-size: contain;
 }
-.sort_blue02_rec_product02{
+.sort_black02_rec_product02{
     height: 80%;
-    background: url(../images/H-blue-chair-06.png) no-repeat center center;
+    background: url(../images/H-black-chair-06.png) no-repeat center center;
     background-size: cover;
 }
-.sort_blue02_rec_product03{
+.sort_black02_rec_product03{
     height: 80%;
-    background: url(../images/H-blue-chair-01.png) no-repeat center center;
+    background: url(../images/H-black-chair-01.png) no-repeat center center;
     background-size: contain;
 }
-.sort_blue02_rec_product h6{
+.sort_black02_rec_product h6{
     font-size: 16px;
     letter-spacing: 0.05em;
     line-height: 30px;
@@ -208,36 +208,36 @@
     font-family: 'Playfair Display';
 }
 /* part3 */
-.sort_blue03{
+.sort_black03{
     height: 160vh;
     flex-direction: column;
 }
 /* 大圖與介紹 */
-.sort_blue03_intro{
+.sort_black03_intro{
     width: 100%;
     height: 50%;
     margin: 0 auto;
     overflow: hidden;
 }
-.sort_blue03_intro_bg{
+.sort_black03_intro_bg{
     background-color: #fff;
     height: 500px;
     width: 80%;
     margin: -43% auto 0 auto;
 }
-.sort_blue03_intro_box{
+.sort_black03_intro_box{
     width: 25%;
     height: 30%;
     background-color: #fff;
     float: left;
 }
-.sort_blue03_intro_top{
+.sort_black03_intro_top{
     justify-content: space-between;
     height: 70%;
     width: 80%;
     margin: 200px auto 0 auto;
 }
-.sort_blue03_intro_l{
+.sort_black03_intro_l{
     width: 40%;
     height: 100%;
     padding: 5% 50px 0 0;
@@ -245,31 +245,31 @@
     justify-content: space-around;
     align-items: flex-end;
 }
-.sort_blue03_intro_l_txt{
+.sort_black03_intro_l_txt{
     text-align: right;
 }
-.sort_blue03_intro_r{
+.sort_black03_intro_r{
     height: 100%;
     width: 70%;
     overflow: hidden;
-    background: url(../images/H-blue-chair-05.png) no-repeat center center;
+    background: url(../images/H-black-chair-05.png) no-repeat center center;
     background-size: cover;
 }
-.sort_blue03_intro_l_txt>h3{
+.sort_black03_intro_l_txt>h3{
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.1em;
     color: #ad776c;
     font-family: 'SourceHanSerifTC-Bold';
 }
-.sort_blue03_h2{
+.sort_black03_h2{
     font-size: 70px;
     letter-spacing: 0.05em;
     color: #662424;
     font-weight: 700;
     font-family: 'Playfair Display';
 }
-.sort_blue03_intro_l_txt>p{
+.sort_black03_intro_l_txt>p{
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.1em;
@@ -277,70 +277,70 @@
     font-family: 'Noto Sans TC';
 }
 /* 推薦商品導引文字 */
-.sort_blue03_rec{
+.sort_black03_rec{
     height: 12%;
     text-align: center;
     padding-top: 90px;
 }
-.sort_blue03_rec > h5{
+.sort_black03_rec > h5{
     font-size: 15px;
     font-weight: 200;
     letter-spacing: 0.3em;
     font-family: 'Noto Sans TC';
     color: #fff;
 }
-.sort_blue03_rec > figure{
+.sort_black03_rec > figure{
     height: 25px;
     width: 25px;
     margin: 8px auto;
 }
-.sort_blue03_rec > figure img{
+.sort_black03_rec > figure img{
     height: 100%;
     object-fit: contain;
 }
 /* 推薦商品 */
-.sort_blue03_rec_product{
+.sort_black03_rec_product{
     height: 30%;
     justify-content: space-between;
     padding-top: 30px;
 }
-.sort_blue03_rec_product_scale:hover{
+.sort_black03_rec_product_scale:hover{
     transform: scale(1.1);
 }
-.sort_blue03_rec_product a{
+.sort_black03_rec_product a{
     text-decoration: none;
 }
-.sort_blue03_rec_product_s{
+.sort_black03_rec_product_s{
     width: 20%;
     height: 100%;
     text-align: center;
 }
-.sort_blue03_rec_product_l{
+.sort_black03_rec_product_l{
     width: 35%;
     height: 100%;
     text-align: center;
 }
-.sort_blue03_rec_product01{
+.sort_black03_rec_product01{
     height: 80%;
     background: url(../images/H-orange-chair-04.png) no-repeat center center;
     background-size: contain;
 }
-.sort_blue03_rec_product02{
+.sort_black03_rec_product02{
     height: 80%;
     background: url(../images/H-pink-chair-05.png) no-repeat center center;
     background-size: cover;
 }
-.sort_blue03_rec_product03{
+.sort_black03_rec_product03{
     height: 80%;
     background: url(../images/H-light-09.png) no-repeat center center;
     background-size: contain;
 }
-.sort_blue03_rec_product04{
+.sort_black03_rec_product04{
     height: 80%;
     background: url(../images/H-orange-chair-07.png) no-repeat center center;
     background-size: contain;
 }
-.sort_blue03_rec_product h6{
+.sort_black03_rec_product h6{
     font-size: 16px;
     letter-spacing: 0.05em;
     line-height: 30px;
@@ -349,64 +349,64 @@
     font-family: 'Playfair Display';
 }
 /* part4 */
-.sort_blue04{
+.sort_black04{
     height: 160vh;
     flex-direction: column;
 }
 /* 大圖與介紹 */
-.sort_blue04_intro{
+.sort_black04_intro{
     width: 100%;
     height: 50%;
     margin: 0 auto;
     overflow: hidden;
 }
-.sort_blue04_intro_bg{
+.sort_black04_intro_bg{
     background-color: #fff;
     height: 500px;
     width: 80%;
     margin: -43% auto 0 auto;
 }
-.sort_blue04_intro_box{
+.sort_black04_intro_box{
     width: 25%;
     height: 45%;
     background-color: #fff;
     float: right;
 }
-.sort_blue04_intro_top{
+.sort_black04_intro_top{
     justify-content: space-between;
     height: 70%;
     width: 80%;
     margin: 200px auto 0 auto;
 }
-.sort_blue04_intro_l{
+.sort_black04_intro_l{
     width: 40%;
     height: 100%;
     padding: 6% 0 0 80px;
     flex-direction: column;
     justify-content: space-around;
 }
-.sort_blue04_intro_r{
+.sort_black04_intro_r{
     height: 100%;
     width: 60%;
     overflow: hidden;
     background: url(../images/H-pink-chair-09.png) no-repeat center center;
     background-size: cover;
 }
-.sort_blue04_intro_l_txt>h3{
+.sort_black04_intro_l_txt>h3{
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.1em;
     color: #ad776c;
     font-family: 'SourceHanSerifTC-Bold';
 }
-.sort_blue04_h2{
+.sort_black04_h2{
     font-size: 80px;
     letter-spacing: 0.05em;
     color: #a4594a;
     font-weight: 700;
     font-family: 'Playfair Display';
 }
-.sort_blue04_intro_l_txt>p{
+.sort_black04_intro_l_txt>p{
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.1em;
@@ -414,65 +414,65 @@
     font-family: 'Noto Sans TC';
 }
 /* 推薦商品導引文字 */
-.sort_blue04_rec{
+.sort_black04_rec{
     height: 12%;
     text-align: center;
     padding-top: 90px;
 }
-.sort_blue04_rec > h5{
+.sort_black04_rec > h5{
     font-size: 15px;
     font-weight: 200;
     letter-spacing: 0.3em;
     font-family: 'Noto Sans TC';
     color: #fff;
 }
-.sort_blue04_rec > figure{
+.sort_black04_rec > figure{
     height: 25px;
     width: 25px;
     margin: 8px auto;
 }
-.sort_blue04_rec > figure img{
+.sort_black04_rec > figure img{
     height: 100%;
     object-fit: contain;
 }
 /* 推薦商品 */
-.sort_blue04_rec_product{
+.sort_black04_rec_product{
     height: 30%;
     justify-content: space-between;
     padding-top: 30px;
 }
-.sort_blue04_rec_product_scale:hover{
+.sort_black04_rec_product_scale:hover{
     transform: scale(1.1);
 }
-.sort_blue04_rec_product a{
+.sort_black04_rec_product a{
     text-decoration: none;
 }
-.sort_blue04_rec_product_s{
+.sort_black04_rec_product_s{
     width: 20%;
     height: 100%;
     text-align: center;
 }
-.sort_blue04_rec_product_l{
+.sort_black04_rec_product_l{
     width: 35%;
     height: 100%;
     text-align: center;
 }
-.sort_blue04_rec_product01{
+.sort_black04_rec_product01{
     height: 80%;
     background: url(../images/H-pink-chair-09.png) no-repeat center center;
     background-size: contain;
 }
-.sort_blue04_rec_product02{
+.sort_black04_rec_product02{
     height: 80%;
     background: url(../images/H-pink-chair-04.png) no-repeat center center;
     background-size: cover;
 }
-.sort_blue04_rec_product03{
+.sort_black04_rec_product03{
     height: 80%;
     background: url(../images/H-pink-cabinet-02.png) no-repeat center center;
     background-size: contain;
 }
-.sort_blue04_rec_product h6{
+.sort_black04_rec_product h6{
     font-size: 16px;
     letter-spacing: 0.05em;
     line-height: 30px;
@@ -481,18 +481,18 @@
     font-family: 'Playfair Display';
 }
 /* part5 */
-.sort_blue05{
+.sort_black05{
     /*width: 70%;*/
     flex-direction: column;
     justify-content: space-between;
     margin-top: 80px;
 }
-.sort_blue05_sec1{
+.sort_black05_sec1{
     width: 100%;
     height: 30px;
     margin-bottom: 50px;
 }
-.sort_blue05_sec1 li{
+.sort_black05_sec1 li{
     display: inline-block;
     padding: 10px;
     font-size: 14px;
@@ -500,7 +500,7 @@
     line-height: 20px;
     letter-spacing: 0.1em;
 }
-.sort_blue05_filter{
+.sort_black05_filter{
     width: 130px;
     background-color: #000;
     border-radius: 40px;
@@ -510,10 +510,10 @@
     justify-content: space-around;
     align-items: center;
 }
-.sort_blue05_filter:hover{
+.sort_black05_filter:hover{
     background-color: #666;
 }
-.sort_blue05_filter>figure{
+.sort_black05_filter>figure{
     width: 20px;
     height: 20px;
     background: url(../images/icon/filter.svg) no-repeat center center;
@@ -521,7 +521,7 @@
     margin-left: 10px;
     float: left;
 }
-.sort_blue05_byprice>figure, .sort_blue05_bytime>figure{
+.sort_black05_byprice>figure, .sort_black05_bytime>figure{
     width: 10px;
     height: 15px;
     background: url(../images/icon/next.svg) no-repeat center center;
@@ -529,29 +529,29 @@
     margin: 3px 10px 0 3px;
     float: right;
 }
-.sort_blue05_row{
+.sort_black05_row{
     width: 100%;
     /*height: 300px;*/
     /*justify-content: space-between;*/
     margin-top: 30px;
     flex-wrap: wrap;
 }
-.sort_blue05_box_l{
+.sort_black05_box_l{
     width: 50%;
     height: 100%;
     position: relative;
 }
-.sort_blue05_box_s{
+.sort_black05_box_s{
     width: 25%;
     height: 100%;
     position: relative;
 }
-.sort_blue05_box_l img{
+.sort_black05_box_l img{
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
-.sort_blue05_box_s img{
+.sort_black05_box_s img{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -564,13 +564,13 @@ color: #fff;
 line-height: 40px;
 }
 /* 頁碼 */
-.sort_blue05_page{
+.sort_black05_page{
     width: 100%;
     height: 40px;
     margin: 70px 0 50px 0;
     text-align: center;
 }
-.sort_blue05_page li{
+.sort_black05_page li{
     display: inline-block;
     font-size: 15px;
     font-family: 'Roboto';
@@ -579,13 +579,13 @@ line-height: 40px;
     color: #888;
     transition: all .5s;
 }
-.sort_blue05_page li:hover{
+.sort_black05_page li:hover{
     color:#000;
 }
-.sort_blue05_page .page{
+.sort_black05_page .page{
     margin: 0 8px 0 8px;
 }
-.sort_blue05_page .page:hover{
+.sort_black05_page .page:hover{
     border-bottom: 1px solid #000;
 }
 .page_prev, .page_next{
