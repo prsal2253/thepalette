@@ -51,23 +51,12 @@ if (!empty($_SESSION['cart'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>shoppingcar_01</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/member.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<?php include 'page_item/head.php'; ?>
 </head>
 <body id="shoppingcar" class="shoppingcar_01">
+<!-- top -->
 <div class="index_top">
-    <header><h1>palette</h1></header>
+    <?php include 'page_item/header.php'; ?>
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
