@@ -39,39 +39,39 @@ if(!empty($items)){
 
 if ($long == 50) {
     $where .= " AND `size_sid_w`=1";
-    $build_query['long'] = $long;
+
 } elseif ($long == 100) {
     $where .= " AND `size_sid_w`=2";
-    $build_query['long'] = $long;
+
 } elseif ($long == 150) {
     $where .= " AND `size_sid_w`=3";
-    $build_query['long'] = $long;
+
 }
 
 if ($high == 50) {
     $where .= " AND `size_sid_h`=1";
-    $build_query['high'] = $high;
+
 } elseif ($high == 100) {
     $where .= " AND `size_sid_h`=2";
-    $build_query['high'] = $high;
+
 } elseif ($high == 150) {
     $where .= " AND `size_sid_h`=3";
-    $build_query['high'] = $high;
+
 }
 
 
 if ($price == 1) {
     $where .= " ORDER BY `price` ASC ";
-    $build_query['price'] = $price;
+
 } elseif ($price == 2) {
     $where .= "  ORDER BY `price` DESC  ";
-    $build_query['price'] = $price;
+
 }elseif ($price == 3) {
     $where .= "  ORDER BY `publish_date` ASC  ";
-    $build_query['price'] = $price;
+
 }elseif ($price == 4) {
     $where .= "  ORDER BY `publish_date` DESC  ";
-    $build_query['price'] = $price;
+
 }
 
 
@@ -191,7 +191,7 @@ $product_rs = $mysqli->query($product_sql);
             <!-- 頁碼 -->
             <div class="sort_red05_page">
                 <ul>
-                    <a <?= $page == 1 ? "style='display: none'" : "href='?page=" . $page2 . "&" . http_build_query($build_query) . "'" ?>>
+                    <a <?= $page == 1 ? "style='display: none'" : "href='?page=" . $page2 . "&" . http_build_query($build_query) ."#my_red". "'" ?>>
                         <!--                           接字串的方式 $page2是變數 前後加上. -->
                         <li class="page_prev">
                             <figure></figure>
@@ -200,11 +200,11 @@ $product_rs = $mysqli->query($product_sql);
                     </a>
                     <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                         <li class="page p<?= $i == $page ? 'active' : '' ?>">
-                            <a <?= $page == $i ? '' : "href='?page=" . $i . "&" . http_build_query($build_query) . "'" ?>>
+                            <a <?= $page == $i ? '' : "href='?page=" . $i . "&" . http_build_query($build_query) . '#my_red'."'" ?>>
                                 <p><?= $i ?></p></a>
                         </li>
                     <?php endfor ?>
-                    <a <?= $page == $total_pages ? "style='display: none'" : "href='?page=" . $page1 . "&" . http_build_query($build_query) . "'" ?>>
+                    <a <?= $page == $total_pages ? "style='display: none'" : "href='?page=" . $page1 . "&" . http_build_query($build_query) .'#my_red'. "'" ?>>
                         <li class="page_next">
                             <figure></figure>
                             NEXT
@@ -256,7 +256,7 @@ $product_rs = $mysqli->query($product_sql);
 
 
 
-    var total_change = $('.total_change');
+    // var total_change = $('.total_change');
 
     var color_change = $('.total_change .filter_color_box');
     var items_change = $('.total_change .filter_items');
@@ -267,7 +267,7 @@ $product_rs = $mysqli->query($product_sql);
         D_items  = {},
         D_setHigh = 0,
         D_setLong = 0,
-        D_price = 1;
+        D_price = 0;
 
     color_change.click(function () {
         color_change.each(function () {
@@ -296,15 +296,15 @@ $product_rs = $mysqli->query($product_sql);
     var high_select = 0;
     setHigh_change.change(function () {
         high_select = setHigh_change.val();
-        var D_setHigh = high_select;
-        // console.log(high_select);
+        D_setHigh = high_select;
+        console.log(high_select);
         get_select_data();
     });
     var long_select = 0;
     setLong_change.change(function () {
         long_select = setLong_change.val();
-        var D_setLong = long_select;
-        // console.log(long_select);
+        D_setLong = long_select;
+        console.log(long_select);
         get_select_data();
     });
 
@@ -312,6 +312,7 @@ $product_rs = $mysqli->query($product_sql);
     var price_select = 0;
     $('.price_select').change(function () {
         price_select = $('.price_select').val();
+        D_price = price_select;
         console.log(price_select);
         get_select_data();
 
