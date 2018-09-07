@@ -107,7 +107,6 @@ p.address_num{width: 10%;color: #888;}
 
 .icon_love{width: 19px; height: 19px;margin: 0 auto; background-image: url(../images/icon/heart.svg);background-position:center;background-repeat: no-repeat; background-size: 100% auto;cursor: pointer;transition: all .5s;}
 .icon_love:hover{ background-image: url(../images/icon/heart_w_hover.svg);}
-.icon_love_click{ background-image: url(../images/icon/heart_w_hover.svg);}
 
 /* fancybox */
 .fancybox-slide--html .fancybox-content{max-width:50%;}
@@ -339,4 +338,5 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 .filter_open {  height: 45vh;}
 
 
-
+/* 加icon class */
+.icon_love_click{ background-image: url(../images/icon/heart_w_hover.svg);}
