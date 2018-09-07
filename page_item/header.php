@@ -67,7 +67,7 @@ if (!empty($_SESSION['cart'])) {
                             <li data-id="sort02"><a href="../thepalette/sort_blue.php">藍綠黃 系列</a></li>
                             <li data-id="sort03"><a href="../thepalette/sort_black.php">黑白灰 系列</a></li>
                             <li data-id="sort04"><a href="../thepalette/sort_earth.php">大地色 系列</a></li>
-                            <li data-id="sort05"><a href="../thepalette/sort_s05_0905.php">材質 系列</a></li>
+                            <li data-id="sort05"><a href="../thepalette/sort_texture.php">材質 系列</a></li>
 
                         </ul>
                     </div>

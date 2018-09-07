@@ -22,7 +22,7 @@ $long = isset($_GET['long']) ? intval($_GET['long']) : 0;//寬度
 $high = isset($_GET['high']) ? intval($_GET['high']) : 0;//高度
 $price = isset($_GET['price']) ? intval($_GET['price']) : 0; //時間價格
 
-$where = " WHERE `product_color_sid` IN(3,6,10) ";
+$where = " WHERE `product_color_sid` BETWEEN 11 AND 13 ";
 
 if(!empty($color)){
     $c = explode(',', $color);
@@ -109,16 +109,16 @@ $product_rs = $mysqli->query($product_sql);
             <div class="index_conten_flex filter_inner transition total_change">
                 <div class="filter_color flex">
                     <div class="filter_color_in" style="margin-left: 0">
-                        <div class="filter_color3 filter_color_box" data-color="orange"></div>
-                        <p>橘色</p>
+                        <div class="filter_color11 filter_color_box" data-color="wood"></div>
+                        <p>木頭</p>
                     </div>
                     <div class="filter_color_in">
-                        <div class="filter_color6 filter_color_box" data-color="yellow"></div>
-                        <p>黃色</p>
+                        <div class="filter_color12 filter_color_box" data-color="metal"></div>
+                        <p>金屬</p>
                     </div>
                     <div class="filter_color_in">
-                        <div class="filter_color10 filter_color_box" data-color="brown"></div>
-                        <p>咖色</p>
+                        <div class="filter_color13 filter_color_box" data-color="other"></div>
+                        <p>其他</p>
                     </div>
                 </div>
                 <ul class="filter_item flex">
@@ -255,6 +255,7 @@ $product_rs = $mysqli->query($product_sql);
 
 
 
+
     // var total_change = $('.total_change');
 
     var color_change = $('.total_change .filter_color_box');
@@ -262,7 +263,7 @@ $product_rs = $mysqli->query($product_sql);
     var setHigh_change = $('.slider_hight');
     var setLong_change = $('.slider_long');
 
-    var D_color = {orange: 0, yellow: 0, brown: 0},
+    var D_color = {wood: 0, metal: 0, other: 0},
         D_items  = {},
         D_setHigh = 0,
         D_setLong = 0,
@@ -320,9 +321,9 @@ $product_rs = $mysqli->query($product_sql);
 
 
     var color_map = {
-        orange: 3,
-        yellow: 6,
-        brown: 10
+        wood: 11,
+        metal: 12,
+        other: 13
     };
 
     var item_map = {
@@ -350,7 +351,7 @@ $product_rs = $mysqli->query($product_sql);
                 items.push(item_map[s]);
             }
         }
-        $.get('sort_earth_api.php', {
+        $.get('sort_texture_api.php', {
             color: color.join(','),
             items: items.join(','),
             high:D_setHigh,
