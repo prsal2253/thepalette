@@ -4,8 +4,6 @@
 $mysqli = new mysqli('localhost', 'orange', '0987', 'the palette');
 // $mysqli = new mysqli('localhost', 'sandra', 'ssan+1222', 'the palette');
 $mysqli->query("SET NAMES utf8");
-
-
 $pageName = 'product_list_red';
 
 $build_query = [];
@@ -18,47 +16,26 @@ $page1 = $page + 1;
 $page2 = $page - 1;
 
 
-$color = isset($_GET['color']) ? intval($_GET['color']) : 0; //顏色
-$items = isset($_GET['items']) ? intval($_GET['items']) : 0;//種類
+$color = isset($_GET['color']) ? $_GET['color'] : 0; //顏色
+$items = isset($_GET['items']) ? $_GET['items'] : 0;//種類
 $long = isset($_GET['long']) ? intval($_GET['long']) : 0;//寬度
 $high = isset($_GET['high']) ? intval($_GET['high']) : 0;//高度
 $price = isset($_GET['price']) ? intval($_GET['price']) : 0; //時間價格
 
+$where = " WHERE 1  ";
 
-
-$where = " WHERE `product_color_sid` BETWEEN 1 AND 3  ";
-if ($color == 'red') {
-    $where .= " AND `product_color_sid`=1";
-    $build_query['color'] = $color;
-} elseif ($color == 'pink') {
-    $where .= " AND `product_color_sid`=2";
-    $build_query['color'] = $color;
-} elseif ($color == 'orange') {
-    $where .= " AND `product_color_sid`=3";
-    $build_query['color'] = $color;
+if(!empty($color)){
+    $c = explode(',', $color);
+    $color_condition = ' AND (product_color_sid='. implode(' OR product_color_sid=', $c) . ')';
+    // 2 OR product_color_sid=3
+    $where .= $color_condition;
 }
 
-
-if ($items == 'chair') {
-    $where .= " AND `category_sid`=1";
-    $build_query['items'] = $items;
-} elseif ($items == 'table') {
-    $where .= " AND `category_sid`=2";
-    $build_query['items'] = $items;
-} elseif ($items == 'sofa') {
-    $where .= " AND `category_sid`=3";
-    $build_query['items'] = $items;
-} elseif ($items == 'box') {
-    $where .= " AND `category_sid`=4";
-    $build_query['price'] = $items;
-} elseif ($items == 'light') {
-    $where .= " AND `category_sid`=5";
-    $build_query['items'] = $items;
-} elseif ($items == 'other') {
-    $where .= " AND `category_sid`=6";
-    $build_query['items'] = $items;
+if(!empty($items)){
+    $i = explode(',', $items);
+    $items_condition = ' AND (category_sid='. implode(' OR category_sid=', $i) . ')';
+    $where .= $items_condition;
 }
-
 
 if ($long == 50) {
     $where .= " AND `size_sid_w`=1";
@@ -104,9 +81,10 @@ $total_pages = ceil($total_rows / $per_page);
 
 
 $product_sql = sprintf("SELECT * FROM  `products_list` $where LIMIT %s, %s ", ($page - 1) * $per_page, $per_page);
+
+//echo $product_sql; exit;
 //這裡會拿到sql的字串
 $product_rs = $mysqli->query($product_sql);
-
 
 ?>
 <div id="sort_red05 ">
@@ -135,7 +113,7 @@ $product_rs = $mysqli->query($product_sql);
                         <p>紅色</p>
                     </div>
                     <div class="filter_color_in">
-                        <div class="filter_color2 filter_color_box" data-color="pick"></div>
+                        <div class="filter_color2 filter_color_box" data-color="pink"></div>
                         <p>粉色</p>
                     </div>
                     <div class="filter_color_in">
@@ -166,7 +144,7 @@ $product_rs = $mysqli->query($product_sql);
                 <div class="filter_sbar flex">
                     <div class="filter_sbar1">
                         <!--寬度-->
-                        <input id="range" type="range" min="0" max="150" value="0" step="50" oninput="change()"
+                        <input id="range" type="range" min="50" max="150" value="150" step="50" oninput="change()"
                                onchange="change()" class="slider slider_hight">
                         <div class="sbar1_txt">
                             家具長度 :
@@ -175,7 +153,7 @@ $product_rs = $mysqli->query($product_sql);
                     </div>
                     <div class="filter_sbar2">
                         <!--高度-->
-                        <input id="range2" type="range" min="0" max="150" value="0" step="50" oninput="change2()"
+                        <input id="range2" type="range" min="50" max="150" value="150" step="50" oninput="change2()"
                                onchange="change2()" class="slider slider_long">
                         <div class="sbar1_txt">
                             家具寬度 :
@@ -185,6 +163,9 @@ $product_rs = $mysqli->query($product_sql);
                 </div>
             </div>
 
+
+
+        <div class="addall">
             <div class="sort_red05_row flex">
                 <?php while ($r = $product_rs->fetch_assoc()): ?>
                     <div name="product" class="sort_red05_box_s product_sid_data" data-sid="<?= $r['product_sid'] ?>">
@@ -232,6 +213,9 @@ $product_rs = $mysqli->query($product_sql);
                 </ul>
             </div>
         </div>
+
+
+
     </section>
 </div>
 </div>
@@ -277,27 +261,36 @@ $product_rs = $mysqli->query($product_sql);
     var color_change = $('.total_change .filter_color_box');
     var items_change = $('.total_change .filter_items');
     var setHigh_change = $('.slider_hight');
-    var setLong_change = $('.slider_long');
-    total_change.click(function () {
+    var setLong_change = $('.slider_long')
 
+    var D_color = {red: 0, pink: 0, orange: 0},
+        D_items  = {},
+        D_setHigh = 0,
+        D_setLong = 0,
+        D_price = 1;
+
+    color_change.click(function () {
         color_change.each(function () {
             if ($(this).hasClass('toggle_color')) {
-                var D_color = $(this).attr('data-color');
-                // console.log($(this).attr('data-color'));
-                $.get('sort_red_api.php', {color: D_color,items: D_items,high:D_setHigh,long:D_setLong,price:D_price}, function (data) {
-                }, 'json');
+                D_color[ $(this).attr('data-color') ] = 1;
+            } else {
+                D_color[ $(this).attr('data-color') ] = 0;
             }
         });
+        console.log(D_color);
+        get_select_data();
+
     });
-    total_change.click(function () {
+    items_change.click(function () {
         items_change.each(function () {
             if ($(this).hasClass('item_choose')) {
-                var D_items = $(this).attr('data-category');
-                // console.log($(this).attr('data-category'));
-                $.get('sort_red_api.php', {color: D_color,items: D_items,high:D_setHigh,long:D_setLong,price:D_price}, function (data) {
-                }, 'json');
+                D_items[ $(this).attr('data-category') ] = 1;
+            } else {
+                D_items[ $(this).attr('data-category') ] = 0;
             }
         });
+        console.log(D_items);
+        get_select_data();
     });
 
     var high_select = 0;
@@ -305,16 +298,14 @@ $product_rs = $mysqli->query($product_sql);
         high_select = setHigh_change.val();
         var D_setHigh = high_select;
         // console.log(high_select);
-        $.get('sort_red_api.php', {color: D_color,items: D_items,high:D_setHigh,long:D_setLong,price:D_price}, function (data) {
-        }, 'json');
+        get_select_data();
     });
     var long_select = 0;
     setLong_change.change(function () {
         long_select = setLong_change.val();
         var D_setLong = long_select;
         // console.log(long_select);
-        $.get('sort_red_api.php', {color: D_color,items: D_items,high:D_setHigh,long:D_setLong,price:D_price}, function (data) {
-        }, 'json');
+        get_select_data();
     });
 
 
@@ -323,30 +314,56 @@ $product_rs = $mysqli->query($product_sql);
         price_select = $('.price_select').val();
         var D_price = price_select;
         // console.log(price_select);
-        $.get('sort_red_api.php', {color: D_color,items: D_items,high:D_setHigh,long:D_setLong,price:D_price}, function (data) {
-        }, 'json');
+        get_select_data();
 
     });
 
 
-    //
-    // p_items.find('.qty-sel').change(function(){
-    //     var tr = $(this).closest('tr');
-    //     var sid = tr.attr('data-sid');
-    //     var qty = $(this).val();
-    //     var price = tr.find('.price').attr('data-price');
-    //     tr.find('.qty').attr('data-qty', qty);
-    //
-    //     console.log( tr.find('.qty').attr('data-qty'), qty);
-    //
-    //
-    //     $.get('add_to_cart.php', {sid:sid, qty:qty}, function(data){
-    //         tr.find('td:last-child').text(qty*price);
-    //
-    //         changeQty(data);
-    //         calTotal();
-    //     }, 'json');
-    // });
+
+    var color_map = {
+        red: 1,
+        pink: 2,
+        orange: 3
+    };
+
+    var item_map = {
+        chair: 1,
+        table: 2,
+        sofa: 3,
+        box: 4,
+        light: 5,
+        other: 6
+    };
+
+
+
+    function get_select_data(){
+        var color = [],
+            items = [],
+            s, i;
+        for(s in D_color){
+            if(D_color[s]==1) {
+                color.push(color_map[s]);
+            }
+        }
+        for(s in D_items){
+            if(D_items[s]==1) {
+                items.push(item_map[s]);
+            }
+        }
+        $.get('sort_red_api.php', {
+            color: color.join(','),
+            items: items.join(','),
+            high:D_setHigh,
+            long:D_setLong,
+            price:D_price
+        }, function (data) {
+            $('.addall').html(data);
+        });
+    }
+
+    get_select_data()
+
 
 
 </script>
