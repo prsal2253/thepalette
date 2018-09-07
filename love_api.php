@@ -4,6 +4,7 @@ require __DIR__ . '/__db_connect.php';
 
 if (!isset($_SESSION['love'])) {
 //    如果沒有設定session就把它設定空的陣列
+    $_SESSION['love'] = [];
 
 }
 
@@ -35,6 +36,7 @@ if (isset($_SESSION['user'])and !empty($_GET['sid'])) {
         if ($af === 1) {
             $result['success'] = true;
 
+            $_SESSION['love'] = $sid;
         }
         echo json_encode($result, JSON_UNESCAPED_UNICODE);
     }

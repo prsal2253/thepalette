@@ -9,7 +9,7 @@
     <?php include 'sort_red02.php';?>
     <?php include 'sort_red03.php';?>
     <?php include 'sort_red04.php';?>
-    <?php include 'sort_red05.php';?>
+    <?php include 'sort_red05_0907.php';?>
     <?php include 'page_item/footer.php';?>  
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

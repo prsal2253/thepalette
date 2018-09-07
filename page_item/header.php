@@ -250,6 +250,11 @@ if (!empty($_SESSION['cart'])) {
     });
 
 
+
+
+
+
+
     //    購物車功能區塊
     var changeQty = function (obj) {
         //這個函式丟一個物件進來

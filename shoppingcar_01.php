@@ -371,13 +371,13 @@ if (!empty($_SESSION['cart'])) {
                 if (data.success) {
                     console.log(data);
                     alert('商品已加入刪除囉！啾咪～？');
-                    $(this).removeClass("icon_love_click");
+
 
                 } else {
                     alert('你登入了媽？！啾咪～');
                 }
                 ;
-
+                
             }, 'json');
         } else {
             $(this).addClass("icon_love_click");
