@@ -1,6 +1,10 @@
 <?php
 
-require __DIR__ . '/__db_connect.php';
+//require __DIR__ . '/__db_connect.php';
+$mysqli = new mysqli('localhost','orange','0987','the palette');
+// $mysqli = new mysqli('localhost', 'sandra', 'ssan+1222', 'the palette');
+$mysqli->query("SET NAMES utf8");
+
 
 $pageName = 'product_list_red';
 
@@ -45,48 +49,69 @@ $product_rs = $mysqli->query($product_sql);
 
 
 ?>
-<?php include 'page_item/head.php'; ?>
-</head>
-<!-- 依照頁面改ＩＤ -->
-<body id="" class="">
-<!-- top -->
-<div class="index_top">
-    <?php include 'page_item/header.php'; ?>
-</div>
-<!-- main -->
-<div class="index_main">
-
     <div id="sort_red05">
         <section>
             <div class="index_conten_flex sort_red05">
-                <ul class="sort_red05_sec1">
-                    <a href="/">
-                        <li class="sort_red05_filter transition">
-                            <figure></figure>
-                            商品篩選
-                        </li>
-                    </a>
-                    <a href="?cate=1">
-                        <li class="sort_red05_byprice transition">依價錢由少至多
-                            <figure></figure>
-                        </li>
-                    </a>
-                    <a href="?cate=2">
-                        <li class="sort_red05_byprice transition">依價錢由多至少
-                            <figure></figure>
-                        </li>
-                    </a>
-                    <a href="?cate=3">
-                        <li class="sort_red05_bytime transition">依上架順序由早到晚
-                            <figure></figure>
-                        </li>
-                    </a>
-                    <a href="?cate=4">
-                        <li class="sort_red05_bytime transition">依上架順序由晚到早
-                            <figure></figure>
-                        </li>
-                    </a>
-                </ul>
+                <div class="index_conten_flex filter">
+                    <ul class="filter_sec1">
+                        <li class="filter_filter transition">
+                            <figure></figure>商品篩選</li>
+                        <select class="filter_byprice transition">依價錢
+                            <div class="s_product_detail_01_num palette_select">
+                                <a href="?cate=1"><option>由高到低</option></a>
+                                <a href="?cate=2"><option>由低到高</option></a>
+                            </div>
+                        </select>
+                        <select class="filter_byprice transition">依上架順序
+                            <div class="s_product_detail_01_num palette_select">
+                                <a href="?cate=3"><option>由新到舊</option></a>
+                                <a href="?cate=4"><option>由舊到新</option></a>
+                            </div>
+                        </select>
+                    </ul>
+                </div>
+                <div class="index_conten_flex filter_inner transition">
+                    <div class="filter_color flex">
+                        <div class="filter_color_in" style="margin-left: 0">
+                            <div class="filter_color1 filter_color_box"></div>
+                            <p>紅色</p>
+                        </div>
+                        <div class="filter_color_in">
+                            <div class="filter_color2 filter_color_box"></div>
+                            <p>粉色</p>
+                        </div>
+                        <div class="filter_color_in">
+                            <div class="filter_color3 filter_color_box"></div>
+                            <p>橘色</p>
+                        </div>
+                    </div>
+                    <ul class="filter_item flex">
+                        <li class="filter_item01 filter_items transition"><figure></figure><p>椅子</p></li>
+                        <li class="filter_item02 filter_items transition"><figure></figure><p>桌子</p></li>
+                        <li class="filter_item03 filter_items transition"><figure></figure><p>沙發</p></li>
+                        <li class="filter_item04 filter_items transition"><figure></figure><p>櫃子</p></li>
+                        <li class="filter_item05 filter_items transition"><figure></figure><p>燈飾</p></li>
+                        <li class="filter_item06 filter_items transition" style="margin: 50px 0 0 0"><figure></figure><p>織品</p></li>
+                    </ul>
+                    <div class="filter_sbar flex">
+                        <div class="filter_sbar1">
+                            <!--寬度-->
+                            <input id="range" type="range" min="0" max="150" value="0" step="50" oninput="change()" onchange="change()" class="slider">
+                            <div class="sbar1_txt">
+                                家具長度 :
+                                <span id="value">0</span> cm
+                            </div>
+                        </div>
+                        <div class="filter_sbar2">
+                            <!--高度-->
+                            <input id="range2" type="range" min="0" max="150" value="0" step="50" oninput="change2()" onchange="change2()" class="slider">
+                            <div class="sbar1_txt">
+                                家具寬度 :
+                                <span id="value2">0</span> cm
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="sort_red05_row flex">
                     <?php while($r = $product_rs->fetch_assoc()): ?>
@@ -138,7 +163,6 @@ $product_rs = $mysqli->query($product_sql);
 
 <div class="index_footer">
 
-    <?php include 'page_item/footer.php'; ?>
 </div>
 </body>
 </html>
