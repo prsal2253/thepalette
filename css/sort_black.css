@@ -115,7 +115,7 @@
     height: 100%;
     width: 60%;
     overflow: hidden;
-    background: url(../images/H-black-chair-02.png) no-repeat center center;
+    background: url(../images/H-black-chair-07.png) no-repeat center center;
     background-size: cover;
 }
 .sort_black02_intro_l_txt>h3{
@@ -190,17 +190,12 @@
 }
 .sort_black02_rec_product02{
     height: 80%;
-    background: url(../images/H-black-table-01.png) no-repeat center center;
-    background-size: contain;
+    background: url(../images/H-black-chair-06.png) no-repeat center center;
+    background-size: cover;
 }
 .sort_black02_rec_product03{
     height: 80%;
-    background: url(../images/H-cup-03.png) no-repeat center center;
-    background-size: contain;
-}
-.sort_black02_rec_product04{
-    height: 80%;
-    background: url(../images/H-black-table-03.png) no-repeat center center;
+    background: url(../images/H-black-chair-01.png) no-repeat center center;
     background-size: contain;
 }
 .sort_black02_rec_product h6{
