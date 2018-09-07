@@ -39,7 +39,7 @@
                     <div class="sort_blue02_intro_l flex">
                         <h2 class="sort_blue02_h2">Blue</h2>
                         <div class="sort_blue02_intro_l_txt">
-                            <h3>熱情的紅 沉穩的紅 撩人的紅</h3><br><br>
+                            <h3>神秘的藍 高貴的藍 透亮的藍</h3><br><br>
                             <p>藍色是信任、忠誠、誠實的色彩。因此它總是讓人感覺真誠、保留、靜謐的。藍色是一種不喜歡引起注意、不愛譁眾取寵的顏色，它喜歡用自己的方式去實踐生活。想像我們躺著仰望一片明朗的天空、萬里無雲，你能注目那片湛藍很久，那樣的一望無際也像片鏡子，投射你內心的平靜、你與自己的私密對話。</p>
                         </div>                            
                         
@@ -86,7 +86,7 @@
                     <div class="sort_blue03_intro_l flex">
                         
                         <div class="sort_blue03_intro_l_txt">
-                            <h3>熱情的橘 沉穩的橘 撩人的橘</h3><br><br>
+                            <h3>自然的綠 療育的綠 清爽的綠</h3><br><br>
                             <p>改編自 Jenny Han 的同名青春愛情小說，內容講述亞裔女孩 Lara Jean 這名默默無名的女孩，有著溫柔、聰穎的性格，卻十分內向。她的心思細膩，對那些「愛過的男孩們」卻不曾訴說心中的情感，這是她永藏心底的秘密。當熾熱的感情無處渲洩時，Lara Jean 會寫下「情書」藏在帽盒裡。</p>
                         </div>
                         <h2 class="sort_blue03_h2">Green</h2>                                 
@@ -134,7 +134,7 @@
                     <div class="sort_blue04_intro_l flex">
                         <h2 class="sort_blue04_h2">Yellow</h2>
                         <div class="sort_blue04_intro_l_txt">
-                            <h3>熱情的粉 沉穩的粉 撩人的粉</h3><br><br>
+                            <h3>溫暖的黃 快樂的黃 朝氣的黃</h3><br><br>
                             <p>改編自 Jenny Han 的同名青春愛情小說，內容講述亞裔女孩 Lara Jean 這名默默無名的女孩，有著溫柔、聰穎的性格，卻十分內向。她的心思細膩，對那些「愛過的男孩們」卻不曾訴說心中的情感，這是她永藏心底的秘密。</p>
                         </div>                            
                         
