@@ -362,45 +362,50 @@ if (!empty($_SESSION['cart'])) {
 
     // 點選收藏後加class
     $(".icon_love,.product_favorate").click(function (data) {
-        if ($(this).hasClass('icon_love_click')) {
-            $(this).removeClass("icon_love_click");
-            var product = $(this).closest('.product-item');
-            var sid = product.attr('data-sid');
-            $.get('unlove_api.php', {sid: sid}, function (data) {
-                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
-                if (data.success) {
-                    console.log(data);
-                    alert('商品已加入刪除囉！啾咪～？');
+        <?php if (isset ($_SESSION['user'])):?>
+            if ($(this).hasClass('icon_love_click')) {
+                $(this).removeClass("icon_love_click");
+                var product = $(this).closest('.product-item');
+                var sid = product.attr('data-sid');
+                $.get('unlove_api.php', {sid: sid}, function (data) {
+                    //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                    if (data.success) {
+                        console.log(data);
+                        alert('商品已加入刪除囉！啾咪～？');
 
 
-                } else {
-                    alert('你登入了媽？！啾咪～');
-                }
-                ;
-                
-            }, 'json');
-        } else {
-            $(this).addClass("icon_love_click");
-            var product = $(this).closest('.product-item');
-            var sid = product.attr('data-sid');
-            $.get('love_api.php', {sid: sid}, function (data) {
-                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                    } else {
+                        alert('你登入了媽？！啾咪～');
+                        $(this).removeClass("icon_love_click");
 
-                if (data.success) {
-                    console.log(data);
-                    alert('商品已加入最愛囉！啾咪～');
+                    }
+                    ;
 
-                } else {
+                }, 'json');
+            } else {
+                $(this).addClass("icon_love_click");
+                var product = $(this).closest('.product-item');
+                var sid = product.attr('data-sid');
+                $.get('love_api.php', {sid: sid}, function (data) {
+                    //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
 
-                    alert('你登入了媽？');
-                    $(this).addClass("icon_love_click");
+                    if (data.success) {
+                        console.log(data);
+                        alert('商品已加入最愛囉！啾咪～');
 
-                };
+                    } else {
 
-            }, 'json');
+                        alert('你登入了媽？');
+                        $(this).addClass("icon_love_click");
 
+                    }
+                    ;
 
-        }
+                }, 'json');
+            }
+            <?php else:?>
+        alert('你登入了媽？！啾咪～');
+        <?php endif;?>
     });
 
 

@@ -117,7 +117,7 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
                 passwordHelp.show();
                 isPass = false;
             }
-            alert('<?=$msg_type?>');
+            alert('<?=$msg_info?>');
 
             return isPass;
         };
