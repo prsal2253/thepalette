@@ -215,7 +215,7 @@ if (!empty($_SESSION['cart'])) {
                 </div>
             </div>
         </section>
-        <section class="item_12 item_13 item_17">
+        <section class="item_12 item_13 item_17"> 
             <div class="index_conten ">
                 <!-- 會員名稱 -->
                 <div class="item_02_conten">
