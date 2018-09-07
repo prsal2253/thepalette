@@ -200,7 +200,7 @@ if (!empty($_SESSION['cart'])) {
     $(".car_icon").click(function () {
         $(this).parents().find(".car_iconhover").toggleClass("menu_active");
         //即時更新
-        $.get('header_api.php', function (data) {
+        $.get('./page_item/header_api.php', function (data) {
             $('.car_iconhover').html(data);
         }, 'text');
     });
@@ -284,7 +284,7 @@ if (!empty($_SESSION['cart'])) {
         var sid = tr.attr('data-sid');
         e.stopPropagation();
         //    氣泡事件
-        $.get('add_to_cart.php', {sid: sid}, function (data) {
+        $.get('./page_item/header_api.php', {sid: sid}, function (data) {
             tr.remove();//要等ajax回來才可以做刪除動作
             window.changeQty(data);
         }, 'json');
