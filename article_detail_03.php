@@ -398,7 +398,7 @@
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="product_quicklook.php?id=8" class="palette_btn quick_look_palette_btn quick"
+                                    <a href="product_quicklook.php?id=126" class="palette_btn quick_look_palette_btn quick"
                                        data-fancybox
                                        data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
                                    "70vh"}}}'>快速查看</a>

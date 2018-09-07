@@ -350,7 +350,7 @@
                     </div>
                     <!-- 一組商品 -->
                     <div class="product_box" style="width: 25%;">
-                        <img src="images/H-blue-table-02.png" alt="商品名稱">
+                        <img src="images/H-light-09.png" alt="商品名稱">
                         <div class="product_mask transition">
                             <div class="product_favorate transition"></div>
                             <div class="product_name_nd_btn">
