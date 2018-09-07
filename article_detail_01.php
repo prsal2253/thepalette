@@ -32,7 +32,6 @@
     .artd_box1 {
         width: 100%;
         height: 100vh;
-        background: lightblue;
         position: relative;
     }
 
@@ -185,7 +184,6 @@
         width: 100%;
         height: 550px;
         overflow: hidden;
-
     }
 
     .artd_img1 img {
@@ -232,7 +230,7 @@
         background-color: #fff;
         margin: 0 auto;
     }
-    #product_detail_04{    background-color: #fff;}
+    #product_detail_04{ background-color: #fff;}
 </style>
 </head>
 
@@ -269,7 +267,7 @@
 
                     <div class="artd_post flex">
                         <div class="artd_prev flex ">
-                            <img src="images/article/36416203116_b5ffe0b139_k.jpg" alt="" class="transition">
+                            <img src="images/article/Skærmbillede-2018-07-04-kl.-14.08.04-1024x763.png" alt="" class="transition">
                             <a href="article_detail_05.php" class="transition">PREV
                                 <br>ARTICLE</a>
                         </div>
@@ -317,7 +315,6 @@
                 <p> Photo: Trendsparna <br>
                     Cover via : Dekorella <br>
                     Cover Art Design : Decordemon
-                    
                 </p>
             </div>
         </div>
@@ -402,6 +399,7 @@
         </section>
     </div>
     </div>
+
     <div class="index_footer">
         <?php include 'page_item/footer.php';?>
     </div>

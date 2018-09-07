@@ -13,10 +13,9 @@
         background: #fff;
     }
 
-    .index_main section {
+    #article_detail .index_main section {
         padding: 0;
     }
-
     /* 麵包屑 */
 
     #article_detail .bread_crumbs {
@@ -26,16 +25,13 @@
         z-index: 11;
     }
 
-    #article_detail .bread_crumbs ul li a {
+    #article_detail .bread_crumbs ul li a,#article_detail .bread_crumbs ul li,#article_detail .bread_crumbs ul li::after {
         color: #fff;
     }
-
-    /* 版頭 */
 
     .artd_box1 {
         width: 100%;
         height: 100vh;
-        background: lightblue;
         position: relative;
     }
 
@@ -59,26 +55,70 @@
 
     .artd_prev,
     .artd_next {
-        width: 40%;
+        width: 50%;
         height: 100%;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        position: relative;
     }
+
     .artd_prev img,
-    .artd_next img{
-        width: 50px;
+    .artd_next img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        opacity: 0;
     }
+    .artd_prev img{
+        left:-100%;
+    }
+    .artd_next img {
+        right:-100%;
+    }
+
+    .artd_prev:hover img,
+    .artd_next:hover img{
+        opacity: 1;
+    }
+
+    .artd_prev:hover img{
+        left:0%;
+    }
+    .artd_next:hover img {
+        right:0%;
+    }
+
     .artd_prev a,
     .artd_next a {
         color: #fff;
-        
+    }
+
+    .artd_prev a, .artd_next a  {
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        background-size: 50px auto;
+        background-repeat: no-repeat;
+        text-decoration: none;
     }
     .artd_prev a {
-        margin: 0 0 4% 5%;
-        text-align: right;
+        background-image: url(images/icon/arrow_w.svg);
+        background-position: 25% 54%;
+        padding: 0 0 0 15%;
     }
     .artd_next a {
-        margin: 0 5% 4% 0;
+        background-image: url(images/icon/arrow2_w.svg);
+        background-position: 75% 54%;
+        padding: 0 15% 0 0;
+    }
+    .artd_prev:hover a, .artd_next:hover a{
+        background-color: rgba(0,0,0,0.3);
     }
 
     .artd_box1 figure {
@@ -87,12 +127,12 @@
         width: 100%;
         height: 100%;
     }
-
     /* 文章標題 */
 
     .artd_title {
         position: relative;
         top: -110px;
+        width: 60%;
     }
 
     .artd_title h2 {
@@ -100,7 +140,6 @@
         font-size: 33px;
         letter-spacing: 2px;
         line-height: 50px;
-        width: 60%;
     }
 
     /* 文章內容 */
@@ -185,122 +224,12 @@
     .product_detail_04 {
         width: 100%;
         flex-direction: column;
-        margin: 80px auto;
+        padding: 80px 0;
+        background-color: #fff;
+        margin: 0 auto;
     }
+    #product_detail_04{ background-color: #fff;}
 
-    /* footer */
-    #footer{
-            background-color: #000;
-        }
-        .footer{
-            height: 380px;
-            flex-direction: column;
-            justify-content: space-between; 
-        }
-       .footer_top, .footer_bottom{
-           width: 100%;
-       } 
-       .footer_top{
-           height: 20%;
-           margin: 60px 0 20px 0;
-       }
-       .footer_top h2{
-           font-size: 40px;
-           letter-spacing: 0.05em;
-           font-family: 'Playfair Display';
-           font-weight: 700;
-           color: #ad776c;
-       }
-       .footer_bottom{
-           height: 80%;
-           width: 100%;
-           justify-content: space-between;
-       }
-       .footer_bottom h3{
-            font-size: 18px;
-           letter-spacing: 0.1em;
-           font-family: 'SourceHanSerifTC-SemiBold';
-           font-weight: 700;
-           color: #fff; 
-           margin-bottom: 20px;
-       }
-       .footer_bottom ul{
-           margin: 0 40px 20px 0;
-       }
-       .footer_bottom_left{
-           width: 60%;
-           justify-content: flex-start;
-       }
-       .footer_about li, .footer_contact li, .footer_notice li, .footer_service li{
-            font-size: 13px;
-           letter-spacing: 0.1em;
-           line-height: 25px;
-           font-family: 'Noto Sans TC';
-           font-weight: 300;
-           color: #fff; 
-           display: block;
-           transition: all .5s;
-       }
-       .footer_service li:hover, .footer_about li:hover, .footer_notice li:hover{
-           color: #ad776c;
-        }
-        .footer_bottom_right > ul{
-            flex-direction: column;
-            justify-content: space-between;
-            margin: 0;
-        }
-       .footer_bottom_right figure{
-           width: 40px;
-           height: 40px;
-           margin-right: 10px;
-           display: inline-block;
-       }
-       .footer_bottom_right_icon1{
-           background: url(images/icon/facebook.svg) no-repeat center center;
-           background-size: cover;
-       }
-       .footer_bottom_right_icon2{
-           background: url(images/icon/instagram.svg) no-repeat center center;
-           background-size: cover;
-       }
-       .footer_bottom_right h4{
-           font-size: 12px;
-           font-family: 'Roboto';
-           color: #fff;
-           letter-spacing: 0.01em;
-           line-height: 30px;
-       }
-       .footer_bottom_right_mail{
-           width: 100%;
-           justify-content: space-between;
-           align-items: flex-end;
-           margin-top: 40px;
-       }
-       input[type="text"].footer_bottom_right_txtmail{
-           width: 75%;
-           height: 40px;
-           border: 1px solid #fff;
-           background: rgba(255, 255, 255, 0);
-           border-radius: 40px;
-           padding: 0;
-           margin: 0 10px 0 0 ;
-           text-align: center;
-       }
-       .footer_bottom_right_send{
-           width: 20%;
-           height: 40px;
-           background-color: #666;
-           border-radius: 40px;
-           color: #fff;
-           font-size: 14px;
-           letter-spacing: 0.1em;
-           font-family: 'Noto Sans TC';
-           margin-left: 10px;
-           border: 1px solid #666;
-           padding: 0;
-           margin: 0;
-           font-weight: 300;
-       }
 </style>
 </head>
 
@@ -336,19 +265,19 @@
                     <div class="artd_box2"></div>
 
                     <div class="artd_post flex">
-                        <div class="artd_prev flex">
-                            <img src="images/icon/arrow_w.svg" alt="">
-                            <a href="article_detail_03.php">PREV<br>ARTICLE</a>
+                        <div class="artd_prev flex ">
+                            <img src="images/article/41831742764_29cab9c5a9_k.jpg" alt="" class="transition">
+                            <a href="article_detail_03.php" class="transition">PREV
+                                <br>ARTICLE</a>
                         </div>
-                        <div class="artd_next flex">
-                            <a href="article_detail_05.php">NEXT<br>ARTICLE</a>
-                            <img src="images/icon/arrow2_w.svg" alt="">
+                        <div class="artd_next flex transition">
+                            <img src="images/article/Skærmbillede-2018-07-04-kl.-14.08.04-1024x763.png" alt="" class="transition">
+                            <a href="article_detail_05.php" class="transition">NEXT
+                                <br>ARTICLE</a>
                         </div>
                     </div>
-
                 </figure>
             </div>
-    </div>
 
     <div class="index_conten">
         <!-- 文章標題 -->
@@ -468,6 +397,7 @@
                 </div>
             </div>
         </section>
+    </div>
     </div>
 
         <div class="index_footer">
