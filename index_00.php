@@ -1,702 +1,26 @@
 <?php include 'page_item/head.php';?>
-    <style>
-        .index02 {
-            width: 100%;
-        }
+<!-- 元件css -->
+<link rel="stylesheet" href="css/pageitem.css?123">
 
-        /* video */
-
-        .index02_video {
-            margin-top: 100px;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            background-color: #999;
-        }
-
-        .index02_video_txt {
-            padding: 410px 0 0 50px; 
-        }
-
-        .index02_video figure {
-            width: 50px;
-            height: 50px;
-            background: url(images/icon/play.svg) no-repeat center center;
-            background-size: cover;
-            margin-right: 20px;
-            display: inline-block;
-        }
-
-        .index02_video h2 {
-            font-family: 'Playfair Display';
-            font-size: 25px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            color: #fff;
-            display: inline-block;
-        }
-
-        /* about */
-
-        .index02_about {
-            width: 100%;
-        }
-
-        .index02_about_topic {
-            margin: 120px 0 50px 0;
-        }
-
-        .index02_about_topic h2 {
-            font-family: 'SourceHanSerifTC-Bold';
-            font-size: 30px;
-            color: #000;
-            letter-spacing: 0.08em;
-        }
-
-        .index02_about_content {
-            width: 100%;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .about_con01,
-        .about_con02,
-        .about_con03 {
-            width: 30%;
-        }
-
-        .index02_about_content p {
-            font-family: 'Noto Sans TC';
-            font-size: 15px;
-            letter-spacing: 0.1em;
-            color: #000;
-            font-weight: 300;
-            line-height: 22px;
-        }
-
-         /* swipe */
-
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-
-        body {
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-
-        .swiper-container,
-        .swiper-container2 {
-            width: 100%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .swiper-slide {
-            height: 100%;
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-
-        .swiper-pagination {
-            position: relative;
-        }
-
-        .swiper-pagination-clickable .swiper-pagination-bullet {
-            margin-right: 5px;
-        }
-
-        /* index03 */
-        #index03 {
-            margin: 50px 0 150px 0;
-        }
-        .index03_left,
-        .index03_right {
-            flex-direction: column;
-            width: 50%;
-        }
-        .index03_400 {
-            width: 100%;
-            height: 400px;
-            overflow: hidden;
-        }
-
-        .index03_800 {
-            width: 100%;
-            height: 800px;
-            overflow: hidden;
-        }
-
-        .index03_deco {
-            width: 30px;
-            height: 4px;
-            background-color: #fff;
-            margin-bottom: 15px;
-        }
-
-        /* left */
-        .left01_swipe img,
-        .left04_swipe img,
-        .right05_swipe img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .index03_left01 {
-            background: url(images/banner/27683687327_6181c92a30_b.jpg) no-repeat center center;
-            background-size: cover;
-        }
-
-        .index03_left02 {
-            background-color: #32465a;
-        }
-
-        .index03_left04 {
-            background: url(images/banner/27683687327_6181c92a30_b.jpg) no-repeat center center;
-            background-size: cover;
-        }
-
-        .index03_left05 {
-            background-color: #59493f;
-        }
-
-        .index03_txt01 {
-            width: 70%;
-            height: 20%;
-            margin: 100px auto 0 auto;
-        }
-
-        .index03_txt01_left {
-            width: 80%;
-            float: left
-        }
-
-        .index03_txt01_right {
-            width: 11%;
-            float: right;
-            margin-top: -15px;
-        }
-
-        .index03_h2 {
-            font-size: 35px;
-            font-family: 'Playfair Display';
-            color: #fff;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            line-height: 40px;
-        }
-
-        .index03_left02_box {
-            height: 80%;
-            overflow: hidden;
-            transition: all .5s .1s;
-        }
-
-        .index03_left02_box img {
-            height: 130%;
-            object-fit: cover;
-            margin: -180px 0 0 -30px;
-        }
-
-        .index03_left05_box {
-            height: 80%;
-            overflow: hidden;
-            transition: all .5s .1s;
-
-        }
-
-        .index03_left05_box img {
-            height: 120%;
-            object-fit: cover;
-            margin: -80px 0 0 -110px;
-        }
-
-        /* right */
-
-        .index03_right01 {
-            transition: all .2s;
-            background-color: #d2d2d2;
-        }
-
-        .index03_right03 {
-            background: url(images/banner/marble_bg.jpg) no-repeat center bottom;
-            background-size: cover;
-        }
-
-        .index03_right04 {
-            background-color: #ad776c;
-        }
-
-        .index03_right05 {
-            background: url(images/banner/Casa-La-Quinta-Weekend-House-For-Retired-Couple-Mexico-Yellowtrace-05.jpg) no-repeat bottom center;
-            background-size: cover;
-        }
-
-        .index03_right03_box {
-            height: 70%;
-            overflow: hidden;
-            margin-left: -55px;
-            transition: all .5s .1s;
-
-        }
-
-        .index03_right03_box2 {
-            height: 70%;
-            overflow: hidden;
-            margin: -560px 0 0 110px;
-        }
-
-        .index03_right03_box_img1 {
-            height: 90%;
-            object-fit: cover;
-            margin: 0;
-        }
-
-        .index03_right03_box_img2 {
-            height: 110%;
-            object-fit: cover;
-            margin: 0;
-        }
-
-        .index03_right04_box {
-            height: 70%;
-            overflow: hidden;
-            transition: all .5s .1s;
-
-        }
-
-        .index03_right04_box img {
-            height: 135%;
-            object-fit: cover;
-            margin: -50px 0 0 40px;
-        }
-
-        .index03_txt02 {
-            width: 50%;
-            height: 100%;
-            margin: -53% 0 0 90px;
-        }
-
-        .index03_txt02_top {
-            height: 55%;
-        }
-
-        .index03_txt02_bottom {
-            height: 11%;
-            margin-top: -15px;
-        }
-
-        .index03_right01_box {
-            height: 100%;
-            overflow: hidden;
-            transition: all .5s .1s;
-        }
-
-        .index03_right01_box img {
-            height: 125%;
-            object-fit: cover;
-            margin: 0 0 0 150px;
-            transform: rotateY(180deg);
-        }
-
-        /* hidden parts */
-
-        .index03_right01:hover, .index03_right03:hover,.index03_right04:hover, .index03_left02:hover, .index03_left05:hover {
-            cursor: pointer;
-        }
-
-        .right01_hide_bg {
-            background-color: #333;
-            width: 100%;
-            height: 100%;
-            margin: -80% 0 0 100%;
-        }
-
-        .index03_right01:hover .right01_hide_bg {
-            margin-left: 0;
-        }
-
-        .index03_txt02_show, .index03_txt01_show, .index03_txt01_right04_show, .index03_txt01_right03_show, .index03_txt01_left05_show{
-            transition: all .3s .2s;
-        }
-
-        .index03_right01:hover .index03_txt02_show, .index03_left02:hover .index03_txt01_show, .index03_right04:hover .index03_txt01_right04_show, .index03_right03:hover .index03_txt01_right03_show, .index03_left05:hover .index03_txt01_left05_show{
-            opacity: 0;
-        }
-
-        .txt02_hide {
-            float: left;
-            margin: -67% 0 0 -50%;
-            transition: all .8s;
-            opacity: 0;
-        }
-
-        .index03_right01:hover .txt02_hide {
-            margin-left: 15%;
-            opacity: 1;
-        }
-
-        .right01_box_hide {
-            margin: -67% 0 0 100px;
-            transition: all .8s;
-            opacity: 0;
-        }
-
-        .right01_box_hide img {
-            width: 100%;
-            margin: -30px 0 0 170px;
-        }
-
-        .index03_right01:hover .right01_box_hide {
-            margin: -67% 0 0 0;
-            opacity: 1;
-        }
-        .index03_right01:hover .right01_box_show {
-            margin-left: 500px;
-            opacity: 0;
-        }
-        /* left02 hidden */
-        .left02_hide_bg{
-            width: 100%;
-            height: 110%;
-            background-color: #e29a09;
-            margin: -150% 0 0 -100%;
-        }
-        .index03_left02:hover .left02_hide_bg{
-            margin: -150% 0 0 0;
-        } 
-        .txt01_hide {
-            float: left;
-            margin: -133% 0 0 -20%;
-            transition: all .8s;
-            opacity: 0;
-        }
-
-        .index03_left02:hover .txt01_hide {
-            margin-left: 15%;
-            opacity: 1;
-            margin: -133% 0 0 15%;
-        }
-        .left02_box_hide {
-            transform: translate(600px,-700px);
-            transition: all .8s;
-            opacity: 0;
-        }
-
-        .left02_box_hide img {
-            object-fit: contain;
-        }
-
-        .index03_left02:hover .left02_box_hide {
-            transform: translate(0px,-680px);
-            opacity: 1;
-        }
-        .index03_left02:hover .left02_box_show {
-            margin-left: 500px;
-            opacity: 0;
-        }
-        /* right04 */
-        .right04_hide_bg{
-            width: 100%;
-            height: 110%;
-            background-color: #661b1b;
-            margin: -270% 0 0 100%;
-        }
-        .index03_right04:hover .right04_hide_bg{
-            margin: -270% 0 0 0;
-        }
-        .index03_right04:hover .index03_txt01_right04_hide{
-            transform: translate(15px,-230px);
-            opacity: 1;
-        }
-        .index03_txt01_right04_hide{
-            transition: all .8s;
-            transform: translate(550px,-230px);
-            opacity: 0;
-        }
-        .index03_right04:hover .right04_box_hide{
-            transform: translate(0px,-1050px);
-            opacity: 1;
-        }
-        .right04_box_hide{
-            transform: translate(100px,-1020px);
-            transition: all .5s .1s;
-            opacity: 0;
-        }
-        .index03_right04:hover .right04_box_hide img{
-            width: 150%;
-            height: 150%;
-            object-fit: cover;
-        }
-        .right04_box_hide img{
-            width: 140%;
-            height: 140%;
-        }
-        .index03_right04:hover .right04_box_show{
-            transform: translateX(600px);
-            opacity: 0;
-        }
-
-        /* right03 hidden */
-        .right03_hide_bg{
-            background: url(images/banner/wood_bg.jpg) no-repeat center center;
-            background-size: cover;
-            width: 100%;
-            height: 110%;
-            margin: -270% 0 0 100%;
-        }
-        .index03_right03:hover .right03_hide_bg{
-            margin: -270% 0 0 0;
-        }
-        .index03_right03:hover .right03_box1_show, .index03_right03:hover .right03_box2_show{
-            opacity: 0;
-            transform: translateY(-300px);
-        }
-        .right03_box_hide{
-            width:130%;
-            transform: translate(-450px,-550px);
-            opacity: 0;
-        }
-        .right03_box_hide img{
-            width: 90%;
-            object-fit: cover;
-            margin-top: -50px;
-        }
-        .index03_right03:hover .right03_box_hide{
-            transform: translate(-90px,-550px);
-            opacity: 1;
-        }
-        .index03_txt01_right03_hide{
-            transform: translate(0px,-900%);
-            opacity: 0;
-            transition: all .5s .2s;
-        }
-        .index03_right03:hover .index03_txt01_right03_hide{
-            transform: translate(0px,-820%);
-            opacity: 1;
-        }
-
-        /* left05 */ 
-        .left05_hide_bg{
-            background-color: #c2704f; 
-            width: 100%;
-            height: 110%;
-            margin: -300% 0 0 -100%;
-        }
-        .index03_left05:hover .left05_hide_bg{
-            margin: -300% 0 0 0;
-        }
-        .index03_left05:hover .left05_box_show{
-            transform: translateX(-600px);
-            opacity: 0;
-        }
-        .left05_box_hide{
-            transform: translate(20px,-270%);
-            opacity: 0;
-        }
-        .left05_box_hide img{
-            width:100%;
-            object-fit: contain;
-            margin-left: 1px;
-        }
-        .index03_left05:hover .left05_box_hide{
-            transform: translate(0px,-182%);
-            opacity: 1;
-        }
-        .index03_txt01_left05_hide{
-            transition: all .8s ;
-            opacity: 0
-        }
-        .index03_left05:hover .index03_txt01_left05_hide{
-            transform: translateY(-230%);
-            opacity: 1;
-        }
-
-        @media screen and (max-width:800px){
-            .index03{
-                flex-direction: column;
-            }
-            .index03_left, .index03_right{
-                width: 100%;
-            }
-            .index03_400{
-                height: 250px;
-            }
-            .index03_800{
-                height: 400px;
-            }
-            .index03_left03, .index03_right02 {
-                display: none;
-            }
-            .index03_txt01{
-                margin-top: 50px;
-            }
-            .index03_txt01_right{
-                width: 15%;
-            }
-            .index03_h2{
-                font-size: 30px;
-                line-height: 35px;
-            }
-            .index03_left02_box, .index03_left05_box{
-                height: auto;
-                width: 100%;
-            }
-            .index03_left02_box img{
-                width: 130%;
-                margin: -25% 0 0 -5%;
-            }
-            .index03_left05_box img{
-                width: 110%;
-                margin: -12% 0 0 0;
-            }
-            .index03_txt02{
-                margin-left: 14%
-            }
-            .index03_right03_box2{
-                height: 80%;
-                margin: -320px 0 0 70px;
-            }
-            .index03_right03_box{
-                height: 80%;
-                margin: 0 0 0 -4%;
-            }
-            
-        }
-        /* 文章 */
-
-        #product_detail_05 {
-            background-color: #000;
-            height: 65vh;
-            padding-top: 1px;
-        }
-
-        .product_detail_05 {
-            margin: 80px auto;
-            height: 60vh;
-            flex-direction: column;
-        }
-
-        .product_detail_05_topic {
-            margin-bottom: 30px;
-        }
-
-        .product_detail_05_h2 {
-            font-size: 25px;
-            letter-spacing: 0.01em;
-            font-weight: 700;
-            line-height: 35px;
-            color: #fff;
-            font-family: 'Playfair Display';
-        }
-
-        .product_detail_05_h3 {
-            font-size: 20px;
-            letter-spacing: 0.1em;
-            line-height: 20px;
-            color: #fff;
-            font-family: 'SourceHanSerifTC-SemiBold';
-        }
-
-        .product_detail_05_article {
-            justify-content: space-between;
-            width: 100%;
-            height: 80%;
-        }
-
-        .product_detail_05_article_01 {
-            width: 48%;
-            height: 80%;
-            background: url(images/banner/122089_6.jpg) no-repeat center center;
-            background-size: cover;
-            position: relative;
-        }
-
-        .product_detail_05_article_02 {
-            width: 48%;
-            height: 80%;
-            background: url(images/banner/gf_1642_bm_2226_sc_1740_mood_rgb_high.jpg) no-repeat center center;
-            background-size: cover;
-            position: relative;
-        }
-
-        .product_detail_05_article_box {
-            width: 90%;
-            height: 35%;
-            background-color: #fff;
-            position: absolute;
-            bottom: 20px;
-            left: 5%;
-        }
-
-        .product_detail_05_article_box:hover {
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-
-        .article_txt {
-            width: 90%;
-            height: 100%;
-            margin: auto;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: flex-start;
-        }
-
-        .article_date {
-            color: #000;
-            font-family: 'Roboto';
-            font-size: 12px;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-
-        .article_topic {
-            font-size: 16px;
-            letter-spacing: 0.1em;
-            line-height: 23px;
-            color: #000;
-            font-family: 'SourceHanSerifTC-Bold';
-        }
-
-        .product_detail_05_article a {
-            text-decoration: none;
-        }
-
-        .article_date_deco {
-            width: 18px;
-            height: 3px;
-            background-color: #333;
-            margin: 3px 0;
-        }
-    </style>
 </head>
-
-<body>
+<body id="index">
+ <!-- top -->
+<div class="index_top">
+    <?php include 'page_item/header.php';?> 
+</div>
+ <!-- main -->
+<div class="index_main">
+    <!-- 確認每頁麵包屑是否正確 -->
+    <!-- <section  class="bread_crumbs">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">member</a></li>
+            <li>signup</member></li>
+        </ul></section> -->
     <!-- banner 輪播 -->
     <section id="ps-container" class="ps-container">
                 <div class="sale_box">
-                    <div><a href="#">
+                    <div><a href="activity.php">
                         <h3>「家具滿額贈」</h3>
                         <h6>活動開跑即日起至9/16</h6>
                         <p>活動開跑即日即是起至9/16, 全館商品消費滿萬即贈設計師吊燈一組。</p>
@@ -705,22 +29,24 @@
 				<div class="ps-slidewrapper">
 			
                         <div class="ps-slides">
-                                <div style="background-image:url(../images/article/27683649797_babbcb85cc_b.jpg);"></div>
-                                <div style="background-image:url(../images/about/28680117748_367563dcee_h.jpg)"></div>
-                                <div style="background-image:url(../images/article/40745881410_ab590a502f_k.jpg);"></div>
-                                <div style="background-image:url(../images/banner/banner01.jpg);"></div>
-                                <div style="background-image:url(../images/banner/banner02.jpg);"></div>
-                                <div style="background-image:url(../images/banner/banner03.jpg);"></div>
-                                <div style="background-image:url(../images/banner/40745889000_96ba023acb_k.jpg);"></div>
-                                <div style="background-image:url(../images/article/40745881410_ab590a502f_k.jpg);"></div>
-                                <div style="background-image:url(../images/banner/27683687327_6181c92a30_b.jpg);"></div>
+                                <div style="background-image:url(images/article/27683649797_babbcb85cc_b.jpg);">
+                                <div class="ps-salebox"></div></div>
+                                <div style="background-image:url(images/about/28680117748_367563dcee_h.jpg)"></div>
+                                <div style="background-image:url(images/article/40745881410_ab590a502f_k.jpg);"></div>
+                                <div style="background-image:url(images/banner/40745889000_96ba023acb_k.jpg);"></div>
+                                <div style="background-image:url(images/article/40745881410_ab590a502f_k.jpg);"></div>
+                                <div style="background-image:url(images/banner/27683687327_6181c92a30_b.jpg);"></div>
                         </div>
-                    </div>
-            
+                </div>
+            <div class="ps-salewrapper">	
+                    <div class="ps-sale" style="background-color: #d89d54"></div>
+                    <div class="ps-sale" style="background-color: #568080"></div>
+                    <div class="ps-sale" style="background-color: #d89d54"></div>
+                    <div class="ps-sale" style="background-color: #568080"></div>
+                    <div class="ps-sale" style="background-color: #000"></div>
+                    <div class="ps-sale" style="background-color: #568080"></div>  
+            </div>
             <div class="ps-numberwrapper">	
-                    <div class="ps-number"><span class="">01</span><span>/ 04</span></div>
-                    <div class="ps-number"><span class="">02</span><span>/ 04</span></div>
-                    <div class="ps-number"><span class="">03</span><span>/ 04</span></div> 
                     <div class="ps-number"><span class="">01</span><span>/ 04</span></div>
                     <div class="ps-number"><span class="">02</span><span>/ 04</span></div>
                     <div class="ps-number"><span class="">03</span><span>/ 04</span></div> 
@@ -736,11 +62,8 @@
                     <span style="font-family: 'Noto Sans TC';font-size: 15px;line-height: 30px;font-weight: 300;color: #ddbcb3;letter-spacing: .05em;">靈感無處不在。重要的是接受。我們試圖受到各種刺激的影響......總是在工作時間或空閒時間尋找靈感，始終睜大眼睛。這是我們的心態。</span>
                 </div>
 				<div class="ps-content" style="background-color: #568080">
-                    
+                <h2>bule</h2>
                 </div>
-                <div class="ps-content"><h2>bule</h2></div>
-                <div class="ps-content"><h2>red</h2></div>
-				<div class="ps-content"><h2>pink</h2></div>
                 <div class="ps-content"><h2>bule</h2></div>
                 <div class="ps-content" style="background-color: #d89d54">
                     <h2>Sunshine<br/>Yellow</h2>
@@ -767,15 +90,8 @@
 			</div><!-- /ps-slidewrapper -->
 			
 		</section><!-- /ps-container -->
-    <!-- 頁面ID -->
+    <!-- 關於我們 -->
     <section id="index02">
-
-         <!-- top -->
-        <div class="index_top">
-            <?php include 'page_item/header.php';?> 
-        </div>
-
-        <!-- main -->
         <div class="index_conten index02">
             <div class="index02_video">
                 <div class="index02_video_txt">
@@ -804,6 +120,7 @@
             </div>
         </div>
     </section>
+    <!-- 商品介紹 -->
     <section id="index03">
         <div class="index_conten_flex index03">
             <div class="index03_left flex">
@@ -1020,7 +337,7 @@
     </section>
     <!-- 文章 -->
     <div id="product_detail_05">
-        <section>
+        <section style="padding:0">
             <div class="index_conten_flex product_detail_05">
                 <div class="product_detail_05_topic">
                     <h2 class="product_detail_05_h2">Style Insights</h2>
@@ -1028,20 +345,20 @@
                 </div>
                 <div class="product_detail_05_article flex">
                     <div class="product_detail_05_article_01">
-                        <a href="/" class="product_detail_05_article_box transition">
+                        <a href="article_detail_05.php" class="product_detail_05_article_box transition">
                             <div class="article_txt flex">
                                 <div class="article_date">
-                                    <div class="article_date_deco"></div>2018 JUN 23</div>
-                                <div class="article_topic">七個裝潢提案,將你的公寓改造成宜人的居住空間。</div>
+                                    <div class="article_date_deco"></div>2018 MAY 18</div>
+                                <div class="article_topic">7個裝潢提案，改造成宜人居住的美妙空間</div>
                             </div>
                         </a>
                     </div>
                     <div class="product_detail_05_article_02">
-                        <a href="/" class="product_detail_05_article_box transition">
+                        <a href="article_detail_01.php" class="product_detail_05_article_box transition">
                             <div class="article_txt flex">
                                 <div class="article_date">
-                                    <div class="article_date_deco"></div>2018 AUG 08</div>
-                                <div class="article_topic">七個裝潢提案,將你的公寓改造成宜人的居住空間。</div>
+                                    <div class="article_date_deco"></div>2018 AUG 29</div>
+                                <div class="article_topic">利用色調，為「家」妝點上現代獨特風格</div>
                             </div>
                         </a>
                     </div>
@@ -1049,16 +366,23 @@
             </div>
         </section>
     </div>
-     <!-- footer -->
-    <div class="index_footer">
-        <?php include 'page_item/footer.php';?>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-    <script src="js/swiper/js/swiper.min.js"></script> 
-    <script>
+</div>
+
+<!-- 聯絡我們 -->
+<?php include 'contact_us.php';?>
+
+<!-- footer -->
+<div class="index_footer">
+<?php include 'page_item/footer.php';?>
+</div>
+
+<script type="text/javascript" src="js/slider.js"></script>
+<script>
+
+        $(function() {
+        Slider.init();
+         });
+
         $('.slide-nav').on('hover', function (e) {
             e.preventDefault();
             // get current slide
@@ -1116,47 +440,6 @@
                 disableOnInteraction: false,
             },
         });
-
-        // menu
-        $("nav>.palette_menu,nav>.car_icon").click(function(){
-            $(this).toggleClass("menu_active");
-        });
-    // tab
-    $(function(){
-    $(".palette_menubox .menubox_l ul li").mouseover(function () {
-        $(".palette_menubox .menubox_l ul li").removeClass("selected");
-        $(".palette_menubox .menubox_r .ranking_box").removeClass("selected");
-        $(this).addClass("selected");
-       $("#"+$(this).attr("data-id")).addClass("selected");
-    });
-    });
-     // tab2
-     $(function(){
-    $(".collectionsbox_l ul li").mouseover(function () {
-        $(".collectionsbox_l ul li").removeClass("selected");
-        $(".collectionsbox_r .ranking_box").removeClass("selected");
-        $(this).addClass("selected");
-       $("#"+$(this).attr("data-id")).addClass("selected");
-    });
-    });
-    //go top
-    $(function(){
-        $(window).scroll(function(){
-		if( $(window).scrollTop() > 1620 ){
-			$(".go_top").fadeIn(800);
-		}else{
-			$(".go_top").fadeOut(600);
-		};
-	})	
-        $('.go_top').click(function(){
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ?
-        $('html') : $('body')) : $('html,body');
-        $body.animate({scrollTop: 0}, 600);
-        return false;
-        });
-    });
     </script>
-
 </body>
-
 </html>

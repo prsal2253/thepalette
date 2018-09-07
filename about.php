@@ -1066,6 +1066,7 @@
             <img src="images/about/store.png" style="width: 100%;" alt="">
         </section>
     </div>
+    
     <div class="index_footer">
         <?php include 'page_item/footer.php';?>
     </div>
