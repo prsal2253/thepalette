@@ -57,8 +57,8 @@ $product_rs = $mysqli->query($product_sql);
 <div class="index_main">
 
     <div id="sort_red05">
-        <section>
-            <div class="index_conten_flex sort_red05">
+        <section id="my_red">
+            <div class="index_conten_flex sort_red05" >
                 <ul class="sort_red05_sec1">
                     <a href="/">
                         <li class="sort_red05_filter transition">
@@ -66,22 +66,22 @@ $product_rs = $mysqli->query($product_sql);
                             商品篩選
                         </li>
                     </a>
-                    <a href="?cate=1">
+                    <a href="?cate=1#my_red">
                         <li class="sort_red05_byprice transition">依價錢由少至多
                             <figure></figure>
                         </li>
                     </a>
-                    <a href="?cate=2">
+                    <a href="?cate=2#my_red"">
                         <li class="sort_red05_byprice transition">依價錢由多至少
                             <figure></figure>
                         </li>
                     </a>
-                    <a href="?cate=3">
+                    <a href="?cate=3#my_red"">
                         <li class="sort_red05_bytime transition">依上架順序由早到晚
                             <figure></figure>
                         </li>
                     </a>
-                    <a href="?cate=4">
+                    <a href="?cate=4#my_red"">
                         <li class="sort_red05_bytime transition">依上架順序由晚到早
                             <figure></figure>
                         </li>
