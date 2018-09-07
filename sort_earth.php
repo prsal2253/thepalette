@@ -180,7 +180,7 @@
 $(window).scroll(function() {
     var scrolltop = $(this).scrollTop();
     if (scrolltop>300 && scrolltop<2000){
-        $(".changebg").css('background-color','#736558');
+        $(".changebg").css('background-color','#5f4e42');
     }else if(scrolltop>2000 && scrolltop<3400){
         $('.changebg').css('background-color','#c2704f');
     }else if(scrolltop>3400){
@@ -191,7 +191,7 @@ $(window).scroll(function() {
 $(window).scroll(function() {
     var scrolltop = $(this).scrollTop();
     if (scrolltop>300 && scrolltop<2000){
-        $(".changebox").css('background-color','#736558');
+        $(".changebox").css('background-color','#5f4e42');
     }else if(scrolltop>2000 && scrolltop<3400){
         $('.changebox').css('background-color','#c2704f');
     }else if(scrolltop>3400){
