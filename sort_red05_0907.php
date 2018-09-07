@@ -22,7 +22,7 @@ $long = isset($_GET['long']) ? intval($_GET['long']) : 0;//寬度
 $high = isset($_GET['high']) ? intval($_GET['high']) : 0;//高度
 $price = isset($_GET['price']) ? intval($_GET['price']) : 0; //時間價格
 
-$where = " WHERE 1  ";
+$where = " WHERE `product_color_sid` BETWEEN 1 AND 3 ";
 
 if(!empty($color)){
     $c = explode(',', $color);
@@ -148,7 +148,7 @@ $product_rs = $mysqli->query($product_sql);
                                onchange="change()" class="slider slider_hight">
                         <div class="sbar1_txt">
                             家具長度 :
-                            <span id="value">0</span> cm
+                            <span id="value">150</span> cm
                         </div>
                     </div>
                     <div class="filter_sbar2">
@@ -157,7 +157,7 @@ $product_rs = $mysqli->query($product_sql);
                                onchange="change2()" class="slider slider_long">
                         <div class="sbar1_txt">
                             家具寬度 :
-                            <span id="value2">0</span> cm
+                            <span id="value2">150</span> cm
                         </div>
                     </div>
                 </div>
@@ -312,8 +312,7 @@ $product_rs = $mysqli->query($product_sql);
     var price_select = 0;
     $('.price_select').change(function () {
         price_select = $('.price_select').val();
-        var D_price = price_select;
-        // console.log(price_select);
+        console.log(price_select);
         get_select_data();
 
     });
