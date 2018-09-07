@@ -1,8 +1,8 @@
 <?php
 
-//require __DIR__ . '/__db_connect.php';
+
 $mysqli = new mysqli('localhost', 'orange', '0987', 'the palette');
-// $mysqli = new mysqli('localhost', 'sandra', 'ssan+1222', 'the palette');
+
 $mysqli->query("SET NAMES utf8");
 $pageName = 'product_list_red';
 
@@ -22,7 +22,7 @@ $long = isset($_GET['long']) ? intval($_GET['long']) : 0;//寬度
 $high = isset($_GET['high']) ? intval($_GET['high']) : 0;//高度
 $price = isset($_GET['price']) ? intval($_GET['price']) : 0; //時間價格
 
-$where = " WHERE `product_color_sid` BETWEEN 1 AND 3 ";
+$where = " WHERE `product_color_sid` BETWEEN 4 AND 6 ";
 
 if(!empty($color)){
     $c = explode(',', $color);
@@ -109,16 +109,16 @@ $product_rs = $mysqli->query($product_sql);
             <div class="index_conten_flex filter_inner transition total_change">
                 <div class="filter_color flex">
                     <div class="filter_color_in" style="margin-left: 0">
-                        <div class="filter_color1 filter_color_box" data-color="red"></div>
-                        <p>紅色</p>
+                        <div class="filter_color1 filter_color_box" data-color="bule"></div>
+                        <p>藍色</p>
                     </div>
                     <div class="filter_color_in">
-                        <div class="filter_color2 filter_color_box" data-color="pink"></div>
-                        <p>粉色</p>
+                        <div class="filter_color2 filter_color_box" data-color="green"></div>
+                        <p>綠色</p>
                     </div>
                     <div class="filter_color_in">
-                        <div class="filter_color3 filter_color_box" data-color="orange"></div>
-                        <p>橘色</p>
+                        <div class="filter_color3 filter_color_box" data-color="yellow"></div>
+                        <p>黃色</p>
                     </div>
                 </div>
                 <ul class="filter_item flex">
@@ -263,7 +263,7 @@ $product_rs = $mysqli->query($product_sql);
     var setHigh_change = $('.slider_hight');
     var setLong_change = $('.slider_long')
 
-    var D_color = {red: 0, pink: 0, orange: 0},
+    var D_color = {blue: 0, green: 0, yellow: 0},
         D_items  = {},
         D_setHigh = 0,
         D_setLong = 0,
@@ -321,9 +321,9 @@ $product_rs = $mysqli->query($product_sql);
 
 
     var color_map = {
-        red: 1,
-        pink: 2,
-        orange: 3
+        bule: 4,
+        green: 5,
+        yellow: 6
     };
 
     var item_map = {
@@ -351,7 +351,7 @@ $product_rs = $mysqli->query($product_sql);
                 items.push(item_map[s]);
             }
         }
-        $.get('sort_red_api.php', {
+        $.get('sort_bule_api.php', {
             color: color.join(','),
             items: items.join(','),
             high:D_setHigh,

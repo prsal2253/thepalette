@@ -24,7 +24,7 @@ $long = isset($_GET['long']) ? intval($_GET['long']) : 0;//寬度
 $high = isset($_GET['high']) ? intval($_GET['high']) : 0;//高度
 $price = isset($_GET['price']) ? intval($_GET['price']) : 0; //時間價格
 
-$where = " WHERE `product_color_sid` BETWEEN 1 AND 3 ";
+$where = " WHERE `product_color_sid` BETWEEN 7 AND 9 ";
 
 if(!empty($color)){
     $c = explode(',', $color);
