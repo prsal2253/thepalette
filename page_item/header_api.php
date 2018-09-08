@@ -32,9 +32,9 @@ if(!empty($_SESSION['cart'])): ?>
         $total += $r['price'] * $r['qty'];
         ?>
         <div class="order_listbox" data-sid="<?= $k ?>">
-            <figure class="description_20"><a href="#"><img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>"></a></figure>
+            <figure class="description_20"><a href="product_detail.php?id=<?= $r['product_sid'] ?>"><img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>"></a></figure>
             <div class="description_70">
-                <a href="#" class="product_name"><?= $r['product_name'] ?></a>
+                <a href="product_detail.php?id=<?= $r['product_sid'] ?>" class="product_name"><?= $r['product_name'] ?></a>
                 <p>Ｘ<?= $r['qty'] ?></p>
                 <p>$<?= $r['price'] ?></p>
             </div>

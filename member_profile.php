@@ -180,7 +180,7 @@ if (empty($_SESSION['user'])) {
                 console.log(data);
                 alert('會員資料已更新！');
             } else {
-                alert('更新錯誤！啾咪～');
+                alert('更新失敗！請再試一次');
                 $('#total_howmuch').text($(".howmuch").length);
             }
         }, 'json');

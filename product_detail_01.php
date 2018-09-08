@@ -96,7 +96,7 @@ if(isset($_GET['id'])) {
                         </div>
                     </div>
                     <div class="product_detail_image">
-                        <img class="img-good" src="images/<?= $r['img'] ?>.png" alt="">
+                        <img class="img-good" src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                     </div>
                 </div>          
                 <!-- 右邊 -->
@@ -135,7 +135,9 @@ if(isset($_GET['id'])) {
                                     <option value="5">05</option>
                                 </select>
                             </div>
-                        <button class="add_to_cart"><h5 class="product_detail_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
+                        <button class="add_to_cart">
+                            <h5 class="product_detail_01_h5">
+                                <span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                     </div>
                 </div>
             </div>

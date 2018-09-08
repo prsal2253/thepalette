@@ -139,7 +139,7 @@ $product_rs = $mysqli->query($product_sql);
                         <p>燈飾</p></li>
                     <li class="filter_item06 filter_items transition" data-category="other" style="margin: 50px 0 0 0">
                         <figure></figure>
-                        <p>織品</p></li>
+                        <p>其他</p></li>
                 </ul>
                 <div class="filter_sbar flex">
                     <div class="filter_sbar1">
@@ -147,7 +147,7 @@ $product_rs = $mysqli->query($product_sql);
                         <input id="range" type="range" min="50" max="150" value="150" step="50" oninput="change()"
                                onchange="change()" class="slider slider_hight">
                         <div class="sbar1_txt">
-                            家具長度 :
+                            家具高度 :
                             <span id="value">150</span> cm
                         </div>
                     </div>

@@ -200,8 +200,8 @@ if (isset($_GET['id'])) {
                                     if ($order['orders_sid'] == $dt['order_sid']):
                                         ?>
                                         <div class="order_listbox howmuch product-item">
-                                            <figure class="description_10"><a href="#"><img
-                                                            src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
+                                            <figure class="description_10"><a href="product_detail.php?id=<?= $dt['product_sid'] ?>"><img
+                                                            src="images/<?= $dt['img'] ?>.png" alt="<?= $dt['product_name'] ?>"></a></figure>
                                             <div class="description_50">
                                                 <div class="sale_icon"><span>活動商品</span></div>
                                                 <a href="product_detail.php?id=<?= $dt['product_sid'] ?>"

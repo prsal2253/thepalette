@@ -360,11 +360,11 @@ if (!empty($_SESSION['cart'])) {
                     //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
                     if (data.success) {
                         console.log(data);
-                        alert('商品已加入刪除囉！啾咪～？');
+                        alert('商品已從追蹤清單刪除！');
 
 
                     } else {
-                        alert('你登入了媽？！啾咪～');
+                        alert('你登入了嗎？');
                         $(this).removeClass("icon_love_click");
 
                     }
@@ -380,11 +380,11 @@ if (!empty($_SESSION['cart'])) {
 
                     if (data.success) {
                         console.log(data);
-                        alert('商品已加入最愛囉！啾咪～');
+                        alert('商品已加入追蹤清單！');
 
                     } else {
 
-                        alert('你登入了媽？');
+                        alert('你登入了嗎？');
                         $(this).addClass("icon_love_click");
 
                     }

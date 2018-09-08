@@ -69,7 +69,7 @@ if(!empty($data_fa)){
                     <div class="item_02 item_03 item_04">
                         <!-- top -->
                         <div class="item_02_conten">
-                            <p class="description">總共<span class="description_mark" id="total_howmuch">32</span>筆商品</p>
+                            <p class="description">總共<span class="description_mark" id="total_howmuch"></span>筆商品</p>
                         </div>
 
 
@@ -94,7 +94,7 @@ if(!empty($data_fa)){
 
                                     <div class="order_listbox howmuch" data-sid="<?= $dt['product_sid'] ?>">
                                         <figure class="description_10"><a href="#"><img
-                                                        src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
+                                                        src="images/<?= $dt['img'] ?>.png" alt="<?= $dt['product_name'] ?>"></a></figure>
                                         <div class="description_50">
                                             <a href="product_detail.php?id=<?= $dt['product_sid'] ?>"
                                                class="product_name"><?= $dt['product_name'] ?></a>
@@ -108,13 +108,13 @@ if(!empty($data_fa)){
                                     </div>
                             <?php endforeach; ?>
                             <!-- 一件商品 -->
-
+                            <?php endif ?>
 
                         </div>
 <!--                        --><?php //else: ?>
 <!--                        --><?php //endif ?>
 
-                        <?php endif ?>
+
                         <!-- 頁碼 -->
                         <!--            <div class="page_num">-->
                         <!--                <ul>-->
@@ -143,11 +143,11 @@ if(!empty($data_fa)){
             //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
             tr.remove();
             if (data.success) {
-                alert('商品已加入刪除囉！啾咪～');
+                alert('商品已從追蹤清單刪除！');
                 console.log(data);
                 $('#total_howmuch').text($(".howmuch").length);
             } else {
-                alert('你登入了媽？');
+                alert('你登入了嗎？');
 
             }
         }, 'json');
