@@ -2,7 +2,7 @@
 
 //require __DIR__ . '/__db_connect.php';
 $mysqli = new mysqli('localhost', 'orange', '0987', 'the palette');
-// $mysqli = new mysqli('localhost', 'sandra', 'ssan+1222', 'the palette');
+//$mysqli = new mysqli('localhost', 'sandra', 'ssan+1222', 'the palette');
 $mysqli->query("SET NAMES utf8");
 $pageName = 'product_list_red';
 
