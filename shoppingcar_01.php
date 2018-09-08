@@ -129,63 +129,6 @@ if (!empty($_SESSION['cart'])) {
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                        <!-- 一件群組商品 -->
-                        <!--                        <div class="order_listbox shopping_group">-->
-                        <!--                                <figure class="description_10"><a href="#"><img src="images/banner/connect_sofa_leaf_around_ambiente.jpg" alt="商品名稱"></a></figure>-->
-                        <!--                                <div class="description_40">-->
-                        <!--                                    <div class="sale_icon"><span>群組商品</span></div>-->
-                        <!--                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christopher Knight HomeAnastasia Tufted Chair - Christopher Knight Home</a>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                                <div class="description_10"></div>-->
-                        <!--                                <div class="description_10">1</div>-->
-                        <!--                                <div class="description_10">$120000</div>-->
-                        <!--                                <div class="description_10"><div class="icon_love"></div></div>-->
-                        <!--                                <div class="description_5"><div class="icon_garbage"></div></div>-->
-                        <!--                        </div>-->
-                        <!--                        <div>-->
-                        <!--                            <div class="order_listbox shopping_group_d">-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                                <figure class="description_5"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>-->
-                        <!--                                <div class="description_40">-->
-                        <!--                                    <a href="#" class="product_name">Anastasia Tufted Chair</a>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                                <div class="description_10">黃色</div>-->
-                        <!--                                <div class="description_10">1</div>-->
-                        <!--                                <div class="description_10"></div>-->
-                        <!--                                <div class="description_10"></div>-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                            </div>-->
-                        <!---->
-                        <!--                            <div class="order_listbox shopping_group_d">-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                                <figure class="description_5"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>-->
-                        <!--                                <div class="description_40">-->
-                        <!--                                    <a href="#" class="product_name">Anastasia Tufted Chair -e</a>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                                <div class="description_10">黃色</div>-->
-                        <!--                                <div class="description_10">1</div>-->
-                        <!--                                <div class="description_10"></div>-->
-                        <!--                                <div class="description_10"></div>-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                            </div>-->
-                        <!---->
-                        <!--                            <div class="order_listbox shopping_group_d">-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                                <figure class="description_5"><a href="#"><img src="images/S-yellow-chair01-500px.png" alt="商品名稱"></a></figure>-->
-                        <!--                                <div class="description_40">-->
-                        <!--                                    <a href="#" class="product_name">Anastasia Tufted Chair - Christe</a>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                                <div class="description_10">黃色</div>-->
-                        <!--                                <div class="description_10">1</div>-->
-                        <!--                                <div class="description_10"></div>-->
-                        <!--                                <div class="description_10"></div>-->
-                        <!--                                <div class="description_5"></div>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
 
                         <div class="order_listbox order_listbox_tatle">
                             <div>
@@ -350,7 +293,7 @@ if (!empty($_SESSION['cart'])) {
     });
 
     // 點選收藏後加class
-    $(".icon_love,.product_favorate").click(function (data) {
+    $(".icon_love").click(function (data) {
         <?php if (isset ($_SESSION['user'])):?>
             if ($(this).hasClass('icon_love_click')) {
                 $(this).removeClass("icon_love_click");
