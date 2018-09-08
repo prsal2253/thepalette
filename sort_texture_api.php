@@ -137,3 +137,50 @@ $product_rs = $mysqli->query($product_sql);
             </a>
         </ul>
     </div>
+<script>
+    $(".product_favorate").click(function (data) {
+
+        if ($(this).hasClass('icon_love_click')) {
+            $(this).removeClass("icon_love_click");
+            var product = $(this).closest('.product_sid_data');
+            var sid = product.attr('data-sid');
+            console.log(sid);
+            $.get('unlove_api.php', {sid: sid}, function (data) {
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                if (data.success) {
+                    console.log(data);
+                    alert('商品已從追蹤清單刪除！');
+
+
+                } else {
+                    alert('你登入了嗎？');
+                    $(this).removeClass("icon_love_click");
+
+                }
+                ;
+
+            }, 'json');
+        } else {
+            $(this).addClass("icon_love_click");
+            var product = $(this).closest('.product_sid_data');
+            var sid = product.attr('data-sid');
+            $.get('love_api.php', {sid: sid}, function (data) {
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                console.log(sid);
+                if (data.success) {
+                    console.log(data);
+                    alert('商品已加入追蹤清單！');
+
+                } else {
+
+                    alert('你登入了嗎？');
+                    $(this).addClass("icon_love_click");
+
+                }
+                ;
+
+            }, 'json');
+        }
+
+    });
+</script>

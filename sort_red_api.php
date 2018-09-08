@@ -88,6 +88,17 @@ $product_sql = sprintf("SELECT * FROM  `products_list` $where LIMIT %s, %s ", ($
 
 $product_rs = $mysqli->query($product_sql);
 
+if (isset ($_SESSION['user'])) {
+    $data_fa = [];
+    $sql_love = 'SELECT * FROM `members_favourite` WHERE `member_sid`=' . $_SESSION['user']['member_sid'];
+    $rs_love = $mysqli->query($sql_love);
+
+    while ($r_love = $rs_love->fetch_assoc()) {
+        //    這裡迴圈先一一取出$rs_love陣列
+        $data_fa[$r_love['product_sid']] = $r_love['product_sid'];
+//以'product_sid'自己當作key對應'product_sid'的val
+    }
+}
 
 ?>
 
@@ -96,7 +107,7 @@ $product_rs = $mysqli->query($product_sql);
             <div name="product" class="sort_red05_box_s product_sid_data" data-sid="<?= $r['product_sid'] ?>">
                 <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                 <div class="product_mask transition">
-                    <div class="product_favorate transition"></div>
+                    <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?> transition"></div>
                     <div class="product_name_nd_btn">
                         <div class="product_name">
                             <h3 class="product_name_h3"><a href="#"
@@ -137,3 +148,52 @@ $product_rs = $mysqli->query($product_sql);
             </a>
         </ul>
     </div>
+
+
+<script>
+    $(".product_favorate").click(function (data) {
+
+        if ($(this).hasClass('icon_love_click')) {
+            $(this).removeClass("icon_love_click");
+            var product = $(this).closest('.product_sid_data');
+            var sid = product.attr('data-sid');
+            console.log(sid);
+            $.get('unlove_api.php', {sid: sid}, function (data) {
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                if (data.success) {
+                    console.log(data);
+                    alert('商品已從追蹤清單刪除！');
+
+
+                } else {
+                    alert('你登入了嗎？');
+                    $(this).removeClass("icon_love_click");
+
+                }
+                ;
+
+            }, 'json');
+        } else {
+            $(this).addClass("icon_love_click");
+            var product = $(this).closest('.product_sid_data');
+            var sid = product.attr('data-sid');
+            $.get('love_api.php', {sid: sid}, function (data) {
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                console.log(sid);
+                if (data.success) {
+                    console.log(data);
+                    alert('商品已加入追蹤清單！');
+
+                } else {
+
+                    alert('你登入了嗎？');
+                    $(this).addClass("icon_love_click");
+
+                }
+                ;
+
+            }, 'json');
+        }
+
+    });
+</script>

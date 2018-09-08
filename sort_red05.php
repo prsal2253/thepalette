@@ -86,6 +86,22 @@ $product_sql = sprintf("SELECT * FROM  `products_list` $where LIMIT %s, %s ", ($
 //這裡會拿到sql的字串
 $product_rs = $mysqli->query($product_sql);
 
+
+
+
+
+if (isset ($_SESSION['user'])) {
+    $data_fa = [];
+    $sql_love = 'SELECT * FROM `members_favourite` WHERE `member_sid`=' . $_SESSION['user']['member_sid'];
+    $rs_love = $mysqli->query($sql_love);
+
+    while ($r_love = $rs_love->fetch_assoc()) {
+        //    這裡迴圈先一一取出$rs_love陣列
+        $data_fa[$r_love['product_sid']] = $r_love['product_sid'];
+//以'product_sid'自己當作key對應'product_sid'的val
+    }
+}
+
 ?>
 <div id="sort_red05 ">
     <section id="my_red">
@@ -171,7 +187,7 @@ $product_rs = $mysqli->query($product_sql);
                     <div name="product" class="sort_red05_box_s product_sid_data product-item" data-sid="<?= $r['product_sid'] ?>">
                         <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                         <div class="product_mask transition">
-                <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?>transition"></div>
+                            <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?>transition"></div>
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3"><a href="#"
@@ -365,78 +381,55 @@ $product_rs = $mysqli->query($product_sql);
     get_select_data()
 
 // 最愛
-    $(".product_favorate").click(function(){
-        $(this).toggleClass("icon_love_click");
+
+    $(".product_favorate").click(function (data) {
+        <?php if (isset ($_SESSION['user'])):?>
+        if ($(this).hasClass('icon_love_click')) {
+            $(this).removeClass("icon_love_click");
+            var product = $(this).closest('.product-item');
+            var sid = product.attr('data-sid');
+            $.get('unlove_api.php', {sid: sid}, function (data) {
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+                if (data.success) {
+                    console.log(data);
+                    alert('商品已從追蹤清單刪除！');
+
+
+                } else {
+                    alert('你登入了嗎？');
+                    $(this).removeClass("icon_love_click");
+
+                }
+                ;
+
+            }, 'json');
+        } else {
+            $(this).addClass("icon_love_click");
+            var product = $(this).closest('.product-item');
+            var sid = product.attr('data-sid');
+            $.get('love_api.php', {sid: sid}, function (data) {
+                //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+
+                if (data.success) {
+                    console.log(data);
+                    alert('商品已加入追蹤清單！');
+
+                } else {
+
+                    alert('你登入了嗎？');
+                    $(this).addClass("icon_love_click");
+
+                }
+                ;
+
+            }, 'json');
+        }
+        <?php else:?>
+        alert('你登入了嗎？');
+        <?php endif;?>
     });
 
-    
-    //$(".product_mask.product_favorate").click(function (data) {
-    //    <?php //if (isset ($_SESSION['user'])):?>
-    //    if ($(this).hasClass('icon_love_click')) {
-    //        $(this).removeClass("icon_love_click");
-    //        var product = $(this).closest('.product-item');
-    //        var sid = product.attr('data-sid');
-    //        $.get('unlove_api.php', {sid: sid}, function (data) {
-    //            //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
-    //            if (data.success) {
-    //                console.log(data);
-    //                alert('商品已從追蹤清單刪除！');
-    //
-    //
-    //            } else {
-    //                alert('你登入了嗎？');
-    //                $(this).removeClass("icon_love_click");
-    //
-    //            }
-    //            ;
-    //
-    //        }, 'json');
-    //    } else {
-    //        $(this).addClass("icon_love_click");
-    //        var product = $(this).closest('.product-item');
-    //        var sid = product.attr('data-sid');
-    //        $.get('love_api.php', {sid: sid}, function (data) {
-    //            //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
-    //
-    //            if (data.success) {
-    //                console.log(data);
-    //                alert('商品已加入追蹤清單！');
-    //
-    //            } else {
-    //
-    //                alert('你登入了嗎？');
-    //                $(this).addClass("icon_love_click");
-    //
-    //            }
-    //            ;
-    //
-    //        }, 'json');
-    //    }
-    //    <?php //else:?>
-    //    alert('你登入了嗎？');
-    //    <?php //endif;?>
-    //});
 
-<!--    --><?php //while ($r = $product_rs->fetch_assoc()): ?>
-//    <div name="product" class="sort_red05_box_s product_sid_data product-item" data-sid="<?//= $r['product_sid'] ?>//">
-//        <img src="images/<?//= $r['img'] ?>//.png" alt="<?//= $r['product_name'] ?>//">
-//        <div class="product_mask transition">
-//        <div class="product_favorate <?//= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?>//transition"></div>
-//        <div class="product_name_nd_btn">
-//        <div class="product_name">
-//        <h3 class="product_name_h3"><a href="#"
-//    id="product_name"><?//= $r['product_name'] ?>//</a></h3>
-//    </div>
-//    <div class="product_btn"></div>
-//        <a href="product_quicklook.php?id=<?//= $r['product_sid'] ?>//"
-//    class="palette_btn quick_look_palette_btn quick"
-//    data-fancybox
-//    data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
-//    "70vh"}}}'>快速查看</a>
-//    </div>
-//    </div>
-//    </div>
-//    <?php //endwhile; ?>
 
 
 

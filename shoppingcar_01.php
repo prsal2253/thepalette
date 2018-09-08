@@ -130,6 +130,7 @@ if (!empty($_SESSION['cart'])) {
                             </div>
                         <?php endforeach; ?>
 
+
                         <div class="order_listbox order_listbox_tatle">
                             <div>
                                 <p>總共 <span class="description_mark" id="total-qty"><?= $total_qty ?></span> 件商品，訂單金額
@@ -293,7 +294,7 @@ if (!empty($_SESSION['cart'])) {
     });
 
     // 點選收藏後加class
-    $(".icon_love").click(function (data) {
+    $(".icon_love,.product_favorate").click(function (data) {
         <?php if (isset ($_SESSION['user'])):?>
             if ($(this).hasClass('icon_love_click')) {
                 $(this).removeClass("icon_love_click");
