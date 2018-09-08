@@ -88,7 +88,7 @@ while($c = $rs3->fetch_assoc()){
                                 <option>訂單完成</option>
                                 </select>
                         </div>
-                        <p class="description">總共<span class="description_mark total_howmuch">32</span>筆訂單</p>
+                        <p class="description">總共<span class="description_mark total_howmuch"></span>筆訂單</p>
                     </div>
 
 
@@ -110,7 +110,8 @@ while($c = $rs3->fetch_assoc()){
                                 $t += $dt['price'] * $dt['quantity'];
                                 ?>
                         <div class="order_listbox ">
-                                <figure class="description_10"><a href="#"><img src="images/<?= $dt['img'] ?>.png" alt="商品名稱"></a></figure>
+                                <figure class="description_10"><a href="product_detail.php?id=<?= $dt['product_sid'] ?>">
+                                        <img src="images/<?= $dt['img'] ?>.png" alt="<?= $dt['product_name'] ?>"></a></figure>
                                 <div class="description_40">
                                     <div class="sale_icon"><span>活動商品</span></div>
                                     <a href="product_detail.php?id=<?= $dt['product_sid'] ?>" class="product_name"><?= $dt['product_name'] ?></a>
