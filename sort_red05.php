@@ -234,7 +234,7 @@ $product_rs = $mysqli->query($product_sql);
     })
     //選品項
     $(".filter_items").click(function () {
-        $(this).toggleClass("item_choose");
+        $(".filter_items",this).toggleClass("item_choose");
     })
 
     //顯示range的值
