@@ -99,7 +99,7 @@ if (!empty($_SESSION['cart'])) {
                             $total_qty += $r['qty'];// 這裡是總數量
                             ?>
                             <div class="order_listbox product-item" data-sid="<?= $k ?>">
-                                <figure class="description_10"><a href="#"><img src="images/<?= $r['img'] ?>.png"
+                                <figure class="description_10"><a href="product_detail.php?id=<?= $r['product_sid'] ?>"><img src="images/<?= $r['img'] ?>.png"
                                                                                 alt="<?= $r['product_name'] ?>"></a>
                                 </figure>
                                 <div class="description_40">
