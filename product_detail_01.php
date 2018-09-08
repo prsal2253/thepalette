@@ -96,7 +96,7 @@ if(isset($_GET['id'])) {
                         </div>
                     </div>
                     <div class="product_detail_image">
-                        <img class="img-good" src="images/<?= $r['img'] ?>.png" alt="">
+                        <img class="img-good" src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                     </div>
                 </div>          
                 <!-- 右邊 -->
