@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Palette</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/product_detail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="js/swiper/css/swiper.min.css">
-
-    <style>
-
-    </style> 
+<?php include 'page_item/head.php'; ?>
 </head>
 <body>
+<!-- top -->
+<div class="index_top">
+    <?php include 'page_item/header.php'; ?>
+</div>
     <?php include 'product_detail_01.php';?>
     <?php include 'product_detail_02.php';?>
     <?php include 'product_detail_03.php';?>

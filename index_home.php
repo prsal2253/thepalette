@@ -335,7 +335,7 @@
         </div>
     </section>
     <!-- 文章 -->
-    <div id="product_detail_05">
+    <!-- <div id="product_detail_05">
         <section>
             <div class="index_conten_flex product_detail_05">
                 <div class="product_detail_05_topic">
@@ -364,7 +364,45 @@
                 </div>
             </div>
         </section>
+    </div> -->
+
+ <!-- 文章 -->
+ <div id="product_detail_05">
+        <section style="padding:0">
+            <div class="index_conten_flex product_detail_05">
+                <div class="product_detail_05_topic">
+                    <h2 class="product_detail_05_h2">Style Insights</h2>
+                    <h3 class="product_detail_05_h3">風格專欄</h3>
+                </div>
+                <div class="product_detail_05_article flex">
+                    <div class="product_detail_05_article_01">
+                        <a href="article_detail_05.php" class="product_detail_05_article_box transition">
+                            <div class="article_txt flex">
+                                <div class="article_date">
+                                    <div class="article_date_deco"></div>2018 MAY 18</div>
+                                <div class="article_topic">7個裝潢提案，改造成宜人居住的美妙空間</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product_detail_05_article_02">
+                        <a href="article_detail_01.php" class="product_detail_05_article_box transition">
+                            <div class="article_txt flex">
+                                <div class="article_date">
+                                    <div class="article_date_deco"></div>2018 AUG 29</div>
+                                <div class="article_topic">利用色調，為「家」妝點上現代獨特風格</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+</div>
+
+<!-- 聯絡我們 -->
+<?php include 'contact_us.php';?>
+
+
 </div>
  <!-- footer -->
 <div class="index_footer">

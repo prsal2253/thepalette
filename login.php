@@ -42,7 +42,6 @@ if(isset($_POST['email']) and isset($_POST['password'])) {
 </div>
  <!-- main -->
 <div class="index_main">
-    <div class="index_main">
         <!-- 麵包屑 -->
         <section  class="bread_crumbs">
             <ul>
