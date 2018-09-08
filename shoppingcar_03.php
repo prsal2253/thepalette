@@ -26,18 +26,18 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
 
     $c_ar = [];
 //先給空陣列
-    while($c = $rs3->fetch_assoc()){
+    while ($c = $rs3->fetch_assoc()) {
 //    這裡迴圈先一一取出$rs3陣列
         $c_ar[$c['product_color_sid']] = $c['color'];
 //以'product_color_sid'當作key對應'color'的val
     }
 }
 ?>
-<?php include 'page_item/head.php';?>
+<?php include 'page_item/head.php'; ?>
 </head>
 <body id="shoppingcar" class="shoppingcar_03">
 <div class="index_top">
-    <?php include 'page_item/header.php';?> 
+    <?php include 'page_item/header.php'; ?>
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -56,84 +56,88 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
         </div>
     </section>
     <form name="form1" method="post" action="" onsubmit="return checkForm()">
-    <section class="item_12 item_13 item_17 item_19">
-        <div class="index_conten ">
-            <div class="item_02">
-                <div class="item_02_conten">
-                    <div class="order_listbox item_19_title">
-                        <h3 class="member_title"><span>付款已完成 請前往預約</span></h3>
-                        <p>
-                            訂單詳細內容請至會員中心的訂單列表查詢您的訂單處理情形<br/>
-                            如有相關疑問，請查看常見問題或使用訂單詢問進行留言</p>
-                    </div>
-                    <?php if (!empty($_SESSION['cart'])): ?>
-                        <?php
-                        $total_qty = 0;// 一定要先設定一個0不然會找不到值
-                        $total = 0;// 一定要先設定一個0不然會找不到值
-                        foreach ($keys as $k):// $k是拿到$keys的val
-                            $r = $data[$k]; // 整筆資料(包含 qty)
-                            $total += $r['price'] * $r['qty'];// 這裡是總價格
-                            $total_qty += $r['qty'];// 這裡是總數量
-                            ?>
-                            <!-- 一件商品 -->
-                            <div class="order_listbox product-item" data-sid="<?= $k ?>">
-                                <figure class="description_10"><a href="#"><img src="images/<?= $r['img'] ?>.png"
-                                                                                alt="<?= $r['product_name'] ?>"></a>
-                                </figure>
-                                <div class="description_50">
-                                    <div class="sale_icon"><span>活動商品</span></div>
-                                    <a href="#" class="product_name"><?= $r['product_name'] ?></a>
+        <section class="item_12 item_13 item_17 item_19">
+            <div class="index_conten ">
+                <div class="item_02">
+                    <div class="item_02_conten">
+                        <div class="order_listbox item_19_title">
+                            <h3 class="member_title"><span>付款已完成 請前往預約</span></h3>
+                            <p>
+                                訂單詳細內容請至會員中心的訂單列表查詢您的訂單處理情形<br/>
+                                如有相關疑問，請查看常見問題或使用訂單詢問進行留言</p>
+                        </div>
+                        <?php if (!empty($_SESSION['cart'])): ?>
+                            <?php
+                            $total_qty = 0;// 一定要先設定一個0不然會找不到值
+                            $total = 0;// 一定要先設定一個0不然會找不到值
+                            foreach ($keys as $k):// $k是拿到$keys的val
+                                $r = $data[$k]; // 整筆資料(包含 qty)
+                                $total += $r['price'] * $r['qty'];// 這裡是總價格
+                                $total_qty += $r['qty'];// 這裡是總數量
+                                ?>
+                                <!-- 一件商品 -->
+                                <div class="order_listbox product-item" data-sid="<?= $k ?>">
+                                    <figure class="description_10"><a
+                                                href="product_detail.php?id=<?= $r['product_sid'] ?>">
+                                            <img src="images/<?= $r['img'] ?>.png"
+                                                    alt="<?= $r['product_name'] ?>"></a>
+                                    </figure>
+                                    <div class="description_50">
+                                        <div class="sale_icon"><span>活動商品</span></div>
+                                        <a href="product_detail.php?id=<?= $r['product_sid'] ?>" class="product_name"><?= $r['product_name'] ?></a>
+                                    </div>
+                                    <div class="description_10"></div>
+                                    <div class="description_10"><?= $c_ar[$r['product_color_sid']] ?></div>
+                                    <div class="description_10 product-item-qty"
+                                         data-qty="<?= $r['qty'] ?>"><?= $r['qty'] ?></div>
+                                    <div class="description_10 product-item-price"
+                                         data-price="<?= $r['price'] ?>"><?= $r['price'] ?>
+                                    </div>
                                 </div>
-                                <div class="description_10"></div>
-                                <div class="description_10"><?= $c_ar[$r['product_color_sid']] ?></div>
-                                <div class="description_10 product-item-qty"
-                                     data-qty="<?= $r['qty'] ?>"><?= $r['qty'] ?></div>
-                                <div class="description_10 product-item-price"
-                                     data-price="<?= $r['price'] ?>"><?= $r['price'] ?></div>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
 
-                        <div class="order_listbox order_listbox_tatle">
-                            <p>總共 <span class="description_mark" id="total-qty"><?= $total_qty ?></span>
-                                件商品，小計<span class="description_mark"><h3 class="product_price"
-                                                                         id="total-price"></h3></span></p>
-                        </div>
-                        <?php if ($_SESSION['sighup_transport'] == 2): ?>
                             <div class="order_listbox order_listbox_tatle">
-                                <p>＋貨運運費<span class="description_mark">＄800</span></p>
+                                <p>總共 <span class="description_mark" id="total-qty"><?= $total_qty ?></span>
+                                    件商品，小計<span class="description_mark"><h3 class="product_price"
+                                                                             id="total-price"></h3></span></p>
                             </div>
-                        <?php else: ?>
-                        <?php endif; ?>
-                        <div class="order_listbox order_listbox_tatle">
-                            <p>總金額</p>
-                            <h3 class="product_price" id="pay-price"></h3>
-                        </div>
+                            <?php if ($_SESSION['sighup_transport'] == 2): ?>
+                                <div class="order_listbox order_listbox_tatle">
+                                    <p>＋貨運運費<span class="description_mark">＄800</span></p>
+                                </div>
+                            <?php else: ?>
+                            <?php endif; ?>
+                            <div class="order_listbox order_listbox_tatle">
+                                <p>總金額</p>
+                                <h3 class="product_price" id="pay-price"></h3>
+                            </div>
 
-                    <?php endif ?>
-                    <div class="item_02_conten item_19box">
-                        提醒您，目前常見之詐騙手法如下：<br/>
-                        來電顯示開頭為「＋」者，是國際電話，有可能就是詐騙電話！<br/>
-                        國內ATM自動"提款機"並沒有分期付款設定解除等服務，如要求您前往操作應為詐騙集團手法。<br/>
-                        切勿依來電指示操作自動提款機提、至銀行提（匯）款或交付現金給任何人，以免被騙。<br/>
-                        瞭解更多反詐騙詳細內容 請至 內政部警政署165反詐騙網站
-                    </div>
-                    <div class="order_listbox order_listbox_tatle item_conten_button">
-                        <div>
-                            <input type="submit" class="palette_btn_back"  onclick="location.href='order_list.php'" value="訂單詳細">
-                            <input type="submit" onclick="location.href='reservation_01.php'" value="前往預約">
+                        <?php endif ?>
+                        <div class="item_02_conten item_19box">
+                            提醒您，目前常見之詐騙手法如下：<br/>
+                            來電顯示開頭為「＋」者，是國際電話，有可能就是詐騙電話！<br/>
+                            國內ATM自動"提款機"並沒有分期付款設定解除等服務，如要求您前往操作應為詐騙集團手法。<br/>
+                            切勿依來電指示操作自動提款機提、至銀行提（匯）款或交付現金給任何人，以免被騙。<br/>
+                            瞭解更多反詐騙詳細內容 請至 內政部警政署165反詐騙網站
+                        </div>
+                        <div class="order_listbox order_listbox_tatle item_conten_button">
+                            <div>
+                                <input type="submit" class="palette_btn_back" onclick="location.href='order_list.php'"
+                                       value="訂單詳細">
+                                <input type="submit" onclick="location.href='reservation_01.php'" value="前往預約">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </form>
 
 </div>
 <script>
     //點結帳傳值
     function checkForm() {
-        $.post('shoppingcar_03_api.php', $(document.form1).serialize(), function(data){
+        $.post('shoppingcar_03_api.php', $(document.form1).serialize(), function (data) {
 
         }, 'json');
         return false;
@@ -203,10 +207,9 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
     });
 
 
-
 </script>
 <div class="index_footer">
-<?php include 'page_item/footer.php';?>
+    <?php include 'page_item/footer.php'; ?>
 </div>
 </body>
 </html>

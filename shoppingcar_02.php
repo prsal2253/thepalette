@@ -77,7 +77,7 @@ if (isset($_SESSION['user']) and !empty($_SESSION['cart'])) {
                             ?>
                             <!-- 一件商品 -->
                             <div class="order_listbox product-item" data-sid="<?= $k ?>">
-                                <figure class="description_10"><a href="#"><img src="images/<?= $r['img'] ?>.png"
+                                <figure class="description_10"><a href="product_detail.php?id=<?= $r['product_sid'] ?>"><img src="images/<?= $r['img'] ?>.png"
                                                                                 alt="<?= $r['product_name'] ?>"></a>
                                 </figure>
                                 <div class="description_50">
