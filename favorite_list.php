@@ -143,11 +143,11 @@ if(!empty($data_fa)){
             //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
             tr.remove();
             if (data.success) {
-                alert('商品已加入刪除囉！啾咪～');
+                alert('商品已從追蹤清單刪除！');
                 console.log(data);
                 $('#total_howmuch').text($(".howmuch").length);
             } else {
-                alert('你登入了媽？');
+                alert('你登入了嗎？');
 
             }
         }, 'json');
