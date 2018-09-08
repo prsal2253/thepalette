@@ -393,7 +393,7 @@ if (!empty($_SESSION['cart'])) {
                 }, 'json');
             }
             <?php else:?>
-        alert('你登入了媽？！啾咪～');
+        alert('你登入了嗎？');
         <?php endif;?>
     });
 
