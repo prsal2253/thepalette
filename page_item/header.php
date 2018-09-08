@@ -170,7 +170,7 @@ if (!empty($_SESSION['cart'])) {
             </div>
         <?php endforeach; ?>
 
-        <div class="check_outbox"><a class="check_out" href="../shoppingcar_01.php">CHECK OUT</a></div>
+        <div class="check_outbox"><a class="check_out" href="shoppingcar_01.php">CHECK OUT</a></div>
 
     <?php else: ?><!-- 購物車沒有商品時的狀態 -->
         <div class="order_listbox carts_none">
