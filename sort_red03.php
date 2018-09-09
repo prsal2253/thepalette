@@ -10,7 +10,7 @@
                             
                             <div class="sort_red03_intro_l_txt">
                                 <h3>熱情的橘 沉穩的橘 撩人的橘</h3><br><br>
-                                <p>改編自 Jenny Han 的同名青春愛情小說，內容講述亞裔女孩 Lara Jean 這名默默無名的女孩，有著溫柔、聰穎的性格，卻十分內向。她的心思細膩，對那些「愛過的男孩們」卻不曾訴說心中的情感，這是她永藏心底的秘密。當熾熱的感情無處渲洩時，Lara Jean 會寫下「情書」藏在帽盒裡。</p>
+                                <p>橘色的色彩家族龐大，可以隨意搭配許多色彩。在色彩的能量上，橘色代表歡樂的、童玩式的熱鬧意象；表現內在愉悅的感覺、說不出道理的開心。</p>
                             </div>
                             <h2 class="sort_red03_h2">Orange</h2>                                 
                         </div>    
@@ -27,21 +27,24 @@
                     </figure>
                 </div>
                 <div class="sort_red03_rec_product flex">
-                    <a href="/" class="sort_red03_rec_product_s">
+                    <a href="product_quicklook.php?id=16" class="sort_red03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                         <div class="sort_red03_rec_product01 sort_red03_rec_product_scale transition"></div>
-                        <h6>Stacked System</h6>
+                        <h6>Heritage Convertible Sofa</h6>
                     </a>
-                    <a href="/" class="sort_red03_rec_product_s">
+
+                    <a href="product_quicklook.php?id=29" class="sort_red03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                         <div class="sort_red03_rec_product02 sort_red03_rec_product_scale transition"></div>
-                        <h6>Stacked System</h6>
+                        <h6>Oal Chair</h6>
                     </a>
-                    <a href="/" class="sort_red03_rec_product_s">
+
+                    <a href="product_quicklook.php?id=152" class="sort_red03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                         <div class="sort_red03_rec_product03 sort_red03_rec_product_scale transition"></div>
-                        <h6>Stacked System</h6>
+                        <h6>Orbit Light</h6>
                     </a>
-                    <a href="/" class="sort_red03_rec_product_s">
+
+                    <a href="product_quicklook.php?id=19" class="sort_red03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                         <div class="sort_red03_rec_product04 sort_red03_rec_product_scale transition"></div>
-                        <h6>Fringe Pouf</h6>
+                        <h6>Pavilion AV5 Chair</h6>
                     </a>
                 </div>
             </div>
