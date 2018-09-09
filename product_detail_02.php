@@ -1,6 +1,7 @@
 
 
 <div id="product_detail_02"> 
+                <section>
                     <div class="index_conten_flex product_detail_02">
                         <div class="product_detail_02_topic flex">
                             <div class="product_detail_02_topic_left">
