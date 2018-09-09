@@ -1,3 +1,6 @@
+<?php
+require __DIR__ . '/__db_connect.php';
+?>
 <?php include 'page_item/head.php';?>
 <!-- 元件css -->
 <link rel="stylesheet" href="css/pageitem.css?123">
