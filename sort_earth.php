@@ -62,17 +62,17 @@ require __DIR__ . '/__db_connect.php';
             <div class="sort_earth02_rec_product flex">
                 <a href="product_quicklook.php?id=116" class="sort_earth02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth02_rec_product01 sort_earth02_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>ARMCHAIR HALLWAY</h6>
                 </a>
                 
                 <a href="product_quicklook.php?id=118" class="sort_earth02_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth02_rec_product02 sort_earth02_rec_product_scale transition"></div>
-                    <h6>Oscar Sectional Sofa</h6>
+                    <h6>Pirouette Shelf</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=109" class="sort_earth02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth02_rec_product03 sort_earth02_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>Oal Chair</h6>
                 </a>
             </div>
         </div>
@@ -111,22 +111,22 @@ require __DIR__ . '/__db_connect.php';
             <div class="sort_earth03_rec_product flex">
                 <a href="product_quicklook.php?id=14" class="sort_earth03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth03_rec_product01 sort_earth03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>SOFT EDGE 12 CHAIR</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=4" class="sort_earth03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth03_rec_product02 sort_earth03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>SPARK LOUNGE CHAIR</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=108" class="sort_earth03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth03_rec_product03 sort_earth03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>VASE</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=19" class="sort_earth03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth03_rec_product04 sort_earth03_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>Pavilion AV5 Chair</h6>
                 </a>
             </div>
         </div>
@@ -162,17 +162,17 @@ require __DIR__ . '/__db_connect.php';
             <div class="sort_earth04_rec_product flex">
                 <a href="product_quicklook.php?id=69" class="sort_earth04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth04_rec_product01 sort_earth04_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>Hal Stackable Chair</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=123" class="sort_earth04_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth04_rec_product02 sort_earth04_rec_product_scale transition"></div>
-                    <h6>Oscar Sectional Sofa</h6>
+                    <h6>SPARK LOUNGE SOFA</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=68" class="sort_earth04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth04_rec_product03 sort_earth04_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>SIRO+ CHAIR</h6>
                 </a>
             </div>
         </div>
@@ -197,7 +197,6 @@ $(window).scroll(function() {
         $('.changebg').css('background-color','#d89d54');
     }
 });
-
 $(window).scroll(function() {
     var scrolltop = $(this).scrollTop();
     if (scrolltop>300 && scrolltop<2000){
@@ -208,7 +207,6 @@ $(window).scroll(function() {
         $('.changebox').css('background-color','#d89d54');
     }
 });
-
 </script>
 </body>
 </html>

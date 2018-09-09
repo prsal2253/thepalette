@@ -110,22 +110,22 @@ require __DIR__ . '/__db_connect.php';
             <div class="sort_texture03_rec_product flex">
                 <a href="product_quicklook.php?id=133" class="sort_texture03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_texture03_rec_product01 sort_texture03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>Mini Scented Candle</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=142" class="sort_texture03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_texture03_rec_product02 sort_texture03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>Concert Lamp</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=150" class="sort_texture03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_texture03_rec_product03 sort_texture03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>BOULE VASE</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=151" class="sort_texture03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_texture03_rec_product04 sort_texture03_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>Circa Light</h6>
                 </a>
             </div>
         </div>
@@ -159,17 +159,17 @@ require __DIR__ . '/__db_connect.php';
                 </figure>
             </div>
             <div class="sort_texture04_rec_product flex">
-                <a href="product_quicklook.php?id=64" class="sort_texture04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
+                <a href="product_quicklook.php?id=53" class="sort_texture04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_texture04_rec_product01 sort_texture04_rec_product_scale transition"></div>
                     <h6>Stacked System</h6>
                 </a>
 
-                <a href="product_quicklook.php?id=64" class="sort_texture04_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
+                <a href="product_quicklook.php?id=148" class="sort_texture04_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_texture04_rec_product02 sort_texture04_rec_product_scale transition"></div>
                     <h6>Oscar Sectional Sofa</h6>
                 </a>
 
-                <a href="product_quicklook.php?id=64" class="sort_texture04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
+                <a href="product_quicklook.php?id=143" class="sort_texture04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_texture04_rec_product03 sort_texture04_rec_product_scale transition"></div>
                     <h6>Fringe Pouf</h6>
                 </a>

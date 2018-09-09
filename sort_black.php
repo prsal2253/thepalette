@@ -62,22 +62,22 @@ require __DIR__ . '/__db_connect.php';
             <div class="sort_black02_rec_product flex">
                 <a href="product_quicklook.php?id=136" class="sort_black02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black02_rec_product01 sort_black02_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>Suspence Nomad Lamp</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=71" class="sort_black02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black02_rec_product02 sort_black02_rec_product_scale transition"></div>
-                    <h6>Oscar Sectional Sofa</h6>
+                    <h6>Braden Sofa</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=135" class="sort_black02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black02_rec_product03 sort_black02_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>OIVA Coffee Cup</h6>
                 </a>
 
                 <a href="product_quicklook.php?id=75" class="sort_black02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black02_rec_product04 sort_black02_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>Kazimir Large Table</h6>
                 </a>
             </div>
         </div>
@@ -117,19 +117,19 @@ require __DIR__ . '/__db_connect.php';
             <div class="sort_black03_rec_product flex">
                 <a href="product_quicklook.php?id=103" class="sort_black03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black03_rec_product01 sort_black03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>ARMCHAIR HALLWAY</h6>
                 </a>
                 <a href="product_quicklook.php?id=129" class="sort_black03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black03_rec_product02 sort_black03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>VASE</h6>
                 </a>
                 <a href="product_quicklook.php?id=137" class="sort_black03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black03_rec_product03 sort_black03_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>Pharaoh Lamp</h6>
                 </a>
                 <a href="product_quicklook.php?id=134" class="sort_black03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black03_rec_product04 sort_black03_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>Outdoor Round Carpet</h6>
                 </a>
             </div>
         </div>
@@ -165,15 +165,15 @@ require __DIR__ . '/__db_connect.php';
             <div class="sort_black04_rec_product flex">
                 <a href="product_quicklook.php?id=140" class="sort_black04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black04_rec_product01 sort_black04_rec_product_scale transition"></div>
-                    <h6>Stacked System</h6>
+                    <h6>Radon Wall Lamp</h6>
                 </a>
                 <a href="product_quicklook.php?id=90" class="sort_black04_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black04_rec_product02 sort_black04_rec_product_scale transition"></div>
-                    <h6>Oscar Sectional Sofa</h6>
+                    <h6>Edition Wisbone Chair</h6>
                 </a>
                 <a href="product_quicklook.php?id=132" class="sort_black04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_black04_rec_product03 sort_black04_rec_product_scale transition"></div>
-                    <h6>Fringe Pouf</h6>
+                    <h6>Nordlys Scented Candle</h6>
                 </a>
             </div>
         </div>

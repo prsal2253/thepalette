@@ -95,12 +95,12 @@
     width: 80%;
     margin: -43% auto 0 auto;
 }
-.sort_texture02_intro_box{
+/* .sort_texture02_intro_box{
     width: 15%;
     height: 45%;
     background-color: #fff;
     float: right;
-}
+} */
 .sort_texture02_intro_top{
     justify-content: space-between;
     height: 70%;
@@ -116,22 +116,22 @@
 }
 .sort_texture02_intro_r{
     height: 100%;
-    width: 60%;
+    width: 53%;
     overflow: hidden;
-    background: url(../images/H-other-chair-09.png) no-repeat right 95%
+    background: url(../images/H-other-chair-09.png) no-repeat right 95%;
     background-size: cover;
 }
 .sort_texture02_intro_l_txt>h3{
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.1em;
-    color: #ad776c;
+    color: #736558;
     font-family: 'SourceHanSerifTC-Bold';
 }
 .sort_texture02_h2{
     font-size: 80px;
     letter-spacing: 0.05em;
-    color: #662424;
+    color: #736558;
     font-weight: 700;
     font-family: 'Playfair Display';
 }
@@ -139,7 +139,7 @@
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.1em;
-    color: #ad776c;
+    color: #736558;
     font-family: 'Noto Sans TC';
 }
 /* 推薦商品導引文字 */
@@ -227,12 +227,12 @@
     width: 80%;
     margin: -43% auto 0 auto;
 }
-.sort_texture03_intro_box{
+/* .sort_texture03_intro_box{
     width: 25%;
     height: 30%;
     background-color: #fff;
     float: left;
-}
+} */
 .sort_texture03_intro_top{
     justify-content: space-between;
     height: 70%;
@@ -252,22 +252,23 @@
 }
 .sort_texture03_intro_r{
     height: 100%;
-    width: 70%;
+    width: 63%;
     overflow: hidden;
-    background: url(../images/H-other-chair-05.png) no-repeat center center;
+    background: url(../images/H-other-chair-05.png) no-repeat center 68%;
     background-size: cover;
+    margin-left: -6%;
 }
 .sort_texture03_intro_l_txt>h3{
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.1em;
-    color: #ad776c;
+    color: #444;
     font-family: 'SourceHanSerifTC-Bold';
 }
 .sort_texture03_h2{
     font-size: 70px;
     letter-spacing: 0.05em;
-    color: #662424;
+    color: #444;
     font-weight: 700;
     font-family: 'Playfair Display';
 }
@@ -275,7 +276,7 @@
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.1em;
-    color: #ad776c;
+    color: rgb(180,180,180);
     font-family: 'Noto Sans TC';
 }
 /* 推薦商品導引文字 */
@@ -368,12 +369,12 @@
     width: 80%;
     margin: -43% auto 0 auto;
 }
-.sort_texture04_intro_box{
+/* .sort_texture04_intro_box{
     width: 25%;
     height: 45%;
     background-color: #fff;
     float: right;
-}
+} */
 .sort_texture04_intro_top{
     justify-content: space-between;
     height: 70%;
@@ -402,7 +403,7 @@
     font-family: 'SourceHanSerifTC-Bold';
 }
 .sort_texture04_h2{
-    font-size: 80px;
+    font-size: 65px;
     letter-spacing: 0.05em;
     color: #a4594a;
     font-weight: 700;
@@ -471,7 +472,7 @@
 }
 .sort_texture04_rec_product03{
     height: 80%;
-    background: url(../images/H-pillow-04.png) no-repeat center center;
+    background: url(../images/H-other-chair-06.png) no-repeat center center;
     background-size: contain;
 }
 .sort_texture04_rec_product h6{
