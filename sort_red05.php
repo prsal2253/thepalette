@@ -239,7 +239,7 @@ if (isset ($_SESSION['user'])) {
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script>
 
-    // filter
+    // filter 
     // 選擇顏色
     $(".filter_color_box").click(function () {
         $(this).toggleClass("toggle_color");
@@ -250,7 +250,7 @@ if (isset ($_SESSION['user'])) {
     })
     //選品項
     $(".filter_items").click(function () {
-        $(".filter_items",this).toggleClass("item_choose");
+        $(this).toggleClass("item_choose");
     })
 
     //顯示range的值

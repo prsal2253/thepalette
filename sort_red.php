@@ -5,7 +5,7 @@ require __DIR__ . '/__db_connect.php';
 </head>
 <body>
 <!-- top -->
-<div class="index_top">
+<div class="index_top"> 
     <?php include 'page_item/header.php'; ?>
 </div>
 <?php include 'sort_red01.php'; ?>

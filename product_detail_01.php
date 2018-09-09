@@ -34,22 +34,22 @@ if(isset($_GET['id'])) {
         margin-left: 2px;
     }
     .color1{
-        background-color: red;
+        background-color: #802929;
     }
     .color2{
-        background-color: hotpink;
+        background-color: #da9480;
     }
     .color3{
-        background-color: darkorange;
+        background-color: #c55638;
     }
     .color4{
-        background-color: deepskyblue;
+        background-color: #2e4553;
     }
     .color5{
-        background-color: green;
+        background-color: #407060;
     }
     .color6{
-        background-color: yellow;
+        background-color: #d89d54;
     }
     .color7{
         background-color: black;
@@ -58,19 +58,19 @@ if(isset($_GET['id'])) {
         background-color: white;
     }
     .color9{
-        background-color: darkgray;
+        background-color: #999;
     }
     .color10{
-        background-color: saddlebrown;
+        background-color: #736558;
     }
     .color11{
-        background-color: lightyellow;
+        background-color: #D59A54;
     }
     .color12{
-        background-color: cornflowerblue;
+        background-color: #70929E;
     }
     .color13{
-        background-color: purple;
+        background-color: #80346D;
     }
 </style>
 
@@ -126,7 +126,8 @@ if(isset($_GET['id'])) {
                                 <?php endforeach; ?>
                             </div>
                         <?php else:?>
-                            <div></div>
+                            <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                            <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
                         <?php endif;?>
                     </div>
                     <div class="product_detail_01_btns flex">

@@ -79,7 +79,7 @@ if(isset($_GET['id'])) {
 .s_star{
     width: 75px;
     height: 15px;
-    background: url(images/icon/star.svg) repeat left center;
+    background: url(images/icon/star.svg) no-repeat left center;
     background-size: contain;
 }
 .product_quicklook_image{
@@ -265,7 +265,7 @@ if(isset($_GET['id'])) {
                         <div class="product_quicklook_01_description">
                             <h6 class="product_quicklook_01_h6">商品描述</h6>
                             <div class="product_quicklook_01_h7_box">
-                                <h7 class="product_quicklook_01_h7"><?= $r['introduction'] ?><br><br></h7> 
+                                <h7 class="product_quicklook_01_h7"><?= $r['introduction'] ?><br><br></h7>
                             </div>
                         </div>
                         <div class="product_quicklook_01_price">
@@ -282,7 +282,8 @@ if(isset($_GET['id'])) {
                             <?php endforeach; ?>
                         </div>
                         <?php else:?>
-                        <div></div>
+                        <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                        <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
                         <?php endif;?>
                         <div class="product_quicklook_01_btns flex">
                             <div class="s_product_detail_01_num palette_select" style="width:48%;">
