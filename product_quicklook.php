@@ -79,7 +79,7 @@ if(isset($_GET['id'])) {
 .s_star{
     width: 75px;
     height: 15px;
-    background: url(images/icon/star.svg) no-repeat left center;
+    background: url(images/icon/star.svg) repeat left center;
     background-size: contain;
 }
 .product_quicklook_image{
@@ -172,14 +172,14 @@ if(isset($_GET['id'])) {
     cursor: pointer;
 }
 .color1{
-        background-color: #802929;
-    }
-    .color2{
-        background-color: #da9480;
-    }
-    .color3{
-        background-color: #c55638;
-    }
+    background-color: #662424;
+}
+.color2{
+    background-color: #da9480;
+}
+.color3{
+    background-color: darkorange;
+}
     .color4{
         background-color: #2e4553;
     }
@@ -202,13 +202,13 @@ if(isset($_GET['id'])) {
         background-color: #736558;
     }
     .color11{
-        background-color: #D59A54;
+        background-color: lightyellow;
     }
     .color12{
-        background-color: #70929E;
+        background-color: cornflowerblue;
     }
     .color13{
-        background-color: #80346D;
+        background-color: purple;
     }
 
 .s_product_quicklook_01_num{
@@ -232,9 +232,6 @@ if(isset($_GET['id'])) {
     height: 40px;
     background-color: #666;
     margin-top: 10px;
-}
-.ql_more a{
-    text-decoration:none;
 }
 .product_quicklook_01_h7_box{
     height: 150px;
@@ -268,7 +265,7 @@ if(isset($_GET['id'])) {
                         <div class="product_quicklook_01_description">
                             <h6 class="product_quicklook_01_h6">商品描述</h6>
                             <div class="product_quicklook_01_h7_box">
-                                <h7 class="product_quicklook_01_h7"><?= $r['introduction'] ?><br><br></h7> 
+                                <h7 class="product_quicklook_01_h7"><?= $r['introduction'] ?><br><br></h7>
                             </div>
                         </div>
                         <div class="product_quicklook_01_price">
@@ -285,7 +282,8 @@ if(isset($_GET['id'])) {
                             <?php endforeach; ?>
                         </div>
                         <?php else:?>
-                        <div></div>
+                        <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                        <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
                         <?php endif;?>
                         <div class="product_quicklook_01_btns flex">
                             <div class="s_product_detail_01_num palette_select" style="width:48%;">
@@ -299,7 +297,7 @@ if(isset($_GET['id'])) {
                             </div>
                             <button class="add_to_cart"><h5 class="product_quicklook_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                         </div>
-                        <a href="product_detail.php?id=<?= $r['product_sid'] ?>" target="_top" class="product_quicklook_01_h5" style="color:#fff;"><button class="ql_more">了解商品詳情</button></a>
+                        <button class="ql_more"><a href="product_detail.php?id=<?= $r['product_sid'] ?>" target="_top" class="product_quicklook_01_h5" style="color:#fff;">了解商品詳情</a></button>
                                                                         <!-- target屬性規定在何處打開連接文檔                       -->
 
                     </div>
