@@ -157,17 +157,17 @@
                 </figure>
             </div>
             <div class="sort_earth04_rec_product flex">
-                <a href="product_quicklook.php?id=140" class="sort_earth04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
+                <a href="product_quicklook.php?id=69" class="sort_earth04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth04_rec_product01 sort_earth04_rec_product_scale transition"></div>
                     <h6>Stacked System</h6>
                 </a>
 
-                <a href="product_quicklook.php?id=140" class="sort_earth04_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
+                <a href="product_quicklook.php?id=123" class="sort_earth04_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth04_rec_product02 sort_earth04_rec_product_scale transition"></div>
                     <h6>Oscar Sectional Sofa</h6>
                 </a>
 
-                <a href="product_quicklook.php?id=140" class="sort_earth04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
+                <a href="product_quicklook.php?id=68" class="sort_earth04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_earth04_rec_product03 sort_earth04_rec_product_scale transition"></div>
                     <h6>Fringe Pouf</h6>
                 </a>
