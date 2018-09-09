@@ -187,8 +187,8 @@ span.cart_number2{width: 18px;height: 18px;position: fixed;top:92px;right: 26px;
 .car_iconhover{position: fixed;background: rgba(255,255,255,.9);width:400px;top: 90px;right: -440px;overflow: hidden;transition: all .5s;padding: 10px 15px;opacity: 0;z-index: 990;}
 .car_iconhover .order_listbox{background: rgba(255,255,255,0);transition: all .5s;}
 .car_iconhover .order_listbox:hover{background: rgba(255,255,255,.9);}
-.car_iconhover .check_outbox{width: 100%; padding: 10px 0 0 0; border-top: 1px #ddd solid;}
-.car_iconhover .check_outbox a.check_out{color: #000; font-family: 'Playfair Display';font-size: 20px;font-weight: 600;line-height: 40px;text-align: center;text-decoration: none;background: rgba(255,255,255,0);transition: all .5s;padding: 0 15px;}
+.car_iconhover .check_outbox{width: 100%; padding: 10px 0 0 0;}
+.car_iconhover .check_outbox a.check_out{color: #000; font-family: 'Playfair Display';font-size: 20px;font-weight: 600;line-height: 40px;text-align: center;text-decoration: none;background: rgba(255,255,255,0);transition: all .5s;padding: 0 15px;display: block;}
 .car_iconhover .check_outbox a.check_out:hover{background: rgba(255,255,255,.9);color:  #e54728;}
 .order_listbox.carts_none{text-align: center;padding: 50px 0;}
 .car_iconhover .order_listbox.carts_none:hover{background: rgba(255,255,255,0);}
