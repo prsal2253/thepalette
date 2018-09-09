@@ -19,7 +19,7 @@ if (!empty($_SESSION['cart'])) {
     }
 }
 ?>
-<header><h1>palette</h1></header>
+<header><h1><a href="index.php"><img src="../thepalette/images/logo/logo_white-01.svg" alt=""></a></h1></header>
 
 <!-- menu icon -->
 <div class="menu_icon">

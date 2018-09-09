@@ -113,8 +113,9 @@ p.address_num{width: 10%;color: #888;}
 
 /* header */
 #heard .index_main{background: url(../images/avenue-boiserie.jpg) bottom center repeat-y;background-attachment: fixed;background-size: 100% auto;min-height:500vh;}
-header{    mix-blend-mode: difference;position: fixed; top: 50px; left: 30px; width:100px;height: 100px;z-index: 9999;}
-header h1{display:inline-flex; width:100px;height: 100px;border: 2px solid #fff;color: #fff;text-transform: uppercase;align-items: flex-end;justify-content:flex-end;letter-spacing: .15em;}
+header{mix-blend-mode: difference;position: fixed; top: 50px; left: 30px; width:100px;z-index: 9999;}
+header h1{display:inline-flex; width:100px;} 
+header h1 img{ width: 100%;height: auto;}
 /* .index_top nav{position: fixed;right: 30px; top:0px; width: 40px;height: 100%;padding: 50px 0;z-index: 999;}
 
 .palette_menu {cursor: pointer;z-index: 999;} */

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: localhost:8889
--- 產生時間： 2018 年 09 月 06 日 10:37
+-- 產生時間： 2018 年 09 月 09 日 07:26
 -- 伺服器版本: 5.7.21
 -- PHP 版本： 7.2.7
 
@@ -48,7 +48,23 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`member_sid`, `name`, `gender`, `email`, `password`, `mobile`, `address_city`, `address_side`, `address_post`, `address`, `year`, `month`, `day`, `activated`) VALUES
-(1, '  test', 1, '123@gmail.com', '123456', '0987987987', '臺北市', '中正區', '100', '走路會痛', 0, 0, 0, NULL);
+(2, '         我要改名字', 1, '123@gmail.com', '09870987', '0987987987', '基隆市', '七堵區', '206', '走路會痛', 2015, 7, 11, NULL),
+(3, 'test', NULL, '455@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 2017, 4, 7, NULL),
+(4, 'dasdasdasd', NULL, '111@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 2013, 6, 9, NULL),
+(5, 'werwer', NULL, '987@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(8, 'dasdasdasd', NULL, '22222@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(12, 'te', NULL, '1232312123@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 2015, 0, 0, NULL),
+(13, 'dasdasdasd', NULL, '213123123@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(14, 'dasdasdasd', NULL, '12312312312@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(15, 'dasdasdasd', NULL, '12123123@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(16, '123123', NULL, '1212312312312@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(17, '123', NULL, '2131231231231@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(18, '2131231', NULL, '1212121212@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(19, '2312312451324324', NULL, '5431523152414@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(20, 'dasdasdasd', NULL, '123213123123@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(21, '423424', NULL, '31412312@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(22, 'test', NULL, '111111@gmail.com', '111111', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL),
+(23, '121323', NULL, '21312312312@gmail.com', '123456', NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -68,10 +84,8 @@ CREATE TABLE `members_favourite` (
 --
 
 INSERT INTO `members_favourite` (`members_favourite_sid`, `member_sid`, `product_sid`, `date`) VALUES
-(56, 1, 72, '2018-09-06 18:17:20'),
-(58, 1, 8, '2018-09-06 18:17:23'),
-(59, 1, 74, '2018-09-06 18:22:27'),
-(60, 1, 3, '2018-09-06 18:27:51');
+(104, 2, 2, '2018-09-09 01:03:58'),
+(106, 2, 65, '2018-09-09 01:20:45');
 
 -- --------------------------------------------------------
 
@@ -124,7 +138,9 @@ INSERT INTO `orders` (`orders_sid`, `member_sid`, `order_date`, `orderer_name`, 
 (14, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL),
 (15, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL),
 (16, 1, '2018-09-06', '法大大', 'fdfsdfds', 'fsdfsf', NULL, NULL, NULL, 'dsfsd', '法大大', 'fdfsdfds', 'fsdfsf', NULL, NULL, NULL, 'dsfsd', '1', '2', '1', NULL),
-(17, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL);
+(17, 1, '2018-09-06', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL),
+(18, 2, '2018-09-08', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL),
+(19, 23, '2018-09-09', '', '', '', NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, '', '1', '2', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -179,7 +195,10 @@ INSERT INTO `orders_details` (`sid`, `order_sid`, `product_sid`, `price`, `quant
 (32, 15, 109, 9000, 1),
 (33, 16, 110, 8500, 1),
 (34, 17, 3, 9000, 4),
-(35, 17, 44, 9000, 5);
+(35, 17, 44, 9000, 5),
+(36, 18, 42, 27000, 1),
+(37, 18, 2, 27000, 1),
+(38, 19, 42, 27000, 1);
 
 -- --------------------------------------------------------
 
@@ -488,7 +507,8 @@ INSERT INTO `reservation_sid` (`reservation_sid`, `member_sid`, `order_sid`, `re
 (3, 1, 13, '2018-09-13', '晚上19：30-21：30'),
 (4, 1, 9, '2018-09-27', '上午09：00-12：00'),
 (5, 1, 14, '2018-09-06', '下午13：30-17：30'),
-(6, 1, 16, '2018-08-30', '上午09：00-12：00');
+(6, 1, 16, '2018-08-30', '上午09：00-12：00'),
+(7, 23, 19, '2018-09-05', '下午13：30-17：30');
 
 --
 -- 已匯出資料表的索引
@@ -569,25 +589,25 @@ ALTER TABLE `reservation_sid`
 -- 使用資料表 AUTO_INCREMENT `members`
 --
 ALTER TABLE `members`
-  MODIFY `member_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '客戶編號', AUTO_INCREMENT=2;
+  MODIFY `member_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '客戶編號', AUTO_INCREMENT=24;
 
 --
 -- 使用資料表 AUTO_INCREMENT `members_favourite`
 --
 ALTER TABLE `members_favourite`
-  MODIFY `members_favourite_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '會員收藏編號', AUTO_INCREMENT=61;
+  MODIFY `members_favourite_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '會員收藏編號', AUTO_INCREMENT=107;
 
 --
 -- 使用資料表 AUTO_INCREMENT `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orders_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '訂單編號', AUTO_INCREMENT=18;
+  MODIFY `orders_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '訂單編號', AUTO_INCREMENT=20;
 
 --
 -- 使用資料表 AUTO_INCREMENT `orders_details`
 --
 ALTER TABLE `orders_details`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '編號', AUTO_INCREMENT=36;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '編號', AUTO_INCREMENT=39;
 
 --
 -- 使用資料表 AUTO_INCREMENT `products_category_sid`
@@ -629,7 +649,7 @@ ALTER TABLE `products_size_sid_w`
 -- 使用資料表 AUTO_INCREMENT `reservation_sid`
 --
 ALTER TABLE `reservation_sid`
-  MODIFY `reservation_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '預約時間編號', AUTO_INCREMENT=7;
+  MODIFY `reservation_sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '預約時間編號', AUTO_INCREMENT=8;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
