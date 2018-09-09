@@ -284,7 +284,7 @@ $pageName = 'register';
                 }
 
                 if(data.info){
-                    alert('註冊失敗請再次確認輸入資料');
+                    alert('註冊失敗，Email已被使用');
 
                     // info.attr('class', 'alert alert-'+data.info.type);
                     // 上面是更改bs4外觀樣式樣式
