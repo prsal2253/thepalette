@@ -3,7 +3,7 @@
 }
 .product_detail_01{
     justify-content: space-between;
-    margin-top: -30px;
+    margin-top: -60px;
 }
 .product_detail_h1{
     border-color: black;
@@ -55,9 +55,8 @@
 /* 右邊 */
 .product_detail_01_right{
     width: 30%;
-    height: 100%;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 .s_sale_01{
     max-width: 100%;
@@ -67,11 +66,12 @@
     margin-bottom: 10px;
 }
 .s_sale_02{
-    max-width: 220px;
+    width: 250px;
     border-radius: 40px;
     background: #bc5446;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
+    padding: 0 0 0 30px;
 }
 .product_detail_01_h5{
     font-size: 15px;
@@ -110,6 +110,7 @@
 }
 .product_detail_01_color{
     padding: 0 0 0 0;
+    margin-top: 30px;
 }
 .color01,.color02,.color03{
     width: 35px;

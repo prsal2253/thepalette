@@ -297,7 +297,7 @@ if(isset($_GET['id'])) {
                             </div>
                             <button class="add_to_cart"><h5 class="product_quicklook_01_h5"><span style="font-family:'Noto Sans TC';line-height: 40px">加入購物車</span></h5></button>
                         </div>
-                        <button class="ql_more"><a href="product_detail.php?id=<?= $r['product_sid'] ?>" target="_top" class="product_quicklook_01_h5" style="color:#fff;">了解商品詳情</a></button>
+                        <button class="ql_more"><a href="product_detail.php?id=<?= $r['product_sid'] ?>" target="_top" class="product_quicklook_01_h5" style="color:#fff;text-decoration:none;">了解商品詳情</a></button>
                                                                         <!-- target屬性規定在何處打開連接文檔                       -->
 
                     </div>
