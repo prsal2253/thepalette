@@ -97,14 +97,18 @@ if (isset($_GET['id'])) {
                                 <div class="order_listbox">
                                     <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
                                     <p class="description_25">訂單編號：000000<?= $order['orders_sid'] ?></p>
+                                    <?php if (!empty($rt1['date'])): ?>
+                                    <p class="description"><span class="description_mark">訂單狀態：預約已完成</span></p>
+                                    <?php else: ?>
                                     <p class="description"><span class="description_mark">訂單狀態：信用卡一次付清(已付款)</span></p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="order_listbox order_detail_box">
 
                                     <ul class="order_timebar">
                                         <li></li>
                                         <li class="this_time"></li>
-                                        <?php if (!empty($r['reservation_date'])): ?>
+                                        <?php if (!empty($rt1['date'])): ?>
                                             <li class="this_time"></li>
                                         <?php else: ?>
                                             <li class=""></li>
@@ -114,7 +118,7 @@ if (isset($_GET['id'])) {
                                     <div class="order_timebar_detail">
                                         <p>訂單成立<br/><span><?= $order['order_date'] ?></span></p>
                                         <p>匯款確認<br/><span><?= $order['order_date'] ?></span></p>
-                                        <p>預約確認<br/><span><?= $rt1['reservation_date'] ?></span></p>
+                                        <p>預約確認<br/><span><?= $rt1['date'] ?></span></p>
                                         <p>訂單完成<br/><span></span></p>
                                     </div>
 
