@@ -358,7 +358,7 @@ crossorigin="anonymous"></script>
         $.get('add_to_cart.php', {sid:sid,qty:qty}, function(data){
             //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
             console.log(data);
-            alert('商品已加入購物車囉！啾咪～');
+            alert('商品已加入購物車！');
             //點上面購物車數量會變
             window.parent.changeQty(data);
 
@@ -366,6 +366,21 @@ crossorigin="anonymous"></script>
             //changeQty(data);
         }, 'json');
     });
+
+
+
+    (function () {
+        window.alert = function (text) {
+            //解析alert内容中的换行符
+            text = text.toString().replace(/\\/g, '\\').replace(/\n/g, '<br />').replace(/\r/g, '<br />');
+
+            // 自定义DIV弹窗
+            var alertdiv = '<div id="alertdiv">' + text + '<br /><input type="submit" name="button" id="button" value="確認" onclick="$(this).parent().remove();" /></div>';
+            $(document.body).append(alertdiv);
+            // 显示
+            $("#alertdiv").show();
+        };
+    })();
 </script>
 </body>
 </html>
