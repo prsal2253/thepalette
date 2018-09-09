@@ -27,8 +27,8 @@ if(isset($_GET['id'])) {
 ?>
 <style>
     .color1,.color2,.color3,.color4,.color5,.color6,.color7,.color8,.color9,.color10,.color11,.color12,.color13{
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         display: inline-block;
         margin-left: 2px;
@@ -105,6 +105,7 @@ if(isset($_GET['id'])) {
                 </div>          
                 <!-- 右邊 -->
                 <div class="flex product_detail_01_right">
+                <div class="s_sale">
                     <div class="s_sale_01"><h5 class="product_detail_01_h5">活動期間Swoon滿兩件免費到府安裝</h5></div>
                     <div class="s_sale_02"><h5 class="product_detail_01_h5">國泰銀行刷卡分期免利息</h5></div>
                     <div class="product_detail_01_description">
@@ -113,6 +114,7 @@ if(isset($_GET['id'])) {
                         <h6 class="product_detail_01_h6">商品規格</h6>
                         <h7 class="product_detail_01_h7"><?= $r['product_size'] ?></h7>
                     </div>
+                </div>
                     <div class="product_detail_01_price">
                         <h8 class="product_detail_01_h8"><span style="font-family: Georgia"  class="sub-total2"></span>
                             <span style="font-size: 12px; color:#666; text-decoration: line-through"
