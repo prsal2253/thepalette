@@ -5,7 +5,7 @@
 - https://www.phpmyadmin.net
 -
 - 主機: localhost:8889
-- 產生時間： 2018 年 09 月 06 日 11:24
+- 產生時間： 2018 年 09 月 09 日 07:26
 - 伺服器版本: 5.7.21
 - PHP 版本： 7.2.7
 -->
@@ -34,7 +34,7 @@
                   `activated` int(11) DEFAULT NULL COMMENT '驗證',
                   PRIMARY KEY (`member_sid`),
                   UNIQUE KEY `email` (`email`)
-                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+                ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
             </pma:table>
             <pma:table name="members_favourite">
                 CREATE TABLE `members_favourite` (
@@ -43,7 +43,7 @@
                   `product_sid` int(11) NOT NULL COMMENT '商品編號',
                   `date` datetime NOT NULL COMMENT '日期',
                   PRIMARY KEY (`members_favourite_sid`)
-                ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+                ) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8;
             </pma:table>
             <pma:table name="orders">
                 CREATE TABLE `orders` (
@@ -69,7 +69,7 @@
                   `pay` varchar(255) DEFAULT NULL COMMENT '付款方式',
                   `reservation_sid` int(11) DEFAULT NULL COMMENT '預約時間編號',
                   PRIMARY KEY (`orders_sid`)
-                ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+                ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
             </pma:table>
             <pma:table name="orders_details">
                 CREATE TABLE `orders_details` (
@@ -79,7 +79,7 @@
                   `price` int(11) NOT NULL COMMENT '商品價格',
                   `quantity` int(11) NOT NULL COMMENT '商品數量',
                   PRIMARY KEY (`sid`)
-                ) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+                ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
             </pma:table>
             <pma:table name="products_category_sid">
                 CREATE TABLE `products_category_sid` (
@@ -146,7 +146,7 @@
                   `reservation_date` varchar(255) DEFAULT NULL COMMENT '預約日期',
                   `reservation_time` varchar(255) DEFAULT NULL COMMENT '預約時間',
                   PRIMARY KEY (`reservation_sid`)
-                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+                ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
             </pma:table>
         </pma:database>
     </pma:structure_schemas>
@@ -156,30 +156,290 @@
     -->
     <database name="the palette">
         <!-- 資料表 members -->
+        <table name="members">
+            <column name="member_sid">2</column>
+            <column name="name">         我要改名字</column>
+            <column name="gender">1</column>
+            <column name="email">123@gmail.com</column>
+            <column name="password">09870987</column>
+            <column name="mobile">0987987987</column>
+            <column name="address_city">基隆市</column>
+            <column name="address_side">七堵區</column>
+            <column name="address_post">206</column>
+            <column name="address">走路會痛</column>
+            <column name="year">2015</column>
+            <column name="month">7</column>
+            <column name="day">11</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">3</column>
+            <column name="name">test</column>
+            <column name="gender">NULL</column>
+            <column name="email">455@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">2017</column>
+            <column name="month">4</column>
+            <column name="day">7</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">4</column>
+            <column name="name">dasdasdasd</column>
+            <column name="gender">NULL</column>
+            <column name="email">111@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">2013</column>
+            <column name="month">6</column>
+            <column name="day">9</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">5</column>
+            <column name="name">werwer</column>
+            <column name="gender">NULL</column>
+            <column name="email">987@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">8</column>
+            <column name="name">dasdasdasd</column>
+            <column name="gender">NULL</column>
+            <column name="email">22222@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">12</column>
+            <column name="name">te</column>
+            <column name="gender">NULL</column>
+            <column name="email">1232312123@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">2015</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">13</column>
+            <column name="name">dasdasdasd</column>
+            <column name="gender">NULL</column>
+            <column name="email">213123123@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">14</column>
+            <column name="name">dasdasdasd</column>
+            <column name="gender">NULL</column>
+            <column name="email">12312312312@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">15</column>
+            <column name="name">dasdasdasd</column>
+            <column name="gender">NULL</column>
+            <column name="email">12123123@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">16</column>
+            <column name="name">123123</column>
+            <column name="gender">NULL</column>
+            <column name="email">1212312312312@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">17</column>
+            <column name="name">123</column>
+            <column name="gender">NULL</column>
+            <column name="email">2131231231231@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">18</column>
+            <column name="name">2131231</column>
+            <column name="gender">NULL</column>
+            <column name="email">1212121212@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">19</column>
+            <column name="name">2312312451324324</column>
+            <column name="gender">NULL</column>
+            <column name="email">5431523152414@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">20</column>
+            <column name="name">dasdasdasd</column>
+            <column name="gender">NULL</column>
+            <column name="email">123213123123@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">21</column>
+            <column name="name">423424</column>
+            <column name="gender">NULL</column>
+            <column name="email">31412312@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">22</column>
+            <column name="name">test</column>
+            <column name="gender">NULL</column>
+            <column name="email">111111@gmail.com</column>
+            <column name="password">111111</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
+        <table name="members">
+            <column name="member_sid">23</column>
+            <column name="name">121323</column>
+            <column name="gender">NULL</column>
+            <column name="email">21312312312@gmail.com</column>
+            <column name="password">123456</column>
+            <column name="mobile">NULL</column>
+            <column name="address_city">NULL</column>
+            <column name="address_side">NULL</column>
+            <column name="address_post">NULL</column>
+            <column name="address">NULL</column>
+            <column name="year">0</column>
+            <column name="month">0</column>
+            <column name="day">0</column>
+            <column name="activated">NULL</column>
+        </table>
         <!-- 資料表 members_favourite -->
         <table name="members_favourite">
-            <column name="members_favourite_sid">56</column>
-            <column name="member_sid">1</column>
-            <column name="product_sid">72</column>
-            <column name="date">2018-09-06 18:17:20</column>
+            <column name="members_favourite_sid">104</column>
+            <column name="member_sid">2</column>
+            <column name="product_sid">2</column>
+            <column name="date">2018-09-09 01:03:58</column>
         </table>
         <table name="members_favourite">
-            <column name="members_favourite_sid">58</column>
-            <column name="member_sid">1</column>
-            <column name="product_sid">8</column>
-            <column name="date">2018-09-06 18:17:23</column>
-        </table>
-        <table name="members_favourite">
-            <column name="members_favourite_sid">59</column>
-            <column name="member_sid">1</column>
-            <column name="product_sid">74</column>
-            <column name="date">2018-09-06 18:22:27</column>
-        </table>
-        <table name="members_favourite">
-            <column name="members_favourite_sid">60</column>
-            <column name="member_sid">1</column>
-            <column name="product_sid">3</column>
-            <column name="date">2018-09-06 18:27:51</column>
+            <column name="members_favourite_sid">106</column>
+            <column name="member_sid">2</column>
+            <column name="product_sid">65</column>
+            <column name="date">2018-09-09 01:20:45</column>
         </table>
         <!-- 資料表 orders -->
         <table name="orders">
@@ -573,6 +833,52 @@
             <column name="pay">1</column>
             <column name="reservation_sid">NULL</column>
         </table>
+        <table name="orders">
+            <column name="orders_sid">18</column>
+            <column name="member_sid">2</column>
+            <column name="order_date">2018-09-08</column>
+            <column name="orderer_name"></column>
+            <column name="orderer_email"></column>
+            <column name="orderer_mobile"></column>
+            <column name="orderer_city">NULL</column>
+            <column name="orderer_side">NULL</column>
+            <column name="orderer_post">NULL</column>
+            <column name="orderer_address"></column>
+            <column name="sender_name"></column>
+            <column name="sender_email"></column>
+            <column name="sender_mobile"></column>
+            <column name="sender_city">NULL</column>
+            <column name="sender_side">NULL</column>
+            <column name="sender_post">NULL</column>
+            <column name="sender_address"></column>
+            <column name="invoice">1</column>
+            <column name="transport">2</column>
+            <column name="pay">1</column>
+            <column name="reservation_sid">NULL</column>
+        </table>
+        <table name="orders">
+            <column name="orders_sid">19</column>
+            <column name="member_sid">23</column>
+            <column name="order_date">2018-09-09</column>
+            <column name="orderer_name"></column>
+            <column name="orderer_email"></column>
+            <column name="orderer_mobile"></column>
+            <column name="orderer_city">NULL</column>
+            <column name="orderer_side">NULL</column>
+            <column name="orderer_post">NULL</column>
+            <column name="orderer_address"></column>
+            <column name="sender_name"></column>
+            <column name="sender_email"></column>
+            <column name="sender_mobile"></column>
+            <column name="sender_city">NULL</column>
+            <column name="sender_side">NULL</column>
+            <column name="sender_post">NULL</column>
+            <column name="sender_address"></column>
+            <column name="invoice">1</column>
+            <column name="transport">2</column>
+            <column name="pay">1</column>
+            <column name="reservation_sid">NULL</column>
+        </table>
         <!-- 資料表 orders_details -->
         <table name="orders_details">
             <column name="sid">1</column>
@@ -818,6 +1124,27 @@
             <column name="product_sid">44</column>
             <column name="price">9000</column>
             <column name="quantity">5</column>
+        </table>
+        <table name="orders_details">
+            <column name="sid">36</column>
+            <column name="order_sid">18</column>
+            <column name="product_sid">42</column>
+            <column name="price">27000</column>
+            <column name="quantity">1</column>
+        </table>
+        <table name="orders_details">
+            <column name="sid">37</column>
+            <column name="order_sid">18</column>
+            <column name="product_sid">2</column>
+            <column name="price">27000</column>
+            <column name="quantity">1</column>
+        </table>
+        <table name="orders_details">
+            <column name="sid">38</column>
+            <column name="order_sid">19</column>
+            <column name="product_sid">42</column>
+            <column name="price">27000</column>
+            <column name="quantity">1</column>
         </table>
         <!-- 資料表 products_category_sid -->
         <table name="products_category_sid">
@@ -3760,6 +4087,13 @@
             <column name="order_sid">16</column>
             <column name="reservation_date">2018-08-30</column>
             <column name="reservation_time">上午09：00-12：00</column>
+        </table>
+        <table name="reservation_sid">
+            <column name="reservation_sid">7</column>
+            <column name="member_sid">23</column>
+            <column name="order_sid">19</column>
+            <column name="reservation_date">2018-09-05</column>
+            <column name="reservation_time">下午13：30-17：30</column>
         </table>
     </database>
 </pma_xml_export>
