@@ -7,5 +7,4 @@ unset($_SESSION['sighup_transport']);
     unset($_SESSION['sighup_pay']);
 
 
-
 ?>

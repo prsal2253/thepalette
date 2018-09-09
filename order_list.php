@@ -104,7 +104,11 @@ foreach ($my_orders as $v) {
                                 <div class="order_listbox">
                                     <p class="description_25">訂購日期：<?= $order['order_date'] ?></p>
                                     <p class="description_25">訂單編號：000000<?= $order['orders_sid'] ?></p>
-                                    <p class="description"><span class="description_mark">訂單狀態：信用卡一次付清(已付款)</span></p>
+                                    <?php if (!empty($order['reservation_sid'])): ?>
+                                        <p class="description"><span class="description_mark">訂單狀態：預約已完成</span></p>
+                                    <?php else: ?>
+                                        <p class="description"><span class="description_mark">訂單狀態：信用卡一次付清(已付款)</span></p>
+                                    <?php endif; ?>
                                 </div>
                                 <?php
                                 foreach ($my_details as $dt):
