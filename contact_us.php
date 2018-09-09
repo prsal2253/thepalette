@@ -32,7 +32,7 @@ require __DIR__ . '/__db_connect.php';
             color: #d1c0a5;
             font-family: 'Playfair Display';
             font-weight: 700;
-            letter-spacing: 5px;
+            letter-spacing: 0.05em;
             font-size: 30px;
             line-height: 100%;
             margin-bottom: 10px;
@@ -47,7 +47,7 @@ require __DIR__ . '/__db_connect.php';
         /* contact form */
 
         .about_info {
-            margin-bottom: 21%;
+            margin-bottom: 15%;
         }
 
         .about_contact img {
@@ -58,7 +58,7 @@ require __DIR__ . '/__db_connect.php';
             font-family: 'Roboto', 'Noto Sans TC';
             position: relative;
             width: 400px;
-            margin: -45% 0 5% 65%;
+            margin: -40% 0 5% 65%;
         }
 
         .about_contact input::placeholder,
@@ -156,20 +156,20 @@ require __DIR__ . '/__db_connect.php';
 <body>
 
 <div class="index_conten">
-        <h2 class="contact_title1">CONTACT US</h2>
+        <h2 class="contact_title1">Contact Us</h2>
         <h3 class="contact_title2">聯絡我們</h3>
 
         <div class="about_contact">
             <img src="images/about/Store_Sign_Mockup.jpg" alt="">
             <div class="about_submit">
                 <form id="form" class="topBefore">
-                    <h4>THE PALETTE</h4>
+                    <h4>The Palette</h4>
                     <div class="about_info">
                         <p>台北市中山北路二段20巷2號1F</p>
                         <p>客服電話 2658-4833</p>
                         <p>營業時間 MON-SAT 11:00-21:00</p>
                     </div>
-                    <h4>GET IN TOUCH</h4>
+                    <h4>Get In Touch</h4>
                     <input id="name" type="text" placeholder="姓名">
                     <input id="email" type="text" placeholder="電子郵件">
                     <textarea id="message" type="text" placeholder="訊息"></textarea>
