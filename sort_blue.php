@@ -57,15 +57,17 @@
                 </figure>
             </div>
             <div class="sort_blue02_rec_product flex">
-                <a href="/" class="sort_blue02_rec_product_s">
+                <a href="product_quicklook.php?id=48" class="sort_blue02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue02_rec_product01 sort_blue02_rec_product_scale transition"></div>
                     <h6>Stacked System</h6>
                 </a>
-                <a href="/" class="sort_blue02_rec_product_l">
+                
+                <a href="product_quicklook.php?id=46" class="sort_blue02_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue02_rec_product02 sort_blue02_rec_product_scale transition"></div>
                     <h6>Oscar Sectional Sofa</h6>
                 </a>
-                <a href="/" class="sort_blue02_rec_product_s">
+
+                <a href="product_quicklook.php?id=38" class="sort_blue02_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue02_rec_product03 sort_blue02_rec_product_scale transition"></div>
                     <h6>Fringe Pouf</h6>
                 </a>
@@ -104,19 +106,22 @@
                 </figure>
             </div>
             <div class="sort_blue03_rec_product flex">
-                <a href="/" class="sort_blue03_rec_product_s">
+                <a href="product_quicklook.php?id=35" class="sort_blue03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue03_rec_product01 sort_blue03_rec_product_scale transition"></div>
                     <h6>Stacked System</h6>
                 </a>
-                <a href="/" class="sort_blue03_rec_product_s">
+
+                <a href="product_quicklook.php?id=49" class="sort_blue03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue03_rec_product02 sort_blue03_rec_product_scale transition"></div>
                     <h6>Stacked System</h6>
                 </a>
-                <a href="/" class="sort_blue03_rec_product_s">
+
+                <a href="product_quicklook.php?id=147" class="sort_blue03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue03_rec_product03 sort_blue03_rec_product_scale transition"></div>
                     <h6>Stacked System</h6>
                 </a>
-                <a href="/" class="sort_blue03_rec_product_s">
+
+                <a href="product_quicklook.php?id=54" class="sort_blue03_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue03_rec_product04 sort_blue03_rec_product_scale transition"></div>
                     <h6>Fringe Pouf</h6>
                 </a>
@@ -152,15 +157,15 @@
                 </figure>
             </div>
             <div class="sort_blue04_rec_product flex">
-                <a href="/" class="sort_blue04_rec_product_s">
+                <a href="product_quicklook.php?id=64" class="sort_blue04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue04_rec_product01 sort_blue04_rec_product_scale transition"></div>
                     <h6>Stacked System</h6>
                 </a>
-                <a href="/" class="sort_blue04_rec_product_l">
+                <a href="product_quicklook.php?id=123" class="sort_blue04_rec_product_l quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue04_rec_product02 sort_blue04_rec_product_scale transition"></div>
                     <h6>Oscar Sectional Sofa</h6>
                 </a>
-                <a href="/" class="sort_blue04_rec_product_s">
+                <a href="product_quicklook.php?id=69" class="sort_blue04_rec_product_s quick_look_palette_btn" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :"70vh"}}}'>
                     <div class="sort_blue04_rec_product03 sort_blue04_rec_product_scale transition"></div>
                     <h6>Fringe Pouf</h6>
                 </a>
