@@ -42,10 +42,27 @@ if(!empty($_SESSION['cart'])): ?>
         </div>
     <?php endforeach; ?>
 
-    <div class="check_outbox"><a class="check_out" href="/thepalette/thepalette/shoppingcar_01.php">CHECK OUT</a></div>
+    <div class="check_outbox"><a class="check_out" href="../thepalette/shoppingcar_01.php">CHECK OUT</a></div>
 
 <?php else: ?><!-- 購物車沒有商品時的狀態 -->
     <div class="order_listbox carts_none">
         <h3>購物車目前沒有任何商品</h3>
     </div>
 <?php endif ?>
+
+<script>
+
+
+    $('.icon_garbage').click(function () {
+        var tr = $(this).closest('.order_listbox');
+        var sid = tr.attr('data-sid');
+        console.log(sid);
+        //    氣泡事件
+        $.get('/thepalette/thepalette/page_item/header_api.php', {sid: sid}, function (data) {
+            tr.remove();//要等ajax回來才可以做刪除動作
+            window.changeQty(data);
+        }, 'json');
+
+
+    });
+</script>

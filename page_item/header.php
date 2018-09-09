@@ -200,7 +200,7 @@ if (!empty($_SESSION['cart'])) {
     $(".car_icon").click(function () {
         $(this).parents().find(".car_iconhover").toggleClass("menu_active");
         //即時更新
-        $.get('./page_item/header_api.php', function (data) {
+        $.get('/thepalette/thepalette/page_item/header_api.php', function (data) {
             $('.car_iconhover').html(data);
         }, 'text');
     });
@@ -267,7 +267,7 @@ if (!empty($_SESSION['cart'])) {
     };
 
     var changeSmallCart = function () {
-        $.get('./page_item/header_api.php', function (data) {
+        $.get('/thepalette/thepalette/page_item/header_api.php', function (data) {
             $('.car_iconhover').html(data);
         }, 'text');
     };
@@ -284,12 +284,17 @@ if (!empty($_SESSION['cart'])) {
         var sid = tr.attr('data-sid');
         e.stopPropagation();
         //    氣泡事件
-        $.get('./page_item/header_api.php', {sid: sid}, function (data) {
+        $.get('/thepalette/thepalette/page_item/header_api.php', {sid: sid}, function (data) {
             tr.remove();//要等ajax回來才可以做刪除動作
             window.changeQty(data);
         }, 'json');
 
     });
+
+
+
+
+
 
      (function () {
         window.alert = function (text) {
