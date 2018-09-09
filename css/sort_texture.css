@@ -118,7 +118,7 @@
     height: 100%;
     width: 60%;
     overflow: hidden;
-    background: url(../images/H-other-chair-09.png) no-repeat center center;
+    background: url(../images/H-other-chair-09.png) no-repeat right 95%
     background-size: cover;
 }
 .sort_texture02_intro_l_txt>h3{
@@ -188,12 +188,12 @@
 }
 .sort_texture02_rec_product01{
     height: 80%;
-    background: url(../images/H-other-table-05.png) no-repeat center center;
-    background-size: contain;
+    background: url(../images/H-other-table-06.png) no-repeat center center;
+    background-size: cover;
 }
 .sort_texture02_rec_product02{
     height: 80%;
-    background: url(../images/H-other-table-06.png) no-repeat center center;
+    background: url(../images/H-other-table-05.png) no-repeat center center;
     background-size: cover;
 }
 .sort_texture02_rec_product03{
