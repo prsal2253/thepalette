@@ -19,6 +19,7 @@ require __DIR__. '/__db_connect.php';
         <?php include 'page_item/head.php';?>
     </div>
 <div class="index_footer"></div>
+</body>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 <script>
