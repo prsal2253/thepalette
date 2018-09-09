@@ -314,9 +314,9 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 .filter_color_box {  width: 30px;  height: 30px;  border:3px solid #000; border-radius: 50%;  margin: 60px auto 15px auto;transition: all .5s;}
 .filter_color_box:hover{cursor: pointer;border:3px solid #fff; }
 .filter_color_in { margin: 0 0 0 80px;  color: #999;}
-.filter_color1 { background-color: #662424;}
-.filter_color2 { background-color: #ad776c;}
-.filter_color3 { background-color: #a4594a;}
+.filter_color1 { background-color: #802929;}
+.filter_color2 { background-color: #D79180;}
+.filter_color3 { background-color: #c55638;}
 .filter_color4{background-color: rgb(46, 69, 83);}
 .filter_color5{background-color: rgb(86, 128, 128);}
 .filter_color6{background-color: rgb(216, 157, 84);}
@@ -330,7 +330,7 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 
 .filter_item li { margin: 50px 10px 0 0;  padding: 10px 30px;  border-radius: 20px;  border: 1px solid #000;}
 .filter_item p{ color: rgb(240, 240, 240); letter-spacing: 0.3em;  text-align: center;  font-weight: 400;  line-height: 25px;  font-size: 15px;  margin-top: 10px;}
-.filter_item li:hover { border-radius: 20px; border: 1px solid #999;  cursor: pointer;}
+/* .filter_item li:hover { border-radius: 20px; border: 1px solid #999;  cursor: pointer;} */
 .filter_item figure{  width: 80px;  height: 80px;  margin-top: 10px;}
 .filter_item01 figure{ background: url(../images/icon/filter_chair.svg) no-repeat center center;  background-size: cover;}
 .filter_item02 figure{  background: url(../images/icon/filter_table.svg) no-repeat center center;  background-size: cover;}
