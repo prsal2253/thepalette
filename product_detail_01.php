@@ -126,7 +126,8 @@ if(isset($_GET['id'])) {
                                 <?php endforeach; ?>
                             </div>
                         <?php else:?>
-                            <div></div>
+                            <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                            <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
                         <?php endif;?>
                     </div>
                     <div class="product_detail_01_btns flex">
