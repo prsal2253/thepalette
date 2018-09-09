@@ -160,7 +160,7 @@ require __DIR__ . '/__db_connect.php';
         <h3 class="contact_title2">聯絡我們</h3>
 
         <div class="about_contact">
-            <img src="images/about/41652301865_d68404f4ec_k.jpg" alt="">
+            <img src="images/about/Store_Sign_Mockup.jpg" alt="">
             <div class="about_submit">
                 <form id="form" class="topBefore">
                     <h4>THE PALETTE</h4>

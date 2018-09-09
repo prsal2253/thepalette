@@ -1044,7 +1044,7 @@ require __DIR__ . '/__db_connect.php';
                     <h2>CONTACT US</h2>
                     <h3>聯絡我們</h3>
 
-                    <img src="images/about/41652301865_d68404f4ec_k.jpg" alt="">
+                    <img src="images/about/Store_Sign_Mockup.jpg" alt="">
 
 
                     <div class="about_submit">

@@ -54,7 +54,7 @@ if (!empty($_SESSION['cart'])) {
             <div id="all" class="ranking_box selected">
                 <div class="all_box">
                     <h2>最新活動</h2>
-                    <img src="../thepalette/images/banner/blaise_desktop_1.jpg" alt=""></div>
+                    <img src="../thepalette/images/about/Store_Sign_Mockup.jpg" alt=""></div>
             </div>
             <!-- product -->
             <div class="ranking_box" id="collections">
