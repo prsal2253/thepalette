@@ -328,9 +328,9 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 .filter_color12{background-image: url(../images/banner/tin_texture.jpg);}
 .filter_color13{background-image: url(../images/banner/marble_bg.jpg);}
 
-.filter_item li { margin: 50px 10px 0 0;  padding: 10px 30px;  border-radius: 20px;  border: 1px solid #000;}
+.filter_item li { margin: 50px 10px 0 0;  padding: 10px 30px;  border-radius: 20px;  border: 1px solid #000; cursor: pointer;}
 .filter_item p{ color: rgb(240, 240, 240); letter-spacing: 0.3em;  text-align: center;  font-weight: 400;  line-height: 25px;  font-size: 15px;  margin-top: 10px;}
-/* .filter_item li:hover { border-radius: 20px; border: 1px solid #999;  cursor: pointer;} */
+.filter_item li:hover { border-radius: 20px; border: 1px solid #999;  cursor: pointer;}
 .filter_item figure{  width: 80px;  height: 80px;  margin-top: 10px;}
 .filter_item01 figure{ background: url(../images/icon/filter_chair.svg) no-repeat center center;  background-size: cover;}
 .filter_item02 figure{  background: url(../images/icon/filter_table.svg) no-repeat center center;  background-size: cover;}
