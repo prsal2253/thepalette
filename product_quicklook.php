@@ -79,7 +79,7 @@ if(isset($_GET['id'])) {
 .s_star{
     width: 75px;
     height: 15px;
-    background: url(images/icon/star.svg) repeat left center;
+    background: url(images/icon/star.svg) no-repeat left center;
     background-size: contain;
 }
 .product_quicklook_image{
