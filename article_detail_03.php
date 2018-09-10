@@ -340,7 +340,7 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">SOFT EDGE 12 CHAIR</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
@@ -359,11 +359,11 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">Circa Light</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
-                                    <a href="product_quicklook.php?id=8" class="palette_btn quick_look_palette_btn quick"
+                                    <a href="product_quicklook.php?id=151" class="palette_btn quick_look_palette_btn quick"
                                        data-fancybox
                                        data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "1000px","height" :
                                    "70vh"}}}'>快速查看</a>
@@ -378,7 +378,7 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">Oal Chair</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
@@ -397,7 +397,7 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">Z Rack Oak</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>

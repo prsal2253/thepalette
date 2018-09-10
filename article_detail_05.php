@@ -341,7 +341,7 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">SIRO+ CHAIR</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
@@ -360,7 +360,7 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">Volume Lamp</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
@@ -379,7 +379,7 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">Mini Scented Candle</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
@@ -398,7 +398,7 @@ require __DIR__ . '/__db_connect.php';
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3">
-                                        <a href="#">Arch Zen Chair</a>
+                                        <a href="#">Oal Chair</a>
                                     </h3>
                                 </div>
                                 <div class="product_btn"></div>
