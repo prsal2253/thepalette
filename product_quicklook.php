@@ -194,6 +194,7 @@ if(isset($_GET['id'])) {
     }
     .color8{
         background-color: white;
+        border: 2px solid #f0f0f0
     }
     .color9{
         background-color: #999;
