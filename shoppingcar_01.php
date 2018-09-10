@@ -158,13 +158,13 @@ if (!empty($_SESSION['cart'])) {
                            href="#"
                            title="付款說明">?</a>
                            <div style="display: none;" id="modal2">
-                           Ｔhe Palette 目前採用三種付款方式，且線上刷卡部分由安全且具公信力的網上金流公司處理，讓您的個人資訊安全不外洩! 確保您交易安全!
+                           <p>Ｔhe Palette 目前採用三種付款方式，且線上刷卡部分由安全且具公信力的網上金流公司處理，讓您的個人資訊安全不外洩! 確保您交易安全!
                            <br/>1. 線上匯款
                            <br/>匯款帳號會是亂數產生，完成訂單後將產生專屬於您匯款帳號
                            <br/>若我們收到您的訂單三天內，未收到您的付款以及匯款回報，我們將去電詢問您是否要去取消該筆訂單。
                            <br/>2. 信用卡 一次付清/分期付款
                            <br/>分期付款利率及配合銀行請查訊分期付款銀行
-                           <br/>如有任何問題可電洽客服專線0800-060-085，或利用線上客服 聯繫，將由專人為您服務。
+                           <br/>如有任何問題可電洽客服專線0800-060-085，或利用線上客服 聯繫，將由專人為您服務。</p>
                             </div>
                         </div>
                     <div class="order_listbox">
@@ -175,10 +175,10 @@ if (!empty($_SESSION['cart'])) {
                             <input type="radio" name="pay" value="2"><span class="radio_content">信用卡分期付款</span><span
                                     data-fancybox data-src="#modal" class="description_mark">分期銀行</span>
                             <div style="display: none;" id="modal">
-                                <p>You are awesome!</p>
-                                <p>You are awesome!</p>
-                                <p>You are awesome!</p>
-                                <p>You are awesome!</p>
+                                <p>3期0利率32家</p>
+                                <p>6期0利率32家</p>
+                                <p>10期0利率27家</p>
+                                <p>12期0利率11家</p>
                             </div>
                         </div>
                         <div class="radio_box">
@@ -197,12 +197,13 @@ if (!empty($_SESSION['cart'])) {
                            href="#"
                            title="運送說明">?</a>
                            <div style="display: none;" id="modal3">
-                           Ｔhe Palette 目前採用兩種運送方式
+                           <p>Ｔhe Palette 目前採用兩種運送方式
                            <br/>1. 到店自取
                            <br/>訂單付款完成後，我們會告知備貨天數即商品預計到達時間，再請於七天內來店取貨
                            <br/>2. 貨運
                            <br/>Ｔhe Palette 使用最新貨運預約系統，當您完成付款後可於訂單詳細前往貨運預約，詳細預約流程請查詢預約流程
                            <br/>如有任何問題可電洽客服專線0800-060-085，或利用線上客服 聯繫，將由專人為您服務。
+                            </p>
                             </div>
                         </div>
                     <div class="order_listbox">

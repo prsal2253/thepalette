@@ -340,7 +340,7 @@ $product_act = $mysqli->query($sqact);
                     <h3 style="font-size: 16px;"><?= $r['product_name'] ?></h3>
                     <h3>$<?= $r['price'] ?></h3>
                     <div class="palette_select member_input40 flex">
-                        <select>
+                        <select class="qty">
                             <option value="">0</option>
                             <option value="">1</option>
                             <option value="">2</option>
