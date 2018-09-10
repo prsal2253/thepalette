@@ -1,23 +1,23 @@
 <?php
 
-if (!empty($_SESSION['cart'])) {
-    $keys = array_keys($_SESSION['cart']);
-//字面上意思是拿到$_SESSION['cart']所有的key
-    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
-    //IN (這邊要塞sid逗號隔開)
-//黏著符號js叫做join()
-//php叫做implode
-//SELECT * FROM `products_list` WHERE `product_sid` IN (1,2)
-    $rs = $mysqli->query($sql);
-
-    $data = [];
-
-    while ($r = $rs->fetch_assoc()) {
-        $r['qty'] = $_SESSION['cart'][$r['product_sid']];
-
-        $data[$r['product_sid']] = $r;
-    }
-}
+//if (!empty($_SESSION['cart'])) {
+//    $keys = array_keys($_SESSION['cart']);
+////字面上意思是拿到$_SESSION['cart']所有的key
+//    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
+//    //IN (這邊要塞sid逗號隔開)
+////黏著符號js叫做join()
+////php叫做implode
+////SELECT * FROM `products_list` WHERE `product_sid` IN (1,2)
+//    $rs = $mysqli->query($sql);
+//
+//    $data = [];
+//
+//    while ($r = $rs->fetch_assoc()) {
+//        $r['qty'] = $_SESSION['cart'][$r['product_sid']];
+//
+//        $data[$r['product_sid']] = $r;
+//    }
+//}
 ?>
 <header><h1><a href="index.php"><img src="../thepalette/images/logo/logo_white-01.svg" alt=""></a></h1></header>
 
