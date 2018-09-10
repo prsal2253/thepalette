@@ -389,6 +389,12 @@ require __DIR__ . '/__db_connect.php';
 <script type="text/javascript" src="js/slider.js"></script>
 <script>
 
+        // 影片loop
+        $('video').on('ended', function () {
+            this.load();
+            this.play();
+        });
+
         $(function() {
         Slider.init();
          });
