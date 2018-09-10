@@ -27,5 +27,6 @@
     <link rel="stylesheet" href="js/swiper/css/swiper.min.css">
     <!-- article -->
     <link rel="stylesheet" href="css/article.css">
+    <link rel="icon" href="../thepalette/images/logo/logo-03.svg"" type="image/x-icon" />
 
 
