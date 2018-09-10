@@ -150,7 +150,7 @@ header h1 img{ width: 100%;height: auto;}
 .ranking_box {width: 100%;height:0%; color: #fff;padding: 0px 0; text-align: center;opacity: 0;transition: all .8s;overflow: hidden;}
 .ranking_box>div{width:90%;margin: 0 auto;}
 .ranking_box>div>h2{display: block;width: 100%;margin:10px auto 50px;color: #fff;font-size: 25px;font-family: 'SourceHanSerifTC-SemiBold';text-align: left;line-height: 25px;}
-.ranking_box img{width: 100%;height: auto;}
+.ranking_box img{width: 100%; height: 450px; object-fit: cover;}
 .ranking_box.selected{opacity: 1;height:90%;}
 /* all */
 .all_box{}

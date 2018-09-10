@@ -35,7 +35,7 @@ if (!empty($_SESSION['cart'])) {
                 <li class="selected" data-id="all">
                     <a href="../thepalette/index.php"><span>Home</span>首頁</a>
                 </li>
-                <li data-id="all">
+                <li data-id="about">
                     <a href="../thepalette/about.php"><span>About Us</span>關於我們</a>
                 </li>
                 <li data-id="collections">
@@ -54,7 +54,7 @@ if (!empty($_SESSION['cart'])) {
             <div id="all" class="ranking_box selected">
                 <div class="all_box">
                     <h2>最新活動</h2>
-                    <img src="../thepalette/images/about/Store_Sign_Mockup.jpg" alt=""></div>
+                    <img src="../thepalette/images/banner/activity01.jpg" alt=""></div>
             </div>
             <!-- product -->
             <div class="ranking_box" id="collections">
@@ -110,6 +110,12 @@ if (!empty($_SESSION['cart'])) {
                         </h3>
                     </a>
                 </div>
+            </div>
+            <!-- about us -->
+            <div class="ranking_box" id="about">
+            <div class="all_box">
+                    <h2>關於我們</h2>
+            <img src="../thepalette/images/about/Store_Sign_Mockup.jpg" alt=""></div>
             </div>
             <!-- icon list -->
             <div class="menu_iconbar">

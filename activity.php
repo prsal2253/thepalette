@@ -30,14 +30,14 @@ require __DIR__ . '/__db_connect.php';
             right: 0;
             position: absolute;
             width: 200px;
-            height: 180px;
+            height: 200px;
             background: #739eb6;
         }
         .mark_box2 {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 180px;
+            height: 171px;
             background: #22394b;
         }
         .mark_title {
@@ -48,7 +48,7 @@ require __DIR__ . '/__db_connect.php';
         .mark_title_box {
             width: 100%;
             margin-top: 280px;
-            padding: 10% 5% 10% 20%;
+            padding: 16% 5% 10% 20%;
         }
         .mark_title h2 {
             font-family: 'SourceHanSerifTC-Bold';
@@ -60,16 +60,16 @@ require __DIR__ . '/__db_connect.php';
         .mark_title h3 {
             font-family: 'SourceHanSerifTC-Bold';
             letter-spacing: 5px;
-            font-size: 35px;
+            font-size: 30px;
             line-height: 20px;
-            border-bottom: 15px solid #97b189;
-            margin-top: 40px;
-            width: 420px
+            border-bottom: 10px solid #97b189;
+            margin-top: 33px;
+            width: 365px;
         }
         .mark_title p {
             font-family: 'SourceHanSerifTC-Bold';
             letter-spacing: 5px;
-            font-size: 25px;
+            font-size: 23px;
             line-height: 25px;
             margin-top: 15px;
             color: #444;
@@ -78,7 +78,7 @@ require __DIR__ . '/__db_connect.php';
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 720px;
+            height: 700px;
             object-fit: cover;
         }
         .mark_sale,
@@ -87,16 +87,16 @@ require __DIR__ . '/__db_connect.php';
             z-index: 11;
             font-family: 'SourceHanSerifTC-Bold';
             letter-spacing: 5px;
-            font-size: 40px;
-            line-height: 50px;
+            font-size: 30px;
+            line-height: 35px;
             color: #739eb6;
         }
         .mark_sale {
-            margin: 480px 0 0 70px;
+            margin: 420px 0 0 110px;
         }
         .mark_sale1 {
             transform: rotate(-90deg);
-            margin: 235px 0 0 730px;
+            margin: 340px 0 0 697px;
         }
         .mark_img_light,
         .mark_img_light_sm {
@@ -113,13 +113,14 @@ require __DIR__ . '/__db_connect.php';
             width: 180px;
         }
         .mark_help {
-            font-size: 12px;
-            font-weight: 400;
+            font-size: 10px;
+            font-weight: 100;
+            color:#fff;
         }
         .mark_help_box {
             position: absolute;
             bottom: 0;
-            padding: 5px;
+            padding: 0 0 5px 15px;
             z-index: 11;
         }
         /* 篩選器 */
@@ -311,10 +312,10 @@ require __DIR__ . '/__db_connect.php';
                             <p style="color:#fff">SALE</p>
                         </div>
                         <div class="mark_sale1">
-                            <p>SALE</p>
                             <p style="color:#fff">SALE</p>
+                            <p>SALE</p>
                         </div>
-                        <img class="mark_img1" src="./images/banner/Fogia_2016_212_FIX.jpg" alt="商品促銷">
+                        <img class="mark_img1" src="./images/banner/Fogia_2016_212_FIX01.jpg" alt="商品促銷">
 
                         <div class="mark_help_box">
                             <p class="mark_help">下單前請務必先參考商品尺寸表及顏色，挑選適合您的品項，避免因尺寸不合退貨造成您無法符合優惠資格。</p>
