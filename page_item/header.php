@@ -1,23 +1,23 @@
 <?php
 
-if (!empty($_SESSION['cart'])) {
-    $keys = array_keys($_SESSION['cart']);
-//字面上意思是拿到$_SESSION['cart']所有的key
-    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
-    //IN (這邊要塞sid逗號隔開)
-//黏著符號js叫做join()
-//php叫做implode
-//SELECT * FROM `products_list` WHERE `product_sid` IN (1,2)
-    $rs = $mysqli->query($sql);
-
-    $data = [];
-
-    while ($r = $rs->fetch_assoc()) {
-        $r['qty'] = $_SESSION['cart'][$r['product_sid']];
-
-        $data[$r['product_sid']] = $r;
-    }
-}
+//if (!empty($_SESSION['cart'])) {
+//    $keys = array_keys($_SESSION['cart']);
+////字面上意思是拿到$_SESSION['cart']所有的key
+//    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
+//    //IN (這邊要塞sid逗號隔開)
+////黏著符號js叫做join()
+////php叫做implode
+////SELECT * FROM `products_list` WHERE `product_sid` IN (1,2)
+//    $rs = $mysqli->query($sql);
+//
+//    $data = [];
+//
+//    while ($r = $rs->fetch_assoc()) {
+//        $r['qty'] = $_SESSION['cart'][$r['product_sid']];
+//
+//        $data[$r['product_sid']] = $r;
+//    }
+//}
 ?>
 <header><h1><a href="index.php"><img src="../thepalette/images/logo/logo_white-01.svg" alt=""></a></h1></header>
 
@@ -95,15 +95,15 @@ if (!empty($_SESSION['cart'])) {
 
                 <div class="menu_articlesbox">
                     <h2>最新專欄</h2>
-                    <a class="menu_articles" href="#">
-                        <figure><img src="../thepalette/images/article/35653610953_0bab2c8b03_k.jpg" alt=""></figure>
+                    <a class="menu_articles" href="article_detail_05.php">
+                        <figure><img src="../thepalette/images/article/Skærmbillede-2018-07-04-kl.-14.08.04-1024x763.png" style="height:auto" alt=""></figure>
                         <h3 class="menuarticles_titlebox">
                             <span class="menuarticles_time">2018 JUN 20</span>
-                            <span class="menuarticles_title">不再盲目追逐流行：藏於細節裡的時尚感。</span>
+                            <span class="menuarticles_title">7個裝潢提案，改造成宜人居住的美妙空間</span>
                         </h3>
                     </a>
-                    <a class="menu_articles" href="#">
-                        <figure><img src="../thepalette/images/article/19685713975_2af3c54b73_k.jpg" alt=""></figure>
+                    <a class="menu_articles" href="article_detail_04.php">
+                        <figure><img src="../thepalette/images/article/19685713975_2af3c54b73_k.jpg" style="height:auto" alt=""></figure>
                         <h3 class="menuarticles_titlebox">
                             <span class="menuarticles_time">2018 JUN 11</span>
                             <span class="menuarticles_title">兩種英式宅風格，獻給嚮往英倫風格的你</span>
