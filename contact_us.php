@@ -154,7 +154,6 @@ require __DIR__ . '/__db_connect.php';
 
 </head>
 <body>
-
 <div class="index_conten">
         <h2 class="contact_title1">Contact Us</h2>
         <h3 class="contact_title2">聯絡我們</h3>
@@ -178,6 +177,5 @@ require __DIR__ . '/__db_connect.php';
         </div>
 </div>
 <img src="images/about/store.png" style="width: 100%;" alt="">
-
 </body>
 </html>

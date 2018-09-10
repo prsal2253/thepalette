@@ -375,10 +375,11 @@ require __DIR__ . '/__db_connect.php';
             </div>
         </section>
     </div>
-</div>
-
+    
 <!-- 聯絡我們 -->
 <?php include 'contact_us.php';?>
+</div>
+
 
 <!-- footer -->
 <div class="index_footer">
