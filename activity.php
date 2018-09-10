@@ -48,7 +48,7 @@ require __DIR__ . '/__db_connect.php';
         .mark_title_box {
             width: 100%;
             margin-top: 280px;
-            padding: 40px;
+            padding: 10% 5% 10% 20%;
         }
         .mark_title h2 {
             font-family: 'SourceHanSerifTC-Bold';
@@ -330,80 +330,104 @@ require __DIR__ . '/__db_connect.php';
             <div class="index_conten_flex mark_all">
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-blue-chair-14.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Zig Zag Chair</h3>
+                    <h3>$61500</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-grey-chair-05.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>SIRO+ CHAIR</h3>
+                    <h3>$21200</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-pink-chair-08.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>SOFT EDGE 12 CHAIR</h3>
+                    <h3>$75300</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-other-table-08.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>HALLWAY TABLE</h3>
+                    <h3>$25600</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-blue-chair-09.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Outline Sofa</h3>
+                    <h3>$62900</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-white-chair-03.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Edition Chair</h3>
+                    <h3>$23000</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-green-chair-07.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>ARMCHAIR HALLWAY</h3>
+                    <h3>$24200</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
@@ -414,8 +438,8 @@ require __DIR__ . '/__db_connect.php';
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-blue-chair-03.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Edition Chair</h3>
+                    <h3>$47000</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
@@ -426,60 +450,80 @@ require __DIR__ . '/__db_connect.php';
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-grey-chair-06.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Hal Stackable Chair</h3>
+                    <h3>$15500</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-pink-chair-06.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>SOFT EDGE 12 CHAIR</h3>
+                    <h3>$35400</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-green-table-01.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Lau Square Table</h3>
+                    <h3>$30300</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-white-table-03.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Kazimir Table</h3>
+                    <h3>$21500</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-other-table-09.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>HALLWAY TABLE</h3>
+                    <h3>$25600</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
@@ -492,30 +536,42 @@ require __DIR__ . '/__db_connect.php';
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-bottle-01.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>VASE</h3>
+                    <h3>$5500</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
                 </div>
                 <div class="mark_product">
                     <img class="mark_img2" src="images/H-pink-chair-02.png" alt="">
-                    <h3>商品名稱</h3>
-                    <h3>$26000</h3>
+                    <h3>Edition Chair</h3>
+                    <h3>$40400</h3>
                     <div class="palette_select member_input40 flex">
                         <select>
                             <option value="">0</option>
                             <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
                         </select>
                         <button>選購</button>
                     </div>
