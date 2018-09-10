@@ -11,17 +11,23 @@ if (empty($_SESSION['user'])) {
 };
 //print_r($_SESSION['user']['member_sid']);
 ?>
-<?php include 'page_item/head.php';?>
-    <style>
-        small{
-            display: none;font-size: 13px;line-height: 13px;margin: 12px 0 0 0;padding: 0 0 0 20px; color: #df9282; letter-spacing: .2em;
-        }
-    </style>
+<?php include 'page_item/head.php'; ?>
+<style>
+    small {
+        display: none;
+        font-size: 13px;
+        line-height: 13px;
+        margin: 12px 0 0 0;
+        padding: 0 0 0 20px;
+        color: #df9282;
+        letter-spacing: .2em;
+    }
+</style>
 </head>
 <body id="member" class="member_profile">
- <!-- top -->
- <div class="index_top">
-    <?php include 'page_item/header.php';?> 
+<!-- top -->
+<div class="index_top">
+    <?php include 'page_item/header.php'; ?>
 </div>
 <div class="index_main">
     <!-- 麵包屑 -->
@@ -36,11 +42,13 @@ if (empty($_SESSION['user'])) {
         <div class="index_conten_flex">
             <div class="index_conten_l">
                 <div class="item_01">
-                    <div class="item_01menu"><a href="order_list.php"><h6 class="transition">訂單列表</h6><span class="transition">Order List</span></a>
+                    <div class="item_01menu"><a href="order_list.php"><h6 class="transition">訂單列表</h6><span
+                                    class="transition">Order List</span></a>
                     </div>
                     <div class="item_01menu item_01menu_in"><h6 class="transition">會員資料</h6><span class="transition">member profile</span>
                     </div>
-                    <div class="item_01menu"><a href="favorite_list.php"><h6 class="transition">追蹤清單</h6><span class="transition">my favourite</span></a>
+                    <div class="item_01menu"><a href="favorite_list.php"><h6 class="transition">追蹤清單</h6><span
+                                    class="transition">my favourite</span></a>
                     </div>
                 </div>
             </div>
@@ -69,11 +77,12 @@ if (empty($_SESSION['user'])) {
                                 <div class="item_02_conten_l">會員名稱</div>
                                 <div class="item_02_conten_r">
                                     <input class="member_name" type="text" name="name"
-                                           placeholder="請輸入會員名稱" value=" <?= $_SESSION['user']['name'] ?>">
+                                           placeholder="請輸入會員名稱" value="<?= $_SESSION['user']['name'] ?>">
                                     <!-- 需判斷兩者只能選填一個預設為Ｍ -->
-                                    <?php if (($_SESSION['user']['gender']) === 0): ?>
+                                    <?php if (($_SESSION['user']['gender']) == 0): ?>
                                         <div class="radio_box">
-                                            <input type="radio" name="gender" value="1" ><span class="radio_content">先生</span>
+                                            <input type="radio" name="gender" value="1"><span
+                                                    class="radio_content">先生</span>
                                         </div>
                                         <div class="radio_box">
                                             <input type="radio" name="gender" value="0" checked><span
@@ -83,7 +92,8 @@ if (empty($_SESSION['user'])) {
                                             <input type="radio" name="gender" value="1" checked><span
                                                     class="radio_content">先生</span></div>
                                         <div class="radio_box">
-                                            <input type="radio" name="gender" value="0" ><span class="radio_content">小姐</span>
+                                            <input type="radio" name="gender" value="0"><span
+                                                    class="radio_content">小姐</span>
                                         </div>
                                     <?php endif ?>
                                 </div>
@@ -160,7 +170,7 @@ if (empty($_SESSION['user'])) {
                                     </div>
                                 </div>
                                 <div class="item_02_conten">
-                                    <input type="submit" id="submit_btn" value="確認修改" onclick="location.href=#">
+                                    <input type="submit" id="submit_btn" value="確認修改">
                                     <p class="submit_point">會員資料修改完成後請點選確認修改</p>
                                 </div>
                         </form>
@@ -174,17 +184,21 @@ if (empty($_SESSION['user'])) {
 <script>
 
     function checkForm() {
-        console.log( $(document.form1).serialize() );
-        $.post('member_profile_api.php', $(document.form1).serialize(), function(data){
+        // console.log($(document.form1).serialize());
+        $.post('member_profile_api.php', $(document.form1).serialize(), function (data) {
             if (data.success) {
-                console.log(data);
-                alert('會員資料已更新！');
+
+                alert('會員資料已更新，一秒後更新資料！');
+                // console.log(data);
+                setTimeout(function(){
+                    location.href = location.href ;
+                }, 1000);
             } else {
                 alert('更新失敗！請再試一次');
                 $('#total_howmuch').text($(".howmuch").length);
             }
         }, 'json');
-
+return false;
     };
 </script>
 
@@ -313,7 +327,7 @@ if (empty($_SESSION['user'])) {
 <!--    年月日選項E -->
 <!-- footer -->
 <div class="index_footer">
-<?php include 'page_item/footer.php';?>
+    <?php include 'page_item/footer.php'; ?>
 </div>
 </body>
 </html>

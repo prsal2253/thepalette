@@ -40,7 +40,7 @@ if (isset($_SESSION['user'])) {
     $af = $stmt->affected_rows;
     $stmt->close();
     $user = $mysqli->query($sql_user);
-    if ($af == 1) {
+    if ($af === 1) {
 
         $_SESSION['user'] = $user->fetch_assoc();
         $result['success'] = true;
