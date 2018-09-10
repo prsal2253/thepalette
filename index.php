@@ -102,6 +102,7 @@ require __DIR__ . '/__db_connect.php';
     <section id="index02">
         <div class="index_conten index02">
             <div class="index02_video">
+            <video src="images/background/796977780.mp4" autoplay></video>
                 <div class="index02_video_txt">
                     <figure></figure>
                     <h2>Better Living Through Color</h2>
@@ -322,7 +323,7 @@ require __DIR__ . '/__db_connect.php';
                         <img src="images/H-red-chair-06.png" alt="" class="index03_right04_box">
                     </div>
                     <div class="right04_hide_bg transition"></div>
-                </div>
+</a>
 
                 <div class="index03_right05 index03_400">
                     <!-- Swiper -->
