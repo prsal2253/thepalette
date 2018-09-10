@@ -187,7 +187,12 @@ if (isset ($_SESSION['user'])) {
                     <div name="product" class="sort_red05_box_s product_sid_data product-item" data-sid="<?= $r['product_sid'] ?>">
                         <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                         <div class="product_mask transition">
-                            <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?>transition"></div>
+                            <div class="product_favorate
+
+                            <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?>
+
+
+                            transition"></div>
                             <div class="product_name_nd_btn">
                                 <div class="product_name">
                                     <h3 class="product_name_h3"><a href="#"

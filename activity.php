@@ -175,6 +175,7 @@ $product_act = $mysqli->query($sqact);
         .mark_product div select {
             width: 45%;
             border-radius: 31px;
+            margin-top: 10px;
         }
         .mark_product div button {
             padding: 0 15px;
@@ -275,7 +276,13 @@ $product_act = $mysqli->query($sqact);
             width: 250px;
             position: absolute;
         }
+        .bored_act{
+            border: 1px white solid;
+        }
+        .bored_act_bl{
+            border: 1px gray solid;
 
+        }
     </style>
 </head>
 
@@ -284,7 +291,7 @@ $product_act = $mysqli->query($sqact);
 
  <!-- top -->
  <div class="index_top">
-    <?php include 'page_item/header.php';?> 
+    <?php include 'page_item/header.php';?>
 </div>
 
     <!-- main -->
@@ -335,263 +342,41 @@ $product_act = $mysqli->query($sqact);
         <section class="item_34">
             <div class="index_conten_flex mark_all">
                 <?php while ($r = $product_act->fetch_assoc()): ?>
-                <div class="mark_product" data-sid="<?= $r['product_sid'] ?>">
-                    <img class="mark_img2" src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
+
+                <div class="mark_product bored_act
+
+
+                 <?= isset($_SESSION['act'][$r['product_sid']]) ? 'bored_act_bl':'' ?>
+
+
+
+                 transition" data-sid="<?= $r['product_sid'] ?>">
+
+
+                    <a href="product_quicklook.php?id=<?= $r['product_sid'] ?>" target="_blank">
+                        <img class="mark_img2" src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                     <h3 style="font-size: 16px;"><?= $r['product_name'] ?></h3>
+                    </a>
                     <h3>$<?= $r['price'] ?></h3>
                     <div class="palette_select member_input40 flex">
                         <select class="qty">
-                            <option value="">0</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
-                        <button>選購</button>
+                        <button class="add_to_cart">選購</button>
                     </div>
                 </div>
                 <?php endwhile; ?>
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-grey-chair-05.png" alt="">-->
-<!--                    <h3>SIRO+ CHAIR</h3>-->
-<!--                    <h3>$21200</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-pink-chair-08.png" alt="">-->
-<!--                    <h3>SOFT EDGE 12 CHAIR</h3>-->
-<!--                    <h3>$75300</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-other-table-08.png" alt="">-->
-<!--                    <h3>HALLWAY TABLE</h3>-->
-<!--                    <h3>$25600</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-blue-chair-09.png" alt="">-->
-<!--                    <h3>Outline Sofa</h3>-->
-<!--                    <h3>$62900</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-white-chair-03.png" alt="">-->
-<!--                    <h3>Edition Chair</h3>-->
-<!--                    <h3>$23000</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-green-chair-07.png" alt="">-->
-<!--                    <h3>ARMCHAIR HALLWAY</h3>-->
-<!--                    <h3>$24200</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-blue-chair-03.png" alt="">-->
-<!--                    <h3>Edition Chair</h3>-->
-<!--                    <h3>$47000</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-grey-chair-06.png" alt="">-->
-<!--                    <h3>Hal Stackable Chair</h3>-->
-<!--                    <h3>$15500</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-pink-chair-06.png" alt="">-->
-<!--                    <h3>SOFT EDGE 12 CHAIR</h3>-->
-<!--                    <h3>$35400</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-green-table-01.png" alt="">-->
-<!--                    <h3>Lau Square Table</h3>-->
-<!--                    <h3>$30300</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-white-table-03.png" alt="">-->
-<!--                    <h3>Kazimir Table</h3>-->
-<!--                    <h3>$21500</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-other-table-09.png" alt="">-->
-<!--                    <h3>HALLWAY TABLE</h3>-->
-<!--                    <h3>$25600</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-grey-chair-04.png" alt="">-->
-<!--                    <h3>商品名稱</h3>-->
-<!--                    <h3>$26000</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-bottle-01.png" alt="">-->
-<!--                    <h3>VASE</h3>-->
-<!--                    <h3>$5500</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="mark_product">-->
-<!--                    <img class="mark_img2" src="images/H-pink-chair-02.png" alt="">-->
-<!--                    <h3>Edition Chair</h3>-->
-<!--                    <h3>$40400</h3>-->
-<!--                    <div class="palette_select member_input40 flex">-->
-<!--                        <select>-->
-<!--                            <option value="">0</option>-->
-<!--                            <option value="">1</option>-->
-<!--                            <option value="">2</option>-->
-<!--                            <option value="">3</option>-->
-<!--                            <option value="">4</option>-->
-<!--                            <option value="">5</option>-->
-<!--                        </select>-->
-<!--                        <button>選購</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
         </section>
 
         <!-- 結算 -->
         <div class="mark_box3">
             <div class="index_conten">
                 <div class="mark_total ">
-                    <p>已選購2件，原價$32,940元，折扣價$1,000元</p>
+                    <p>已選購<span class="qty-act"></span>件，原價$32,940元，折扣價$1,000元</p>
                     <p>總金額
                         <span class="product_price">
                             <span>$</span>31940</span>
@@ -636,10 +421,54 @@ $product_act = $mysqli->query($sqact);
 
 </body>
 
-<script src="js/jquery-3.3.1.js"></script>
 <script>
-    $("item_34 button").click(function(){
-        $(this).toggleClass();
+    var changeQty = function (obj) {
+        //這個函式丟一個物件進來
+        var total = 0;
+        for (var s in obj) {
+
+            total += obj[s];
+        }
+        $('.qty-act').text(total);
+    };
+
+
+
+    $('.add_to_cart').click(function(){
+        var mark_product = $(this).closest('.mark_product');
+        mark_product.toggleClass('bored_act_bl');
+        var sid = mark_product.attr('data-sid');
+        var qty = mark_product.find('.qty').val();
+        console.log(`sid: ${sid}, qty: ${qty}`);
+
+    if(mark_product.hasClass('bored_act_bl')){
+        $.get('activity_api.php', {sid:sid,qty:qty}, function(data){
+
+            console.log(data);
+            alert('1！');
+            //點上面購物車數量會變
+            window.parent.changeQty(data);
+
+        }, 'json');
+        }else {
+        mark_product.removeClass('bored_act_bl');
+        $.get('activity_api.php', {sid: sid}, function (data) {
+            alert('0');
+            window.changeQty(data);
+        }, 'json');
+
+    }
+
+        // $.get('add_to_cart.php', {sid:sid,qty:qty}, function(data){
+        //     //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
+        //     console.log(data);
+        //     alert('商品已加入購物車！');
+        //     //點上面購物車數量會變
+        //     window.parent.changeQty(data);
+        //
+        //     window.parent.changeSmallCart();
+        //     //changeQty(data);
+        // }, 'json');
     });
 </script>
 </html>

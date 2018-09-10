@@ -138,13 +138,13 @@ $product_rs = $mysqli->query($product_sql);
         </ul>
     </div>
 <script>
-    $(".product_favorate").click(function (data) {
 
+    $(".product_favorate").click(function (data) {
+        <?php if (isset ($_SESSION['user'])):?>
         if ($(this).hasClass('icon_love_click')) {
             $(this).removeClass("icon_love_click");
-            var product = $(this).closest('.product_sid_data');
+            var product = $(this).closest('.product-item');
             var sid = product.attr('data-sid');
-            console.log(sid);
             $.get('unlove_api.php', {sid: sid}, function (data) {
                 //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
                 if (data.success) {
@@ -162,11 +162,11 @@ $product_rs = $mysqli->query($product_sql);
             }, 'json');
         } else {
             $(this).addClass("icon_love_click");
-            var product = $(this).closest('.product_sid_data');
+            var product = $(this).closest('.product-item');
             var sid = product.attr('data-sid');
             $.get('love_api.php', {sid: sid}, function (data) {
                 //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
-                console.log(sid);
+
                 if (data.success) {
                     console.log(data);
                     alert('商品已加入追蹤清單！');
@@ -181,6 +181,10 @@ $product_rs = $mysqli->query($product_sql);
 
             }, 'json');
         }
+        <?php else:?>
+        $(this).removeClass("icon_love_click");
+        alert('你登入了嗎？');
 
+        <?php endif;?>
     });
 </script>
