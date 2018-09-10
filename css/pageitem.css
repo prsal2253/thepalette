@@ -8,12 +8,12 @@
 .sale_box a:link,.sale_box a:visited{text-decoration: none;}
 .sale_box h3{font-size: 32px;line-height: 40px;font-family: 'SourceHanSerifTC-SemiBold';color: #fff;margin-bottom:5px;text-indent: -20px;letter-spacing: .15em;}
 .sale_box h6{font-size: 24px;line-height: 30px;font-family: 'SourceHanSerifTC-SemiBold';color: #fff;margin-bottom:10px;letter-spacing: .15em;}
-.sale_box p{font-size: 16px;line-height: 24px;color: #d6b7b7;margin-top: 5%;font-weight: 300;letter-spacing: 0.15em;}
+.sale_box p{font-size: 16px;line-height: 24px;color: #fff;opacity:.8;margin-top: 5%;font-weight: 300;letter-spacing: 0.15em;}
 
 .ps-contentwrapper {position: absolute;bottom: 0px;left: 60%;overflow: hidden;height: 65%;width: 30%;z-index: 10;}
 .ps-content {width: 100%;height: 100%;padding: 50px;background-color: #ad776c;text-transform: none;position: absolute;}
 .ps-content h2{font-size: 70px;line-height: 75px; color: #fff;font-family: 'Playfair Display';font-weight: 700;letter-spacing: .05em;}
-.ps-content p{font-size: 24px;line-height: 100px;font-family: 'Playfair Display';color: #daa799;letter-spacing: .05em;font-weight: 700;}
+.ps-content p{font-size: 24px;line-height: 35px;font-family: 'Playfair Display';color: #daa799;letter-spacing: .05em;font-weight: 700;margin: 50px 0 20px 0;}
 
 .ps-slidewrapper {position: absolute;left:0px;top: 0px;height: 100%;width: 60%;overflow: hidden;}
 .ps-slides {position: absolute;top: 0px;bottom: 0px;left: 0;width: 100%;}
