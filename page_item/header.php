@@ -290,7 +290,7 @@
         var sid = tr.attr('data-sid');
         e.stopPropagation();
         //    氣泡事件
-        $.get('/thepalette/thepalette/page_item/header_api.php', {sid: sid}, function (data) {
+        $.get('add_to_cart.php', {sid: sid}, function (data) {
             tr.remove();//要等ajax回來才可以做刪除動作
             window.changeQty(data);
         }, 'json');
