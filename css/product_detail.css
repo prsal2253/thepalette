@@ -334,6 +334,7 @@
 }
 .product_detail_04_products{
     justify-content: space-between;
+    height: 300px;
 }
 .product_detail_04_topic{
     margin-bottom: 30px;
