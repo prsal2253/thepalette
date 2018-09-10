@@ -25,8 +25,8 @@
                                     <img src="images/H-orange-chair-07.png" alt="">
                                     <div class="sort_red05_pname">
                                             <h2>Swoon Fabric Chair</h2>
-                                            <h3>$38,335</h3>
-                                            <h4>$ 45,100</h4>
+                                            <h3>$12,300</h3>
+                                            <h4>$ 18,100</h4>
                                     </div>
                                 </a>
                                 </div>
@@ -35,8 +35,8 @@
                                         <img src="images/H-pink-chair-08.png" alt="">
                                         <div class="sort_red05_pname">
                                                 <h2>SOFT EDGE 12 CHAIR</h2>
-                                                <h3>$164,005</h3>
-                                                <h4>$ 75,300</h4>
+                                                <h3>$21,800</h3>
+                                                <h4>$ 35,300</h4>
                                         </div>
                                     </a>
                                 </div>
@@ -44,8 +44,8 @@
                                     <a href="#">
                                         <img src="images/H-bottle-01.png" alt="">
                                         <div class="sort_red05_pname">
-                                                <h2>Swoon Fabric Chair</h2>
-                                                <h3>$4,675</h3>
+                                                <h2>VASE</h2>
+                                                <h3>$4,690</h3>
                                                 <h4>$ 5,500</h4>
                                         </div>
                                     </a>
