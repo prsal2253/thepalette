@@ -27,11 +27,7 @@
     <link rel="stylesheet" href="js/swiper/css/swiper.min.css">
     <!-- article -->
     <link rel="stylesheet" href="css/article.css">
-<<<<<<< HEAD
     <!-- icon -->
     <link rel="icon" type="/thepalette/thepalette/images/logo/favicon2.ico" href="/thepalette/thepalette/images/logo/favicon1.ico" />
-=======
-    <link rel="icon" href="../thepalette/images/logo/logo-03.svg"" type="image/x-icon" />
->>>>>>> 3475bb1a1123ea917310ababc05e059b48e18ba3
 
 
