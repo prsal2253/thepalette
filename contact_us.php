@@ -163,7 +163,6 @@ require __DIR__ . '/__db_connect.php';
             <img src="images/about/Store_Sign_Mockup.jpg" alt="">
             <div class="about_submit">
                 <form id="form" class="topBefore">
-                    <h4>The Palette</h4>
                     <div class="about_info">
                         <p>台北市中山北路二段20巷2號1F</p>
                         <p>客服電話 2658-4833</p>

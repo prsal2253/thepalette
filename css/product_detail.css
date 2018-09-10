@@ -4,6 +4,7 @@
 .product_detail_01{
     justify-content: space-between;
     margin-top: -60px;
+    height: 73vh;
 }
 .product_detail_h1{
     border-color: black;
