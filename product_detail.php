@@ -4,7 +4,7 @@ require __DIR__ . '/__db_connect.php';
     <style>
     .product_detail_02_group{position: relative;overflow: hidden;}
     .product_detail_02_group_pic{position: absolute;left: 0;top: 0;}
-    .group_more{position: absolute;background-color: #000;height: 60px;width: 300px;margin-top: -0px;float: none;text-align: center;bottom: 0;right: 0;}
+    .group_more{position: absolute;background-color: #000;height: 60px;width: 300px;margin-top: -0px;float: none;text-align: center;bottom: 0;right: 0;z-index: 10;}
     .product_detail_02_h5 {color: #fff;font-size: 12px;line-height: 60px;letter-spacing: 0.15em;font-family: 'Roboto';font-weight: 300;}
     .group_more_box{background-color: rgba(15,15,15,.8);width: 100%;height: 100%;position: absolute;z-index: 3;right: -100%;transition: all .5s;
     display: inline-flex;justify-content: center;padding: 0 5% 60px;}
@@ -13,8 +13,8 @@ require __DIR__ . '/__db_connect.php';
     .group_goods img{width: 100%;}
     .group_goods .sort_red05_pname{color: #fff;text-align: center;}
     .group_goods .sort_red05_pname h2{font-family: 'Playfair Display';font-size: 18px;line-height: 30px}
-    .group_goods .sort_red05_pname h3{font-family: Georgia, 'Times New Roman', Times, serif;font-size: 18px;line-height: 20px}
-    .group_goods .sort_red05_pname h4{font-family: Georgia, 'Times New Roman', Times, serif;font-size: 12px;color: #ddd;text-decoration: line-through;line-height: 30px}
+    .group_goods .sort_red05_pname h3{font-family: Georgia, 'Times New Roman', Times, serif;font-size: 24px;line-height: 30px}
+    .group_goods .sort_red05_pname h4{font-family: Georgia, 'Times New Roman', Times, serif;font-size: 12px;color: #ddd;text-decoration: line-through;line-height: 20px}
     </style>
 <?php include 'page_item/head.php'; ?>
 </head>

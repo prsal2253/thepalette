@@ -154,10 +154,19 @@ if (!empty($_SESSION['cart'])) {
                 <div class="item_02_conten">
                     <div class="order_listbox">
                         <h3>請選擇付款方式</h3>
-                        <a data-fancybox data-type="ajax" data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
-                           href="javascript:;" class="description_q transition" class="description_q transition"
+                        <a data-fancybox data-src="#modal2" href="javascript:;" class="description_q transition" class="description_q transition"
                            href="#"
-                           title="付款說明">?</a></div>
+                           title="付款說明">?</a>
+                           <div style="display: none;" id="modal2">
+                           Ｔhe Palette 目前採用三種付款方式，且線上刷卡部分由安全且具公信力的網上金流公司處理，讓您的個人資訊安全不外洩! 確保您交易安全!
+                           <br/>1. 線上匯款
+                           <br/>匯款帳號會是亂數產生，完成訂單後將產生專屬於您匯款帳號
+                           <br/>若我們收到您的訂單三天內，未收到您的付款以及匯款回報，我們將去電詢問您是否要去取消該筆訂單。
+                           <br/>2. 信用卡 一次付清/分期付款
+                           <br/>分期付款利率及配合銀行請查訊分期付款銀行
+                           <br/>如有任何問題可電洽客服專線0800-060-085，或利用線上客服 聯繫，將由專人為您服務。
+                            </div>
+                        </div>
                     <div class="order_listbox">
                         <div class="radio_box">
                             <input type="radio" name="pay" value="1" checked><span class="radio_content">信用卡一次付清</span>
@@ -184,10 +193,18 @@ if (!empty($_SESSION['cart'])) {
                 <div class="item_02_conten">
                     <div class="order_listbox">
                         <h3>請選擇運送方式</h3>
-                        <a data-fancybox data-type="ajax" data-src="https://codepen.io/fancyapps/pen/oBgoqB.html"
-                           href="javascript:;" class="description_q transition" class="description_q transition"
+                        <a data-fancybox data-src="#modal3" href="javascript:;" class="description_q transition" class="description_q transition"
                            href="#"
-                           title="付款說明">?</a></div>
+                           title="運送說明">?</a>
+                           <div style="display: none;" id="modal3">
+                           Ｔhe Palette 目前採用兩種運送方式
+                           <br/>1. 到店自取
+                           <br/>訂單付款完成後，我們會告知備貨天數即商品預計到達時間，再請於七天內來店取貨
+                           <br/>2. 貨運
+                           <br/>Ｔhe Palette 使用最新貨運預約系統，當您完成付款後可於訂單詳細前往貨運預約，詳細預約流程請查詢預約流程
+                           <br/>如有任何問題可電洽客服專線0800-060-085，或利用線上客服 聯繫，將由專人為您服務。
+                            </div>
+                        </div>
                     <div class="order_listbox">
                         <div class="radio_box">
                             <input type="radio" name="transport" value="1"><span class="radio_content">到店取貨<span
