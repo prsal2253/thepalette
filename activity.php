@@ -357,7 +357,7 @@ $product_act = $mysqli->query($sqact);
                         <img class="mark_img2" src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                     <h3 style="font-size: 16px;"><?= $r['product_name'] ?></h3>
                     </a>
-                    <h3>$<?= $r['price'] ?></h3>
+                    <h3 class="product-item-price" data-price="<?= $r['price'] ?>">$<?= $r['price'] ?></h3>
                     <div class="palette_select member_input40 flex">
                         <select class="qty">
                             <option value="1">1</option>
@@ -432,9 +432,9 @@ $product_act = $mysqli->query($sqact);
         $('.qty-act').text(total);
     };
 
+var add_to_cart=$('.add_to_cart');
 
-
-    $('.add_to_cart').click(function(){
+    add_to_cart.click(function(){
         var mark_product = $(this).closest('.mark_product');
         mark_product.toggleClass('bored_act_bl');
         var sid = mark_product.attr('data-sid');
@@ -443,10 +443,8 @@ $product_act = $mysqli->query($sqact);
 
     if(mark_product.hasClass('bored_act_bl')){
         $.get('activity_api.php', {sid:sid,qty:qty}, function(data){
-
+            add_to_cart.text('取消');
             console.log(data);
-            alert('1！');
-            //點上面購物車數量會變
             window.parent.changeQty(data);
 
         }, 'json');
@@ -454,10 +452,31 @@ $product_act = $mysqli->query($sqact);
         mark_product.removeClass('bored_act_bl');
         $.get('activity_api.php', {sid: sid}, function (data) {
             alert('0');
+            add_to_cart.text('選購');
             window.changeQty(data);
         }, 'json');
 
     }
+        //
+        // var actTotal = function () {
+        //     var total = 0;// 一開始設定0
+        //     var total_qty = 0;
+        //     var items = $('.mark_product');
+        //
+        //
+        //     items.each(function () {    // 抓到所有項目，所以用each迴圈下去跑，每跑到一個就抓它價格跟數量乘起來
+        //         total += $(this).find('.product-item-price').attr('data-price') * $(this).find('.product-item-qty').attr('data-qty');
+        //         //這裡應該做型別轉換parseInt轉成數字，但是乘法會轉換
+        //         total_qty += parseInt($(this).find('.product-item-qty').attr('data-qty'));
+        //         // total_qty += $(this).find('.product-item-qty').attr('data-qty')*1;
+        //     });
+        //
+        //     $('#total-price').text(dallorCommas(total));
+        //     $('#total-qty').text(total_qty);
+        // };
+        //
+        //
+
 
         // $.get('add_to_cart.php', {sid:sid,qty:qty}, function(data){
         //     //發送給誰，送的參數(字串KEY:值)，callback函式(json格式)
