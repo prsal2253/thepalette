@@ -355,3 +355,11 @@ input[type="text"].footer_bottom_right_txtmail{ width: 75%; height: 40px; border
 
 /* 加icon class */
 .icon_love_click{ background-image: url(../images/icon/heart_w_hover.svg);}
+
+/* 列表頁 麵包屑 */
+#sort_red .bread_crumbs{
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  z-index: 11;
+}

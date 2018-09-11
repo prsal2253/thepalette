@@ -441,8 +441,6 @@ if (isset ($_SESSION['user'])) {
 
 
 </script>
-<div class="index_footer">
-
 </div>
 </body>
 </html>
