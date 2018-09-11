@@ -15,6 +15,7 @@ $page = isset($_GET['page']) ? intval($_GET['page']) : 1; //用戶要看第幾�
 $page1 = $page + 1;
 $page2 = $page - 1;
 
+$build_query = $_GET;
 
 $color = isset($_GET['color']) ? $_GET['color'] : 0; //顏色
 $items = isset($_GET['items']) ? $_GET['items'] : 0;//種類
@@ -106,7 +107,7 @@ if (isset ($_SESSION['user'])) {
 <div id="sort_red05 ">
     <section id="my_red">
         <div class="index_conten_flex sort_red05">
-            <div class="index_conten_flex filter">
+            <div class="index_conten_flex filter" style="z-index:2">
                 <ul class="filter_sec1">
                     <li class="filter_filter transition">
                         <figure></figure>
@@ -212,20 +213,23 @@ if (isset ($_SESSION['user'])) {
             <!-- 頁碼 -->
             <div class="sort_red05_page">
                 <ul>
-                    <a <?= $page == 1 ? "style='display: none'" : "href='?page=" . $page2 . "&" . http_build_query($build_query) ."#my_red". "'" ?>>
+                    <a <?= $page == 1 ? "style='display: none'" : ' href="javascript:changePage('. $page1. ')" '?>>
                         <!--                           接字串的方式 $page2是變數 前後加上. -->
                         <li class="page_prev">
                             <figure></figure>
                             PREV
                         </li>
                     </a>
-                    <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                    <?php for ($i = 1; $i <= $total_pages; $i++):
+                        $build_query['page'] = $i;
+
+                        ?>
                         <li class="page p<?= $i == $page ? 'active' : '' ?>">
-                            <a <?= $page == $i ? '' : "href='?page=" . $i . "&" . http_build_query($build_query) . '#my_red'."'" ?>>
+                            <a <?= $page == $i ? '' : ' href="javascript:changePage('. $i. ')" ' ?>>
                                 <p><?= $i ?></p></a>
                         </li>
                     <?php endfor ?>
-                    <a <?= $page == $total_pages ? "style='display: none'" : "href='?page=" . $page1 . "&" . http_build_query($build_query) .'#my_red'. "'" ?>>
+                    <a <?= $page == $total_pages ? "style='display: none'" : ' href="javascript:changePage('. $page2. ')" ' ?>>
                         <li class="page_next">
                             <figure></figure>
                             NEXT
@@ -358,7 +362,8 @@ if (isset ($_SESSION['user'])) {
 
 
 
-    function get_select_data(){
+    function get_select_data(p){
+        var page = p || 1;
         var color = [],
             items = [],
             s, i;
@@ -373,6 +378,7 @@ if (isset ($_SESSION['user'])) {
             }
         }
         $.get('sort_red_api.php', {
+            page: page,
             color: color.join(','),
             items: items.join(','),
             high:D_setHigh,
@@ -434,7 +440,11 @@ if (isset ($_SESSION['user'])) {
         <?php endif;?>
     });
 
+    var changePage = function(page){
+        window.parent.get_select_data(page);
 
+
+    };
 
 
 
