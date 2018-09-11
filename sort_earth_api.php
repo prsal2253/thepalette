@@ -10,7 +10,7 @@ $mysqli->query("SET NAMES utf8");
 
 $pageName = 'product_list_red';
 
-$build_query = [];
+$build_query = $_GET;
 
 # 商品資料 begin>
 $per_page = 16; //一頁有幾筆
@@ -102,13 +102,14 @@ if (isset ($_SESSION['user'])) {
     }
 }
 ?>
-
+<?php if (!empty($total_rows)): ?>
     <div class="sort_red05_row flex">
         <?php while ($r = $product_rs->fetch_assoc()): ?>
-            <div name="product" class="sort_red05_box_s product_sid_data product-item" data-sid="<?= $r['product_sid'] ?>">
+            <div name="product" class="sort_red05_box_s product_sid_data product-item"
+                 data-sid="<?= $r['product_sid'] ?>">
                 <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                 <div class="product_mask transition">
-                    <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?> transition"></div>
+                    <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid'] ? 'icon_love_click' : '' ?> transition"></div>
                     <div class="product_name_nd_btn">
                         <div class="product_name">
                             <h3 class="product_name_h3"><a href="#"
@@ -128,29 +129,35 @@ if (isset ($_SESSION['user'])) {
     <!-- 頁碼 -->
     <div class="sort_red05_page">
         <ul>
-            <a <?= $page == 1 ? "style='display: none'" : "href='?page=" . $page2 . "&" . http_build_query($build_query) .'#my_red'. "'" ?>>
-                <!--                           接字串的方式 $page2是變數 前後加上. -->
-                <li class="page_prev">
-                    <figure></figure>
-                    PREV
-                </li>
-            </a>
-            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+            <?php for ($i = 1; $i <= $total_pages; $i++):
+                $build_query['page'] = $i;
+
+                ?>
                 <li class="page p<?= $i == $page ? 'active' : '' ?>">
-                    <a <?= $page == $i ? '' : "href='?page=" . $i . "&" . http_build_query($build_query) . '#my_red'."'" ?>>
+                    <a <?= $page == $i ? '' : ' href="javascript:changePage(' . $i . ')" ' ?>>
                         <p><?= $i ?></p></a>
                 </li>
             <?php endfor ?>
-            <a <?= $page == $total_pages ? "style='display: none'" : "href='?page=" . $page1 . "&" . http_build_query($build_query) .'#my_red'. "'" ?>>
-                <li class="page_next">
-                    <figure></figure>
-                    NEXT
-                </li>
-            </a>
         </ul>
     </div>
-<script>
+<?php else: ?>
+    <div style="height: 500px; background-color: #ffffff;">
+        <p style="     text-align: center;
+padding: 200px 0 ;
+         color: #000;
+         font-size: 25px;
+         font-family: 'SourceHanSerifTC-SemiBold';
+    line-height: 30px;
+    margin: 0 auto;">沒有任何商品，請重新篩選</p>
+    </div>
+<?php endif; ?>
 
+<script>
+    var changePage = function (page) {
+        window.parent.get_select_data(page);
+
+
+    };
     $(".product_favorate").click(function (data) {
         <?php if (isset ($_SESSION['user'])):?>
         if ($(this).hasClass('icon_love_click')) {
