@@ -86,6 +86,8 @@ $product_sql = sprintf("SELECT * FROM  `products_list` $where LIMIT %s, %s ", ($
 //這裡會拿到sql的字串
 $product_rs = $mysqli->query($product_sql);
 
+
+
 ?>
 <div id="sort_red05 ">
     <section id="my_red">

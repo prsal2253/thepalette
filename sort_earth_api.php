@@ -1,5 +1,7 @@
 <?php
-
+if(! isset($_SESSION)){
+    session_start();
+}
 //require __DIR__ . '/__db_connect.php';
 $mysqli = new mysqli('localhost', 'orange', '0987', 'the palette');
 
@@ -88,15 +90,25 @@ $product_sql = sprintf("SELECT * FROM  `products_list` $where LIMIT %s, %s ", ($
 
 $product_rs = $mysqli->query($product_sql);
 
+if (isset ($_SESSION['user'])) {
+    $data_fa = [];
+    $sql_love = 'SELECT * FROM `members_favourite` WHERE `member_sid`=' . $_SESSION['user']['member_sid'];
+    $rs_love = $mysqli->query($sql_love);
 
+    while ($r_love = $rs_love->fetch_assoc()) {
+        //    這裡迴圈先一一取出$rs_love陣列
+        $data_fa[$r_love['product_sid']] = $r_love['product_sid'];
+//以'product_sid'自己當作key對應'product_sid'的val
+    }
+}
 ?>
 
     <div class="sort_red05_row flex">
         <?php while ($r = $product_rs->fetch_assoc()): ?>
-            <div name="product" class="sort_red05_box_s product_sid_data" data-sid="<?= $r['product_sid'] ?>">
+            <div name="product" class="sort_red05_box_s product_sid_data product-item" data-sid="<?= $r['product_sid'] ?>">
                 <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                 <div class="product_mask transition">
-                    <div class="product_favorate transition"></div>
+                    <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?> transition"></div>
                     <div class="product_name_nd_btn">
                         <div class="product_name">
                             <h3 class="product_name_h3"><a href="#"
@@ -182,9 +194,7 @@ $product_rs = $mysqli->query($product_sql);
             }, 'json');
         }
         <?php else:?>
-        $(this).removeClass("icon_love_click");
         alert('你登入了嗎？');
-
         <?php endif;?>
     });
 </script>

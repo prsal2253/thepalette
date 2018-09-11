@@ -349,7 +349,6 @@ $product_act = $mysqli->query($sqact);
                  <?= isset($_SESSION['act'][$r['product_sid']]) ? 'bored_act_bl':'' ?>
 
 
-
                  transition" data-sid="<?= $r['product_sid'] ?>">
 
 
@@ -359,14 +358,14 @@ $product_act = $mysqli->query($sqact);
                     </a>
                     <h3 class="product-item-price" data-price="<?= $r['price'] ?>">$<?= $r['price'] ?></h3>
                     <div class="palette_select member_input40 flex">
-                        <select class="qty">
+                        <select class="qty" data-qty="<?= $_SESSION['act'][$sid]==0 ? 0 : $_SESSION['act'][$sid] ?> ">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        <button class="add_to_cart">選購</button>
+                        <button class="add_to_act"><?= isset($_SESSION['act'][$r['product_sid']]) ? '取消':'選購' ?></button>
                     </div>
                 </div>
                 <?php endwhile; ?>
@@ -376,7 +375,7 @@ $product_act = $mysqli->query($sqact);
         <div class="mark_box3">
             <div class="index_conten">
                 <div class="mark_total ">
-                    <p>已選購<span class="qty-act"></span>件，原價$32,940元，折扣價$1,000元</p>
+                    <p>已選購<span class="qty-act"></span>件，原價<span id="total-price"></span>，折扣價$1,000元</p>
                     <p>總金額
                         <span class="product_price">
                             <span>$</span>31940</span>
@@ -422,6 +421,43 @@ $product_act = $mysqli->query($sqact);
 </body>
 
 <script>
+
+
+    var dallorCommas = function (n) {    // 這是加$跟三三為單位中間加逗號
+        return '$ ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    };
+
+
+
+    var actTotal = function () {
+        var total = 0;// 一開始設定0
+        var total_qty = 0;
+        var items = $('.mark_product');
+
+
+        items.each(function () {    // 抓到所有項目，所以用each迴圈下去跑，每跑到一個就抓它價格跟數量乘起來
+            if($(this).hasClass('bored_act_bl')) {
+                total += $(this).find('.product-item-price').attr('data-price') * $(this).find('.qty').val();
+                //這裡應該做型別轉換parseInt轉成數字，但是乘法會轉換
+                total_qty += parseInt($(this).find('.qty').val());
+            }
+            // total_qty += $(this).find('.product-item-qty').attr('data-qty')*1;
+        });
+
+        $('#total-price').text(dallorCommas(total));
+        $('.qty-act').text(total_qty);
+    };
+
+
+
+    actTotal();
+
+
+
+
+
+
+
     var changeQty = function (obj) {
         //這個函式丟一個物件進來
         var total = 0;
@@ -432,9 +468,13 @@ $product_act = $mysqli->query($sqact);
         $('.qty-act').text(total);
     };
 
-var add_to_cart=$('.add_to_cart');
 
-    add_to_cart.click(function(){
+
+
+
+    var add_to_act=$('.add_to_act');
+
+    add_to_act.click(function(){
         var mark_product = $(this).closest('.mark_product');
         mark_product.toggleClass('bored_act_bl');
         var sid = mark_product.attr('data-sid');
@@ -443,39 +483,24 @@ var add_to_cart=$('.add_to_cart');
 
     if(mark_product.hasClass('bored_act_bl')){
         $.get('activity_api.php', {sid:sid,qty:qty}, function(data){
-            add_to_cart.text('取消');
+            alert('已加入');
+            mark_product.find(add_to_act).text('取消');
             console.log(data);
-            window.parent.changeQty(data);
+            window.changeQty(data);
 
         }, 'json');
-        }else {
+        }else{
         mark_product.removeClass('bored_act_bl');
         $.get('activity_api.php', {sid: sid}, function (data) {
-            alert('0');
-            add_to_cart.text('選購');
+            alert('已取消');
+            mark_product.find(add_to_act).text('選購');
             window.changeQty(data);
-        }, 'json');
 
+        }, 'json');
+        actTotal();
     }
-        //
-        // var actTotal = function () {
-        //     var total = 0;// 一開始設定0
-        //     var total_qty = 0;
-        //     var items = $('.mark_product');
-        //
-        //
-        //     items.each(function () {    // 抓到所有項目，所以用each迴圈下去跑，每跑到一個就抓它價格跟數量乘起來
-        //         total += $(this).find('.product-item-price').attr('data-price') * $(this).find('.product-item-qty').attr('data-qty');
-        //         //這裡應該做型別轉換parseInt轉成數字，但是乘法會轉換
-        //         total_qty += parseInt($(this).find('.product-item-qty').attr('data-qty'));
-        //         // total_qty += $(this).find('.product-item-qty').attr('data-qty')*1;
-        //     });
-        //
-        //     $('#total-price').text(dallorCommas(total));
-        //     $('#total-qty').text(total_qty);
-        // };
-        //
-        //
+
+
 
 
         // $.get('add_to_cart.php', {sid:sid,qty:qty}, function(data){

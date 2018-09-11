@@ -1,6 +1,9 @@
 <?php
 
 //require __DIR__ . '/__db_connect.php';
+if(! isset($_SESSION)){
+    session_start();
+}
 $mysqli = new mysqli('localhost', 'orange', '0987', 'the palette');
 
 $mysqli->query("SET NAMES utf8");
@@ -104,7 +107,7 @@ if (isset ($_SESSION['user'])) {
 
     <div class="sort_red05_row flex">
         <?php while ($r = $product_rs->fetch_assoc()): ?>
-            <div name="product" class="sort_red05_box_s product_sid_data" data-sid="<?= $r['product_sid'] ?>">
+            <div name="product" class="sort_red05_box_s product_sid_data product-item" data-sid="<?= $r['product_sid'] ?>">
                 <img src="images/<?= $r['img'] ?>.png" alt="<?= $r['product_name'] ?>">
                 <div class="product_mask transition">
                     <div class="product_favorate <?= $data_fa[$r['product_sid']] == $r['product_sid']  ? 'icon_love_click' : '' ?> transition"></div>
@@ -152,6 +155,7 @@ if (isset ($_SESSION['user'])) {
 
 <script>
 
+
     $(".product_favorate").click(function (data) {
         <?php if (isset ($_SESSION['user'])):?>
         if ($(this).hasClass('icon_love_click')) {
@@ -195,9 +199,7 @@ if (isset ($_SESSION['user'])) {
             }, 'json');
         }
         <?php else:?>
-        $(this).removeClass("icon_love_click");
         alert('你登入了嗎？');
-
         <?php endif;?>
     });
 
