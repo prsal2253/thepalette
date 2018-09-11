@@ -28,6 +28,6 @@
     <!-- article -->
     <link rel="stylesheet" href="css/article.css">
     <!-- icon -->
-    <link rel="icon" type="/thepalette/thepalette/images/logo/favicon2.ico" href="/thepalette/thepalette/images/logo/favicon1.ico" />
+    <link rel="icon" type="/thepalette/images/logo/favicon2.ico" href="/thepalette/thepalette/images/logo/favicon1.ico" />
 
 
