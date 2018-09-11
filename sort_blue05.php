@@ -421,8 +421,6 @@ $product_rs = $mysqli->query($product_sql);
 
 
 </script>
-<div class="index_footer">
-
 </div>
 </body>
 </html>

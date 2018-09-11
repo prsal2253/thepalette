@@ -8,6 +8,17 @@ require __DIR__ . '/__db_connect.php';
 <div class="index_top"> 
     <?php include 'page_item/header.php'; ?>
 </div>
+<!-- 麵包屑 -->
+<section class="bread_crumbs bread_crumbs_b" style="background:none">
+            <ul>
+                <li>
+                    <a href="index.php">home</a>
+                </li>
+                <li>
+                    <a href="sort_red.php">Sort Red</a>
+                </li>
+            </ul>
+        </section>
 <?php include 'sort_red01.php'; ?>
 <?php include 'sort_red02.php'; ?>
 <?php include 'sort_red03.php'; ?>
