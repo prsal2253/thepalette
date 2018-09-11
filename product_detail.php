@@ -23,6 +23,7 @@ require __DIR__ . '/__db_connect.php';
 <div class="index_top">
     <?php include 'page_item/header.php'; ?>
 </div>
+<div class="index_main">
     <?php include 'product_detail_01.php';?>
     <?php include 'product_detail_02.php';?>
     <?php include 'product_detail_03.php';?>
@@ -30,6 +31,7 @@ require __DIR__ . '/__db_connect.php';
     <?php include 'product_detail_05.php';?>
     <?php include 'product_detail_06.php';?>
     <?php include 'page_item/footer.php';?>
+    </div>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

@@ -74,19 +74,19 @@
                     <div class="collectionsbox_r">
                         <!-- 01 -->
                         <div id="sort01" class="ranking_box selected"><img
-                                    src="../thepalette/images/banner/39195293794_6055c635a0_k.jpg" alt=""></div>
+                                    src="../thepalette/images/article/41831742764_29cab9c5a9_k.jpg" alt=""></div>
                         <!-- 02 -->
                         <div id="sort02" class="ranking_box"><img
-                                    src="../thepalette/images/banner/40745884310_4b1e901143_b.jpg" alt=""></div>
+                                    src="../thepalette/images/article/27683687837_a79ca6f457_k.jpg" alt=""></div>
                         <!-- 03 -->
                         <div id="sort03" class="ranking_box"><img
-                                    src="../thepalette/images/banner/40745889000_96ba023acb_k.jpg" alt=""></div>
+                                    src="../thepalette/images/banner/40745885510_cbc65a1f51_k_01.jpg" alt=""></div>
                         <!-- 04 -->
                         <div id="sort04" class="ranking_box"><img
-                                    src="../thepalette/images/banner/38924676214_1e6d29ce12_b.jpg" alt=""></div>
+                                    src="../thepalette/images/banner/42554113441_45651f95e7_k_01.jpg" alt=""></div>
                         <!-- 05 -->
                         <div id="sort05" class="ranking_box"><img
-                                    src="../thepalette/images/banner/28680134718_346947a0b7_b.jpg" alt=""></div>
+                                    src="../thepalette/images/banner/41652279495_20e9f2bcc7_k.jpg" alt=""></div>
                     </div>
                 </div>
             </div>
