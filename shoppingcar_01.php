@@ -230,7 +230,9 @@ if (!empty($_SESSION['cart'])) {
         </section>
     </form>
 </div>
-<div class="index_footer"></div>
+<div class="index_footer">
+<?php include 'page_item/footer.php'; ?>
+</div>
 <script>
     //點結帳傳值
     function checkForm() {
