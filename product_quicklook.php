@@ -172,14 +172,14 @@ if(isset($_GET['id'])) {
     cursor: pointer;
 }
 .color1{
-    background-color: #662424;
-}
-.color2{
-    background-color: #da9480;
-}
-.color3{
-    background-color: darkorange;
-}
+        background-color: #802929;
+    }
+    .color2{
+        background-color: #da9480;
+    }
+    .color3{
+        background-color: #c55638;
+    }
     .color4{
         background-color: #2e4553;
     }
@@ -194,7 +194,7 @@ if(isset($_GET['id'])) {
     }
     .color8{
         background-color: white;
-        border: 2px solid #f0f0f0
+        border: 2px solid #f0f0f0;
     }
     .color9{
         background-color: #999;
@@ -203,13 +203,13 @@ if(isset($_GET['id'])) {
         background-color: #736558;
     }
     .color11{
-        background-color: lightyellow;
+        background-color: #D59A54;
     }
     .color12{
-        background-color: cornflowerblue;
+        background-color: #70929E;
     }
     .color13{
-        background-color: purple;
+        background-color: #80346D;
     }
 
 .s_product_quicklook_01_num{
