@@ -286,7 +286,7 @@ if (isset ($_SESSION['user'])) {
     var color_change = $('.total_change .filter_color_box');
     var items_change = $('.total_change .filter_items');
     var setHigh_change = $('.slider_hight');
-    var setLong_change = $('.slider_long')
+    var setLong_change = $('.slider_long');
 
     var D_color = {red: 0, pink: 0, orange: 0},
         D_items  = {},

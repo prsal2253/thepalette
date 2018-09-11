@@ -425,11 +425,11 @@ $product_act = $mysqli->query($sqact);
     <div class="mark_box3">
         <div class="index_conten">
             <div class="mark_total ">
-                <p>已選購<span class="qty-act"></span>件，原價<span id="total-price"></span></p>
+                <p>已選購&nbsp;<span class="qty-act"></span>&nbsp;件，原價&nbsp;<span id="total-price"></span>&nbsp;元</p>
                 <p class="spc" style="color: #fff;font-size: 20px;line-height: 40px;text-align: end;"></p>
                 <p>總金額
                     <span class="product_price">
-                            <span class="totalspc"></span></span>
+                            <span class="totalspc" style="font-size: 30px;color: #e54728;"></span></span>&nbsp;元
                 </p>
             </div>
             <button class="add_to_cart3">加入購物車</button>
@@ -495,15 +495,15 @@ $product_act = $mysqli->query($sqact);
             }
 
 
-            $('#total-price').text(total);
+            $('#total-price').text(dallorCommas(total));
             $('.qty-act').text(total_qty);
 
             if (total > 20000) {
-                $('.spc').text('折扣價$1,000元');
-                $('.totalspc').text(parseInt(total) - 1000);
+                $('.spc').text('折扣價 $1,000 元');
+                $('.totalspc').text(dallorCommas(parseInt(total) - 1000));
             } else {
-                $('.spc').text('折扣價$    0元');
-                $('.totalspc').text(total);
+                $('.spc').text('折扣價 $    0 元');
+                $('.totalspc').text(dallorCommas(total));
             }
         });
     }
