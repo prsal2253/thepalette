@@ -1,23 +1,23 @@
 <?php
+require __DIR__ . '/../__db_connect.php';
+if (!empty($_SESSION['cart'])) {
+    $keys = array_keys($_SESSION['cart']);
+//字面上意思是拿到$_SESSION['cart']所有的key
+    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
+    //IN (這邊要塞sid逗號隔開)
+//黏著符號js叫做join()
+//php叫做implode
+//SELECT * FROM `products_list` WHERE `product_sid` IN (1,2)
+    $rs = $mysqli->query($sql);
 
-//if (!empty($_SESSION['cart'])) {
-//    $keys = array_keys($_SESSION['cart']);
-////字面上意思是拿到$_SESSION['cart']所有的key
-//    $sql = sprintf("SELECT * FROM `products_list` WHERE `product_sid` IN (%s)", implode(',', $keys));
-//    //IN (這邊要塞sid逗號隔開)
-////黏著符號js叫做join()
-////php叫做implode
-////SELECT * FROM `products_list` WHERE `product_sid` IN (1,2)
-//    $rs = $mysqli->query($sql);
-//
-//    $data = [];
-//
-//    while ($r = $rs->fetch_assoc()) {
-//        $r['qty'] = $_SESSION['cart'][$r['product_sid']];
-//
-//        $data[$r['product_sid']] = $r;
-//    }
-//}
+    $data = [];
+
+    while ($r = $rs->fetch_assoc()) {
+        $r['qty'] = $_SESSION['cart'][$r['product_sid']];
+
+        $data[$r['product_sid']] = $r;
+    }
+}
 ?>
 <header><h1><a href="index.php"><img src="../thepalette/images/logo/logo_white-01.svg" alt=""></a></h1></header>
 
@@ -206,7 +206,7 @@
     $(".car_icon").click(function () {
         $(this).parents().find(".car_iconhover").toggleClass("menu_active");
         //即時更新
-        $.get('/thepalette/thepalette/page_item/header_api.php', function (data) {
+        $.get('/thepalette/page_item/header_api.php', function (data) {
             $('.car_iconhover').html(data);
         }, 'text');
     });
@@ -273,7 +273,7 @@
     };
 
     var changeSmallCart = function () {
-        $.get('/thepalette/thepalette/page_item/header_api.php', function (data) {
+        $.get('/thepalette/page_item/header_api.php', function (data) {
             $('.car_iconhover').html(data);
         }, 'text');
     };
