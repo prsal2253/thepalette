@@ -1,8 +1,13 @@
-<?php
-require __DIR__ . '/__db_connect.php';
-?>
-<?php include 'page_item/head.php';?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         #about nav {
             z-index: 99;
@@ -15,9 +20,8 @@ require __DIR__ . '/__db_connect.php';
             background: none;
         }
 
-        #about .index_main section {
+        .index_main section {
             padding: 0;
-            background:#fff;
         }
 
         .about_box1 {
@@ -90,45 +94,39 @@ require __DIR__ . '/__db_connect.php';
 
         .about_catalog {
             width: 100%;
-            justify-content: center;
+            margin-top: 10%;
+            justify-content: space-around;
         }
 
         .about_catalog a {
-            font-family: 'Roboto';
-            font-size: 18px;
-            color: #d1c0a5;
-            background: #fff;
-            font-weight: 400;
+            font-family: 'Playfair Display';
+            font-size: 20px;
+            background: #d1c0a5;
+            font-weight: 600;
             padding: 0;
-            letter-spacing: 2px;
+            width: 210px;
+            letter-spacing: 4px;
             border: 1px solid #d1c0a5;
 
         }
 
         .about_catalog a:hover {
-            font-family: 'Roboto';
-            font-size: 18px;
-            color:#fff;
-            background: #d1c0a5;
+            font-family: 'Playfair Display';
+            font-size: 20px;
+            color:#d1c0a5;
+            background: #fff;
             border: 1px solid #d1c0a5;
-            font-weight: 400;
+            font-weight: 600;
             padding: 0;
-            letter-spacing: 3px;
-        }
-
-        .w_catalog1,
-        .w_catalog2,
-        .w_catalog3,
-        .w_catalog4{
-            margin:8% 2% 0 2%;
-            width: 15%;
+            width: 210px;
+            letter-spacing: 4px;
         }
 
         /* 關於我們 */
 
         .about_us {
             position: relative;
-            margin: 15% 0 5% 0;
+            margin: 20% 0 5% 0;
             width: 100%;
             height: auto;
         }
@@ -318,7 +316,6 @@ require __DIR__ . '/__db_connect.php';
             width: 50%;
             height: 100%;
             position: relative;
-            margin-left: 10%;
         }
 
         .about_left2 h4 {
@@ -348,7 +345,7 @@ require __DIR__ . '/__db_connect.php';
             margin-top: 15%;
             width: 40%;
             height: 100%;
-            margin-left: 50%;
+            margin-left: 60%;
         }
 
         .about_right2 p {
@@ -360,7 +357,7 @@ require __DIR__ . '/__db_connect.php';
         }
 
         .about_right2 h4 {
-            margin-left: -7%;
+            margin-left: -6%;
             margin-top: -623px;
         }
 
@@ -370,11 +367,11 @@ require __DIR__ . '/__db_connect.php';
             width: 50%;
             height: 100%;
             font-weight: 900;
-            margin: 10% 0 0 10%;
+            margin-top: 10%;
         }
 
         .about_left3 h4 {
-            margin-left: -9%;
+            margin-left: -8%;
             margin-top: -458px;
         }
 
@@ -389,10 +386,10 @@ require __DIR__ . '/__db_connect.php';
         /* designer 4 */
 
         .about_right3 {
-            margin-top: 25%;
+            margin-top: 20%;
             width: 40%;
             height: 100%;
-            margin-left: 50%;
+            margin-left: 60%;
         }
 
         .about_right3 p {
@@ -404,7 +401,7 @@ require __DIR__ . '/__db_connect.php';
         }
 
         .about_right3 h4 {
-            margin-left: 13%;
+            margin-left: 11%;
             margin-top: -285px;
         }
 
@@ -722,7 +719,7 @@ require __DIR__ . '/__db_connect.php';
         /* contact form */
 
         .about_info {
-            margin-bottom: 16%;
+            margin-bottom: 21%;
         }
 
         .about_contact img {
@@ -733,7 +730,7 @@ require __DIR__ . '/__db_connect.php';
             font-family: 'Roboto', 'Noto Sans TC';
             position: relative;
             width: 400px;
-            margin: -40% 0 5% 65%;
+            margin: -45% 0 5% 65%;
         }
 
         .about_contact input::placeholder,
@@ -790,7 +787,6 @@ require __DIR__ . '/__db_connect.php';
             border: solid 1px #b3aca7;
             transition: all 0.3s ease-in-out;
             margin: 2% 0;
-            outline: none;
         }
 
         .about_contact textarea:hover {
@@ -808,31 +804,33 @@ require __DIR__ . '/__db_connect.php';
             color: #e2dedb;
         }
     </style>
-
 </head>
-<!-- 頁面ID -->
+
 <body id="about" class="">
-
-     <!-- top -->
     <div class="index_top">
-        <?php include 'page_item/header.php';?> 
+        <header>
+            <h1>palette</h1>
+        </header>
     </div>
-
-    <!-- main -->
+    <nav>
+    </nav>
     <div class="index_main">
         <!-- 麵包屑 -->
-        <section class="bread_crumbs bread_crumbs_b" style="background:none">
+        <section class="bread_crumbs bread_crumbs_b">
             <ul>
                 <li>
-                    <a href="index.php">home</a>
+                    <a href="#">home</a>
                 </li>
                 <li>
-                    <a href="about.php">About</a>
+                    <a href="#">About</a>
                 </li>
+                <!-- <li>
+                    <a href="#">Swoon Chair Space Copenhagen</a>
+                </li> -->
             </ul>
         </section>
 
-        <!-- 頁面內容 -->
+        <!-- 關於我們 -->
         <section class="item_36">
             <div class="about_box1">
                 <figure>
@@ -852,16 +850,16 @@ require __DIR__ . '/__db_connect.php';
 
                 <div class="about_catalog flex">
                     <div class="w_catalog1">
-                        <a href="#w_about" class="palette_btn about_click">About</a>
+                        <a href="#w_about" class="palette_btn about_click">ABOUT</a>
                     </div>
                     <div class="w_catalog2">
-                        <a href="#w_designer" class="palette_btn designer_click">Designer</a>
+                        <a href="#w_designer" class="palette_btn designer_click">DESIGNER</a>
                     </div>
                     <div class="w_catalog3">
-                        <a href="#w_policy" class="palette_btn policy_click">Policy</a>
+                        <a href="#w_policy" class="palette_btn policy_click">POLICY</a>
                     </div>
                     <div class="w_catalog4">
-                        <a href="#w_contact" class="palette_btn contact_click">Contact</a>
+                        <a href="#w_contact" class="palette_btn contact_click">CONTACT</a>
                     </div>
                 </div>
                 <div id="w_about"></div>
@@ -974,7 +972,7 @@ require __DIR__ . '/__db_connect.php';
                 <!-- designer end-->
             </div>
             <!-- slider start -->
-            <!-- <div class="about_box9">
+            <div class="about_box9">
                 <div class="about_slider">
 
                     <div class="about_polite">
@@ -984,7 +982,7 @@ require __DIR__ . '/__db_connect.php';
                         <img src="images/about/slider1.png" alt="" />
                     </div>
                 </div>
-            </div> -->
+            </div>
             <!-- slider end -->
 
 
@@ -1044,11 +1042,12 @@ require __DIR__ . '/__db_connect.php';
                     <h2>CONTACT US</h2>
                     <h3>聯絡我們</h3>
 
-                    <img src="images/about/Store_Sign_Mockup.jpg" alt="">
+                    <img src="images/about/41652301865_d68404f4ec_k.jpg" alt="">
 
 
                     <div class="about_submit">
                         <form id="form" class="topBefore">
+                            <h4>THE PALETTE</h4>
                             <div class="about_info">
                                 <p>台北市中山北路二段20巷2號1F</p>
                                 <p>客服電話 2658-4833</p>
@@ -1068,10 +1067,7 @@ require __DIR__ . '/__db_connect.php';
             <img src="images/about/store.png" style="width: 100%;" alt="">
         </section>
     </div>
-    
-    <div class="index_footer">
-        <?php include 'page_item/footer.php';?>
-    </div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
         // 滑動指定區域
@@ -1101,17 +1097,17 @@ require __DIR__ . '/__db_connect.php';
 
 
         // 家具輪播
-        // let pos = 0;
-        // let speed = 1;
-        // function draw() {
-        //     requestAnimationFrame(draw); $('.about_polite').css({
-        //         left: pos -= speed
-        //     });
-        //     if (pos < -$('.about_polite').width()) {
-        //         pos = 0;
-        //     }
-        // }
-        // draw();
+        let pos = 0;
+        let speed = 1;
+        function draw() {
+            requestAnimationFrame(draw); $('.about_polite').css({
+                left: pos -= speed
+            });
+            if (pos < -$('.about_polite').width()) {
+                pos = 0;
+            }
+        }
+        draw();
 
 
         // 輪播特效

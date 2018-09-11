@@ -181,6 +181,8 @@ $product_act = $mysqli->query($sqact);
             padding: 0 15px;
             width: 45%;
             letter-spacing: .2em;
+            height: 0%;
+            margin-top: 4%;
         }
         /* 結算 */
         .mark_box3 {
@@ -277,11 +279,10 @@ $product_act = $mysqli->query($sqact);
             position: absolute;
         }
         .bored_act{
-            border: 1px white solid;
+            border: 5px white solid;
         }
         .bored_act_bl{
-            border: 1px gray solid;
-
+            border: 5px #97b189 solid;
         }
     </style>
 </head>
