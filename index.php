@@ -107,7 +107,6 @@ require __DIR__ . '/__db_connect.php';
                     <figure></figure>
                     <h2>Better Living Through Color</h2>
                 </div>
-                <video src="" loop></video>
             </div>
             <div class="index02_about">
                 <div class="index02_about_topic">
