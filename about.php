@@ -722,7 +722,7 @@ require __DIR__ . '/__db_connect.php';
         /* contact form */
 
         .about_info {
-            margin-bottom: 21%;
+            margin-bottom: 16%;
         }
 
         .about_contact img {
@@ -733,7 +733,7 @@ require __DIR__ . '/__db_connect.php';
             font-family: 'Roboto', 'Noto Sans TC';
             position: relative;
             width: 400px;
-            margin: -45% 0 5% 65%;
+            margin: -40% 0 5% 65%;
         }
 
         .about_contact input::placeholder,
@@ -824,10 +824,10 @@ require __DIR__ . '/__db_connect.php';
         <section class="bread_crumbs bread_crumbs_b" style="background:none">
             <ul>
                 <li>
-                    <a href="#">home</a>
+                    <a href="index.php">home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="about.php">About</a>
                 </li>
             </ul>
         </section>
@@ -1049,7 +1049,6 @@ require __DIR__ . '/__db_connect.php';
 
                     <div class="about_submit">
                         <form id="form" class="topBefore">
-                            <h4>THE PALETTE</h4>
                             <div class="about_info">
                                 <p>台北市中山北路二段20巷2號1F</p>
                                 <p>客服電話 2658-4833</p>
