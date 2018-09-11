@@ -1,6 +1,3 @@
-#product_detail_01{
-    height: 90vh;
-}
 .product_detail_01{
     justify-content: space-between;
     margin-top: -60px;
@@ -362,7 +359,6 @@
     padding-top: 1px;
 }
 .product_detail_05{
-    margin: 80px auto;
     height: 60vh;
     flex-direction: column;
 }
