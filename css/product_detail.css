@@ -153,16 +153,14 @@
 /* part2 */
 #product_detail_02{
     background-color: #000;
-    height: 90vh;
 }
 .product_detail_02{
-    height: 90vh;
     flex-direction: column;
 }
 .product_detail_02_topic{
     justify-content: space-between;
     align-items: center;
-    margin: 80px 0 50px 0;
+    margin: 0 0 50px 0;
 }
 .product_detail_02_h2{
     font-size: 25px;
@@ -328,7 +326,6 @@
 .product_detail_04{
     width: 100%;
     flex-direction: column;
-    margin: 80px auto;
 }
 .product_detail_04_products{
     justify-content: space-between;
@@ -443,7 +440,6 @@ margin-bottom: 30px;
 }
 /* part6 */
 .product_detail_06{
-    margin: 80px auto;
     flex-direction: column;
 }
 .product_detail_06_topic{

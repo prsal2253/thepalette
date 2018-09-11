@@ -76,9 +76,6 @@ if(isset($_GET['id'])) {
 </style>
 
 <div id="product_detail_01"> 
-    <div class="index_top">
-        <header><h1 class="product_detail_h1">palette</h1></header>
-    </div>
     <div class="index_main">
         <!-- 麵包屑 -->
         <section  class="bread_crumbs bread_crumbs_b">
